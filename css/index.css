@@ -1,0 +1,257 @@
+body {
+  min-height: 150vh;
+}
+
+main {
+  padding-bottom: 100px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5rem;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+header p {
+  margin: 0 auto 0 5%;
+}
+
+header div#hamBtn,
+header ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 2.5% 0 auto;
+}
+
+header div#hamBtn li,
+header ul li {
+  list-style-type: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 2.5%;
+}
+
+div#hero {
+  width: 100%;
+  background-color: #000855;
+  color: white;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+div#hero div#infoHolder {
+  margin: 0 auto 0 5%;
+}
+
+div#hero img {
+  margin: 0 5% 0 auto;
+  width: 7rem;
+  height: 8rem;
+}
+
+div#mainContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+div#mainContent div.projectHolder {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+div#mainContent div.projectHolder div.contentHolder {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  cursor: pointer;
+}
+
+div#mainContent div.projectHolder div.contentHolder div.infoOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: whitesmoke;
+}
+
+div#mainContent div.projectHolder div.contentHolder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+div#mainContent div.projectHolder div.contentHolder:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+
+div#mainContent div.projectHolder div.contentHolder:hover div.infoOverlay {
+  top: 0%;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 1) {
+  border: 1px solid red;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 1) div.infoOverlay h3 {
+  margin: 30% auto 0 auto;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 2) {
+  border: 1px solid blue;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 2) div.infoOverlay h3 {
+  margin: 15% auto 0 auto;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 3) {
+  border: 1px solid yellow;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 3) div.infoOverlay h3 {
+  margin: 15% auto 0 auto;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 4) {
+  border: 1px solid green;
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+div#mainContent div.projectHolder:nth-child(4n + 4) div.infoOverlay h3 {
+  margin: 30% auto 0 auto;
+}
+
+footer {
+  height: 150px;
+  background-color: #3a3a3a;
+}
+
+@media only screen and (min-width: 760px) {
+  header {
+    height: 10rem;
+  }
+  div#hero {
+    height: 20rem;
+  }
+  div#mainContent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+  }
+  div#mainContent div.projectHolder {
+    width: 100%;
+    height: 100%;
+  }
+  div#mainContent div.projectHolder div.infoOverlay h3 {
+    margin: 25% auto 0 auto;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 1) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 1) div.infoOverlay h3 {
+    margin: 25% auto 0 auto;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 2) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 2) div.infoOverlay h3 {
+    margin: 25% auto 0 auto;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 3) {
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 3) div.infoOverlay h3 {
+    margin: 25% auto 0 auto;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 4) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  div#mainContent div.projectHolder:nth-child(3n + 4) div.infoOverlay h3 {
+    margin: 25% auto 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  div#mainContent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  div#mainContent div.projectHolder:nth-child(4n + 1) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  div#mainContent div.projectHolder:nth-child(4n + 2) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  div#mainContent div.projectHolder:nth-child(4n + 3) {
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  div#mainContent div.projectHolder:nth-child(4n + 4) {
+    -ms-grid-column: 4;
+    grid-column: 4;
+  }
+}
+/*# sourceMappingURL=index.css.map */
