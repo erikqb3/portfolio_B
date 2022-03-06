@@ -15,19 +15,22 @@ header {
   align-items: center;
   z-index: 2;
   h1 {
+    font-size: 2rem;
+    margin: 0 0 0 5%;
   }
   p {
-    margin: 0 auto 0 5%;
+    display: none;
   }
   div#hamBtn,
   ul {
     align-items: center;
     display: flex;
-    margin: 0 2.5% 0 auto;
+    margin: 0 5% 0 auto;
     li {
       list-style-type: none;
       width: max-content;
       margin: 0 2.5%;
+      font-size: 1rem;
     }
   }
 }
@@ -41,6 +44,10 @@ div#hero {
   margin-bottom: 2rem;
   div#infoHolder {
     margin: 0 auto 0 5%;
+    h2 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
   }
   img {
     margin: 0 5% 0 auto;
@@ -85,7 +92,8 @@ div#mainContent {
         object-position: center;
       }
     }
-    div.contentHolder:hover {
+    div.contentHolder:hover,
+    div.contentHolder:active {
       transform: scale(1.25);
       transition: 0.35s ease;
       div.infoOverlay {
@@ -99,7 +107,7 @@ div#mainContent {
     grid-column: 1;
     div.infoOverlay {
       h3 {
-        margin: 30% auto 0 auto;
+        margin: 70% auto 0 auto;
       }
     }
   }
@@ -108,7 +116,7 @@ div#mainContent {
     grid-column: 2 / span 2;
     div.infoOverlay {
       h3 {
-        margin: 15% auto 0 auto;
+        margin: 35% auto 0 auto;
       }
     }
   }
@@ -117,7 +125,7 @@ div#mainContent {
     grid-column: 1 / span 2;
     div.infoOverlay {
       h3 {
-        margin: 15% auto 0 auto;
+        margin: 35% auto 0 auto;
       }
     }
   }
@@ -126,7 +134,7 @@ div#mainContent {
     grid-column: 3;
     div.infoOverlay {
       h3 {
-        margin: 30% auto 0 auto;
+        margin: 70% auto 0 auto;
       }
     }
   }

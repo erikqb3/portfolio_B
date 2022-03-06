@@ -21,8 +21,13 @@ header {
   z-index: 2;
 }
 
+header h1 {
+  font-size: 2rem;
+  margin: 0 0 0 5%;
+}
+
 header p {
-  margin: 0 auto 0 5%;
+  display: none;
 }
 
 header div#hamBtn,
@@ -33,7 +38,7 @@ header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 2.5% 0 auto;
+  margin: 0 5% 0 auto;
 }
 
 header div#hamBtn li,
@@ -43,6 +48,7 @@ header ul li {
   width: -moz-max-content;
   width: max-content;
   margin: 0 2.5%;
+  font-size: 1rem;
 }
 
 div#hero {
@@ -61,6 +67,11 @@ div#hero {
 
 div#hero div#infoHolder {
   margin: 0 auto 0 5%;
+}
+
+div#hero div#infoHolder h2 {
+  font-size: 1.75rem;
+  margin: 0;
 }
 
 div#hero img {
@@ -117,14 +128,16 @@ div#mainContent div.projectHolder div.contentHolder img {
      object-position: center;
 }
 
-div#mainContent div.projectHolder div.contentHolder:hover {
+div#mainContent div.projectHolder div.contentHolder:hover,
+div#mainContent div.projectHolder div.contentHolder:active {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   -webkit-transition: 0.35s ease;
   transition: 0.35s ease;
 }
 
-div#mainContent div.projectHolder div.contentHolder:hover div.infoOverlay {
+div#mainContent div.projectHolder div.contentHolder:hover div.infoOverlay,
+div#mainContent div.projectHolder div.contentHolder:active div.infoOverlay {
   top: 0%;
   -webkit-transition: 0.35s ease;
   transition: 0.35s ease;
@@ -137,7 +150,7 @@ div#mainContent div.projectHolder:nth-child(4n + 1) {
 }
 
 div#mainContent div.projectHolder:nth-child(4n + 1) div.infoOverlay h3 {
-  margin: 30% auto 0 auto;
+  margin: 70% auto 0 auto;
 }
 
 div#mainContent div.projectHolder:nth-child(4n + 2) {
@@ -148,7 +161,7 @@ div#mainContent div.projectHolder:nth-child(4n + 2) {
 }
 
 div#mainContent div.projectHolder:nth-child(4n + 2) div.infoOverlay h3 {
-  margin: 15% auto 0 auto;
+  margin: 35% auto 0 auto;
 }
 
 div#mainContent div.projectHolder:nth-child(4n + 3) {
@@ -159,7 +172,7 @@ div#mainContent div.projectHolder:nth-child(4n + 3) {
 }
 
 div#mainContent div.projectHolder:nth-child(4n + 3) div.infoOverlay h3 {
-  margin: 15% auto 0 auto;
+  margin: 35% auto 0 auto;
 }
 
 div#mainContent div.projectHolder:nth-child(4n + 4) {
@@ -169,7 +182,7 @@ div#mainContent div.projectHolder:nth-child(4n + 4) {
 }
 
 div#mainContent div.projectHolder:nth-child(4n + 4) div.infoOverlay h3 {
-  margin: 30% auto 0 auto;
+  margin: 70% auto 0 auto;
 }
 
 footer {
@@ -181,8 +194,44 @@ footer {
   header {
     height: 10rem;
   }
+  header h1 {
+    font-size: 3rem;
+  }
+  header p {
+    display: none;
+  }
+  header div#hamBtn,
+  header ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 2.5% 0 auto;
+  }
+  header div#hamBtn li,
+  header ul li {
+    list-style-type: none;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 2.5%;
+  }
   div#hero {
     height: 20rem;
+  }
+  div#hero div#infoHolder h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  div#hero div#infoHolder p {
+    font-size: 1.5rem;
+  }
+  div#hero img {
+    margin: 0 5% 0 auto;
+    width: 30rem;
+    height: 18rem;
   }
   div#mainContent {
     display: -ms-grid;
@@ -229,6 +278,36 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
+  header {
+    height: 10rem;
+  }
+  header h1 {
+    font-size: 4rem;
+  }
+  header p {
+    margin: 0 auto 0 2.5%;
+    font-size: 1.5rem;
+  }
+  header div#hamBtn,
+  header ul {
+    margin: 0 5% 0 auto;
+  }
+  header div#hamBtn li,
+  header ul li {
+    margin: 0 2.5%;
+  }
+  div#hero div#infoHolder h2 {
+    font-size: 3.25rem;
+    margin: 0;
+  }
+  div#hero div#infoHolder p {
+    font-size: 2rem;
+  }
+  div#hero img {
+    margin: 0 5% 0 auto;
+    width: 30rem;
+    height: 18rem;
+  }
   div#mainContent {
     display: -ms-grid;
     display: grid;
