@@ -1,0 +1,32 @@
+{
+  "project1": {
+    "name": "Hero Factory",
+    "format": "Social Media",
+    "type": "school project",
+    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
+    "notes":""
+  },
+  "project2":{
+    "name": "Pokemon Mix Cafe",
+    "format": "Ecommerce",
+    "type": "fan art",
+    "path": "*",
+    "notes":""
+  },
+  "project3":{
+    "name": "Pokemon Mix Cafe",
+    "format": "Ecommerce",
+    "type": "fan art",
+    "path": "*",
+    "notes":""
+  },
+  "project4": {},
+  "project5":{},
+  "project6": {},
+  "project7":{},
+  "project8": {},
+  "project9":{},
+  "project10": {},
+  "project11":{},
+  "project12": {}
+}

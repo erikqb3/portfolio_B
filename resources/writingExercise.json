@@ -100,7 +100,7 @@
       "Pick two supporting characters and imagine them as dogs or cats. How would the story change?"
     ]
   },
-  "Card" : {
+  "Card10" : {
     "Topic": "STANDARD PROCEDURES",
     "Image":"*",
     "Caption": "What if this happened all the time? Is your hero writing the rules or breaking them?",
@@ -108,22 +108,30 @@
     "Suggestions": [
       "Write a checklist of rules and procedures for this situation. Now look for ways they can become obstacles for your hero.",
       "Make a list of skills fromyour hero's ordinary life. How could thye be adopted to fit this challenge?",
-      "Fesearch how this situation (or place, or job) is handled in the real world. Who is in charge? Look for protocols and gatekeepers"
+      "Research how this situation (or place, or job) is handled in the real world. Who is in charge? Look for protocols and gatekeepers"
     ]
   },
-  "Card2" : {
-    "Topic": "",
+  "Card11" : {
+    "Topic": "PUNY HUMANS",
     "Image":"*",
-    "Caption": "",
-    "Descript": "",
-    "Suggestions": []
+    "Caption": "Sometimes, it really is the end of the world. How would your story change if the stakes were cataclysmic?",
+    "Descript": "Looking at how your hero might respond to a major cataclysm - asteroid, plague, tsunami, robot uprising - can offer insights into her actions at more human level jeopardy. SO start blwoing things up. Knock down some national monuments. Smash, crash and see what you get. <br>What's important to your hero? Who would she save? Where would she go? And once there, would she lead the resistance, or keep her head down? <br>How would a cataclysm change your hero's interaction with the antagonist? Would they still be an opposing side?",
+    "Suggestions": [
+      "A comet will smash into the Earth in 24 hours. What would your hero do?",
+      "Imagine your story in a post-apocalyptic world. What would change? What might stay the same?",
+      "What if your hero was the invader? Consider the story if he was the conqueror rather than the conquered."
+    ]
   },
-  "Card2" : {
-    "Topic": "",
+  "Card12" : {
+    "Topic": "STACK OF NEEDLES",
     "Image":"*",
-    "Caption": "",
-    "Descript": "",
-    "Suggestions": []
+    "Caption": "Too much can be worse than too little. Overwhelm your hero with more than she can handle.",
+    "Descript": "Whatever your hero needs, give him way too much of it. GIve the detective six thousand clues. Give the sad sack forty dates. <br>How heroes handle success can be as illuminating as how they handle failure. Are they gracious? Vindictive? Can they make the transition from rebel to king? <br>Irony shines a spotlight on the struggle of life. You may be dying of thirst, but with a few bad decisions, you can drown in the desert.",
+    "Suggestions": [
+      "List three things the hero needs or wants. For each, what might be the consequence of getting too much?",
+      "An actual stack of needles is no match for a strong magnet. What are ways your hero could handle a sudden deluge?",
+      "Consider jealousy. How would your hero reacti if other characters suddenly had their wishes fulfilled? Or vice versa?"
+    ]
   },
   "Card2" : {
     "Topic": "",

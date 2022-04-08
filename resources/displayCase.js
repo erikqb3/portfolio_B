@@ -1,5 +1,10 @@
-{
-  "project1": {},
+displayCase = {
+  "project1": {
+    "format": "Social Media",
+    "type": "school project",
+    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
+    "notes":""
+  },
   "project2":{},
   "project3":{},
   "project4": {},

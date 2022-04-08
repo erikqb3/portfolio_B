@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hero Factory</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="bannerplace">
+        <p class="homebutton"><a href="../html/index.html">Home</a></p>
+        <p class="loginbutton"><a href="../html/under_construction.html">Login</a></p>
+<!--         <p class="homebutton">
+          Home
+        </p> -->
+        <img
+          class="banner"
+          src="https://cdn.glitch.com/b76629d6-7d20-4296-9a57-a0101d139dd6%2F3902a2d3-fec5-4c24-95ed-f6681f84e3b2.image.png?v=1614977567260"
+          alt="banner"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../html/child_1.html"
+            >Kire L. <br />Elrid</a
+          ></li>
+          <li class="currently_open">Project<br />Proposals</li>
+          <li><a href="../html/child_3.html">Contributors' Introductions</a></li>
+          <li><a href="under_construction.html">Motivtational<br>Resources</a></li>
+          <li>
+            <a href="https://day-dream-productions.glitch.me" target="_blank"
+              >Day-Dream<br>Productions!</a
+              ></li>
+        </ul>
+      </nav>
+
+      <blockquote style="text-align:center">
+        "You can design and create, and build the most wonderful place in the
+        world. But it takes <em>people</em> to
+        <em>make the dream a reality</em>"
+        <cite style="text-align:center"><br /><br />~ Walt Disney</cite> <br />
+        <!--         "Behold, I say unto you, wickedness never was happiness."
+        <cite>~ Alma 41:10</cite><br /> -->
+      </blockquote>
+
+      <main>
+        <div
+          class="main_txt"
+          style="background-color:rgba(16, 37, 63, 0.9); color:white; border: 1px solid black"
+        >
+          <form action="/action_page.php">
+            <!--           <label for="msg"></label> -->
+            <label for="title" style="color:rgb(255,122,0); font-size:2em"
+              ><b>Title of Project:</b></label
+            ><br />
+            <input type="text" id="title" name="project_title" placeholder="--select--"/>
+
+            <label for="skillset"
+              >What's the Main skill set you're looking for?</label
+            >
+            <select id="skillset">
+              <option value="blank">--select--</option>
+              <option value="drawing">Drawing</option>
+              <option value="photography">Photography</option>
+              <option value="musical_performance">Musical Performance</option>
+              <option value="acting">Acting</option>
+              <option value="animation/video_editing"
+                >Animation/Video Editing</option
+              >
+              <option value="programing">Programing</option>
+              <option value="cooking">Cooking</option>
+              <option value="directing">Directing</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="number">How many workers</label>
+            <select id="number">
+              <option value="blank">--select--</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">Four</option>
+              <option value="5">Five</option>
+              <option value="6-10">Six to Ten</option>
+              <option value="lots">More than Ten+</option>
+            </select>
+            <br />
+            <input
+              type="radio"
+              id="volunteers"
+              name="workers"
+              value="volunteers"
+            />
+            <label for="volunteers">Looking for volunteers</label><br />
+            <input
+              type="radio"
+              id="employees"
+              name="workers"
+              value="employees"
+            />
+            <label for="employees">Willing to hire</label><br /><br />
+
+            <div style="margin-bottom:0px; color:rgb(255,122,0)">
+              Prefered form of communication:
+            </div>
+            <input
+              type="radio"
+              id="online"
+              name="communication"
+              value="online"
+            />
+            <label for="volunteers">Online (email,videochat,etc.)</label><br />
+            <input
+              type="radio"
+              id="in_person"
+              name="communication"
+              value="in_person"
+            />
+            <label for="employees">In Person</label><br /><br />
+
+            <label for="time_expectancy">How long will the project last</label>
+            <select id="time_expectancy">
+              <option value="blank">--select--</option>
+              <option value="Less that a day">Less than a day</option>
+              <option value="A few days">A few days</option>
+              <option value="A little more than a week (7 - 14 days)"
+                >A little more than a week (7 - 14 days)</option
+              >
+              <option value="A few weeks - a month"
+                >A few weeks - up to a month</option
+              >
+              <option value="A few months - half a year"
+                >A few months - half a year</option
+              >
+              <option value="<ore than 6 months - a year"
+                >More than 6 months - a year</option
+              >
+              <option value="A few years">A few years</option>
+            </select>
+
+            <div style="margin-top:25px; margin-bottom:5px; color:rgb(255,122,0)">
+              What other descriptions are worth mentioning about your project?
+            </div>
+            <textarea id="msg" class="full_stuff" name="user_message">
+            </textarea>
+
+            <div style="color:rgb(255,122,0)">
+              Note: Your user name will also be visible for others to see so
+              they can look you up in the "Contributors' Introductions" page.
+            </div>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+
+        <div class="main_txt">
+          <h3 class="full_stuff">Large Mural</h3>
+          <h4 class="full_stuff">Emily</h4>
+          <ul class="full_stuff">
+            <li>Drawing</li>
+            <li>Three</li>
+            <li>Looking for Volunteers</li>
+            <li>In Person</li>
+            <li>A few days</li>
+          </ul>
+          <p class="full_stuff">
+            I'm doing a service project for highschool senior project. I plan on
+            painting a large mural along the back wall of my school. My Dad and
+            a teacher will be watching us work so it doesn't matter how old you
+            are. Spent most of my budget on the spray paints, so I'm looking for
+            volunteers, but hey, this will be a cool experience nonetheless!
+          </p>
+        </div>
+
+        <div class="main_txt">
+          <h3 class="full_stuff">Animated YouTube Video</h3>
+          <h4 class="full_stuff">Scott</h4>
+          <ul>
+            <li>Animation</li>
+            <li>One</li>
+            <li>Looking for Volunteers</li>
+            <li>Online</li>
+            <li>A little more than a week (7 - 14 days)</li>
+          </ul>
+          <p class="full_stuff">
+            For my next music video, I want it to be animated. Not only do I
+            need an animator, I also need at least two cartoonists. Stuck in
+            quarantine, but still want to make this happen!Let me see how this
+            project turns out and then I'll consider providing monetary
+            compensation for your help
+          </p>
+        </div>
+
+        <div class="main_txt">
+          <h3 class="full_stuff">Short Film</h3>
+          <h4 class="full_stuff">Jonny</h4>
+          <ul class="full_stuff">
+            <li>Other</li>
+            <li>Six to Ten</li>
+            <li>Willing to Hire</li>
+            <li>In Person</li>
+            <li>Less than a day</li>
+          </ul>
+          <p class="full_stuff" style="text-align:left">
+            Hey guys! Starting a CGI project, but need some actors to interact
+            with my animations. Shouldn't take too long, but I'll pay $5/hr for
+            your help.
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p><span>&copy; 2021 Hero Factory - Erik Q. Birch - WDD03</span></p>
+
+      <div class="social">
+        <a href="https://facebook.com" target="_blank">
+          <img
+            class="facebook"
+            src="https://cdn.glitch.com/1d969333-93d8-4b13-beea-cfbe9c5a9f6e%2Ffacebook%20logo.png?v=1611884696522"
+            alt="link to Facebook"
+          />
+        </a>
+        <a href="https://youtube.com" target="_blank">
+          <img
+            class="youtube"
+            src="https://cdn.glitch.com/1d969333-93d8-4b13-beea-cfbe9c5a9f6e%2Fyoutube%20logo.png?v=1611884692033"
+            alt="link to YouTube"
+          />
+        </a>
+        <a href="https://pinterest.com" target="_blank">
+          <img
+            class="pinterest"
+            src="https://cdn.glitch.com/1d969333-93d8-4b13-beea-cfbe9c5a9f6e%2Fpinterest%20logo.png?v=1611884703625"
+            alt="link to Pinterest"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
