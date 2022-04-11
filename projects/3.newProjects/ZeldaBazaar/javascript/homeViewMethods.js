@@ -4,7 +4,6 @@ import { startupMethods } from "./startupMethods.js";
 
 export const homeViewMethods = {
   establishHTML_home: function() {
-    console.log("HELLOW?")
     let body = document.querySelector('body');
     let logo = globalMethods.createElement('img',"logo","","../img/Logo.png");
     let homeView = globalMethods.createElement('main',"homeView");

@@ -13,8 +13,8 @@
   "project2": {
     "name": "Family History Bingo",
     "path": "/projects/1.oldProjects/FamilyHistoryBingo/Bingo.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
+    "siteType": "Game",
+    "yearCreated":"2021",
     "thumbnailPaths":[
       "resources/img/FHB_thumbnail.png",
       "resources/img/Square.png"
@@ -24,8 +24,8 @@
   "project3": {
     "name": "Pokemon Cafe Mix (Fan-Art)",
     "path": "/projects/1.oldProjects/PokemonCafeMix/PCW_menu_items.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
+    "siteType": "Game",
+    "yearCreated":"2021",
     "thumbnailPaths":[
       "resources/img/PCM_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
@@ -35,8 +35,8 @@
   "project4": {
     "name": "Pokemon: Ro-Sha-Bo!",
     "path": "/projects/1.oldProjects/PokemonRoShamBo/PokemonRSB.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
+    "siteType": "Game",
+    "yearCreated":"2021",
     "thumbnailPaths":[
       "resources/img/PRSB_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
@@ -46,8 +46,8 @@
   "project5": {
     "name": "You Know Studio Ghibli?!?!",
     "path": "/projects/1.oldProjects/YouKnowStudioGhibli/featuredAttraction.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
+    "siteType": "Game",
+    "yearCreated":"2021",
     "thumbnailPaths":[
       "resources/img/YKSG_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
@@ -55,23 +55,23 @@
     "descript":""
   },
   "project6": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
+    "name": "To Do List",
+    "path": "/projects/1.oldProjects/ToDoList/ToDo.html",
+    "siteType": "App",
+    "yearCreated":"2021",
     "thumbnailPaths":[
-      "resources/img/Square.png",
+      "resources/img/TD_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
     ],
     "descript":""
   },
   "project7": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
+    "name": "Zelda BOTW Bazaar",
+    "path": "/projects/3.newProjects/ZeldaBazaar/views/index.html",
+    "siteType": "Game",
     "yearCreated":"",
     "thumbnailPaths":[
-      "resources/img/Square.png",
+      "resources/img/ZB_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
     ],
     "descript":""
@@ -93,128 +93,7 @@
     "siteType": "Social Media",
     "yearCreated":"",
     "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project10": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project11": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project12": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project13": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project14": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project15": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project16": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project17": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project18": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project19": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript":""
-  },
-  "project20": {
-    "name": "Hero Factory",
-    "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated":"",
-    "thumbnailPaths":[
-      "resources/img/Square.png",
+      "resources/img/BIO_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
     ],
     "descript":""

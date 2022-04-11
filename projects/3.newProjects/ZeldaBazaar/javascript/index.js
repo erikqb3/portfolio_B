@@ -11,7 +11,7 @@ import { sellGoodsMethods } from "../javascript/sellGoodsMethods.js";
 
 async function main() {
   switch(window.location.href){
-    case dummyViews.homeView_gitHub:
+    case dummyViews.homeView_github:
     case dummyViews.homeView_local:
       homeViewMethods.establishHTML_home();
       shopKeeperSays("greetings");
@@ -23,16 +23,15 @@ async function main() {
       .then(startupFunctions) //temp
       return data;
       break;
+    case dummyViews.todaysOffers:
+      todaysOffersMethods.establishHTML_TO();
+      break;
   }
   
 }
 function startupFunctions(jsonData) {
   console.log(jsonData)
   startupMethods.getSetup(jsonData);
-}
-
-function addLetter(newText) {
-  document.querySelector(".textBox").innerHTML = newText;
 }
 
 export async function shopKeeperSays (
@@ -51,6 +50,10 @@ export async function shopKeeperSays (
     }
     setTimeout(function(i){addLetter(newText)}, speed)
   }
+}
+
+function addLetter(newText) {
+  document.querySelector(".textBox").innerHTML = newText;
 }
 
 export const globalMethods = {
@@ -234,14 +237,14 @@ export const buttonRouter = {
   }
 }
 const dummyViews = {
-  "homeView_github": "http://127.0.0.1:5503/FinalProject/views/index.html",
-  "homeView_local": "http://127.0.0.1:5501/projects/3.newProjects/FinalProject/views/index.html"
+  "homeView_github": "https://erikqb3.github.io/WDD330_ErikQBirch_portfolio/FinalProject/views/index.html",
+  "homeView_local": "http://127.0.0.1:5501/projects/3.newProjects/ZeldaBazaar/views/index.html"
 }
 
 
 main();
 
-
+localStorage.setItem("Pokemon","Flygon")
 
 
 
