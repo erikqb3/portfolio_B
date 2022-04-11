@@ -1,5 +1,6 @@
 body {
   min-height: 150vh;
+  background-color: whitesmoke;
 }
 
 main {
@@ -15,10 +16,11 @@ header {
   position: -webkit-sticky;
   position: sticky;
   background-color: white;
+  color: #000855;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 header h1 {
@@ -30,55 +32,106 @@ header p {
   display: none;
 }
 
-header div#hamBtn,
-header ul {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header div#hamBtn {
+  color: #000855;
+  font-size: 1.5rem;
   margin: 0 5% 0 auto;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-header div#hamBtn li,
-header ul li {
+header div#filterSettings_void {
+  position: absolute;
+  right: 60vw;
+  top: 0;
+  height: 105vh;
+  -webkit-transition: width 0s linear 0.25s, background-color 0s linear 0.25s;
+  transition: width 0s linear 0.25s, background-color 0s linear 0.25s;
+}
+
+header div#filterSettings_holder {
+  position: absolute;
+  z-index: 3;
+  background-color: #000855;
+  color: white;
+  right: 0;
+  top: 0;
+  height: 105vh;
+  width: 0vw;
+  -webkit-transition: width 0.25s linear;
+  transition: width 0.25s linear;
+}
+
+header div#filterSettings_holder ul {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+header div#filterSettings_holder ul li {
+  text-align: center;
   list-style-type: none;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 2.5%;
-  font-size: 1rem;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+header div#filterSettings_holder ul li:hover {
+  background-color: #3a3a3a;
+}
+
+header div#filterSettings_void[class="visible"] {
+  width: 40vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header div#filterSettings_holder[class="visible"] {
+  width: 60vw;
+}
+
+header div#filterSettings_holder[class="visible"] ul {
+  display: block;
 }
 
 div#hero {
   width: 100%;
-  background-color: #000855;
-  color: white;
   height: 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 2rem;
+  background-color: #3a3a3a;
+  color: white;
+  text-shadow: 2.5px 2.5px 5px black;
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 div#hero div#infoHolder {
-  margin: 0 auto 0 5%;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 10rem;
+  width: 100%;
 }
 
 div#hero div#infoHolder h2 {
-  font-size: 1.75rem;
-  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 1rem;
 }
 
-div#hero img,
+div#hero div#infoHolder p {
+  width: 90%;
+  font-size: 0.75rem;
+  margin-left: 1rem;
+}
+
+div#hero div#infoHolder p#author {
+  font-style: italic;
+}
+
 div#hero video {
-  margin: 0 5% 0 auto;
-  width: 7rem;
-  height: 8rem;
+  width: 100%;
 }
 
 div#mainContent {
@@ -117,6 +170,9 @@ div#mainContent div.projectHolder div.contentHolder div.infoOverlay {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.45);
   color: whitesmoke;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  -webkit-text-stroke: 0.5px black;
 }
 
 div#mainContent div.projectHolder div.contentHolder img {
@@ -188,6 +244,7 @@ div#mainContent div.projectHolder:nth-child(4n + 4) div.infoOverlay h3 {
 
 footer {
   height: 150px;
+  margin-top: 3rem;
   background-color: #3a3a3a;
 }
 
@@ -197,42 +254,43 @@ footer {
   }
   header h1 {
     font-size: 3rem;
+    margin: 0 0 0 2.5%;
   }
-  header p {
-    display: none;
-  }
-  header div#hamBtn,
-  header ul {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  header div#hamBtn {
+    font-size: 2.5rem;
     margin: 0 2.5% 0 auto;
   }
-  header div#hamBtn li,
-  header ul li {
-    list-style-type: none;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin: 0 2.5%;
+  header div#filterSettings_holder {
+    -webkit-transition: width 0.25s linear;
+    transition: width 0.25s linear;
+  }
+  header div#filterSettings_holder ul li {
+    font-size: 2rem;
   }
   div#hero {
+    width: 100%;
     height: 20rem;
+    margin-bottom: 1rem;
+  }
+  div#hero div#infoHolder {
+    height: 20rem;
+    width: 100%;
   }
   div#hero div#infoHolder h2 {
+    text-align: center;
+    margin: 4rem auto 0 auto;
     font-size: 2.5rem;
-    margin: 0;
   }
   div#hero div#infoHolder p {
-    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem auto 0 auto;
+    font-size: 1.25rem;
   }
-  div#hero img {
-    margin: 0 5% 0 auto;
-    width: 30rem;
-    height: 18rem;
+  div#hero div#infoHolder p#author {
+    margin-top: 0.25rem;
+  }
+  div#hero video {
+    width: 100%;
   }
   div#mainContent {
     display: -ms-grid;
@@ -276,6 +334,9 @@ footer {
   div#mainContent div.projectHolder:nth-child(3n + 4) div.infoOverlay h3 {
     margin: 25% auto 0 auto;
   }
+  footer {
+    margin-top: 5rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -284,30 +345,61 @@ footer {
   }
   header h1 {
     font-size: 4rem;
+    margin: 0 0 0 2.5%;
   }
   header p {
-    margin: 0 auto 0 2.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto 0 1%;
     font-size: 1.5rem;
   }
-  header div#hamBtn,
-  header ul {
-    margin: 0 5% 0 auto;
+  header div#hamBtn {
+    display: none;
   }
-  header div#hamBtn li,
-  header ul li {
-    margin: 0 2.5%;
+  header div#filterSettings_holder {
+    width: 45vw;
+    height: 10rem;
+  }
+  header div#filterSettings_holder ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 10rem;
+  }
+  header div#filterSettings_holder ul li {
+    line-height: 7rem;
+    padding: 0 auto;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  div#hero {
+    height: 35rem;
+    margin-bottom: 5rem;
+  }
+  div#hero div#infoHolder {
+    height: 35rem;
+    width: 100%;
   }
   div#hero div#infoHolder h2 {
-    font-size: 3.25rem;
-    margin: 0;
+    text-align: center;
+    margin: 10rem auto 0 auto;
+    font-size: 2.5rem;
   }
   div#hero div#infoHolder p {
-    font-size: 2rem;
+    text-align: center;
+    margin: 3rem auto 0 auto;
+    font-size: 1.5rem;
   }
-  div#hero img {
-    margin: 0 5% 0 auto;
-    width: 30rem;
-    height: 18rem;
+  div#hero div#infoHolder p#author {
+    margin-top: 1rem;
+  }
+  div#hero video {
+    width: 100%;
   }
   div#mainContent {
     display: -ms-grid;

@@ -1,0 +1,184 @@
+.hidden {
+  display: none;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+body {
+  background-color: #339cd5;
+}
+
+header > h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 2rem;
+  margin: 30px auto 15px auto;
+  display: block;
+}
+
+header > h1 span {
+  display: block;
+  font-size: 1.25rem;
+  color: white;
+}
+
+main div#dataHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main div#dataHolder div {
+  margin: 0 auto 10px auto;
+}
+
+main div#gameScreen_holder {
+  border: 2.5px solid black;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main div#gameScreen_holder div#correct,
+main div#gameScreen_holder div#description {
+  background-color: whitesmoke;
+  height: 400px;
+  color: black;
+}
+
+main div#gameScreen_holder div#correct {
+  text-align: center;
+  padding: 0;
+  overflow: auto;
+}
+
+main div#gameScreen_holder div#description {
+  overflow: auto;
+}
+
+main div#gameScreen_holder div#description h3 {
+  margin-bottom: 0;
+  padding: 0 5%;
+}
+
+main div#gameScreen_holder div#description p {
+  padding: 0 5%;
+  margin-top: 8px;
+  line-height: 1.5rem;
+}
+
+main div#gameScreen_holder div#mainScreen {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+main div#gameScreen_holder div#mainScreen div {
+  min-height: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main div#gameScreen_holder div#mainScreen #screen_textStream {
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 3;
+  position: absolute;
+}
+
+main div#gameScreen_holder div#mainScreen #screen_textStream div.stream {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+main div#gameScreen_holder div#mainScreen #screen_textStream div.stream p {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+main div#gameScreen_holder div#mainScreen #screen_background {
+  background-image: url("https://image.tmdb.org/t/p/original/etqr6fOOCXQOgwrQXaKwenTSuzx.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  position: absolute;
+  background-color: whitesmoke;
+}
+
+main textarea {
+  display: block;
+  width: 90%;
+  margin: 15px auto;
+  text-align: center;
+  padding: 17.5px 0 0 0;
+}
+
+div#gameMessage {
+  position: absolute;
+  top: 0;
+  z-index: 6;
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  width: 100%;
+}
+
+div#gameMessage div {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10vh;
+}
+
+div#gameMessage div p {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-shadow: 0.5px 0.5px maroon;
+}
+
+div#gameMessage div button {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: bold;
+  width: 40%;
+  display: block;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin: 30px auto 0 auto;
+}
+/*# sourceMappingURL=FA(main).css.map */

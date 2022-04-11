@@ -2,41 +2,57 @@ header {
   height: 10rem;
   h1 {
     font-size: 3rem;
+    margin: 0 0 0 2.5%;
   }
   p {
-    display: none;
   }
-  div#hamBtn,
-  ul {
-    align-items: center;
-    display: flex;
+  div#hamBtn {
+    font-size: 2.5rem;
     margin: 0 2.5% 0 auto;
-    li {
-      list-style-type: none;
-      width: max-content;
-      margin: 0 2.5%;
-    }
+  }
+
+  div#filterSettings_void {
+  }
+  div#filterSettings_holder {
+    transition: width 0.25s linear;
+      ul {
+        li {
+          font-size: 2rem;
+        }
+      }
+  }
+  div#filterSettings_void[class = "visible"] {
+  }
+  div#filterSettings_holder[class = "visible"] {
   }
 }
-
 div#hero {
+  width: 100%;
   height: 20rem;
+  margin-bottom: 1rem;
   div#infoHolder {
-    h2 {
-      font-size: 2.5rem;
-      margin: 0;
+    height: 20rem;
+    width: 100%;
+
+    h2{
+      text-align:center;
+      margin: 4rem auto 0 auto;
+      font-size:2.5rem;
+
     }
     p {
-      font-size: 1.5rem;
+      text-align:center;
+      margin: 1rem auto 0 auto;
+      font-size: 1.25rem;
+    }
+    p#author {
+    margin-top: 0.25rem;
     }
   }
-  img {
-    margin: 0 5% 0 auto;
-    width: 30rem;
-    height: 18rem;
+  video {
+    width: 100%;
   }
 }
-
 div#mainContent {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -83,4 +99,7 @@ div#mainContent {
       }
     }
   }
+}
+footer {
+  margin-top: 5rem;
 }

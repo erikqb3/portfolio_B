@@ -1,0 +1,162 @@
+// MISC
+@mixin myFontStyle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+  transition: 0.25s ease;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+}
+
+// BODY
+body {
+  background-color: #339cd5;
+}
+header > h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 2rem;
+  margin: 30px auto 15px auto;
+  display: block;
+  span {
+    display: block;
+    font-size: 1.25rem;
+    color: white;
+  }
+}
+//MAIN SCREEN
+main {
+  div#dataHolder {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    div {
+      margin: 0 auto 10px auto;
+    }
+  }
+  div#gameScreen_holder {
+    border: 2.5px solid black;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    div#correct,
+    div#description {
+      background-color: whitesmoke;
+      height: 400px;
+      color: black;
+      // padding: 0 1%;
+    }
+    div#correct {
+      text-align: center;
+      padding: 0;
+      overflow: auto;
+    }
+    div#description {
+      overflow: auto;
+      h3 {
+        margin-bottom: 0;
+        padding: 0 5%;
+      }
+      p {
+        padding: 0 5%;
+        margin-top: 8px;
+        line-height: 1.5rem;
+      }
+    }
+    div#mainScreen {
+      // background-color: white;
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      min-height: 400px;
+      position: relative;
+      // background-color: black;
+      div {
+        //ALL DIVS IN SCREEN
+        min-height: 400px;
+        width: 100%;
+        display: flex;
+        // border: 1px solid red;
+      }
+      #screen_textStream {
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: 3;
+        position: absolute;
+        div.stream {
+          display: block;
+          justify-content: center;
+          text-align: center;
+          p {
+            background-color: rgba(255, 255, 255, 0.5);
+            font-weight: bold;
+            font-size: 1rem; //large 1.15rem
+            // width: auto;
+          }
+        }
+      }
+      #screen_background {
+        background-image: url('https://image.tmdb.org/t/p/original/etqr6fOOCXQOgwrQXaKwenTSuzx.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+        position: absolute;
+        background-color: whitesmoke;
+      }
+    }
+  }
+  textarea {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 17.5px 0 0 0;
+  }
+}
+
+div#gameMessage {
+  // position: -webkit-sticky;
+  // position: sticky;
+  position: absolute;
+  top: 0;
+  z-index: 6;
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  width: 100%;
+  // display: block;
+  div {
+    position: -webkit-sticky;
+    position: sticky;
+    // position: relative;
+    top: 10vh;
+    // left: 0;
+    p {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      @include myFontStyle;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      text-shadow: 0.5px 0.5px maroon;
+    }
+    button {
+      @include myFontStyle;
+      width: 40%;
+      display: block;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      margin: 30px auto 0 auto;
+    }
+  }
+}
