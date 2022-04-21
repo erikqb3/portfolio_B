@@ -1,5 +1,5 @@
 //INITiALS
-const track = document.querySelector('.PCW_MI_tabs'); //element
+const track = document.querySelector('.PCM_MI_tabs'); //element
 const tabs = Array.from(track.children); //array
 const allDescriptions = document.querySelector(".all_descriptions"); //element
 const singleDescriptions = Array.from(allDescriptions.children); //array
@@ -361,7 +361,7 @@ galleryStuff.addEventListener('click', e=> {
 
 
 
-// const track = document.querySelector('.PCW_MI_tabs');
+// const track = document.querySelector('.PCM_MI_tabs');
 // const tabs = Array.from(track.children);
 // const menu_items = document.querySelector('gallery');
 // const items = Array.from(menu_items.children);
@@ -374,7 +374,7 @@ galleryStuff.addEventListener('click', e=> {
 // const something = document.querySelectorAll('.drink');
 // console.log(something);
 
-// const track = document.querySelector('.PCW_MI_tabs'); //element
+// const track = document.querySelector('.PCM_MI_tabs'); //element
 // const tabs = Array.from(track.children); //array
 
 // const blah = document.querySelector(".all_descriptions");

@@ -1,0 +1,588 @@
+@media screen and (min-width: 0px) {
+  body {
+    /* background-color:rgb(138,216,213); */
+    background-color: rgb(103, 182, 179);
+    background-image: url('https://cdn.glitch.com/b76629d6-7d20-4296-9a57-a0101d139dd6%2Fac82648f-0736-431a-9f18-81ac2fcea9f9.image.png?v=1624646975079');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  div.main_stuff {
+    background-color: rgb(255, 145, 76);
+    border: 25px solid rgb(237, 181, 134);
+    width: 1000px;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  div > img.Logo {
+    width: 650px;
+    display: block;
+    margin: 10px auto;
+    /* box-shadow: 5px 5px 10px rgb(224,119,51); */
+
+    /* margin:10px, 50px; */
+    /* border: 5px red solid; */
+  }
+
+  div > img.banner {
+    width: 890px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    border: 25px solid rgb(103, 182, 179);
+  }
+
+  p.escape {
+    position: absolute;
+    top: 52;
+    left: 314px;
+    font-size: 1.5em;
+    color: rgb(245, 200, 92);
+    background-color: rgb(213, 86, 69);
+    border: 2.5px solid rgb(141, 56, 45);
+  }
+
+  div.sticky_note {
+    background-color: rgb(254, 236, 224);
+    box-shadow: 2px 2px 5px rgb(104, 86, 74);
+  }
+
+  div.title_tag {
+    width: 940px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /******************Main Page Nav***********************/
+  nav > ul {
+    list-style: none;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 25px auto;
+    padding: 0px;
+    width: 950px;
+  }
+
+  nav > ul > li > a:link,
+  nav > ul > li > a:visited {
+    display: block;
+    font-size: 2em;
+    line-height: 2em;
+    width: 96%;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(213, 86, 69);
+    border: 7.5px solid rgb(141, 56, 45);
+    color: white;
+    text-shadow: 2px 2px black;
+    text-decoration: none;
+  }
+
+  /*****************Main Page***********************/
+
+  div.option_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 950px;
+    height: 500px;
+    margin: 25px auto;
+  }
+
+  div.option_items > #curry {
+    grid-column: 1;
+    grid-row: 1/4;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+  div.option_items > #curry > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  div.option_items > #curry > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  div.option_items > #curry > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 4em;
+    top: 40%;
+    left: 35%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+  div.option_items > #curry > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #curry > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  div.option_items > #menu_items {
+    grid-column: 2;
+    grid-row: 1/2;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+  div.option_items > #menu_items > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  div.option_items > #menu_items > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+  }
+  div.option_items > #menu_items > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    top: 40%;
+    left: 32.5%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+
+  div.option_items > #menu_items > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #menu_items > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  div.option_items > #parties_events {
+    grid-column: 2;
+    grid-row: 2/3;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+  div.option_items > #parties_events > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  div.option_items > #parties_events > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  div.option_items > #parties_events > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 2em;
+    top: 40%;
+    left: 32.5%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+  div.option_items > #parties_events > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #parties_events > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  div.option_items > #testimonials {
+    grid-column: 2;
+    grid-row: 3/4;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+
+  div.option_items > #testimonials > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  div.option_items > #testimonials > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  div.option_items > #testimonials > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    top: 40%;
+    left: 32.5%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+  div.option_items > #testimonials > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #testimonials > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  /*****************Curry Page***********************/
+
+  div.banner_place > img.banner {
+    z-index: 0;
+  }
+  div.banner_place > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 10.5%;
+    bottom: 10;
+    left: 17.76%;
+    right: 0;
+    opacity: 0;
+    height: 620px;
+    width: 1100px;
+  }
+  div.banner_place > div.overlay:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
+  div.banner_place > div.overlay > div.text {
+    font-size: 4em;
+    text-decoration: none;
+  }
+
+  div.banner_place > div.overlay > div.text:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+}
+@media screen and (min-width: 760px) {
+}
+@media screen and (min-width: 1200px) {
+  body {
+    /* background-color:rgb(138,216,213); */
+    background-color: rgb(103, 182, 179);
+    background-image: url('https://cdn.glitch.com/b76629d6-7d20-4296-9a57-a0101d139dd6%2Fac82648f-0736-431a-9f18-81ac2fcea9f9.image.png?v=1624646975079');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  div.main_stuff {
+    background-color: rgb(255, 145, 76);
+    /* background-color: rgb(228,191,162); */
+    border: 25px solid rgb(237, 181, 134);
+    width: 1000px;
+    margin: auto;
+    border-radius: 5px;
+    /* box-shadow: 5px 5px 10px black,  -5px -5px 10px black, inset 5px 5px 10px black,  inset -5px -5px 10px black; */
+  }
+
+  div > img.Logo {
+    width: 650px;
+    display: block;
+    margin: 10px auto;
+    /* box-shadow: 5px 5px 10px rgb(224,119,51); */
+
+    /* margin:10px, 50px; */
+    /* border: 5px red solid; */
+  }
+
+  div > img.banner {
+    width: 890px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    border: 25px solid rgb(103, 182, 179);
+  }
+
+  p.escape {
+    position: absolute;
+    top: 52;
+    left: 314px;
+    font-size: 1.5em;
+    color: rgb(245, 200, 92);
+    background-color: rgb(213, 86, 69);
+    border: 2.5px solid rgb(141, 56, 45);
+  }
+
+  div.sticky_note {
+    background-color: rgb(254, 236, 224);
+    box-shadow: 2px 2px 5px rgb(104, 86, 74);
+  }
+
+  div.title_tag {
+    width: 940px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+    line-height: 2em;
+  }
+  /******************Main Page Nav***********************/
+  nav > ul {
+    list-style: none;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 25px auto;
+    padding: 0px;
+    width: 950px;
+  }
+
+  nav > ul > li > a:link,
+  nav > ul > li > a:visited {
+    display: block;
+    font-size: 2em;
+    line-height: 2em;
+    width: 96%;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(213, 86, 69);
+    border: 7.5px solid rgb(141, 56, 45);
+    color: white;
+    text-shadow: 2px 2px black;
+    text-decoration: none;
+  }
+
+  /*****************Main Page***********************/
+
+  div.option_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 950px;
+    height: 500px;
+    margin: 25px auto;
+  }
+
+  div.option_items > #curry {
+    grid-column: 1;
+    grid-row: 1/4;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+  div.option_items > #curry > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  div.option_items > #curry > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  div.option_items > #curry > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 4em;
+    top: 40%;
+    left: 35%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+  div.option_items > #curry > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #curry > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  div.option_items > #menu_items {
+    grid-column: 2;
+    grid-row: 1/2;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+  div.option_items > #menu_items > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  div.option_items > #menu_items > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+  }
+  div.option_items > #menu_items > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    top: 40%;
+    left: 32.5%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+
+  div.option_items > #menu_items > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #menu_items > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  div.option_items > #parties_events {
+    grid-column: 2;
+    grid-row: 2/3;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+  div.option_items > #parties_events > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  div.option_items > #parties_events > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  div.option_items > #parties_events > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 2em;
+    top: 40%;
+    left: 32.5%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+  div.option_items > #parties_events > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #parties_events > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  div.option_items > #testimonials {
+    grid-column: 2;
+    grid-row: 3/4;
+    position: relative;
+    border: 5px solid rgb(103, 182, 179);
+  }
+
+  div.option_items > #testimonials > img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  div.option_items > #testimonials > a > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  div.option_items > #testimonials > a > div.overlay > div.text {
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    top: 40%;
+    left: 32.5%;
+    transition: 0.5s ease;
+    text-decoration: none;
+  }
+  div.option_items > #testimonials > a:link,
+  a:visited {
+    color: black;
+    opacity: 0;
+  }
+  div.option_items > #testimonials > a:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+
+  /*****************Curry Page***********************/
+
+  div.banner_place > img.banner {
+    z-index: 0;
+  }
+  div.banner_place > div.overlay {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 10.5%;
+    bottom: 10;
+    left: 17.76%;
+    right: 0;
+    opacity: 0;
+    height: 620px;
+    width: 1100px;
+  }
+  div.banner_place > div.overlay:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
+  div.banner_place > div.overlay > div.text {
+    font-size: 4em;
+    text-decoration: none;
+  }
+
+  div.banner_place > div.overlay > div.text:hover {
+    opacity: 0.5;
+    transition: 0.5s ease;
+  }
+}

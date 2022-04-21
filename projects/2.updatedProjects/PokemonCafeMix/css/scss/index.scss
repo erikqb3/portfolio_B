@@ -1,0 +1,8 @@
+@import '_index(min)';
+
+@media only screen and (min-width: 500px) {
+  @import '_index(med)';
+}
+@media only screen and (min-width: 1200px) {
+  @import '_index(max)';
+}
