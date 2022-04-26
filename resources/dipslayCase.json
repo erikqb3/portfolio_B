@@ -11,6 +11,17 @@
     "descript": ""
   },
   "project2": {
+    "name": "Pokemon Cafe Mix (Fan-Art)",
+    "path": "/projects/2.updatedProjects/PokemonCafeMix/views/menu.html",
+    "siteType": ["Fan Art", "Game", "Personal Project"],
+    "yearCreated": "2021",
+    "thumbnailPaths": [
+      "resources/img/PCM_thumbnail.png",
+      "resources/img/HeroFactoryCard.png"
+    ],
+    "descript": ""
+  },
+  "project3": {
     "name": "Family History Bingo",
     "path": "/projects/1.oldProjects/FamilyHistoryBingo/Bingo.html",
     "siteType": ["Fan-Art", "School Project", "Game"],
@@ -18,17 +29,6 @@
     "thumbnailPaths": [
       "resources/img/FHB_thumbnail.png",
       "resources/img/Square.png"
-    ],
-    "descript": ""
-  },
-  "project3": {
-    "name": "Pokemon Cafe Mix (Fan-Art)",
-    "path": "/projects/1.oldProjects/PokemonCafeMix/PCM_menu_items.html",
-    "siteType": ["Fan Art", "Game", "Personal Project"],
-    "yearCreated": "2021",
-    "thumbnailPaths": [
-      "resources/img/PCM_thumbnail.png",
-      "resources/img/HeroFactoryCard.png"
     ],
     "descript": ""
   },
