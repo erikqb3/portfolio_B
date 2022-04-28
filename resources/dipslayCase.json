@@ -3,7 +3,7 @@
     "name": "Hero Factory",
     "path": "/projects/1.oldProjects/HeroFactory/html/index.html",
     "siteType": ["School Project", "Social Media"],
-    "yearCreated": "2021",
+    "yearCreated": 2021,
     "thumbnailPaths": [
       "resources/img/HF_thumbnail.png",
       "resources/img/Square.png"
@@ -13,8 +13,8 @@
   "project2": {
     "name": "Pokemon Cafe Mix (Fan-Art)",
     "path": "/projects/2.updatedProjects/PokemonCafeMix/views/menu.html",
-    "siteType": ["Fan Art", "Game", "Personal Project"],
-    "yearCreated": "2021",
+    "siteType": ["Fan-Art", "Game", "Personal Project"],
+    "yearCreated": 2021,
     "thumbnailPaths": [
       "resources/img/PCM_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
@@ -25,7 +25,7 @@
     "name": "Family History Bingo",
     "path": "/projects/1.oldProjects/FamilyHistoryBingo/Bingo.html",
     "siteType": ["Fan-Art", "School Project", "Game"],
-    "yearCreated": "2021",
+    "yearCreated": 2021,
     "thumbnailPaths": [
       "resources/img/FHB_thumbnail.png",
       "resources/img/Square.png"
@@ -36,7 +36,7 @@
     "name": "Pokemon: Ro-Sha-Bo!",
     "path": "/projects/1.oldProjects/PokemonRoShamBo/PokemonRSB.html",
     "siteType": ["Fan-Art", "Game", "School Project"],
-    "yearCreated": "2021",
+    "yearCreated": 2021,
     "thumbnailPaths": [
       "resources/img/PRSB_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
@@ -47,7 +47,7 @@
     "name": "You Know Studio Ghibli?!?!",
     "path": "/projects/1.oldProjects/YouKnowStudioGhibli/featuredAttraction.html",
     "siteType": ["Fan-Art", "Game", "School Project"],
-    "yearCreated": "2021",
+    "yearCreated": 2021,
     "thumbnailPaths": [
       "resources/img/YKSG_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
@@ -58,7 +58,7 @@
     "name": "To Do List",
     "path": "/projects/1.oldProjects/ToDoList/ToDo.html",
     "siteType": ["School Project", "App"],
-    "yearCreated": "2021",
+    "yearCreated": 2021,
     "thumbnailPaths": [
       "resources/img/TD_thumbnail.png",
       "resources/img/HeroFactoryCard.png"
