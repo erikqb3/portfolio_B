@@ -80,7 +80,7 @@ header div#filterSettings_holder ul li {
 }
 
 header div#filterSettings_holder ul li:hover {
-  background-color: #3a3a3a;
+  background-color: #01052a;
 }
 
 header div#filterSettings_void[class="visible"] {
@@ -358,7 +358,7 @@ footer {
     width: 45vw;
     height: 10rem;
   }
-  header div#filterSettings_holder ul {
+  header div#filterSettings_holder ul#nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -368,11 +368,52 @@ footer {
             align-items: center;
     height: 10rem;
   }
-  header div#filterSettings_holder ul li {
+  header div#filterSettings_holder ul#nav li {
+    display: block;
     line-height: 7rem;
     padding: 0 auto;
     font-size: 1.5rem;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header div#filterSettings_holder ul#nav li div {
+    line-height: 10rem;
+  }
+  header div#filterSettings_holder ul#nav li ul {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+  }
+  header div#filterSettings_holder ul#nav li ul li {
+    margin: 0;
+    line-height: 1.5rem;
+    background-color: #01052a;
+    color: white;
+  }
+  header div#filterSettings_holder ul#nav li ul li:hover {
+    background-color: #3a3a3a;
+  }
+  header div#filterSettings_holder ul#nav li ul#ST_dropDwn_content {
+    height: 30rem;
+  }
+  header div#filterSettings_holder ul#nav li ul#YC_dropDwn_content {
+    height: 20rem;
+  }
+  header div#filterSettings_holder ul#nav li.dropDwn_holder:nth-of-type(2),
+  header div#filterSettings_holder ul#nav li.dropDwn_holder:nth-of-type(3),
+  header div#filterSettings_holder ul#nav li.dropDwn_holder:hover > div {
+    padding: 0;
+  }
+  header div#filterSettings_holder ul#nav li.dropDwn_holder:nth-of-type(2):hover > div {
+    margin-top: 30rem;
+  }
+  header div#filterSettings_holder ul#nav li.dropDwn_holder:nth-of-type(3):hover > div {
+    margin-top: 20rem;
+  }
+  header div#filterSettings_holder ul#nav li.dropDwn_holder:hover > ul {
+    display: block;
   }
   div#hero {
     height: 35rem;

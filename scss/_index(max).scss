@@ -18,26 +18,65 @@ header {
   div#filterSettings_holder {
     width: 45vw;
     height: 10rem;
-      ul {
+      ul#nav {
         display:flex;
         width: 100%;
         align-items: center;
         height: 10rem;
+        // overflow:hidden;
         li {
+          display:block;
           line-height: 7rem;
           padding: 0 auto;
           font-size: 1.5rem;
           width:100%;
+          height:fit-content;
+          // background-color: aqua;
+          div {
+            // background-color: red;
+            line-height:10rem;
+          }
+          div:hover {
+            
+          }
+          ul {
+            margin:0;
+            padding: 0;
+            overflow-y:scroll;
+            li {
+            margin: 0;
+            line-height: 1.5rem;
+            background-color: rgb(1, 5, 42);
+            color:white;
+          } 
+          li:hover {
+            background-color: #3a3a3a;
+          }
+        } 
+        ul#ST_dropDwn_content{
+          height:30rem;
         }
-        // li:nth-of-type(3) {
-        //   line-height: 3.5rem;
-        // }
+        ul#YC_dropDwn_content{
+          height: 20rem;
+        }
+        }
+        li.dropDwn_holder:nth-of-type(2),
+        li.dropDwn_holder:nth-of-type(3),
+        li.dropDwn_holder:hover > div {
+          padding:0;
+        }
+        li.dropDwn_holder:nth-of-type(2):hover > div {
+          margin-top:30rem;
+        }
+        li.dropDwn_holder:nth-of-type(3):hover > div {
+          margin-top: 20rem;
+        }
+        li.dropDwn_holder:hover > ul {
+          // margin-top: 0rem;
+          display:block;
+        }
       }
   }
-  // div#filterSettings_void[class = "visible"] {
-  // }
-  // div#filterSettings_holder[class = "visible"] {
-  // }
 }
 
 

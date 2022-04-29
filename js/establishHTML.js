@@ -8,13 +8,13 @@ export const establishHTML = {
     hamBtn = this.generateElement('div', 'hamBtn', '', '&#9776'),
     filterSettings_void = this.generateElement('div', 'filterSettings_void'),
     filterSettings_holder = this.generateElement('div','filterSettings_holder'),
-    filterSettings_list = this.generateElement('ul'),
+    filterSettings_list = this.generateElement('ul',"nav"),
     listOptions = ['ALL', 'Site Type', 'Year Created', 'Resume', 'Bio/Contact']
   ) {
     /**
      * STEP1: give Hamburger Menu Button an event listener
      * STEP2: create Nav/Filter Bar by looping through the "listOptions" array
-     * STEP2a: add "actualFilter" class to element if filter options exist
+     * STEP2a: add "dropDwn_holder" class to element if filter options exist
      * STEP3: append elements together
      */
 
@@ -22,8 +22,11 @@ export const establishHTML = {
 
     //STEP2
     for (let i in listOptions) {//STEP2a
-      if (i == 1 || i == 2) {
-        listOptions[i] = this.generateElement('li','','actualFilter',listOptions[i]);
+      // console.log(i)
+      if ((i == 1) || (i == 2)) {
+        // console.log(listOptions[i])
+        listOptions[i] = this.generateElement('li','','dropDwn_holder',listOptions[i]);
+        this.filterDropDowns(listOptions[i]);
       } else {
         listOptions[i] = this.generateElement('li', '', '', listOptions[i]);
       }
@@ -58,43 +61,45 @@ export const establishHTML = {
     document.querySelector('body').appendChild(hero);
   },
   filterDropDowns: function (
-    siteType = document.querySelectorAll("li.actualFilter")[0],
-    yearCreated = document.querySelectorAll("li.actualFilter")[1],
+    listOption,
     ST_array = ["School Project","Fan Art","Game","Personal Project","App","E-commerce","Client Work"],
-    YC_array = ["2020 - 2024", "2025 - 2029","2030 - 2034","2035 - 2039"]) {
+    YC_array = ["2020 - 2024", "2025 - 2029","2030 - 2034","2035 - 2039", "2040 - 2044", "2045 - 2049" ], //if you add more, change the margin-top of "li.dropDwn_holder:nth-of-type(x):hover"
 
-      let ST_dropDown = this.generateElement('div',"ST_dropDown","dropDown");
-      let ST_list = this.generateElement('ul',"ST_list","DDList");
-      for (let i in ST_array) {
-        let ST_filter = this.generateElement('li',"","filter",`${ST_array[i]}`);
-        ST_list.appendChild(ST_filter)
-      }
-      ST_dropDown.appendChild(ST_list);
-      siteType.appendChild(ST_dropDown);
-      ST_dropDown.style.display = "none";
-
+    ST_dropDwn_Btn = this.generateElement('div',"ST_dropDwn_Btn","dropDown"),
+    ST_dropDwn_content = this.generateElement('ul',"ST_dropDwn_content","DDList"),
+  
+    YC_dropDwn_Btn = this.generateElement('div',"YC_dropDwn_Btn","dropDown"),
+    YC_dropDwn_content = this.generateElement('ul',"YC_dropDwn_content","DDList")
+    ) {
       
-      let YC_dropDown = this.generateElement('div',"ST_dropDown","dropDown");
-      let YC_list = this.generateElement('ul',"YC_list","DDList");
-      for (let ii in ST_array) {
-        let YC_filter = this.generateElement('li',"","filter",`${YC_array[ii]}`);
-        YC_list.appendChild(YC_filter)
+      let ST_dropDwn_holder;
+      let YC_dropDwn_holder;
+
+      console.log(listOption)
+
+      try {
+        if (listOption.innerHTML == "Site Type") {
+          ST_dropDwn_holder = listOption;
+          ST_dropDwn_holder.innerHTML="";
+          for (let i in ST_array) {
+            let ST_filter = this.generateElement('li',"","filter",`${ST_array[i]}`);
+            ST_dropDwn_content.appendChild(ST_filter)
+          }
+          ST_dropDwn_holder = this.appendChildren(ST_dropDwn_holder, ST_dropDwn_Btn,ST_dropDwn_content);
+          ST_dropDwn_Btn.innerHTML = "Site Type"
+        }     
+        else if (listOption.innerHTML = "Year Created") {
+          YC_dropDwn_holder = listOption;
+          YC_dropDwn_holder.innerHTML="";
+          for (let i in YC_array) {
+            let YC_filter = this.generateElement('li',"","filter",`${YC_array[i]}`);
+            YC_dropDwn_content.appendChild(YC_filter)
+          }
+          YC_dropDwn_holder = this.appendChildren(YC_dropDwn_holder, YC_dropDwn_Btn,YC_dropDwn_content);
+          YC_dropDwn_Btn.innerHTML = "Year Created"
+        }   
       }
-      YC_dropDown.appendChild(YC_list)
-
-
-    siteType.addEventListener('mouseover',(e)=>{
-      console.log("HI");
-      ST_dropDown.style.display = "block";
-      ST_dropDown.addEventListener('mouseout',(e)=> {
-        ST_dropDown.style.display = "hidden";
-        console.log("OFF")
-      })
-    });
-    yearCreated.addEventListener('mouseover',(e)=>{
-      console.log("BYE")
-      
-    })
+      catch(err) {}
   },
   mainContent: async function () {
     let json = '../resources/dipslayCase.json';
