@@ -62,7 +62,7 @@ export const establishHTML = {
   },
   filterDropDowns: function (
     listOption,
-    ST_array = ["School Project","Fan Art","Game","Personal Project","App","E-commerce","Client Work"],
+    ST_array = ["For Authors","For Artists","For Animators", "For Anyone Else"],
     YC_array = ["2020 - 2024", "2025 - 2029","2030 - 2034","2035 - 2039", "2040 - 2044", "2045 - 2049" ], //if you add more, change the margin-top of "li.dropDwn_holder:nth-of-type(x):hover"
 
     ST_dropDwn_Btn = this.generateElement('div',"ST_dropDwn_Btn","dropDown"),
