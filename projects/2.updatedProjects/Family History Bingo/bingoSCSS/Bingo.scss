@@ -1,0 +1,12 @@
+@import '_bingo(min)';
+
+@media only screen and (min-width: 767px) {
+  @import '_bingo(med)';
+}
+@media only screen and (min-width: 993px) {
+  @import '_bingo(max)';
+}
+@media only screen and (min-width: 1600px) {
+
+}
+  // 

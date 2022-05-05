@@ -1,3 +1,121 @@
+// export const establishHTML  = {
+//   createTabs: function(
+//     nav = essentialFunctions.generateElement('nav','tabs'),
+//     ul = essentialFunctions.generateElement('ul',"tabList"),
+//     tabs = ["Timer","Call Out","History"]
+//   ) {
+//     for (let i in tabs) {
+//       let li = essentialFunctions.generateElement('li',"","",tabs[i]);
+//       ul.appendChild(li);
+//       li.addEventListener("click", (e)=> {
+//         console.log(e.target);
+//       })
+//     }
+//     nav.appendChild(ul);
+//     document.questySelector('main').insertBefore(nav,document.querySelector('div#mainScreen'))
+//   },
+//   createTimer: function (
+//     timer = essentialFunctions.generateElement('div',"timer"),
+//     timer_display = essentialFunctions.generateElement('div',"timer_display"),
+//     timer_keypad = essentialFunctions.generateElement('div',"timer_keypad"),
+//     numbers = [7,8,9,4,5,6,1,2,3,0],
+//     number_div = essentialFunctions.generateElement('div',"","number")
+//   ) {
+//     for (let i in numbers) {
+//       let number_p = essentialFunctions.generateElement('p',"","",numbers[i]);
+//       number_div.appendChild(number_p);
+//       timer_keypad.appendChild(number_div);
+//     }
+//     timer = essentialFunctions.appendChildren(timer, timer_display,timer_keypad)
+//     document.questySelector('main').insertBefore(timer,document.querySelector('div#mainScreen'))
+//   },
+//   createCallOut: function(
+//     callOut = essentialFunctions.generateElement('div',"callOut"),
+//     callOut_text = essentialFunctions.generateElement('p',"callOut_text")
+//   ){
+//     callOut.appendChild(callOut_text);
+//     document.questySelector('main').insertBefore(callOut,document.querySelector('div#mainScreen'))
+//   },
+//   createHistory: function(
+//     history = essentialFunctions.generateElement('div',"history"),
+//     history_text = essentialFunctions.generateElement('p',"history_text")
+//   ){
+//     history.appendChild(history_text);
+//     document.questySelector('main').insertBefore(history,document.querySelector('div#mainScreen'))
+//   },
+// }
+
+// export const essentialFunctions = {
+//   generateElement: function (
+//     paramElement,
+//     paramId = '',
+//     paramClass = '',
+//     paramText = '',
+//     paramLink = ''
+//   ) {
+//     let element = document.createElement(paramElement);
+//     element.id = paramId;
+//     element.setAttribute('class', paramClass);
+//     switch (paramElement) {
+//       case 'img':
+//         element.setAttribute('src', paramLink);
+//         element.setAttribute('alt', paramId);
+//         break;
+//       case 'a':
+//         element.setAttribute('href', paramLink);
+//         break;
+//       case 'input':
+//         element.setAttribute('type', paramClass);
+//         element.setAttribute('name', paramId);
+//       case 'source':
+//         element.setAttribute('src', paramLink);
+//         element.setAttribute('type', paramClass);
+//       default:
+//         break;
+//     }
+//     if (paramText != '') {
+//       element.innerHTML = paramText;
+//     }
+//     return element;
+//   },
+//   clearElement: function (elementStr) {
+//     document.querySelector(elementStr).innerHTML = '';
+//   },
+//   appendChildren: function (parent, ...elementChildren) {
+//     for (let i in elementChildren) {
+//       parent.appendChild(elementChildren[i]);
+//     }
+//     return parent;
+//   },
+// }
+
+// console.log("HELLOW")
+
+// establishHTML.createTabs();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let goodCombos = [];
 
 haveTimer();

@@ -1,0 +1,144 @@
+body main nav ul {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 84.5%;
+  margin: 0 auto;
+}
+
+body main nav ul li {
+  background-color: forestgreen;
+  font-weight: bold;
+  line-height: 3rem;
+  padding: 0 7.5%;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+body main nav ul li:hover {
+  background-color: #145114;
+}
+
+body main div#mainScreen {
+  width: 84.5%;
+  margin: 0 auto;
+  height: 30rem;
+  outline: 0.75rem solid forestgreen;
+  outline-offset: -0.75rem;
+}
+
+body main div#mainScreen div#timer,
+body main div#mainScreen div#callOut,
+body main div#mainScreen div#history {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  height: 95%;
+  padding: 0.75rem;
+}
+
+body main div#mainScreen div#timer div#timer_display {
+  width: 100%;
+  padding: 2.25rem 0;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+body main div#mainScreen div#timer div#timer_keypad {
+  width: 100%;
+  margin: 0rem auto;
+  height: 19rem;
+  display: -ms-grid;
+  display: grid;
+  border: 1px solid black;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+body main div#mainScreen div#timer div#timer_keypad div.number {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 0.25px solid black;
+}
+
+body main div#mainScreen div#timer div#timer_keypad div.number p {
+  margin: 0;
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body main div#mainScreen div#timer div#timer_keypad div.number:nth-child(10) {
+  cursor: pointer;
+  padding: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+body main div#mainScreen div#callOut {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body main div#mainScreen div#callOut p {
+  display: block;
+  font-size: 6rem;
+}
+
+body main div#mainScreen div#history {
+  background-image: url("../familySearchLogo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body main div#mainScreen div#history p {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
+  margin: 0;
+  padding: 4rem 10%;
+  background-color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-size: 2.25rem;
+}
+
+body main div#btnHolder {
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+body main div#btnHolder button {
+  width: 5rem;
+  line-height: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+body main h1, body main a#pdfLink {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+/*# sourceMappingURL=Bingo.css.map */
