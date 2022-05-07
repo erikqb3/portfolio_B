@@ -99,7 +99,9 @@ export const establishHTML = {
           YC_dropDwn_Btn.innerHTML = "Year Created"
         }   
       }
-      catch(err) {}
+      catch(err) {
+        console.log(err,"L103")
+      }
   },
   mainContent: async function () {
     let json = '../resources/dipslayCase.json';
