@@ -105,7 +105,7 @@ export const establishHTML = {
       }
   },
   mainContent: async function () {
-    let json = '../resources/dipslayCase.json';
+    let json = '../resources/displayCase.json';
     await fetch(json,
         {
           headers: {
@@ -117,6 +117,9 @@ export const establishHTML = {
       .then((jsObject) => {
         this.useFetchResults(jsObject);
         this.footer();
+      })
+      .catch(err => {
+        console.log(err)
       });
   },
   useFetchResults: function (
