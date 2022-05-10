@@ -78,6 +78,9 @@ header {
     width: 60vw;
     ul {
       display:block;
+      li.dropDwn_holder {
+        display:none;
+      }
     }
   }
 }
