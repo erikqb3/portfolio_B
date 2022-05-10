@@ -106,8 +106,14 @@ export const establishHTML = {
   },
   mainContent: async function () {
     try {
-      let json = 'displayCase.json';
-      await fetch(json)
+      let json = './../resources/displayCase.json';
+      await fetch(json,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept':'application/json'
+            }
+          })
         .then((response) => {return response.json()})
         .then((jsObject) => {
           this.useFetchResults(jsObject);
@@ -118,6 +124,7 @@ export const establishHTML = {
         });
     }
     catch (err) {
+
     }
   },
   useFetchResults: function (
