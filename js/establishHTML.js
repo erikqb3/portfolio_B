@@ -105,22 +105,43 @@ export const establishHTML = {
       }
   },
   mainContent: async function () {
-    let json = '../resources/displayCase.json';
-    await fetch(json,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept':'application/json'
-          }
+    try {
+      let json = '../resources/displayCase.json';
+      await fetch(json,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept':'application/json'
+            }
+          })
+        .then((response) => {return response.json()})
+        .then((jsObject) => {
+          this.useFetchResults(jsObject);
+          this.footer();
         })
-      .then((response) => {return response.json()})
-      .then((jsObject) => {
-        this.useFetchResults(jsObject);
-        this.footer();
-      })
-      .catch(err => {
-        console.log(err)
-      });
+        .catch(err => {
+          console.log(err)
+        });
+    }
+    catch (err) {
+      console.log(err);
+      let json = 'https://erikqb3.github.io/portfolio_B/resources/displayCase.json';
+      await fetch(json,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept':'application/json'
+            }
+          })
+        .then((response) => {return response.json()})
+        .then((jsObject) => {
+          this.useFetchResults(jsObject);
+          this.footer();
+        })
+        .catch(err => {
+          console.log(err)
+        });
+    }
   },
   useFetchResults: function (
     results,
