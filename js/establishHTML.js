@@ -124,8 +124,7 @@ export const establishHTML = {
         });
     }
     catch (err) {
-      console.log(err);
-      let json = 'https://erikqb3.github.io/portfolio_B/resources/displayCase.json';
+      let json = '../public/displayCase.json';
       await fetch(json,
           {
             headers: {
