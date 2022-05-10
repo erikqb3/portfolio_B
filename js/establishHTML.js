@@ -107,13 +107,7 @@ export const establishHTML = {
   mainContent: async function () {
     try {
       let json = 'https://github.com/erikqb3/portfolio_B/blob/75f071c4a9b853a48fc1b31c35538575b66d69fd/resources/displayCase.json';
-      await fetch(json,
-          {
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept':'application/json'
-            }
-          })
+      await fetch(json)
         .then((response) => {return response.json()})
         .then((jsObject) => {
           this.useFetchResults(jsObject);
