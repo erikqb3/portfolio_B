@@ -106,7 +106,7 @@ export const establishHTML = {
   },
   mainContent: async function () {
     try {
-      let json = './../resources/displayCase.json';
+      let json = 'displayCase.json';
       await fetch(json,
           {
             headers: {
