@@ -106,8 +106,14 @@ export const establishHTML = {
   },
   mainContent: async function () {
     let json = '../resources/dipslayCase.json';
-    await fetch(json)
-      .then((response) => response.json())
+    await fetch(json,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept':'application/json'
+          }
+        })
+      .then((response) => {return response.json()})
       .then((jsObject) => {
         this.useFetchResults(jsObject);
         this.footer();
