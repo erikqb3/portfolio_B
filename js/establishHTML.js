@@ -46,7 +46,7 @@ export const establishHTML = {
     quote = this.generateElement('p', 'quote', '', `${quoteInfo[0]}`),
     author = this.generateElement('p', 'author', '', `${quoteInfo[1]}`),
     video = this.generateElement('video', '', 'video'),
-    videoSource = this.generateElement('source','','video/mp4','','/resources/PortfolioVideo(Beta1).mp4')
+    videoSource = this.generateElement('source','','video/mp4','','resources/PortfolioVideo(Beta1).mp4')
   ) {
     /**
      * STEP1: give video video properties
@@ -76,31 +76,32 @@ export const establishHTML = {
       let YC_dropDwn_holder;
 
       console.log(listOption)
-
-      try {
-        if (listOption.innerHTML == "Site Type") {
-          ST_dropDwn_holder = listOption;
-          ST_dropDwn_holder.innerHTML="";
-          for (let i in ST_array) {
-            let ST_filter = this.generateElement('li',"","filter",`${ST_array[i]}`);
-            ST_dropDwn_content.appendChild(ST_filter)
-          }
-          ST_dropDwn_holder = this.appendChildren(ST_dropDwn_holder, ST_dropDwn_Btn,ST_dropDwn_content);
-          ST_dropDwn_Btn.innerHTML = "Site Type"
-        }     
-        else if (listOption.innerHTML = "Year Created") {
-          YC_dropDwn_holder = listOption;
-          YC_dropDwn_holder.innerHTML="";
-          for (let i in YC_array) {
-            let YC_filter = this.generateElement('li',"","filter",`${YC_array[i]}`);
-            YC_dropDwn_content.appendChild(YC_filter)
-          }
-          YC_dropDwn_holder = this.appendChildren(YC_dropDwn_holder, YC_dropDwn_Btn,YC_dropDwn_content);
-          YC_dropDwn_Btn.innerHTML = "Year Created"
-        }   
-      }
-      catch(err) {
-        console.log(err,"L103")
+      if (listOption) {
+        try {
+          if (listOption.innerHTML == "Site Type") {
+            ST_dropDwn_holder = listOption;
+            ST_dropDwn_holder.innerHTML="";
+            for (let i in ST_array) {
+              let ST_filter = this.generateElement('li',"","filter",`${ST_array[i]}`);
+              ST_dropDwn_content.appendChild(ST_filter)
+            }
+            ST_dropDwn_holder = this.appendChildren(ST_dropDwn_holder, ST_dropDwn_Btn,ST_dropDwn_content);
+            ST_dropDwn_Btn.innerHTML = "Site Type"
+          }     
+          else if (listOption.innerHTML = "Year Created") {
+            YC_dropDwn_holder = listOption;
+            YC_dropDwn_holder.innerHTML="";
+            for (let i in YC_array) {
+              let YC_filter = this.generateElement('li',"","filter",`${YC_array[i]}`);
+              YC_dropDwn_content.appendChild(YC_filter)
+            }
+            YC_dropDwn_holder = this.appendChildren(YC_dropDwn_holder, YC_dropDwn_Btn,YC_dropDwn_content);
+            YC_dropDwn_Btn.innerHTML = "Year Created"
+          }   
+        }
+        catch(err) {
+          console.log(err,"L103")
+        }
       }
   },
   mainContent: async function () {
