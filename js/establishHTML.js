@@ -118,7 +118,6 @@ export const establishHTML = {
         });
     }
     catch (err) {
-
     }
   },
   useFetchResults: function (
