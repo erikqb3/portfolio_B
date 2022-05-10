@@ -96,6 +96,10 @@ header div#filterSettings_holder[class="visible"] ul {
   display: block;
 }
 
+header div#filterSettings_holder[class="visible"] ul li.dropDwn_holder {
+  display: none;
+}
+
 div#hero {
   width: 100%;
   height: 10rem;
