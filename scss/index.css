@@ -64,7 +64,6 @@ header div#filterSettings_holder {
 }
 
 header div#filterSettings_holder ul {
-  display: none;
   padding: 0;
   margin: 0;
 }
@@ -96,11 +95,53 @@ header div#filterSettings_holder[class="visible"] ul {
   display: block;
 }
 
-header div#filterSettings_holder[class="visible"] ul li.dropDwn_holder {
+header div#filterSettings_holder[class="visible"] ul li.dropDwn_holder ul {
   display: none;
 }
 
-div#hero {
+header div#filterSettings_holder[class="visible"] ul li.dropDwn_holder ul.dropDown_animation {
+  -webkit-animation-name: dropDown;
+          animation-name: dropDown;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+header div#filterSettings_holder[class="visible"] ul li.dropDwn_holder ul.flipUp_animation {
+  -webkit-animation-name: flipUp;
+          animation-name: flipUp;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes dropDown {
+  from {
+    display: none;
+    height: 0;
+  }
+  to {
+    display: block;
+    height: -webkit-fit-content;
+    height: fit-content;
+  }
+}
+
+@-webkit-keyframes flipUp {
+  from {
+    display: block;
+    height: -webkit-fit-content;
+    height: fit-content;
+  }
+  to {
+    display: none;
+    height: 0;
+  }
+}
+
+section#hero {
   width: 100%;
   height: 10rem;
   background-color: #3a3a3a;
@@ -108,9 +149,10 @@ div#hero {
   text-shadow: 2.5px 2.5px 5px black;
   margin-bottom: 1rem;
   overflow: hidden;
+  position: fixed;
 }
 
-div#hero div#infoHolder {
+section#hero div#infoHolder {
   position: absolute;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
@@ -118,28 +160,32 @@ div#hero div#infoHolder {
   width: 100%;
 }
 
-div#hero div#infoHolder h2 {
+section#hero div#infoHolder h2 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 1rem;
 }
 
-div#hero div#infoHolder p {
+section#hero div#infoHolder p {
   width: 90%;
   font-size: 0.75rem;
   margin-left: 1rem;
 }
 
-div#hero div#infoHolder p#author {
+section#hero div#infoHolder p#author {
   font-style: italic;
 }
 
-div#hero video {
+section#hero video {
   width: 100%;
 }
 
-div#mainContent {
+section#mainContent {
+  position: relative;
+  background-color: whitesmoke;
+  margin-top: 12.5rem;
+  padding-bottom: 3rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -148,7 +194,7 @@ div#mainContent {
       grid-template-rows: 1fr;
 }
 
-div#mainContent div.projectHolder {
+section#mainContent div.projectHolder {
   display: inline-block;
   position: relative;
   width: 100%;
@@ -156,7 +202,7 @@ div#mainContent div.projectHolder {
   overflow: hidden;
 }
 
-div#mainContent div.projectHolder div.contentHolder {
+section#mainContent div.projectHolder div.contentHolder {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -164,7 +210,7 @@ div#mainContent div.projectHolder div.contentHolder {
   cursor: pointer;
 }
 
-div#mainContent div.projectHolder div.contentHolder div.infoOverlay {
+section#mainContent div.projectHolder div.contentHolder div.infoOverlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -180,7 +226,7 @@ div#mainContent div.projectHolder div.contentHolder div.infoOverlay {
   -webkit-text-stroke: 0.5px black;
 }
 
-div#mainContent div.projectHolder div.contentHolder img {
+section#mainContent div.projectHolder div.contentHolder img {
   display: block;
   width: 100%;
   height: 100%;
@@ -190,62 +236,63 @@ div#mainContent div.projectHolder div.contentHolder img {
      object-position: center;
 }
 
-div#mainContent div.projectHolder div.contentHolder:hover,
-div#mainContent div.projectHolder div.contentHolder:active {
+section#mainContent div.projectHolder div.contentHolder:hover,
+section#mainContent div.projectHolder div.contentHolder:active {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   -webkit-transition: 0.35s ease;
   transition: 0.35s ease;
 }
 
-div#mainContent div.projectHolder div.contentHolder:hover div.infoOverlay,
-div#mainContent div.projectHolder div.contentHolder:active div.infoOverlay {
+section#mainContent div.projectHolder div.contentHolder:hover div.infoOverlay,
+section#mainContent div.projectHolder div.contentHolder:active div.infoOverlay {
   top: 0%;
   -webkit-transition: 0.35s ease;
   transition: 0.35s ease;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 1) {
+section#mainContent div.projectHolder:nth-child(4n + 1) {
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 1) div.infoOverlay h3 {
+section#mainContent div.projectHolder:nth-child(4n + 1) div.infoOverlay h3 {
   margin: 70% auto 0 auto;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 2) {
+section#mainContent div.projectHolder:nth-child(4n + 2) {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / span 2;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 2) div.infoOverlay h3 {
+section#mainContent div.projectHolder:nth-child(4n + 2) div.infoOverlay h3 {
   margin: 35% auto 0 auto;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 3) {
+section#mainContent div.projectHolder:nth-child(4n + 3) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 3) div.infoOverlay h3 {
+section#mainContent div.projectHolder:nth-child(4n + 3) div.infoOverlay h3 {
   margin: 35% auto 0 auto;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 4) {
+section#mainContent div.projectHolder:nth-child(4n + 4) {
   -ms-grid-column: 3;
   grid-column: 3;
 }
 
-div#mainContent div.projectHolder:nth-child(4n + 4) div.infoOverlay h3 {
+section#mainContent div.projectHolder:nth-child(4n + 4) div.infoOverlay h3 {
   margin: 70% auto 0 auto;
 }
 
 footer {
+  position: relative;
   height: 150px;
-  margin-top: 3rem;
+  margin-top: 0rem;
   background-color: #3a3a3a;
 }
 
@@ -268,75 +315,77 @@ footer {
   header div#filterSettings_holder ul li {
     font-size: 2rem;
   }
-  div#hero {
+  section#hero {
     width: 100%;
     height: 20rem;
     margin-bottom: 1rem;
   }
-  div#hero div#infoHolder {
+  section#hero div#infoHolder {
     height: 20rem;
     width: 100%;
   }
-  div#hero div#infoHolder h2 {
+  section#hero div#infoHolder h2 {
     text-align: center;
     margin: 4rem auto 0 auto;
     font-size: 2.5rem;
   }
-  div#hero div#infoHolder p {
+  section#hero div#infoHolder p {
     text-align: center;
     margin: 1rem auto 0 auto;
     font-size: 1.25rem;
   }
-  div#hero div#infoHolder p#author {
+  section#hero div#infoHolder p#author {
     margin-top: 0.25rem;
   }
-  div#hero video {
+  section#hero video {
     width: 100%;
   }
-  div#mainContent {
+  section#mainContent {
+    margin-top: 22.5rem;
+    padding-bottom: 7.5rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
   }
-  div#mainContent div.projectHolder {
+  section#mainContent div.projectHolder {
     width: 100%;
     height: 100%;
   }
-  div#mainContent div.projectHolder div.infoOverlay h3 {
+  section#mainContent div.projectHolder div.infoOverlay h3 {
     margin: 25% auto 0 auto;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 1) {
+  section#mainContent div.projectHolder:nth-child(3n + 1) {
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 1) div.infoOverlay h3 {
+  section#mainContent div.projectHolder:nth-child(3n + 1) div.infoOverlay h3 {
     margin: 25% auto 0 auto;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 2) {
+  section#mainContent div.projectHolder:nth-child(3n + 2) {
     -ms-grid-column: 2;
     grid-column: 2;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 2) div.infoOverlay h3 {
+  section#mainContent div.projectHolder:nth-child(3n + 2) div.infoOverlay h3 {
     margin: 25% auto 0 auto;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 3) {
+  section#mainContent div.projectHolder:nth-child(3n + 3) {
     -ms-grid-column: 3;
     grid-column: 3;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 3) div.infoOverlay h3 {
+  section#mainContent div.projectHolder:nth-child(3n + 3) div.infoOverlay h3 {
     margin: 25% auto 0 auto;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 4) {
+  section#mainContent div.projectHolder:nth-child(3n + 4) {
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  div#mainContent div.projectHolder:nth-child(3n + 4) div.infoOverlay h3 {
+  section#mainContent div.projectHolder:nth-child(3n + 4) div.infoOverlay h3 {
     margin: 25% auto 0 auto;
   }
   footer {
-    margin-top: 5rem;
+    margin-top: 0rem;
   }
 }
 
@@ -418,31 +467,32 @@ footer {
   header div#filterSettings_holder ul#nav li.dropDwn_holder:hover > ul {
     display: block;
   }
-  div#hero {
+  section#hero {
     height: 35rem;
     margin-bottom: 5rem;
   }
-  div#hero div#infoHolder {
+  section#hero div#infoHolder {
     height: 35rem;
     width: 100%;
   }
-  div#hero div#infoHolder h2 {
+  section#hero div#infoHolder h2 {
     text-align: center;
     margin: 10rem auto 0 auto;
     font-size: 2.5rem;
   }
-  div#hero div#infoHolder p {
+  section#hero div#infoHolder p {
     text-align: center;
     margin: 3rem auto 0 auto;
     font-size: 1.5rem;
   }
-  div#hero div#infoHolder p#author {
+  section#hero div#infoHolder p#author {
     margin-top: 1rem;
   }
-  div#hero video {
+  section#hero video {
     width: 100%;
   }
-  div#mainContent {
+  section#mainContent {
+    margin-top: 37.5rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -450,19 +500,19 @@ footer {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
   }
-  div#mainContent div.projectHolder:nth-child(4n + 1) {
+  section#mainContent div.projectHolder:nth-child(4n + 1) {
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  div#mainContent div.projectHolder:nth-child(4n + 2) {
+  section#mainContent div.projectHolder:nth-child(4n + 2) {
     -ms-grid-column: 2;
     grid-column: 2;
   }
-  div#mainContent div.projectHolder:nth-child(4n + 3) {
+  section#mainContent div.projectHolder:nth-child(4n + 3) {
     -ms-grid-column: 3;
     grid-column: 3;
   }
-  div#mainContent div.projectHolder:nth-child(4n + 4) {
+  section#mainContent div.projectHolder:nth-child(4n + 4) {
     -ms-grid-column: 4;
     grid-column: 4;
   }

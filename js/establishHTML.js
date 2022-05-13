@@ -40,7 +40,7 @@ export const establishHTML = {
   },
   hero: function (
     quoteInfo = this.heroQuotes(),
-    hero = this.generateElement('div', 'hero'),
+    hero = this.generateElement('section', 'hero'),
     infoHolder = this.generateElement('div', 'infoHolder'),
     title = this.generateElement('h2', 'title', '', 'Showcase Portfolio'),
     quote = this.generateElement('p', 'quote', '', `${quoteInfo[0]}`),
@@ -129,7 +129,7 @@ export const establishHTML = {
   useFetchResults: function (
     results,
     contentWrap = this.generateElement('div', 'contentWrap'),
-    mainContent = this.generateElement('div', 'mainContent')
+    mainContent = this.generateElement('section', 'mainContent')
   ) {
     console.log(results);
     for (let i in results) {

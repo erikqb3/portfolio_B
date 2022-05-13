@@ -80,7 +80,7 @@ header {
 }
 
 
-div#hero {
+section#hero {
   height: 35rem;
   margin-bottom: 5rem;
   div#infoHolder {
@@ -108,25 +108,8 @@ div#hero {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-div#mainContent {
+section#mainContent {
+  margin-top: 37.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;

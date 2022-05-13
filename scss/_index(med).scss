@@ -26,7 +26,7 @@ header {
   div#filterSettings_holder[class = "visible"] {
   }
 }
-div#hero {
+section#hero {
   width: 100%;
   height: 20rem;
   margin-bottom: 1rem;
@@ -53,7 +53,9 @@ div#hero {
     width: 100%;
   }
 }
-div#mainContent {
+section#mainContent {
+  margin-top: 22.5rem;
+  padding-bottom: 7.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   // grid-template-rows: 1fr;
@@ -101,5 +103,5 @@ div#mainContent {
   }
 }
 footer {
-  margin-top: 5rem;
+  margin-top: 0rem;
 }
