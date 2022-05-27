@@ -51,6 +51,7 @@ header div#filterSettings_void {
 }
 
 header div#filterSettings_holder {
+  display: none;
   position: absolute;
   z-index: 3;
   background-color: #000855;
@@ -59,8 +60,6 @@ header div#filterSettings_holder {
   top: 0;
   height: 105vh;
   width: 0vw;
-  -webkit-transition: width 0.25s linear;
-  transition: width 0.25s linear;
 }
 
 header div#filterSettings_holder ul {
@@ -88,7 +87,10 @@ header div#filterSettings_void[class="visible"] {
 }
 
 header div#filterSettings_holder[class="visible"] {
+  display: block;
   width: 60vw;
+  -webkit-transition: width 0.25s linear;
+  transition: width 0.25s linear;
 }
 
 header div#filterSettings_holder[class="visible"] ul {
@@ -168,9 +170,9 @@ section#hero div#infoHolder h2 {
 }
 
 section#hero div#infoHolder p {
-  width: 90%;
+  width: 80%;
   font-size: 0.75rem;
-  margin-left: 1rem;
+  margin: 0 auto 0 1rem;
 }
 
 section#hero div#infoHolder p#author {
@@ -408,6 +410,7 @@ footer {
     display: none;
   }
   header div#filterSettings_holder {
+    display: block;
     width: 45vw;
     height: 10rem;
   }
@@ -431,10 +434,11 @@ footer {
     height: -moz-fit-content;
     height: fit-content;
   }
-  header div#filterSettings_holder ul#nav li div {
+  header div#filterSettings_holder ul#nav li div.dropDown {
     line-height: 10rem;
   }
   header div#filterSettings_holder ul#nav li ul {
+    display: none;
     margin: 0;
     padding: 0;
   }

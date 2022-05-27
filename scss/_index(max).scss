@@ -16,6 +16,7 @@ header {
   div#filterSettings_void {
   }
   div#filterSettings_holder {
+    display:block;
     width: 45vw;
     height: 10rem;
       ul#nav {
@@ -32,14 +33,13 @@ header {
           width:100%;
           height:fit-content;
           // background-color: aqua;
-          div {
-            // background-color: red;
+          div.dropDown {
             line-height:10rem;
           }
-          div:hover {
-            
+          div.dropDown:hover {
           }
           ul {
+            display:none;
             margin:0;
             padding: 0;
             // overflow-y:scroll;
@@ -48,17 +48,17 @@ header {
             line-height: 1.5rem;
             background-color: rgb(1, 5, 42);
             color:white;
+            } 
+            li:hover {
+              background-color: #3a3a3a;
+            }
           } 
-          li:hover {
-            background-color: #3a3a3a;
+          ul#ST_dropDwn_content{
+            height:15rem;
           }
-        } 
-        ul#ST_dropDwn_content{
-          height:15rem;
-        }
-        ul#YC_dropDwn_content{
-          height: 20rem;
-        }
+          ul#YC_dropDwn_content{
+            height: 20rem;
+          }
         }
         li.dropDwn_holder:nth-of-type(2),
         li.dropDwn_holder:nth-of-type(3),

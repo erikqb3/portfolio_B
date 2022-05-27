@@ -117,6 +117,7 @@ export const establishHTML = {
         .then((response) => {return response.json()})
         .then((jsObject) => {
           this.useFetchResults(jsObject);
+          this.lazyLoading();
           this.footer();
         })
         .catch(err => {
@@ -138,7 +139,8 @@ export const establishHTML = {
       let contentHolder = this.generateElement('div', '', 'contentHolder');
       let infoOverlay = this.generateElement('div', '', 'infoOverlay');
       let label = this.generateElement('h3', '', 'label', `${results[i].name}`);
-      let thumbnail = this.generateElement('img','','thumbnail','',`${results[i].thumbnailPaths[0]}`);
+      let thumbnail = this.generateElement('img','','thumbnail');
+      thumbnail = this.specialElements(thumbnail,[`${results[i].thumbnailPaths[0]}`,`${results[i].name}`])
 
       infoOverlay.appendChild(label);
       contentHolder = this.appendChildren(
@@ -160,14 +162,19 @@ export const establishHTML = {
     document.querySelector('body').appendChild(footerElement);
     console.log('WORKS?');
   },
-  specialElements: function (element) {
+  specialElements: function (element,extraAttribute = []) {
     switch (element.classList.value) {
       case 'video':
         element.setAttribute('autoplay', 'autoplay');
         element.setAttribute('loop', true);
         element.muted = 'muted';
         break;
+      case 'thumbnail':
+        element.setAttribute('src',"../resources/img/Square.png");
+        element.setAttribute('data-src', extraAttribute[0]);
+        element.setAttribute('alt',extraAttribute[1])
     }
+    return element;
   },
   generateElement: function (
     paramElement,
@@ -210,11 +217,42 @@ export const establishHTML = {
     }
     return parent;
   },
+  lazyLoading: function(){
+    let imagesToLoad = document.querySelectorAll('img[data-src');
+    const loadImages = (img) => {
+      console.log("Img Loaded")
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = () => {
+        img.removeAttribute('data-src');
+      }
+    };
+    const imgOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px -50px 0px" //make bottom positive so images load before entering screen;
+    }
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((items, observer) => {
+        items.forEach((item) => {
+          if(item.isIntersecting) {
+            loadImages(item.target);
+            observer.unobserve(item.target);
+          }
+        });
+      }, imgOptions);
+      imagesToLoad.forEach((img) => {
+        observer.observe(img);
+      });
+    } else {
+      imagesToLoad.forEach((img)=> {
+        loadImages(img);
+      });
+    }
+  },
   heroQuotes: function (
     quotes = [
       {
         Quote: 'The Noblest Art is that of Making Others Happy!',
-        Author: 'P.T.Barnum',
+        Author: 'P.T.Barnum (Entertainer)',
       },
       {
         Quote:
@@ -224,12 +262,22 @@ export const establishHTML = {
       {
         Quote:
           'You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality!',
-        Author: 'Walt Disney',
+        Author: 'Walt Disney (Animator and Entrepeneur)',
       },
       {
         Quote:
           'Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep.',
-        Author: 'Scott Adams',
+        Author: 'Scott Adams (Cartoon Artist)',
+      },
+      {
+        Quote:
+          'Education is the difference between wishing you could help other people and being able to help them.',
+        Author: 'Russell. M. Nelson (Latter-day Prophet)',
+      },
+      {
+        Quote:
+          'Nobody cares now much you know, until they know how much they care.',
+        Author: 'Theodore Roosevelt (U.S. President)',
       },
     ],
     randNumb = Math.floor(Math.random() * quotes.length)
@@ -237,3 +285,52 @@ export const establishHTML = {
     return [quotes[randNumb].Quote, quotes[randNumb].Author];
   },
 };
+
+const helperFunctions = {
+  generateElement: function (
+    paramElement,
+    paramId = '',
+    paramClass = '',
+    paramText = '',
+    paramLink = ''
+  ) {
+    let element = document.createElement(paramElement);
+    element.id = paramId;
+    element.setAttribute('class', paramClass);
+    switch (paramElement) {
+      case 'img':
+        element.setAttribute('src', paramLink);
+        element.setAttribute('alt', paramId);
+        break;
+      case 'a':
+        element.setAttribute('href', paramLink);
+        break;
+      case 'input':
+        element.setAttribute('type', paramClass);
+        element.setAttribute('name', paramId);
+      case 'source':
+        element.setAttribute('src', paramLink);
+        element.setAttribute('type', paramClass);
+      default:
+        break;
+    }
+    if (paramText != '') {
+      element.innerHTML = paramText;
+    }
+    return element;
+  },
+  specialElements: function (element,extraAttribute = []) {
+    switch (element.classList.value) {
+      case 'video':
+        element.setAttribute('autoplay', 'autoplay');
+        element.setAttribute('loop', true);
+        element.muted = 'muted';
+        break;
+      case 'thumbnail':
+        element.setAttribute('src',"../resources/img/Square.png");
+        element.setAttribute('data-src', extraAttribute[0]);
+        element.setAttribute('alt',extraAttribute[1])
+    }
+    return element;
+  },
+}

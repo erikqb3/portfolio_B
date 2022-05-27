@@ -41,7 +41,7 @@ header {
     transition: width 0s linear 0.25s, background-color 0s linear 0.25s;
   }
   div#filterSettings_holder {
-    // display:none;
+    display:none;
     position:absolute;
     z-index: 3;
     background-color:rgba(0,8,85,1);
@@ -50,7 +50,6 @@ header {
     top:0;
     height: 105vh;
     width: 0vw;
-    transition: width 0.25s linear;
       ul {
         // display:none;
         padding:0;
@@ -68,14 +67,21 @@ header {
         li:hover {
           background-color: rgb(1, 5, 42);
         }
+        li.dropDwn_holder {
+          // padding:0;
+          // margin: 5rem 0;
+        }
       }
   }
   div#filterSettings_void[class = "visible"] {
     width: 40vw;
     background-color:rgba(0, 0, 0, 0.5);
+    // cursor:t;
   }
   div#filterSettings_holder[class = "visible"] {
+    display:block;
     width: 60vw;
+    transition: width 0.25s linear;
     ul {
       display:block;
       li.dropDwn_holder {
@@ -141,9 +147,9 @@ section#hero {
       margin-left: 1rem;
     }
     p {
-      width: 90%;
+      width: 80%;
       font-size: 0.75rem;
-      margin-left: 1rem;
+      margin: 0 auto 0 1rem;
     }
     p#author {
       font-style:italic;

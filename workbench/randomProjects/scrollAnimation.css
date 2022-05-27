@@ -4,8 +4,12 @@
   box-sizing:border-box; /*remember*/
 }
 
+html {
+  height: 100vh;
+}
 body {
   font-family: sans-serif;
+  height: 7500px;
 }
 
 .intro{
@@ -35,4 +39,70 @@ section > h1 {
   padding-top: 300px;
   text-align: center;
   font-size: 80px;
+}
+
+
+
+/*Image Animation*/
+div#allImages {
+  width: 99vw;
+  height: 100vh;
+  position:absolute;
+  overflow:hidden;
+
+}
+div.imageHolder{
+  width: 99vw;
+  height: 100vh;
+  position:absolute;
+  overflow:hidden;
+  top:0;
+}
+
+img {
+  width: 99vw;
+  height: 100vh;
+  position:relative;
+}
+
+
+#img1 {
+
+}
+#img2 {
+  height: 100vh;
+}
+#img3 {
+  height: 100vh;
+}
+#img4 {
+  height: 100vh;
+}
+
+
+div.foldUp {
+  animation-name: pseudoScrollEffect;
+  animation-duration: s;
+  animation-timing-function: linear;
+  animation-fill-mode:both;
+
+}
+
+
+@-webkit-keyframes pseudoScrollEffect {
+  from {
+    height: 100vh;
+  }  
+  to {
+    height: 0;
+  }
+}
+
+@keyframes pseudoScrollEffect {
+  from {
+    height: 100vh;
+  }  
+  to {
+    height: 0;
+  }
 }
