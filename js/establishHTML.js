@@ -217,19 +217,24 @@ export const establishHTML = {
     }
     return parent;
   },
-  lazyLoading: function(){
-    let imagesToLoad = document.querySelectorAll('img[data-src');
-    const loadImages = (img) => {
+  lazyLoading: function(
+    imagesToLoad = document.querySelectorAll('img[data-src]'), //images elements with the attribute "data-src"; similar to css #data-src or .data-src
+    loadImages = (img) => {
       console.log("Img Loaded")
       img.setAttribute('src', img.getAttribute('data-src'));
       img.onload = () => {
         img.removeAttribute('data-src');
       }
-    };
-    const imgOptions = {
+    },
+    imgOptions = {
       threshold: 0,
       rootMargin: "0px 0px -50px 0px" //make bottom positive so images load before entering screen;
-    }
+    },
+  ){
+    //imagesToLoad - 
+    //loadImages - 
+    //imgOptions - 
+    //Step1 - 
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((items, observer) => {
         items.forEach((item) => {
@@ -319,7 +324,7 @@ const helperFunctions = {
     }
     return element;
   },
-  specialElements: function (element,extraAttribute = []) {
+  specialElements: function (element,extraAttribute = []) { //CLONE?
     switch (element.classList.value) {
       case 'video':
         element.setAttribute('autoplay', 'autoplay');
@@ -334,3 +339,7 @@ const helperFunctions = {
     return element;
   },
 }
+
+
+
+

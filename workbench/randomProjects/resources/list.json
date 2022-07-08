@@ -1,0 +1,25 @@
+
+{
+  "university":[
+      {
+          "name":"Brigham Young University",
+          "class":[
+              {
+                  "name":"applied programming",
+                  "rating":[
+                          {
+                          "overall": "5",
+                          "workload": "5",
+                          "tudorAvailability" : "5",
+                          "interesting": "5",
+                          "comment": "really engaging, loved the class"
+                          }
+                  ]
+                  
+              }
+          ]
+          
+      }
+      
+  ]
+}

@@ -1,4 +1,4 @@
-import { establishHTML } from "../js/establishHTML.js"
+import { establishHTML } from "../js/establishHTML.js";
 
 
 

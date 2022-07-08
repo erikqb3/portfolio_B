@@ -1,0 +1,139 @@
+html {
+    height: 100vh;
+    body {
+        background-color:black;
+        div#backgroundTree {
+            background-image:url('Tree.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color:black;
+            width: 100%;
+            height: 750vh;
+            z-index:-1;
+            position:absolute;
+        }
+        div#mainContainer {
+            padding-top:10rem;
+            width: 100%;
+            color: white;
+
+            
+            /*GENERIC*/
+            section { 
+                background-color: rgba(0,0,0,0.75);
+                box-shadow:5px 5px 25px black, -5px -5px 25px black;
+                height:fit-content;
+                padding: 2rem 0;
+                margin: 2.5rem auto;
+                border-radius: 50px; 
+                h1 {
+                    margin: 0 0 1rem 1rem;
+                    text-shadow: 2.5px 2.5px 5px darkgreen;
+                    
+                }
+                h2 {
+                    margin: 0 0 1rem 1rem;
+                }
+            }
+            
+            p.btn {
+                background-color:darkgreen;
+                color:white;
+                line-height: inherit;
+                box-shadow: 2px 2px 5px black;
+                text-align:center;
+                text-shadow: 1.5px 1.5px black;
+                width: fit-content;
+                align-items:center;
+            }
+            
+            p.btn:hover {
+                cursor:pointer;
+                background-color:cyan !important;
+                color: rgb(50,50,50) !important;
+                font-weight:bolder;  
+                text-shadow:none;
+                }
+            
+            header{
+                background:linear-gradient(black 47%, rgba(255,255,255,0) 98%);
+                width:100%;
+                height:10rem;
+                margin-top:-10rem;
+                position:fixed;
+                color: white !important;
+                z-index: 6 ;
+                nav {
+                    color: white !important;
+                    padding:0;
+                    div{
+                        color: white !important;
+                        margin:0;
+                        padding:0;
+                        ul#mainNav {
+                            color: white !important;
+                            width: 100%;  
+                            display:flex;
+                            flex-direction:row;
+                            justify-content:space-evenly;
+                            align-items:center;
+                            position:relative;
+                            margin:0;
+                            padding:0;
+                            li {
+                                display:block;
+                                a:link,
+                                a:visited,
+                                a:hover,
+                                a:active
+                                {
+                                    display:block;
+                                    color: white !important;
+                                    width: 10rem!important;
+                                    text-align:center;
+                                }
+                            }
+                            li:not(#logo) {
+                                display:none;
+                            }
+                            li > a > img {
+                            // border: 1px solid red;
+                            width: 5rem ;
+                            }
+                        }
+                        button {
+                            position:absolute;
+                            top:1rem;
+                            right: 0;
+                            color:white !important;
+                            // display:block;
+                            span {
+                                color: white !important;
+                                font-size:3rem;
+                            }
+                        }
+                        div#navcol-1 {
+                            ul#mobileNav {
+                                width: 30vw;
+                                height: 100vh;
+                                position:absolute;
+                                right:0;
+                                margin: -4.5rem 1rem 0 0;
+                                // display: block;
+                                li {
+                                    a {
+                                        color: white;
+                                        text-align:right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

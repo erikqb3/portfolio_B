@@ -1,0 +1,252 @@
+body {
+    background-color:cyan !important;
+}
+
+
+html {
+    height: 100vh;
+    body {
+        height: 500vh;
+        div#mainContainer {
+            
+            section#hero {
+        
+                h1 {
+                }
+                div.row {
+                    width: 75% !important;
+                    display: flex !important;
+                    flex-direction:row !important;
+                    align-items:center;
+                    transition: background-color 1s, color 1s, box-shadow 1s;
+                    div.col#displayDescript {
+                        h2 {
+                            width: 100%;
+                            text-align:center;
+                            margin:1rem 0 0 0 !important;
+                            padding:0;
+                            line-height:3rem;
+                        }
+                        p {
+                            display:block !important;
+                            padding: 0 1rem;
+                            margin: -1rem 0 1rem 0 !important;
+                        }
+                        div#DLbtn2 {
+                        padding: 0;
+                        align-self:center;
+                        display:block;
+                        width: 40%;
+                        margin: 0 auto;
+                            p {
+                                display:block;
+                                color:white;
+                                background-color:darkgreen; 
+                                width: fit-content;
+                                align-items:center;
+                                margin:0;
+                                padding:0 1rem;
+
+                            }
+                        }
+                        div#DLbtn2:hover {
+                            opacity: 1;
+                        }
+                    }
+                    div.col#hero_img {
+                        img {
+                            display:block;
+                            margin: 0 auto;
+                            transition: opacity 0.5s;
+                        }
+                    }
+                    div.col#DLbtn1{
+                        display:none !important;
+                        div.btn {
+                            display:none !important;
+                        }
+                        div.btn.onlyMax:hover {
+                            opacity: 1;
+                        }
+                    }    
+                }
+                div.row.onlyMax:hover{
+                    background-color:white;
+                    color:black;
+                    box-shadow:5px 5px 25px white, -5px -5px 25px white;
+                    div.col#hero_img {
+                        img {  
+                        opacity: 0.5;
+                        transition: opacity 0.5s;
+                        }
+                        img:hover {
+                            opacity: 1 !important;
+                        }
+                    }
+                    div.col#displayDescript {
+                        div.btn {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+            
+            section#progress {
+                div#progress_chart{
+                    article {
+                        display:block;
+                        width:60%;
+                        margin:1rem auto;
+                        align-items: center;
+                        justify-content: center;
+                        span.story_title{
+                            
+                        }
+                        div.progress_holder {
+                            display:flex;
+                            align-items: center;
+                            div.progress_bar {
+                                display:flex;
+                                // width: 100%;
+                                height:0.75rem;
+                                background-color:cyan;
+                            }
+                            span {
+                                text-align:right;
+                                width: 4rem
+                            }
+                        }
+                    }
+                }
+            }
+            
+            section#starters{
+                h1 {
+                }
+
+                div#grid{
+                    // display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-row-gap: 7.5rem;
+                   // grid-auto-rows: 7.5rem; 
+
+                    article {
+                        div.topHalf {
+                            width: 100%;
+                            div.storyOverlay {
+                                h3 {
+                            }
+                                img {   
+                                }    
+                            }
+                            
+                        }
+                        div.topHalf:hover > h3{
+                        }
+                        div.bottomHalf {
+                            padding-top: 1rem;
+                            p {
+                            }
+                            p:hover {
+                            }
+                        }
+                    }
+                }
+                        }
+                    }
+                }
+            }
+
+
+//ANIMATION
+// article.even > div.row,
+// article.odd > div.row
+// {
+//     animation-name: sidescroll;
+//     animation-duration: 20s;
+//     animation-iteration-count: infinite;
+//     animation-timing-function: linear;
+//     // animation-delay: 2s;
+// }
+// article.even > div.row {
+// animation-direction: normal; //toRight
+// }
+// article.odd > div.row {
+// animation-direction: reverse; //toRight
+// }
+// @keyframes sidescroll {
+//     from {
+//         margin-left: 0;
+//     }
+//     to{
+//         margin-left: -122.5vw;
+//     }
+// }
+
+
+
+
+
+
+
+// div#mainContainer {
+
+//     header{
+//         nav {
+//             div{
+//                 ul#mainNav {
+//                     li {
+//                         a:link,
+//                         a:visited,
+//                         a:hover,
+//                         a:active
+//                         {
+//                         }
+//                     }
+//                     li:not(#logo) {
+//                         display:flex !important;
+//                         font-size: 1.75rem;
+//                     }
+//                     li > a > img {
+//                     // border: 1px solid red;
+//                     width: 10rem;
+//                     }
+//                 }
+//             }
+//         }
+        
+
+//     }
+    
+//     section {
+//         h1 {
+//            margin: 0 0 1rem 3rem !important;
+//         }
+//     }
+    
+    
+//     section#progress {
+//         div#progress_chart{
+//             article {
+//                 width:50% !important;
+//                 margin:2rem auto !important;
+//                 span.story_title{
+//                     font-size: 1.5rem;
+//                 }
+//                 div.progress_holder {
+//                     div.progress_bar {
+//                         width: 100%;
+//                         height:0.75rem;
+//                         background-color:cyan;
+//                     }
+//                     span {
+//                         text-align:right;
+//                         width: 4rem
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+    
+// }

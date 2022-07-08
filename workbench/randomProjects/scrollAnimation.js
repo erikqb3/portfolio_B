@@ -1,3 +1,6 @@
+
+
+
 function scrollAnimation () {
   //https://www.youtube.com/watch?v=wLUJ9VNzZXo&ab_channel=DevEd
   //STARTING VARIALBES
@@ -138,7 +141,42 @@ photoAnimation();
 
 
 
+// function writeJson() {
+//   console.log("HELLOW")
+//   let obj = {
+//     university: []
+//   }
+  
+//   obj.university.push(
+//     {
+//       "name":"Brigham Young University",
+//       "class":[
+//           {
+//               "name":"applied programming",
+//               "rating":[
+//                       {
+//                       "overall": "5",
+//                       "workload": "5",
+//                       "tudorAvailability" : "5",
+//                       "interesting": "5",
+//                       "comment": "really engaging, loved the class"
+//                       }
+//               ]
+              
+//           }
+//       ]
+      
+//   }
+//   )
 
+//   let json = JSON.stringify(obj);
+
+//   const fs = require('fs');
+//   fs.writeFile('myjsonfile.json',json,'utf8',callback);
+// }
+
+
+// writeJson();
 
 
 

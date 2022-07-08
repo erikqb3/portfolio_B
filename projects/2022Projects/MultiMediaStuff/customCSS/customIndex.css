@@ -1,0 +1,97 @@
+@media only screen and (min-width: 0px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+  }
+  body header div#logoSpot {
+    width: 100px;
+    margin-left: 5px;
+  }
+  body header div#logoSpot img {
+    width: 100%;
+  }
+  body header nav#mainNav {
+    display: none;
+  }
+  body header nav#mainNav ul li {
+    color: white;
+    cursor: pointer;
+  }
+  body header section#nav_mobile {
+    position: absolute;
+    top: 5vh;
+    right: 20px;
+  }
+  body header section#nav_mobile div#hambBtn {
+    text-align: right;
+    font-size: 1.5rem;
+  }
+  body header section#nav_mobile div#hambBtn i {
+    color: white;
+  }
+  body header section#nav_mobile nav#sideNav ul {
+    list-style: none;
+    text-align: right;
+  }
+  body header section#nav_mobile nav#sideNav ul li {
+    margin: .5rem 0;
+    color: white;
+    cursor: pointer;
+  }
+  body main {
+    background-color: blue;
+  }
+  body footer {
+    position: relative;
+    background-color: #000936;
+    margin: 100% 0 0 0;
+    width: 100%;
+    min-height: 100px;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: red;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  body header {
+    background: white;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, rgba(255, 255, 255, 0)), color-stop(75%, #000936));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 25%, #000936 75%);
+  }
+  body header nav#mainNav {
+    display: block;
+  }
+  body header nav#mainNav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body header nav#mainNav ul li {
+    margin-right: 2.5rem;
+  }
+  body header section#nav_mobile {
+    display: none;
+  }
+  body section#alternatingBanner {
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=customIndex.css.map */

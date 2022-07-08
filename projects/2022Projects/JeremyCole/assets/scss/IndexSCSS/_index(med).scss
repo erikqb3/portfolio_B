@@ -1,0 +1,101 @@
+body {
+    background-color:cyan !important;
+}
+
+
+html {
+    height: 100vh;
+    body {
+        height: 500vh;
+        div#mainContainer {         
+            padding-top:10rem;
+            color: white;
+            
+            /*GENERIC*/
+            section { 
+                background-color: rgba(0,0,0,0.75);
+                height:fit-content;
+                padding: 2rem 0;
+                box-shadow:5px 5px 25px black, -5px -5px 25px black;
+                h1 {
+                    margin: 0 0 1rem 3rem !important;
+                    
+                }
+                h2 {
+                    margin: 0 0 1rem 2rem;
+                }
+            }
+            
+            p.btn {
+                background-color:darkgreen;
+                color:white;
+                line-height: inherit;
+                box-shadow: 2px 2px 5px black;
+                text-align:center;
+                text-shadow: 1.5px 1.5px black;
+            }
+            
+            p.btn:hover {
+                cursor:pointer;
+                background-color:cyan !important;
+                color: rgb(50,50,50) !important;
+                font-weight:bolder;  
+                text-shadow:none;
+                }
+            
+             header{
+                nav {
+                    div{
+                        ul#mainNav {
+                            li {
+                                a:link,
+                                a:visited,
+                                a:hover,
+                                a:active
+                                {
+                                    display:block;
+                                }
+                           }
+                            li:not(#logo) {
+                                display:flex;
+                                width: 5rem;
+                            }
+                            li > a > img {
+                            // border: 1px solid red;
+                            width: 5rem ;
+                            }
+                        }
+                        button {
+                            position:absolute;
+                            top:1rem;
+                            right: 0;
+                            color:white !important;
+                            // display:block;
+                            span {
+                                color: white !important;
+                                font-size:3rem;
+                            }
+                        }
+                        div#navcol-1 {
+                            ul#mobileNav {
+                                width: 30vw;
+                                height: 100vh;
+                                position:absolute;
+                                right:0;
+                                margin: -4.5rem 1rem 0 0;
+                                // display: block;
+                                li {
+                                    a {
+                                        color: white;
+                                        text-align:right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

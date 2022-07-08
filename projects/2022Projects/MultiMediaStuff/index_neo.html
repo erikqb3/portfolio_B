@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="customCSS/customIndex.css">
+    <link rel="stylesheet" href="customCSS/customLandingBanner.css">
+    <script src="https://kit.fontawesome.com/e362623b47.js" crossorigin="anonymous" defer></script>
+    <script src="customJS/establishHTML.js" type="module" defer></script>
+    <script src="customJS/landingPageFunctionality.js" type=module defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div id="logoSpot"><img src="logo-white.png"></div>
+      <nav id="mainNav">
+        <ul>
+          <li class="navOption">Cinematography</li>
+          <li class="navOption">Videography</li>
+          <li class="navOption">Photography</li>
+          <li class="navOption">Audio</li>
+          <li class="navOption">Graphic Design</li>
+          <li class="">Social Media</li>
+          <li class="">Contact</li>
+        </ul>
+      </nav>
+      <section id="nav_mobile">
+        <div id="hambBtn">
+          <!-- = -->
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="sideNav">
+          <ul>
+
+            <li class="navOption">Cinematography</li>
+            <li class="navOption">Videography</li>
+            <li class="navOption">Photography</li>
+            <li class="navOption">Audio</li>
+            <li class="navOption">Graphic Design</li>
+            <li class="">Social Media</li>
+            <li class="">Contact</li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    
+    <section id="alternatingBanner">
+      <!-- <section id="cinematography_youtubestyle" class="bannerOption">
+        <div class="filler"></div>
+        <video id="cinematography_video" controls autoplay muted>
+          <source id="videoA" src="TestRunResources/videoA.mp4" type="video/mp4">
+        </video>
+        <div id="thmbNail_holder">
+          <div id="thmbNail_holder_row">
+            <div class="imgHolder">
+              <div class="overlay"></div>
+              <img src="/TestRunResources/thmbNailB.jpg" alt="videoB">
+            </div>
+            <div class="imgHolder">
+              <div class="overlay"></div>
+              <img src="/TestRunResources/thmbNailC.jpg" alt="videoC">
+            </div>
+            <div class="imgHolder">
+              <div class="overlay"></div>
+              <img src="/TestRunResources/thmbNailD.jpg" alt="videoD">
+            </div>
+            <div class="imgHolder">
+              <div class="overlay"></div>
+              <img src="/TestRunResources/thmbNailE.jpg" alt="videoE">
+            </div>
+          </div>
+          <div id="cinema_see"><a href="#">See More</a></div>
+        </div>
+      </section> -->
+      
+      <section id="videography_2x2" class="bannerOption">
+        <div class="filler"></div>
+        <div class="video_holder">
+          <div class="filter_dark">
+            <h2>VideoA</h2>
+          </div>
+          <video autoplay muted loop>
+            <source id="videoA" src="TestRunResources/videoA.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video_holder">
+          <div class="filter_dark">
+            <h2>VideoB</h2>
+          </div>
+          <video autoplay muted loop>
+            <source id="videoB" src="TestRunResources/videoB.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video_holder">
+          <div class="filter_dark">
+            <h2>VideoC</h2>
+          </div>
+          <video autoplay muted loop>
+            <source id="videoC" src="TestRunResources/videoC.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video_holder">
+          <div class="filter_dark">
+            <h2>VideoD</h2>
+          </div>
+          <video autoplay muted loop>
+            <source id="videoD" src="TestRunResources/videoD.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+      
+      <!-- <section id="photography_carousel" class="bannerOption">
+        <div class="filler"></div>
+        <div id="carousel_holder">
+          <div id="prevBtn" class="revolveBtn"><i class="fa-solid fa-circle-chevron-left"></i></div>
+          <div id="nextBtn" class="revolveBtn"><i class="fa-solid fa-circle-chevron-right"></i></div>
+          <div id="carousel_content">
+            <div id="photoA" class="img_slide">
+              <div class="filter_dark">
+                <h2>Descript1</h2>
+              </div>
+              <img src="/TestRunResources/photoA.jpg">
+            </div>
+            <div id="photoB" class="img_slide">
+              <img src="/TestRunResources/photoB.jpg">
+            </div>
+            <div id="photoC" class="img_slide">
+              <img src="/TestRunResources/photoC.jpg">
+            </div>
+            <div id="photoD" class="img_slide">
+              <img src="/TestRunResources/photoD.jpg">
+            </div>
+            <div id="photoE" class="img_slide">
+              <img src="/TestRunResources/photoE.jpg">
+            </div>
+          </div>
+          <div id="slide-nav">
+            <button class="slide-dot" value="0">X</button>
+            <button class="slide-dot" value="-100">X</button>
+            <button class="slide-dot" value="-200">X</button>
+            <button class="slide-dot" value="-300">X</button>
+            <button class="slide-dot" value="-400">X</button>
+          </div>
+        </div>
+        
+      </section> -->
+
+      <!-- <section id="audio_playlist" class="bannerOption">
+        <div class="filler"></div>
+        <section id="bannerView">
+          <div id="audio_img">
+            <img src="/TestRunResources/audioImgA.jpg">
+          </div>
+          <div id="features">
+            <div id="currentSong">
+              <div id="currentSong_label">
+                <h3 id="labelElement">Audio1</h3>
+              </div>
+              <div id="currentSong_controls">
+                <audio controls controlsList="nodownload">
+                  <source src="/TestRunResources/Audio1.mp3" type="audio/ogg">
+                </audio>
+              </div>
+            </div>
+            <article id="playList">
+              <ul>
+                <li class="playList_song playList_current">Audio1</li>
+                <li class="playList_song">Audio2</li>
+                <li class="playList_song">Audio3</li>
+                <li class="playList_song">Audio4</li>
+                <li class="playList_song">Audio5</li>
+                <li class="playList_song">Audio6</li>
+                <li class="playList_song">Audio7</li>
+                <li class="playList_song">Audio8</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </section> -->
+
+      <!-- <section id="audio_playlist" class="bannerOption">G</section> -->
+
+      <!-- <section id="graphicDesign_xyz" class="bannerOption">H</section> -->
+    </section>
+    <!-- <main>
+      <section id="pageDescript"></section>
+      <section class="fromMike"></section>
+      <section id="sampleGallery"></section>
+      <section class="fromMike"></section>
+      <section></section>
+      <sectioni id="recentBlog"></section>
+      <section id="clients"></section>
+      <section id="contactBig">
+        <article id="infoArea"></article>
+        <artilce id="formArea"></artilce>
+      </section>
+    </main> -->
+    <footer>
+      <section id="siteLinks">
+        <ul>
+          <li><a>Top</a></li>
+          <li><a>Cinematography</a></li>
+          <li><a>Videography</a></li>
+          <li><a>Photography</a></li>
+          <li><a>Audio</a></li>
+          <li><a>XYZ</a></li>
+        </ul>
+      </section>
+      <section id="subscribe"></section>
+      <section id="contactSmall"></section>
+    </footer>
+  </body>
+</html>

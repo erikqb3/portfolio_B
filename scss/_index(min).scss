@@ -11,7 +11,7 @@ header {
   display: flex;
   height: 5rem;
   top: 0;
-  position: sticky;
+  // position: sticky;
   background-color: white;
   color:rgba(0,8,85,1);
   align-items: center;
@@ -134,7 +134,7 @@ section#hero {
   text-shadow: 2.5px 2.5px 5px black;
   margin-bottom: 1rem;
   overflow: hidden;
-  position:fixed;
+  // position:fixed;
   div#infoHolder {
     position:absolute;
     z-index: 2;
@@ -164,7 +164,7 @@ section#hero {
 section#mainContent {
   position:relative;
   background-color:whitesmoke;
-  margin-top: 12.5rem;
+  margin-top: 2.5rem;
   padding-bottom: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -188,7 +188,7 @@ section#mainContent {
         top: 100%;
         align-items: center;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: rgba(0, 0, 0, 0.9);
         color: whitesmoke;
         font-weight: bold;
         text-shadow:2px 2px 5px black;

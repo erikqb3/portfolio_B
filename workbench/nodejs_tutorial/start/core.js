@@ -3,7 +3,7 @@ const {log} = require('util'); //getting specific function from the util library
 // const v8 = require('v8');
 const {getHeapStatistics} = require('v8') //getting specific function from the v8 library rather than the whole library
 
-// const dirUploads = path.join(__dirname,"www","files","uploads"); creates a file path
+// const dirUploads = path.join(__dirname,"www","files","uploads"); creates a file patheach arguement is a step deeper down the path
 // console.log(__dirname)
 // console.log(dirUploads);
 

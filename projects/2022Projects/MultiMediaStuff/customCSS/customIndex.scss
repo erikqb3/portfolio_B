@@ -1,0 +1,196 @@
+@media only screen and (min-width: 0px) {
+  body {
+    // height: 100vh;
+    margin:0;
+    padding:0;
+    header{
+      // background-color:cyan;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      position: absolute;
+      z-index:5;
+      width: 100%;
+      // background: rgb(255,255,255);
+      // background: linear-gradient(0deg, rgba(255,255,255,0) 25%, rgba(0,9,54,1) 75%);
+      div#logoSpot{
+        width: 100px;
+        margin-left: 5px;
+        img{
+          width: 100%;
+        }
+      }
+      nav#mainNav{
+        display:none;
+        ul{
+          li{
+            color:white;
+            cursor: pointer;
+          }
+        }
+      }
+      section#nav_mobile{
+        position:absolute;
+        top:5vh;
+        right:20px;
+        div#hambBtn{
+          // margin: 7.5rem 0 0 70%;
+          text-align:right;
+          font-size: 1.5rem;
+          i{
+            color:white;
+          }
+        }
+        nav#sideNav{
+          ul{
+            list-style: none;
+            text-align:right;
+            li{
+              margin: .5rem 0;
+              color:white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    main{
+      background-color: blue;
+      section#pageDescript{}
+      section.fromMike{}
+      section.sampleGallery{}
+      section#recentBlog{}
+      section#clients{}
+      section#contactBig{
+          article#infoArea{}
+          article#formArea{}
+      }
+    }
+    footer{
+      position: relative;
+      background-color: rgba(0,9,54,1);
+      margin: 100% 0 0 0;
+      width: 100%;
+      min-height:100px;
+      bottom:0;
+      display:flex;
+      color:red;
+      section#siteLinks{}
+      section#subscribe{}
+      section#contactSmall{}
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    header{
+      div#logoSpot{
+        img{}
+      }
+      nav#mainNav{
+        ul{
+          li{
+            a:link,
+            a:visited{}
+            a:hover,
+            a:active{}
+          }
+        }
+      }
+      section#nav_mobile{
+        div#hambBtn{
+          i{}
+        }
+        nav#sideNav{
+          ul{
+            li{
+              a:link,
+              a:visited{}
+              a:hover,
+              a:active{}
+            }
+          }
+        }
+      }
+    }
+    section#alternatingBanner{}
+    main{
+      section#pageDescript{}
+      section.fromMike{}
+      section.sampleGallery{}
+      section#recentBlog{}
+      section#clients{}
+      section#contactBig{
+          article#infoArea{}
+          article#formArea{}
+      }
+    }
+    footer{
+      section#siteLinks{}
+      section#subscribe{}
+      section#contactSmall{}
+    }
+  }
+}
+@media only screen and (min-width: 993px) {
+  body {
+    header{
+      background: rgb(255,255,255);
+      background: linear-gradient(0deg, rgba(255,255,255,0) 25%, rgba(0,9,54,1) 75%);
+      div#logoSpot{
+        img{}
+      }
+      nav#mainNav{
+        display: block;
+        
+        ul{
+          list-style:none;
+          display:flex;
+          li{
+            margin-right: 2.5rem;
+            a:link,
+            a:visited{}
+            a:hover,
+            a:active{}
+          }
+        }
+      }
+      section#nav_mobile{
+        display:none;
+        div#hambBtn{
+          i{}
+        }
+        nav#sideNav{
+          ul{
+            li{
+              a:link,
+              a:visited{}
+              a:hover,
+              a:active{}
+            }
+          }
+        }
+      }
+    }
+    section#alternatingBanner{
+      height: 100vh;
+    }
+    main{
+      section#pageDescript{}
+      section.fromMike{}
+      section.sampleGallery{}
+      section#recentBlog{}
+      section#clients{}
+      section#contactBig{
+          article#infoArea{}
+          article#formArea{}
+      }
+    }
+    footer{
+      // margin: auto 0 0 0;
+      section#siteLinks{}
+      section#subscribe{}
+      section#contactSmall{}
+    }
+  }
+}
