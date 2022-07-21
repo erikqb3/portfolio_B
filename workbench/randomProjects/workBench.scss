@@ -1,0 +1,73 @@
+//Eternal Carousel
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section#carousel {
+  width: 80%;
+  height:fit-content;
+  margin: 0 auto;
+  overflow:hidden;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+  height: 300px;
+  position:relative;
+  // overflow:hidden;
+}
+.slides {
+  display:flex;
+  height: 100%;
+}
+.slide {
+  min-width: 100%;
+  display:flex;
+  justify-content:center;
+  // margin: 0 5rem;
+}
+.slide > div.imgHolder {
+  width: 95%;
+  height: 100%;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  img {
+    width: fit-content;
+    height:100%;
+  }
+}
+
+.slide-controls {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nextBtn,
+#prevBtn {
+  cursor:pointer;
+  background: transparent;
+  font-size: 30px;
+  padding: 10px;
+  border:none;
+  color: cyan;
+}
+#prevBtn:focus,
+#nextBtn:focus {
+  outline:none;
+}
+
+.currentSlide {
+  border: 1px solid red;
+}

@@ -1,5 +1,12 @@
+//Eternal Carousel
 
 
+
+
+
+
+
+//
 
 function scrollAnimation () {
   //https://www.youtube.com/watch?v=wLUJ9VNzZXo&ab_channel=DevEd
