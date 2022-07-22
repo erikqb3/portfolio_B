@@ -1,0 +1,643 @@
+body {
+  /* background-color:rgb(138,216,213); */
+  background-color: #67b6b3;
+  background-image: url("https://cdn.glitch.com/b76629d6-7d20-4296-9a57-a0101d139dd6%2Fac82648f-0736-431a-9f18-81ac2fcea9f9.image.png?v=1624646975079");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+main button {
+  background-color: #d55645;
+  border: 0.2rem solid #8d382d;
+  color: whitesmoke;
+}
+
+main button:hover,
+main button:active {
+  background-color: #8d382d;
+  border: 0.2rem solid #d55645;
+}
+
+main div#banner_holder img {
+  width: 100%;
+  display: block;
+  height: 20vh;
+  margin: 0;
+}
+
+main h1#menu_label {
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  background-color: #feece0;
+}
+
+main div#navHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main div#navHolder div#tabList {
+  width: 95%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main div#navHolder select#tabList {
+  width: 50%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+main div#navHolder button#cartBtn {
+  margin: 0 auto 0 1rem;
+  width: 7.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+main div#cart {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+main div#cart table#cartItems {
+  width: 100vw;
+  margin: 2.5rem auto;
+}
+
+main div#cart table#cartItems tr > th {
+  text-decoration: underline;
+}
+
+main div#cart table#cartItems tr > td {
+  text-align: center;
+}
+
+main div#cart table#cartItems tr > td.cancelBtn {
+  cursor: pointer;
+}
+
+main div#cart table#totalsInfo {
+  margin: 0 .5rem 0 auto;
+}
+
+main div#cart table#totalsInfo tr > td {
+  width: 5rem;
+  text-align: right;
+}
+
+main div#display_holder {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  grid-gap: 1rem;
+  margin: 1rem auto;
+}
+
+main div#display_holder div.card {
+  width: 100vw;
+  display: block;
+  background-color: #feece0;
+}
+
+main div#display_holder div.card img {
+  display: block;
+  width: 60vw;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border: 0.5rem solid #d55645;
+  margin: 0.5rem;
+}
+
+main div#display_holder div.card img:hover {
+  margin: 0;
+  width: 65vw;
+}
+
+main div#display_holder div.card p.rating {
+  margin: 0.5rem auto 0.5rem auto;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+main div#display_holder div.card div.itemStats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0.5rem auto 0.5rem auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main div#display_holder div.card div.itemStats p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+main div#display_holder div.card div.itemStats p span {
+  font-size: 1.15rem;
+}
+
+main div#display_holder div.card div.quantityInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0.5rem auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main div#display_holder div.card div.quantityInfo label, main div#display_holder div.card div.quantityInfo p {
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+
+main div#display_holder div.card div.quantityInfo label {
+  margin: 0 0.5rem 0 0;
+}
+
+main div#display_holder div.card div.quantityInfo p {
+  justify-self: flex-end;
+  text-align: end;
+  margin: 0 0 0 auto;
+}
+
+main div#display_holder div.card div.quantityInfo input {
+  width: 40%;
+  text-align: center;
+  font-size: 1.25rem;
+  height: 1.5rem;
+  line-height: 0.5rem;
+  border: 1px solid black;
+}
+
+main div#display_holder div.card button {
+  width: 90%;
+  height: 3rem;
+  display: block;
+  margin: 1.5rem auto 1.5rem auto;
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    margin: 0;
+    height: 100vh;
+  }
+  main {
+    width: 80%;
+    background-color: #ff914c;
+    border-left: 0.5rem solid #edb586;
+    border-right: 0.5rem solid #edb586;
+    position: initial;
+    margin: 0 auto;
+    top: 0;
+    height: auto;
+    padding-bottom: 5%;
+  }
+  main button {
+    background-color: #d55645;
+    border: 0.2rem solid #8d382d;
+    color: whitesmoke;
+  }
+  main button:hover,
+  main button:active {
+    background-color: #8d382d;
+    border: 0.2rem solid #d55645;
+  }
+  main div#banner_holder img {
+    width: 97.5%;
+    display: block;
+    height: 30vh;
+    margin: 0;
+    border: 0.5rem solid #d55645;
+  }
+  main h1#menu_label {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    background-color: #feece0;
+  }
+  main div#navHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main div#navHolder div#tabList {
+    width: 95%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main div#navHolder select#tabList {
+    width: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1.25rem;
+  }
+  main div#navHolder button#cartBtn {
+    margin: 0 auto 0 1rem;
+    width: 7.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  main div#cart {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  main div#cart table#cartItems {
+    width: 100%;
+    margin: 2.5rem auto;
+  }
+  main div#cart table#cartItems tr > th {
+    text-decoration: underline;
+  }
+  main div#cart table#cartItems tr > td {
+    text-align: center;
+  }
+  main div#cart table#totalsInfo {
+    margin: 0 .5rem 0 auto;
+  }
+  main div#cart table#totalsInfo tr > td {
+    width: 5rem;
+    text-align: right;
+  }
+  main div#display_holder {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 95%;
+    grid-gap: 1rem;
+    margin: 1rem auto;
+  }
+  main div#display_holder div.card {
+    width: 100%;
+    display: block;
+    background-color: #feece0;
+  }
+  main div#display_holder div.card img {
+    display: block;
+    width: 85%;
+    margin: 1rem auto;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    border: 0.5rem solid #67b6b3;
+  }
+  main div#display_holder div.card img:hover {
+    margin: 0;
+    width: 94.5%;
+    content: "HELLOW";
+  }
+  main div#display_holder div.card img:hover:after {
+    position: absolute;
+    content: "HELLOW";
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+  }
+  main div#display_holder div.card p.rating {
+    margin: 0.5rem auto 0.5rem auto;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  main div#display_holder div.card div.itemStats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 0.5rem auto 0.5rem auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  main div#display_holder div.card div.itemStats p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  main div#display_holder div.card div.itemStats p span {
+    font-size: 1.15rem;
+  }
+  main div#display_holder div.card div.quantityInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 0.5rem auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main div#display_holder div.card div.quantityInfo label, main div#display_holder div.card div.quantityInfo p {
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.5rem;
+  }
+  main div#display_holder div.card div.quantityInfo label {
+    margin: 0 0.5rem 0 0;
+  }
+  main div#display_holder div.card div.quantityInfo p {
+    justify-self: flex-end;
+    text-align: end;
+    margin: 0 0 0 auto;
+  }
+  main div#display_holder div.card div.quantityInfo input {
+    width: 40%;
+    text-align: center;
+    font-size: 1.25rem;
+    height: 1.5rem;
+    line-height: 0.5rem;
+    border: 1px solid black;
+  }
+  main div#display_holder div.card button {
+    width: 90%;
+    height: 3rem;
+    display: block;
+    margin: 1.5rem auto 1.5rem auto;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    margin: 0;
+    height: 100vh;
+  }
+  main {
+    width: 80%;
+    background-color: #ff914c;
+    border-left: 0.5rem solid #edb586;
+    border-right: 0.5rem solid #edb586;
+    position: initial;
+    margin: 0 auto;
+    top: 0;
+    height: auto;
+    padding-bottom: 5%;
+  }
+  main button {
+    background-color: #d55645;
+    border: 0.2rem solid #8d382d;
+    color: whitesmoke;
+  }
+  main button:hover,
+  main button:active {
+    background-color: #8d382d;
+    border: 0.2rem solid #d55645;
+  }
+  main div#banner_holder img {
+    width: 98%;
+    display: block;
+    height: 50vh;
+    margin: 0;
+    border: 0.75rem solid #d55645;
+  }
+  main h1#menu_label {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    background-color: #feece0;
+  }
+  main div#navHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main div#navHolder div#tabList {
+    width: 95%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main div#navHolder div#tabList button {
+    font-size: 2rem;
+    width: 15rem;
+    line-height: 3rem;
+  }
+  main div#navHolder div#tabList button.current-tab {
+    background-color: #8d382d;
+    border: 0.2rem solid #d55645;
+    -webkit-text-decoration: underline #ffc450;
+            text-decoration: underline #ffc450;
+  }
+  main div#navHolder select#tabList {
+    width: 50%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1.25rem;
+  }
+  main div#navHolder button#cartBtn {
+    width: 7.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+  }
+  main div#navHolder button.specialBtn {
+    margin: 0;
+  }
+  main div#navHolder button.specialBtn:hover {
+    color: black;
+    -webkit-text-stroke: 1.25px white;
+    background-color: #ffc74c;
+    font-weight: bold;
+    border: 0.2rem solid #c68e17;
+  }
+  main div#cart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+  }
+  main div#cart table#cartItems {
+    width: 80%;
+    margin: 2.5rem auto;
+  }
+  main div#cart table#cartItems tr > th {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+  main div#cart table#cartItems tr > td {
+    text-align: center;
+  }
+  main div#cart table#totalsInfo {
+    margin: 0 13.5rem 0 auto;
+  }
+  main div#cart table#totalsInfo tr > td {
+    width: 5rem;
+    text-align: right;
+  }
+  main div#cart button {
+    font-size: 1.5rem;
+    margin-left: 9rem;
+  }
+  main div#cart button#closeBtn {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+  }
+  main div#cart button#buyBtn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 3rem;
+  }
+  main div#display_holder {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    width: 95%;
+    grid-gap: 1rem;
+    margin: 1rem auto;
+  }
+  main div#display_holder div.card {
+    width: 100%;
+    display: block;
+    background-color: #feece0;
+  }
+  main div#display_holder div.card img {
+    display: block;
+    width: 85%;
+    margin: 1.5rem auto;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    border: 0.65rem solid #67b6b3;
+  }
+  main div#display_holder div.card img:hover {
+    margin: 0;
+    width: 94.5%;
+  }
+  main div#display_holder div.card p.rating {
+    margin: 0.5rem auto 0.5rem auto;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  main div#display_holder div.card div.itemStats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 0.5rem auto 0.5rem auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  main div#display_holder div.card div.itemStats p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  main div#display_holder div.card div.itemStats p span {
+    font-size: 1.15rem;
+  }
+  main div#display_holder div.card div.quantityInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 0.5rem auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main div#display_holder div.card div.quantityInfo label, main div#display_holder div.card div.quantityInfo p {
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.5rem;
+  }
+  main div#display_holder div.card div.quantityInfo label {
+    margin: 0 0.5rem 0 0;
+  }
+  main div#display_holder div.card div.quantityInfo p {
+    justify-self: flex-end;
+    text-align: end;
+    margin: 0 0 0 auto;
+  }
+  main div#display_holder div.card div.quantityInfo input {
+    width: 40%;
+    text-align: center;
+    font-size: 1.25rem;
+    height: 1.5rem;
+    line-height: 0.5rem;
+    border: 1px solid black;
+  }
+  main div#display_holder div.card button {
+    width: 90%;
+    height: 3rem;
+    display: block;
+    margin: 1.5rem auto 1.5rem auto;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */

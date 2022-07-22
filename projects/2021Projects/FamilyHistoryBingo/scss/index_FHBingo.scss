@@ -1,0 +1,12 @@
+@import 'normalize';
+// @import 'medium.css';
+// @import 'variables';
+@import 'minView';
+
+@media only screen and (min-width: 760px) {
+  @import 'medView';
+  // @import 'maxView';
+}
+@media only screen and (min-width: 1200px) {
+  @import 'maxView';
+}

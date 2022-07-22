@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="Pokemon.js" defer></script> -->
+    <link rel="stylesheet" href="Pokemon.css">
+    <script src="js/Pokemon(draft2).js" defer></script>
+    <script src="js/Roshambo.js" defer></script>
+    <link rel="shortcut icon" href="imgs/favicon.png">
+    <title>Pokémon: Ro-Sham-Bo!</title>
+</head>
+<body>
+    <!-- <section id="output"></section>
+    <ul id="outputList"></ul> -->
+    <div id="scoreBoard">        
+        <div class="scores" id="yourPoints">0</div>
+        <div class="scores" id="otherPoints">0</div>
+    </div>
+
+    <div id="mainScreen">
+        <!-- <div id="yourSide"> -->
+            <div id="yourPokemon_info"></div>
+            <div id="yourPokemon_img"></div>
+        <!-- </div> -->
+        <!-- <div id="otherSide"> -->
+            <div id="otherPokemon_img"></div>
+            <div id="otherPokemon_info"></div>
+        <!-- </div> -->
+    </div>
+
+    <div id="buttons_holder">
+        <button id="gameInfo_button">Game Info</button>
+        <button id="choosePokemon">Choose Pokémon</button>
+        <button id="FIGHT">...and FIGHT!</button>
+    </div>
+    <button id="feelingLucky">Feeling Lucky</button>
+    <!--  -->
+
+
+
+    <div class="hidden" id="gameInfo_content">
+        <h1>Welcome to "Pokémon: RO-SHAM-BO!"</h1>
+        <h4>It's basically a Pokémon version of Rock-Paper-Scizors.</h4>
+            <h3>How to Play:</h3>
+            <ol>
+               <li>Choose a Pokémon (click as many times you like until you find a Pokémon you like)</li>
+               <li>Press the fight button and see what happens.(You will keep the Pokémon you have, but the opponent will change their Pokémon each time you click.</li> 
+               <li>If you wanna go Russian Roulette style, test your luck. (hint hint, nudge nudge)</li>
+            </ol>
+            <h3>How it works:</h3>
+            <ul>
+                <li>The damage calculations is based on the chart shown below.</li>
+                <li>Your damage delt is detemined by comparing your Pokémon's types against the other Pokémon's types. The same is vice versa with the damage delt by the other Pokémon</li>
+                <li>In the case a Pokémon only has 1 type instead of 2, null damage is applied</li>
+                <li> The size of each Pokémon is also taken into account. If your Pokémon is bigger than the other Pokémon, You deal 0.5 more points of damage to the other (same with vice versa</li>
+            </ul>
+            <img src="imgs/typeChart.png">
+            <p>Warnings: The "Feeling Lucky" button doesn't always work due to the fetch and promise components involved (or you're just unlucky). If this is the case, just run it normally or try the button again.
+        </p>
+        <button id="backToGame">Back to Game</button>
+    </div>
+    <p id="Note">This is a fan-made, school project created by Erik Q. Birch. All creative rights go to Nintendo.</p>
+</body>
+</html>

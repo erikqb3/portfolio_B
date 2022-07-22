@@ -9,7 +9,7 @@ export const establishHTML = {
     filterSettings_void = this.generateElement('div', 'filterSettings_void'),
     filterSettings_holder = this.generateElement('div','filterSettings_holder'),
     filterSettings_list = this.generateElement('ul',"nav"),
-    listOptions = ['ALL', 'Site Type', 'Year Created', 'Resume', 'Bio/Contact']
+    listOptions = ['ALL', 'Site Type', 'Year', 'Resume', 'Contact']
   ) {
     /**
      * STEP1: give Hamburger Menu Button an event listener
@@ -88,7 +88,7 @@ export const establishHTML = {
             ST_dropDwn_holder = this.appendChildren(ST_dropDwn_holder, ST_dropDwn_Btn,ST_dropDwn_content);
             ST_dropDwn_Btn.innerHTML = "Site Type"
           }     
-          else if (listOption.innerHTML = "Year Created") {
+          else if (listOption.innerHTML = "Year") {
             YC_dropDwn_holder = listOption;
             YC_dropDwn_holder.innerHTML="";
             for (let i in YC_array) {
@@ -96,7 +96,7 @@ export const establishHTML = {
               YC_dropDwn_content.appendChild(YC_filter)
             }
             YC_dropDwn_holder = this.appendChildren(YC_dropDwn_holder, YC_dropDwn_Btn,YC_dropDwn_content);
-            YC_dropDwn_Btn.innerHTML = "Year Created"
+            YC_dropDwn_Btn.innerHTML = "Year"
           }   
         }
         catch(err) {

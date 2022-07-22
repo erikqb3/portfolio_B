@@ -1,0 +1,830 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
+@media only screen and (min-width: 0px) {
+  .hidden {
+    display: none !important;
+  }
+  .descriptionText {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100 !important;
+    text-align: center;
+    line-height: 2rem;
+  }
+  body {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  body header {
+    position: fixed;
+    top: 0;
+    background-color: #000936;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 5;
+    width: 100vw;
+  }
+  body header div#logoSection {
+    width: 100vw;
+    padding: 0 2.5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header div#logoSection div.logoSpot {
+    z-index: 6;
+  }
+  body header div#logoSection div.logoSpot img {
+    width: 100%;
+  }
+  body header div#logoSection div#SD_logo {
+    width: 50px;
+  }
+  body header div#logoSection div#SD_logo img {
+    width: 100%;
+  }
+  body header div#logoSection div#Studio_logo {
+    width: 50px;
+  }
+  body header div#logoSection div#Studio_logo img {
+    width: 100%;
+  }
+  body header nav#mainNav {
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  body header nav#mainNav ul li {
+    color: white;
+  }
+  body header section#nav_mobile {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    overflow-y: scroll;
+    padding-top: 1.75vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: height 0.25s;
+    transition: height 0.25s;
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+  }
+  body header section#nav_mobile div#hambBtn {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body header section#nav_mobile div#hambBtn i {
+    color: white;
+  }
+  body header section#nav_mobile nav#sideNav {
+    display: none;
+  }
+  body header section#nav_mobile.switch_ON {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #000936;
+    height: 100vh;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul hr {
+    width: 75%;
+    border: 0.25px solid white;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.baseOption {
+    margin: 2.5rem 0;
+    color: white;
+    text-decoration: none;
+    -webkit-transition: -webkit-text-decoration 0.5s;
+    transition: -webkit-text-decoration 0.5s;
+    transition: text-decoration 0.5s;
+    transition: text-decoration 0.5s, -webkit-text-decoration 0.5s;
+    cursor: pointer;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.baseOption:hover,
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.baseOption:active {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder {
+    margin: 2.5rem 0;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder div.dropDown_btn {
+    color: white;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder ul.dropDown_list {
+    overflow-y: hidden;
+    height: 0;
+    padding: 0;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder ul.dropDown_list hr {
+    color: white;
+    width: 50%;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder ul.dropDown_list li {
+    color: white;
+    width: 100%;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:hover div.dropDown_btn,
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:active div.dropDown_btn {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:hover ul.dropDown_list.switch_ON,
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:active ul.dropDown_list.switch_ON {
+    height: 250px;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:hover ul.dropDown_list.switch_ON li:hover,
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:hover ul.dropDown_list.switch_ON li:active,
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:active ul.dropDown_list.switch_ON li:hover,
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:active ul.dropDown_list.switch_ON li:active {
+    font-weight: bolder;
+  }
+  body main {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  body footer {
+    background-color: #000936;
+    color: #8c8a86;
+    padding: 2rem 0 5rem 0;
+    margin: 5rem 0 0 0;
+    width: 100%;
+    min-height: 100px;
+    bottom: 0;
+    display: block;
+  }
+  body footer div#subscribe {
+    width: 100%;
+    padding: 0rem 0 1rem 0;
+  }
+  body footer div#subscribe button {
+    display: block;
+    margin: 0 auto;
+    width: 15rem;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    cursor: pointer;
+  }
+  body footer div#subscribe section#formOverflow {
+    display: none;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 7.25vh;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
+    position: fixed;
+    top: 10vh;
+    left: 2.5vw;
+    color: white;
+    font-size: 2rem;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form {
+    margin-top: -15vh;
+    width: 80vw;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form input, body footer div#subscribe section#formOverflow.showOverlay form textarea {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form input {
+    line-height: 2rem;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form textarea {
+    height: 30vh;
+  }
+  body footer div#footer_lists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 1rem;
+  }
+  body footer div#footer_lists section {
+    margin: 0.5rem 0;
+  }
+  body footer div#footer_lists section > div > h3 {
+    color: white;
+    text-decoration: underline;
+    margin: 0 0 0.25rem 0;
+    font-size: 1.75rem;
+  }
+  body footer div#footer_lists section > div > ul {
+    color: white;
+    list-style: none;
+    padding: none;
+  }
+  body footer div#footer_lists section > div > ul li h4 {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  body footer div#footer_lists section > div > ul li ul {
+    padding: none;
+    list-style: none;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: height 0.75s, opacity 0.75s;
+    transition: height 0.75s, opacity 0.75s;
+  }
+  body footer div#footer_lists section > div > ul li ul li {
+    font-size: 1rem;
+    height: 0;
+    padding-left: 1rem;
+    -webkit-transition: height 0.75s;
+    transition: height 0.75s;
+  }
+  body footer div#footer_lists section > div > ul li ul.showList {
+    height: 5rem;
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body footer div#footer_lists section > div > ul li ul.showList li {
+    height: 0.75rem;
+  }
+  body footer div#footer_lists section#footer_left div#siteLinks ul.showList {
+    height: 8rem;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall h3 {
+    text-align: left;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body header div#logoSection div#SD_logo {
+    width: 100px;
+  }
+  body header div#logoSection div#Studio_logo {
+    width: 100px;
+  }
+  body header section#nav_mobile div#hambBtn {
+    font-size: 3.5rem;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.baseOption {
+    font-size: 2rem;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder {
+    font-size: 2rem;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder ul.dropDown_list li {
+    font-size: 1.5rem;
+  }
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:hover ul.dropDown_list.switch_ON,
+  body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:active ul.dropDown_list.switch_ON {
+    height: 325px;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 7.25vh;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
+    position: fixed;
+    top: 10vh;
+    left: 2.5vw;
+    color: white;
+    font-size: 2rem;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form {
+    margin-top: -15vh;
+    width: 80vw;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form input, body footer div#subscribe section#formOverflow.showOverlay form textarea {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form input {
+    line-height: 2rem;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form textarea {
+    height: 30vh;
+  }
+  body footer div#footer_lists {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall h3 {
+    text-align: right;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li {
+    text-align: right;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li ul li {
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  body header {
+    width: 100%;
+    height: 7.5vh;
+  }
+  body header div#logoSection {
+    position: absolute;
+    width: 100vw;
+    padding: 0 5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header div#logoSection div.logoSpot {
+    z-index: 6;
+  }
+  body header div#logoSection div.logoSpot img {
+    width: 100%;
+  }
+  body header div#logoSection div#SD_logo {
+    width: 50px;
+  }
+  body header div#logoSection div#SD_logo img {
+    width: 100%;
+  }
+  body header div#logoSection div#Studio_logo {
+    width: 50px;
+  }
+  body header div#logoSection div#Studio_logo img {
+    width: 100%;
+  }
+  body header nav#mainNav {
+    display: block;
+    z-index: 3;
+    width: 100%;
+  }
+  body header nav#mainNav ul {
+    list-style: none;
+    margin: 1rem auto !important;
+    margin-right: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    width: 95vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body header nav#mainNav ul li.baseOption {
+    font-size: 1rem;
+    margin-right: 4rem;
+  }
+  body header nav#mainNav ul li.dropDown_holder {
+    display: block;
+  }
+  body header nav#mainNav ul li.dropDown_holder div.dropDown_btn {
+    font-size: 1rem;
+    margin-right: 4rem;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list {
+    position: absolute;
+    left: 0;
+    top: 7.5vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    padding: 0;
+    height: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #969696;
+    color: #000936;
+    margin: 0 !important;
+    -webkit-transition: height 0.5s, padding 0.5s;
+    transition: height 0.5s, padding 0.5s;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #000936;
+    cursor: pointer;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON {
+    padding-top: 1rem;
+    opacity: 1;
+    visibility: visible;
+    height: 7.5vh;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li {
+    opacity: 1;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li:hover {
+    color: white;
+  }
+  body header section#nav_mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body header {
+    width: 100%;
+    height: 7.5vh;
+  }
+  body header div#logoSection {
+    position: absolute;
+    width: 100vw;
+    padding: 0 10vw;
+  }
+  body header div#logoSection div.logoSpot {
+    z-index: 6;
+  }
+  body header div#logoSection div.logoSpot img {
+    width: 100%;
+  }
+  body header div#logoSection div#SD_logo {
+    width: 50px;
+  }
+  body header div#logoSection div#SD_logo img {
+    width: 100%;
+  }
+  body header div#logoSection div#Studio_logo {
+    width: 50px;
+  }
+  body header div#logoSection div#Studio_logo img {
+    width: 100%;
+  }
+  body header nav#mainNav {
+    display: block;
+    z-index: 3;
+    width: 100%;
+  }
+  body header nav#mainNav ul {
+    list-style: none;
+    margin: 1rem auto !important;
+    margin-right: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    width: 95vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body header nav#mainNav ul li.baseOption {
+    margin-right: 4rem;
+  }
+  body header nav#mainNav ul li.dropDown_holder {
+    display: block;
+  }
+  body header nav#mainNav ul li.dropDown_holder div.dropDown_btn {
+    margin-right: 4rem;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list {
+    position: absolute;
+    left: 0;
+    top: 7.5vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    padding: 0;
+    height: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #969696;
+    color: #000936;
+    margin: 0 !important;
+    -webkit-transition: height 0.5s, padding 0.5s;
+    transition: height 0.5s, padding 0.5s;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #000936;
+    cursor: pointer;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON {
+    padding: 1rem 10vw 1rem 10vw;
+    opacity: 1;
+    visibility: visible;
+    height: 12vh;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li {
+    opacity: 1;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:link,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:visited {
+    color: #000936;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-decoration: none;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:link i,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:visited i {
+    font-size: 1.5rem;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li:hover a:hover,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li:hover a:active {
+    color: white;
+  }
+  body header section#nav_mobile {
+    display: none;
+  }
+  body footer {
+    padding-bottom: 0;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 7.25vh;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
+    position: fixed;
+    top: 10vh;
+    left: 2.5vw;
+    color: white;
+    font-size: 2rem;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form {
+    margin-top: -15vh;
+    width: 80vw;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form input, body footer div#subscribe section#formOverflow.showOverlay form textarea {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form input {
+    line-height: 2rem;
+  }
+  body footer div#subscribe section#formOverflow.showOverlay form textarea {
+    height: 30vh;
+  }
+  body footer div#footer_lists {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body footer div#footer_lists section {
+    width: 35vw;
+  }
+  body footer div#footer_lists section > div > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 5rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  body footer div#footer_lists section > div > ul li h4 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1rem;
+    margin: 0 2.5rem 0 0;
+  }
+  body footer div#footer_lists section > div > ul li ul {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    opacity: 1;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body footer div#footer_lists section > div > ul li ul li {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0;
+    font-size: 0.75rem;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall h3 {
+    text-align: right;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul {
+    height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li {
+    text-align: right;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li h4 {
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 0 0 auto;
+    cursor: none;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li ul {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 0rem 0 1rem;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li ul li {
+    padding-right: 0rem;
+    margin: 0;
+  }
+  body footer div#footer_lists section#footer_right div#contactSmall ul li ul li:nth-of-type(3) {
+    margin-bottom: 1rem;
+  }
+}
+/*# sourceMappingURL=index_apple.css.map */

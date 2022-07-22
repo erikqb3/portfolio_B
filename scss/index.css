@@ -252,7 +252,8 @@ section#mainContent div.projectHolder div.contentHolder:active div.infoOverlay {
 
 section#mainContent div.projectHolder:nth-child(4n + 1) {
   -ms-grid-column: 1;
-  grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 /span 2;
 }
 
 section#mainContent div.projectHolder:nth-child(4n + 1) div.infoOverlay h3 {
@@ -260,9 +261,8 @@ section#mainContent div.projectHolder:nth-child(4n + 1) div.infoOverlay h3 {
 }
 
 section#mainContent div.projectHolder:nth-child(4n + 2) {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2 / span 2;
+  -ms-grid-column: 3;
+  grid-column: 3;
 }
 
 section#mainContent div.projectHolder:nth-child(4n + 2) div.infoOverlay h3 {
@@ -271,8 +271,7 @@ section#mainContent div.projectHolder:nth-child(4n + 2) div.infoOverlay h3 {
 
 section#mainContent div.projectHolder:nth-child(4n + 3) {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
+  grid-column: 1;
 }
 
 section#mainContent div.projectHolder:nth-child(4n + 3) div.infoOverlay h3 {
@@ -280,8 +279,9 @@ section#mainContent div.projectHolder:nth-child(4n + 3) div.infoOverlay h3 {
 }
 
 section#mainContent div.projectHolder:nth-child(4n + 4) {
-  -ms-grid-column: 3;
-  grid-column: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
 }
 
 section#mainContent div.projectHolder:nth-child(4n + 4) div.infoOverlay h3 {
@@ -390,10 +390,10 @@ footer {
 
 @media only screen and (min-width: 1200px) {
   header {
-    height: 10rem;
+    height: 5rem;
   }
   header h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     margin: 0 0 0 2%;
   }
   header p {
@@ -409,7 +409,7 @@ footer {
   header div#filterSettings_holder {
     display: block;
     width: 45vw;
-    height: 10rem;
+    height: 5rem;
   }
   header div#filterSettings_holder ul#nav {
     display: -webkit-box;
@@ -419,11 +419,10 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 10rem;
+    height: 5rem;
   }
   header div#filterSettings_holder ul#nav li {
     display: block;
-    line-height: 7rem;
     padding: 0 auto;
     font-size: 1.5rem;
     width: 100%;

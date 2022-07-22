@@ -1,7 +1,7 @@
 header {
-  height: 10rem;
+  height: 5rem;
   h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     margin: 0 0 0 2%;
   }
   p {
@@ -18,16 +18,16 @@ header {
   div#filterSettings_holder {
     display:block;
     width: 45vw;
-    height: 10rem;
+    height: 5rem;
       ul#nav {
         display:flex;
         width: 100%;
         align-items: center;
-        height: 10rem;
+        height: 5rem;
         // overflow:hidden;
         li {
           display:block;
-          line-height: 7rem;
+          // line-height: 7rem;
           padding: 0 auto;
           font-size: 1.5rem;
           width:100%;

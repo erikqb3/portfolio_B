@@ -1,0 +1,53 @@
+[ 
+{"characters":
+  ["Setsuko","Seita"],
+"film_id" :1},
+{"characters":
+  ["Taeko","Toshio","Hirota","Yaeko","Nanako","Tsuneko Tani","Abe"],
+"film_id":4},
+{"characters":
+  ["Porco Rosso","Gina","Fio Piccolo","Donald Curtis","Ferrarin","Grandpa Piccolo","Capo"],
+"film_id":5},
+{"characters":
+  ["Gonta","Shoukichi","Tamasaburo","Inugami Gyobu","Okiyo","Sasuke","Bunta","Osho"],
+"film_id":6},
+{"characters":
+  ["Seiji Amasawa","The Baron", "Shizuku Tsukishima","Sugimura","Yuko Harada","Shiho Tsukishima"],
+"film_id":7},
+{"characters":
+  ["Noboru","Nonoko","Matsuko","Takashi","Shige","Grandma Kikuchi"],
+"film_id":9},
+{"characters":
+  ["Chihiro Ogino","Haku","No-Face","Yubaba","Lin","Zeniba","Kamaji","Boh","Akio Ogino","Yuuko Ogino"],
+"film_id":10},
+{"characters": 
+  ["The Baron","Muta","Natoru","Haru Yoshioka","Prince Lune","Yuki","Natori"],
+"film_id":11},
+{"characters" :
+  ["Sophie Hatter","Howl","Calcifer","Markl","Witch of the Waste","Turnip Head","Madame Suliman","Hin","Lettie"],
+"film_id":12},
+{"characters": 
+  ["Arren","Therru","Sparrow Hawk","Cob","Tenar","Hare"],
+"film_id":13},
+{"characters": 
+  ["Ponyo","Sosuke","Fujimoto","Lisa","Granmamare","Koichi"],
+"film_id":14},
+{"characters":
+  ["Arriety Clock","Sho","Homily Clock","Pod Clock","Sadako Maki","Haru","Spud Spiller"],
+"film_id":15},
+{"characters":
+  ["Umi Matsuzaki","Shiro Mizunuma","Shun Kazama","Yuichiro Sawamura","Sachiko Hirokoji","Sora Matsuzaki","Miki Hokuto"],
+"film_id":16},
+{"characters":
+  ["Jiro Horikoshi","Nahoko Satomi", "Kurokawa","Honjo","Kayo","Hattori","Giovanni Battista Caproni"],
+"film_id":17},
+{"characters":
+  ["Princess Kaguya","Sutemaru","Ishitsukuri","Sanuki no Miyatsuko","Menowarawa","Sagami","Ona","Inbe no Akita"],
+"film_id":18},
+{"characters":
+  ["Marnie","Anna Sasaki","Emily","Kazuhiko","Yoriko Sasaki","Nobuko Kadoya","Setsu Oiwa","Miyoko"],
+"film_id":19},
+{"characters":
+  ["giant red turtle","unnamed castaway","unnamed female human","little girl","little boy"],
+"film_id":20}
+] 
