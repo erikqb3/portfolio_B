@@ -129,7 +129,7 @@ const cinemaSection = {
         cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`  
       }
       else {
-        cinemaSection_array[i].children[0].style.backgroundColor = `rgba(0,0,0,${100-updatedPercentage-50}%)`
+        cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`
       }
       } 
       // console.log(scroll, massOutput)

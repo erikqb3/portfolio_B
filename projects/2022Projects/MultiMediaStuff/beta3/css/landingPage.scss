@@ -79,12 +79,12 @@
         // position: -webkit-sticky;
         // position: sticky;
         // top:0vh;
-        opacity:0;
+        opacity:1;
         // overflow:hidden;
         width: 100%;
-        height: 600vh;
+        height: 300vh;
         box-sizing: border-box;
-        transition: opacity 1s;
+        transition: opacity 2s;
         background-color:white!important;
         // position:absolute;
         // div.overlay_whiteFade{
@@ -162,7 +162,7 @@
   
       section#videography_stagger{
         width: 100%;
-        margin: -100rem auto 0 auto;
+        margin: -75rem auto 0 auto;
         // background-color: red;
         // height: 200vh;
         position:sticky;
@@ -387,19 +387,21 @@
           }
           section#photo_partB{
             width: 100%;
-            height: 125vw;
+            // height: 125vw;
             display:flex;
             flex-direction: column;
             justify-content:space-evenly;
             overflow-x:hidden;
+            margin: 1rem 0;
             article.autoSlide{
-              width: 400vw;
-              height: 35vw;
+              width: 100vw;
+              // height: 35vw;
               display: flex;
               align-items:center;
+              flex-wrap:wrap;
               justify-content:space-evenly;
               // padding: 0 25vw;
-              animation-name: autoSlide_action;
+              // animation-name: autoSlide_action;
               animation-duration: 30s;
               animation-iteration-count:infinite;
               animation-timing-function: linear;
@@ -408,10 +410,12 @@
     
                 div.imgHolder{
                   height: 100%;
-                  width: 47.5vw;
+                  width: 50vw;
                   background-color:black;
                   overflow:hidden;
-                  border-radius: 10px;
+                  // border-radius: 10px;
+                  display:flex;
+                  align-items:center;
                   img {
                     width: 100%;
                     height: 100%;
@@ -429,20 +433,6 @@
             p {
               color:white;
             }
-          }
-          
-          @keyframes autoSlide_action {
-            0% {margin-left: 0vw;}
-            100% {margin-left:-300vw;}
-          }
-          article.autoSlide:nth-child(2) {
-            animation-direction: reverse;
-          }
-          article.autoSlide:nth-child(3) {
-            animation-delay:1s;
-          }
-          article.autoSlide:hover {
-            // animation-duration: 30s;
           }
         }
 
@@ -778,11 +768,13 @@
         }
         section#photo_partB{
           width: 100%;
-          height: 100vw !important;
+          margin: 2rem 0;
+          // height: 100vw !important;
           article.autoSlide{
             // width: 350vw !important;
-            height: 30vw!important;
+            // height: 30vw!important;
             animation-duration: 40s !important;
+            justify-content: center !important;
               div.imgHolder{
                 // height: 20vh !important;
                 width: 45vw !important;
@@ -800,19 +792,6 @@
               }
           }
         }
-        @keyframes autoSlide_action {
-          0% {margin-left: 0vw;}
-          100% {margin-left:-300vw;}
-        }
-        article.autoSlide:nth-child(2) {
-          animation-direction: reverse;
-        }
-        article.autoSlide:nth-child(3) {
-          animation-delay:1s;
-        }
-        article.autoSlide:hover {
-          // animation-duration: 30s;
-        } 
       }
 
     }
@@ -1040,14 +1019,17 @@
           }
         }
         section#photo_partB{
-          height: 35vw !important;
+          // height: 35vw !important;
+          // margin: 2rem 0;
           article.autoSlide{
-            width: 150vw !important;
-            height: 10vw!important;
+            // width: 150vw !important;
+            // height: 10vw!important;
             animation-duration: 10s !important;
+            justify-content:space-evenly !important;
+            margin: .5rem 0;
               div.imgHolder{
                 // height: 20vh !important;
-                width: 17.5vw !important;
+                width: 22.5vw !important;
                 background-color:black;
                 overflow:hidden;
                 img {
@@ -1067,7 +1049,8 @@
           100% {margin-left:-52.5vw;}
         }
         article.autoSlide:nth-child(2) {
-          animation-direction: reverse;
+          // animation-direction: reverse;
+          animation-delay:1s;
         }
         article.autoSlide:nth-child(3) {
           animation-delay:1s;

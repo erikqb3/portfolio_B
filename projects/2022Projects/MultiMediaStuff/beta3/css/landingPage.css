@@ -68,13 +68,13 @@
     font-weight: bolder;
   }
   body main section#cinematography_scrollPlay {
-    opacity: 0;
+    opacity: 1;
     width: 100%;
-    height: 600vh;
+    height: 300vh;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
     background-color: white !important;
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo {
@@ -145,7 +145,7 @@
   }
   body main section#videography_stagger {
     width: 100%;
-    margin: -100rem auto 0 auto;
+    margin: -75rem auto 0 auto;
     position: -webkit-sticky;
     position: sticky;
     top: 15vh;
@@ -382,7 +382,6 @@
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partB {
     width: 100%;
-    height: 125vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -394,21 +393,21 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     overflow-x: hidden;
+    margin: 1rem 0;
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide {
-    width: 400vw;
-    height: 35vw;
+    width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-animation-name: autoSlide_action;
-            animation-name: autoSlide_action;
     -webkit-animation-duration: 30s;
             animation-duration: 30s;
     -webkit-animation-iteration-count: infinite;
@@ -418,10 +417,15 @@
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder {
     height: 100%;
-    width: 47.5vw;
+    width: 50vw;
     background-color: black;
     overflow: hidden;
-    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder img {
     width: 100%;
@@ -432,29 +436,6 @@
   }
   body main section#photography_smallSliders div#photo_contentHolder div#photoSection_descript p {
     color: white;
-  }
-  @-webkit-keyframes autoSlide_action {
-    0% {
-      margin-left: 0vw;
-    }
-    100% {
-      margin-left: -300vw;
-    }
-  }
-  @keyframes autoSlide_action {
-    0% {
-      margin-left: 0vw;
-    }
-    100% {
-      margin-left: -300vw;
-    }
-  }
-  body main section#photography_smallSliders div#photo_contentHolder article.autoSlide:nth-child(2) {
-    animation-direction: reverse;
-  }
-  body main section#photography_smallSliders div#photo_contentHolder article.autoSlide:nth-child(3) {
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
   }
   body main h1#audio_navTarget {
     background-color: black !important;
@@ -777,12 +758,14 @@
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partB {
     width: 100%;
-    height: 100vw !important;
+    margin: 2rem 0;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide {
-    height: 30vw !important;
     -webkit-animation-duration: 40s !important;
             animation-duration: 40s !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder {
     width: 45vw !important;
@@ -795,29 +778,6 @@
   body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder:hover {
     z-index: 2;
     opacity: 0.5;
-  }
-  @-webkit-keyframes autoSlide_action {
-    0% {
-      margin-left: 0vw;
-    }
-    100% {
-      margin-left: -300vw;
-    }
-  }
-  @keyframes autoSlide_action {
-    0% {
-      margin-left: 0vw;
-    }
-    100% {
-      margin-left: -300vw;
-    }
-  }
-  body section#photography_smallSliders div#photo_contentHolder article.autoSlide:nth-child(2) {
-    animation-direction: reverse;
-  }
-  body section#photography_smallSliders div#photo_contentHolder article.autoSlide:nth-child(3) {
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
   }
   body section#audio_playlist section#bannerView div#audio_features div#audio_stickyHolder article#playList ul li {
     border: 3px solid rgba(255, 255, 255, 0.25);
@@ -929,17 +889,16 @@
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA section#photography_carousel div#carousel_holder div#slide-nav div.slide-dot {
     font-size: 3rem;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partB {
-    height: 35vw !important;
-  }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide {
-    width: 150vw !important;
-    height: 10vw !important;
     -webkit-animation-duration: 10s !important;
             animation-duration: 10s !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+    margin: .5rem 0;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder {
-    width: 17.5vw !important;
+    width: 22.5vw !important;
     background-color: black;
     overflow: hidden;
   }
@@ -967,7 +926,8 @@
     }
   }
   body section#photography_smallSliders div#photo_contentHolder article.autoSlide:nth-child(2) {
-    animation-direction: reverse;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
   body section#photography_smallSliders div#photo_contentHolder article.autoSlide:nth-child(3) {
     -webkit-animation-delay: 1s;

@@ -21,6 +21,7 @@
     position: fixed;
     top: 0;
     background-color: #000936;
+    padding: 1rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -32,6 +33,7 @@
             align-items: center;
     z-index: 5;
     width: 100vw;
+    height: 5rem;
   }
   body header div#logoSection {
     width: 100vw;
@@ -78,7 +80,6 @@
     width: 100vw;
     height: 10vh;
     overflow-y: scroll;
-    padding-top: 1.75vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -89,6 +90,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-transition: height 0.25s;
     transition: height 0.25s;
     -webkit-transition-timing-function: linear;
@@ -117,6 +121,15 @@
             box-sizing: border-box;
     background-color: #000936;
     height: 100vh;
+  }
+  body header section#nav_mobile.switch_ON div#hambBtn {
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body header section#nav_mobile.switch_ON nav#sideNav {
     display: block;
