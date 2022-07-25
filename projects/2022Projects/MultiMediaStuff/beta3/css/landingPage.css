@@ -20,17 +20,19 @@
     margin: 0rem 0 0 0;
   }
   body main section#introBanner {
-    margin: 15vh auto 0 auto;
+    margin: 5rem auto 0 auto;
     position: relative;
   }
-  body main section#introBanner h1 {
+  body main section#introBanner h1#landingTitle {
     text-align: center;
     font-size: 1.75rem;
+    margin-top: 5rem;
+    position: absolute;
+    left: 27.5%;
   }
   body main section#introBanner div#bannerImg {
     width: 100%;
-    height: 45vh;
-    margin: 2rem auto 2rem auto;
+    height: 90vh;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,9 +42,7 @@
             justify-content: center;
   }
   body main section#introBanner div#bannerImg img {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 90vh;
   }
   body main section#introBanner div#scrollEffect_intro {
     position: relative;
@@ -67,10 +67,19 @@
     margin: 0rem auto 0 auto;
     font-weight: bolder;
   }
+  body main section#introBanner h1#scrollEffect_end {
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: red;
+  }
   body main section#cinematography_scrollPlay {
     opacity: 1;
     width: 100%;
-    height: 300vh;
+    height: 350vh;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-transition: opacity 2s;
@@ -116,21 +125,26 @@
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent {
     position: absolute;
-    bottom: 55vh;
+    text-align: center;
+    bottom: 15vh;
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     z-index: 2;
     color: red;
-    margin: 0;
-    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent p {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     display: block;
-    width: 50vw;
+    width: 80vw;
     margin: 0 auto;
     color: red;
     font-size: 1.25rem;
+    line-height: 1.75rem;
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo video {
     -webkit-transition: opacity 0.5s;
@@ -726,6 +740,55 @@
 }
 
 @media only screen and (min-width: 768px) {
+  body section#introBanner {
+    margin: 7.5rem auto 0 auto !important;
+    position: relative;
+  }
+  body section#introBanner h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 5rem;
+    position: absolute;
+    left: 27.5%;
+  }
+  body section#introBanner div#bannerImg {
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body section#introBanner div#bannerImg img {
+    width: 100%;
+    height: 85vh;
+  }
+  body section#introBanner div#scrollEffect_intro {
+    position: relative;
+    height: 500vh;
+  }
+  body section#introBanner div#scrollEffect_intro div#scrollEffect_content {
+    opacity: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 150vh;
+    height: 100vh;
+  }
+  body section#introBanner div#scrollEffect_intro div#scrollEffect_content h2 {
+    display: block;
+    margin: 0 auto 60vh auto;
+    font-size: 4rem;
+    text-align: center;
+  }
+  body section#introBanner div#scrollEffect_intro div#scrollEffect_content p {
+    width: 85%;
+    font-size: 1.25rem;
+    margin: 0rem auto 0 auto;
+    font-weight: bolder;
+  }
   body section#photography_smallSliders {
     height: 600vh;
   }
@@ -839,6 +902,17 @@
 }
 
 @media only screen and (min-width: 993px) {
+  body section#introBanner div#bannerImg {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body section#introBanner div#bannerImg img {
+    height: 70vw !important;
+  }
   body section#videography_stagger {
     top: 7.5vh !important;
   }
@@ -1006,8 +1080,51 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  body section#cinematography_scrollPlay {
-    height: 800vh !important;
+  body section#introBanner {
+    margin: 5rem auto 0 auto !important;
+    position: relative;
+  }
+  body section#introBanner h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 5rem;
+    position: absolute;
+    left: 27.5%;
+  }
+  body section#introBanner div#bannerImg {
+    width: 100%;
+    height: 92.5vh !important;
+    margin: 2rem auto 2rem auto;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body section#introBanner div#scrollEffect_intro {
+    position: relative;
+    height: 500vh;
+  }
+  body section#introBanner div#scrollEffect_intro div#scrollEffect_content {
+    opacity: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 150vh;
+    height: 100vh;
+  }
+  body section#introBanner div#scrollEffect_intro div#scrollEffect_content h2 {
+    display: block;
+    margin: 0 auto 60vh auto;
+    font-size: 4rem;
+    text-align: center;
+  }
+  body section#introBanner div#scrollEffect_intro div#scrollEffect_content p {
+    width: 85%;
+    font-size: 1.25rem;
+    margin: 0rem auto 0 auto;
+    font-weight: bolder;
   }
   body section#cinematography_scrollPlay article.cinematography_singleVideo {
     height: 125vh !important;

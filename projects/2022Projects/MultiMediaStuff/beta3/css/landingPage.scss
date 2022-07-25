@@ -22,24 +22,28 @@
       }
 
       section#introBanner {
-        margin: 15vh auto 0 auto;
+        margin:  5rem auto 0 auto;
         position:relative;
-        h1 {
+        h1#landingTitle {
           text-align:center;
           font-size: 1.75rem;
-
+          margin-top: 5rem;
+          position:absolute;
+          left:27.5%;
+          // top:0;
         }
         div#bannerImg{
           width: 100%;
-          height: 45vh;
-          margin: 2rem auto 2rem auto;
+          height: 90vh;
+          // margin: 2rem auto 2rem auto;
           overflow:hidden;
           // border-radius: 15px;
           display:flex;
           justify-content:center;
           img{ 
             // width: 100vw;
-            height: fit-content;
+            // height: fit-content;
+            height: 90vh;
           }
         }
         div#scrollEffect_intro{
@@ -68,46 +72,33 @@
             }
           }
         }
+        h1#scrollEffect_end{
+          position:absolute;
+          bottom: 5vh;
+          left:0;
+          width: 100%;
+          text-align:center;
+          font-size: 3rem;
+          // margin-top: -10vh!important;
+          color:red;
+        }
 
       }
       section#cinematography_scrollPlay{
-        
-        // position:sticky;
-        // position:relative;
-        // margin-top: 10vh;
-        // padding-bottom: 325vh;
-        // position: -webkit-sticky;
-        // position: sticky;
-        // top:0vh;
         opacity:1;
-        // overflow:hidden;
         width: 100%;
-        height: 300vh;
+        height: 350vh;
         box-sizing: border-box;
         transition: opacity 2s;
         background-color:white!important;
-        // position:absolute;
-        // div.overlay_whiteFade{
-        //   position:absolute;
-        //   top:0;
-        //   opacity: 1;
-        //   background-color:red;
-        //   width: 100%;
-        //   height: 100%;
-        //   z-index:2;
-        //   transition: opacity 0.5s;
-        // }
         article.cinematography_singleVideo {
-          // background-color: black;
           width: 100%;
-          // box-sizing: border-box;
           height: 100vh;
           margin: 100vh auto 0 auto;
           overflow: hidden;
           display:flex;
           justify-content: center;
           position: sticky;
-          // top:50vh;
           top:0;
           div.overlay {
             width: 100%;
@@ -115,31 +106,34 @@
             max-height: 100%;
             background-color: rgba(0,0,0,0.5);
             position:absolute;
-            // top:0;
             bottom: 0%;
             overflow:hidden;
             display:flex;
             flex-direction:column;
             align-items: center;
             justify-content: center;
-            // transition: height 0.25s;
             div.textContent {
               position: absolute;
-              bottom: 55vh;
+              text-align:center;
+              bottom: 15vh;
               // margin-top: 50vh;
               h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
                 z-index:2;
                 color:red;
-                margin:0;
-                font-size: 3rem
+                margin:0 0 1rem 0;
+                font-size: 2.5rem
               }
               p {
+                font-family: 'Montserrat', sans-serif;
                 text-align:center;
                 display:block;
-                width: 50vw;
+                width: 80vw;
                 margin:0 auto;
                 color:red;
                 font-size: 1.25rem;
+                line-height: 1.75rem;
               }
             }
           }
@@ -689,6 +683,60 @@
 }
 @media only screen and (min-width: 768px) {
   body {
+    section#introBanner {
+      margin: 7.5rem auto 0 auto !important;
+      position:relative;
+      h1 {
+        text-align:center;
+        font-size: 1.75rem;
+        margin-top: 5rem;
+        position:absolute;
+        left:27.5%;
+        // top:0;
+      }
+      div#bannerImg{
+        width: 100%;
+        height: 85vh;
+        // height: 92.5vh !important;
+        // margin: 2rem auto 2rem auto;
+        overflow:hidden;
+        // border-radius: 15px;
+        display:flex;
+        justify-content:center;
+        img{ 
+          width: 100%;
+          // height: fit-content;
+          height: 85vh;
+        }
+      }
+      div#scrollEffect_intro{
+        position:relative;
+        // background-color: green;
+        height: 500vh;
+        div#scrollEffect_content{
+          // background-color: cyan !important;
+          opacity: 0;
+          position:sticky;
+          top: 150vh;
+          height:100vh;
+          // transition: opacity 0.25s;
+          h2 {
+            display:block;
+            margin: 0 auto 60vh auto;
+            // margin: 0 auto 10rem 7vw;
+            font-size:4rem;
+            text-align:center;
+          }
+          p {
+            width: 85%;
+            font-size: 1.25rem;
+            margin: 0rem auto 0 auto;
+            font-weight:bolder;
+          }
+        }
+      }
+
+    }
     section#photography_smallSliders {
       height: 600vh;
       div#photo_contentHolder{
@@ -923,6 +971,29 @@
 }
 @media only screen and (min-width: 993px) {
   body {
+    section#introBanner {
+      h1 {
+      }
+      div#bannerImg{
+        // height:fit-content;
+        align-items:center;
+        justify-content:center;
+        img{ 
+          // width: 50vw !important;
+          // height: 300vh !important;
+          height:70vw !important;
+        }
+      }
+      div#scrollEffect_intro{
+        div#scrollEffect_content{
+          h2 {
+          }
+          p {
+          }
+        }
+      }
+
+    }
     section#videography_stagger{
       top:7.5vh !important;
       div#video_content {
@@ -1177,9 +1248,62 @@
 }
 @media only screen and (min-width: 1200px) {
   body {
+    section#introBanner {
+      margin: 5rem auto 0 auto !important;
+      // margin: 7.5vh auto 0 auto !important;
+      position:relative;
+      h1 {
+        text-align:center;
+        font-size: 1.75rem;
+        margin-top: 5rem;
+        position:absolute;
+        left:27.5%;
+        // top:0;
+      }
+      div#bannerImg{
+        width: 100%;
+        height: 92.5vh !important;
+        margin: 2rem auto 2rem auto;
+        overflow:hidden;
+        // border-radius: 15px;
+        display:flex;
+        justify-content:center;
+        img{ 
+          // width: 100vw;
+          // height: fit-content;
+          // height: 92.5vh !important;
+        }
+      }
+      div#scrollEffect_intro{
+        position:relative;
+        // background-color: green;
+        height: 500vh;
+        div#scrollEffect_content{
+          // background-color: cyan !important;
+          opacity: 0;
+          position:sticky;
+          top: 150vh;
+          height:100vh;
+          // transition: opacity 0.25s;
+          h2 {
+            display:block;
+            margin: 0 auto 60vh auto;
+            // margin: 0 auto 10rem 7vw;
+            font-size:4rem;
+            text-align:center;
+          }
+          p {
+            width: 85%;
+            font-size: 1.25rem;
+            margin: 0rem auto 0 auto;
+            font-weight:bolder;
+          }
+        }
+      }
 
+    }
     section#cinematography_scrollPlay{
-      height: 800vh !important;
+      // height: 800vh !important;
       article.cinematography_singleVideo {
         // height: initial !important; //needs to be greater than 100vh
         height: 125vh !important;

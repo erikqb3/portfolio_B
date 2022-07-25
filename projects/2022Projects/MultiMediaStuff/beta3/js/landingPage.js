@@ -8,7 +8,7 @@ const introSection = {
     sectionLength_andThenSome = (scrollEffect_endTop-scrollEffect_introTop),
     scrollEffect_content_p = scrollEffect_content.children[1]
   ){
-    console.log(scrollEffect_endTop);
+    // console.log(scrollEffect_endTop);
     let  scrollProgress;
     window.addEventListener('scroll',(e)=>{
       let scroll = window.scrollY;
@@ -49,32 +49,32 @@ const introSection = {
       switch (activeArea) {
         case "none":
           scrollEffect_content.style.opacity = `${0}`;
-          console.log(activeArea, newOpacity, scrollProgress)
+          // console.log(activeArea, newOpacity, scrollProgress)
           break;
         case "quarter1":
           scrollEffect_content.style.opacity = `${1-newOpacity}`
-          console.log(activeArea, newOpacity, scrollProgress)
+          // console.log(activeArea, newOpacity, scrollProgress)
           break;
         case "quarter2":
           scrollEffect_content.style.opacity = `${newOpacity}`
           scrollEffect_content_p.style.opacity = "0";
-          console.log(activeArea, newOpacity, scrollProgress);
+          // console.log(activeArea, newOpacity, scrollProgress);
           break;
         case "quarter3":
           scrollEffect_content.style.opacity = `${1-newOpacity}`
           scrollEffect_content_p.style.opacity = "1";
-          console.log(activeArea, newOpacity, scrollProgress);
+          // console.log(activeArea, newOpacity, scrollProgress);
           break;
         case "quarter4":
           scrollEffect_content.style.opacity = `${newOpacity}`
-          console.log(activeArea, newOpacity, scrollProgress)
+          // console.log(activeArea, newOpacity, scrollProgress)
           break;
-      case "quarter5":
-        // scrollEffect_content.style.opacity = `${}`
-        console.log(activeArea, newOpacity, scrollProgress)
-        break;
-      default:
-        break;
+        case "quarter5":
+          scrollEffect_content.style.opacity = `${0}`
+          // console.log(activeArea, newOpacity, scrollProgress)
+          break;
+        default:
+          break;
       }
 
       this.scrollEffect_changeTop(scrollProgress)
@@ -124,13 +124,14 @@ const cinemaSection = {
 
       endPosition = cinemaSection_array[i+1].offsetTop
       updatedPercentage = this.checkPercentage(scroll,endPosition)
-      cinemaSection_array[i].children[0].style.height = `${100-updatedPercentage}%`
-      if (cinemaSection_array[i].children[1].children[0].id == "videoE") {
-        cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`  
-      }
-      else {
-        cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`
-      }
+      cinemaSection_array[i].children[0].style.height = `${50-updatedPercentage}%`
+      cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`  
+      // if (cinemaSection_array[i].children[1].children[0].id == "videoE") {
+      //   cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`  
+      // }
+      // else {
+      //   cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`
+      // }
       } 
       // console.log(scroll, massOutput)
     })
@@ -486,7 +487,7 @@ const audioFunctions_neo = {
       let targetSong_info;
       for (let stored_song of this.audioOptions_library) {
         if (stored_song[0] == songName){
-          console.log("works");
+          // console.log("works");
           targetSong_info = stored_song;
         }
       }
@@ -516,7 +517,7 @@ const audioFunctions_neo = {
   
           }
           catch(err){
-            console.log("clear")
+            // console.log("clear")
           }
         }
   
@@ -539,7 +540,7 @@ const audioFunctions_neo = {
     },
     addIcon:function(targetSongElement,songName){
       targetSongElement.innerHTML = `<i id="currentSong_icon" class="fa-solid fa-volume-high"></i>` + songName;
-      console.log(targetSongElement.innerHTML,songName);
+      // console.log(targetSongElement.innerHTML,songName);
     },
     removeIcon:function(){
       try{
@@ -652,9 +653,9 @@ const animationSection = {
 
     //STEP1
     for (let video of thmbNailOptions_array) {
-      console.log(video)
+      // console.log(video)
       video.addEventListener('click', (e)=> {
-        console.log(e.target)
+        // console.log(e.target)
         //STEP2
         let formerSource = document.getElementById("cinematography_video").children[0];
         //STEP3
@@ -757,7 +758,7 @@ const helperFunctions = {
     switch (element.classList.value) {
       case 'video': //SpecialCase
         for (let atr of extraAttribute) {
-          console.log(atr)
+          // console.log(atr)
           // element.setAttribute(atr,atr)
         }
         break;

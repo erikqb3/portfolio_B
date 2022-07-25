@@ -21,49 +21,32 @@
     position: fixed;
     top: 0;
     background-color: #000936;
-    padding: 1rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     z-index: 5;
-    width: 100vw;
+    width: 100%;
     height: 5rem;
   }
   body header div#logoSection {
+    height: 5rem;
     width: 100vw;
     padding: 0 2.5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   body header div#logoSection div.logoSpot {
     z-index: 6;
+    width: 50px;
   }
   body header div#logoSection div.logoSpot img {
-    width: 100%;
-  }
-  body header div#logoSection div#SD_logo {
-    width: 50px;
-  }
-  body header div#logoSection div#SD_logo img {
-    width: 100%;
-  }
-  body header div#logoSection div#Studio_logo {
-    width: 50px;
-  }
-  body header div#logoSection div#Studio_logo img {
     width: 100%;
   }
   body header nav#mainNav {
@@ -78,8 +61,7 @@
     font-family: 'Montserrat', sans-serif;
     top: 0;
     width: 100vw;
-    height: 10vh;
-    overflow-y: scroll;
+    height: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -90,16 +72,22 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     -webkit-transition: height 0.25s;
     transition: height 0.25s;
     -webkit-transition-timing-function: linear;
             transition-timing-function: linear;
   }
   body header section#nav_mobile div#hambBtn {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 5rem;
     text-align: center;
     font-size: 1.5rem;
     width: -webkit-fit-content;
@@ -113,29 +101,15 @@
     display: none;
   }
   body header section#nav_mobile.switch_ON {
-    position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     background-color: #000936;
     height: 100vh;
   }
-  body header section#nav_mobile.switch_ON div#hambBtn {
-    height: 10vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   body header section#nav_mobile.switch_ON nav#sideNav {
     display: block;
-    margin: 1rem auto;
+    margin: 0rem auto;
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     padding: 0;
   }
   body header section#nav_mobile.switch_ON nav#sideNav ul {
@@ -362,13 +336,23 @@
 }
 
 @media only screen and (min-width: 768px) {
+  body header {
+    height: 7.5rem;
+  }
+  body header div#logoSection {
+    height: 7.5rem;
+  }
   body header div#logoSection div#SD_logo {
     width: 100px;
   }
   body header div#logoSection div#Studio_logo {
     width: 100px;
   }
+  body header section#nav_mobile {
+    height: 7.5rem;
+  }
   body header section#nav_mobile div#hambBtn {
+    height: 7.5rem;
     font-size: 3.5rem;
   }
   body header section#nav_mobile.switch_ON nav#sideNav ul li.baseOption {
@@ -447,12 +431,11 @@
 @media only screen and (min-width: 993px) {
   body header {
     width: 100%;
-    height: 7.5vh;
   }
   body header div#logoSection {
     position: absolute;
-    width: 100vw;
-    padding: 0 5vw;
+    width: 100%;
+    padding: 0 2.5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -465,71 +448,90 @@
   }
   body header div#logoSection div.logoSpot {
     z-index: 6;
+    width: 75px !important;
   }
   body header div#logoSection div.logoSpot img {
     width: 100%;
   }
-  body header div#logoSection div#SD_logo {
-    width: 50px;
-  }
-  body header div#logoSection div#SD_logo img {
-    width: 100%;
-  }
-  body header div#logoSection div#Studio_logo {
-    width: 50px;
-  }
-  body header div#logoSection div#Studio_logo img {
-    width: 100%;
-  }
   body header nav#mainNav {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     z-index: 3;
     width: 100%;
+    height: 7.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body header nav#mainNav ul {
     list-style: none;
-    margin: 1rem auto !important;
-    margin-right: 0 !important;
+    margin: 0rem auto !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 0;
-    width: 95vw;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    width: 80vw;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   body header nav#mainNav ul li.baseOption {
     font-size: 1rem;
-    margin-right: 4rem;
   }
   body header nav#mainNav ul li.dropDown_holder {
     display: block;
   }
   body header nav#mainNav ul li.dropDown_holder div.dropDown_btn {
     font-size: 1rem;
-    margin-right: 4rem;
   }
   body header nav#mainNav ul li.dropDown_holder ul.dropDown_list {
     position: absolute;
+    top: 7.5rem;
     left: 0;
-    top: 7.5vh;
-    width: 100vw;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     visibility: hidden;
     padding: 0;
-    height: 0;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     background-color: #969696;
     color: #000936;
     margin: 0 !important;
+    height: 0;
     -webkit-transition: height 0.5s, padding 0.5s;
     transition: height 0.5s, padding 0.5s;
   }
   body header nav#mainNav ul li.dropDown_holder ul.dropDown_list li {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON {
+    opacity: 1;
+    visibility: visible;
+    height: 7.5vh;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li {
+    opacity: 1;
+    width: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:link,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:visited {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -540,167 +542,42 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    opacity: 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: #000936;
-    cursor: pointer;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    -webkit-transition-delay: 0.25s;
-            transition-delay: 0.25s;
+    text-decoration: none;
   }
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON {
-    padding-top: 1rem;
-    opacity: 1;
-    visibility: visible;
-    height: 7.5vh;
-  }
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li {
-    opacity: 1;
-  }
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li:hover {
-    color: white;
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:link i,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:visited i {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
   }
   body header section#nav_mobile {
     display: none;
+    padding: 0;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   body header {
-    width: 100%;
-    height: 7.5vh;
+    height: 5rem;
   }
   body header div#logoSection {
-    position: absolute;
-    width: 100vw;
-    padding: 0 10vw;
-  }
-  body header div#logoSection div.logoSpot {
-    z-index: 6;
-  }
-  body header div#logoSection div.logoSpot img {
-    width: 100%;
-  }
-  body header div#logoSection div#SD_logo {
-    width: 50px;
-  }
-  body header div#logoSection div#SD_logo img {
-    width: 100%;
-  }
-  body header div#logoSection div#Studio_logo {
-    width: 50px;
-  }
-  body header div#logoSection div#Studio_logo img {
-    width: 100%;
+    height: 5rem;
   }
   body header nav#mainNav {
-    display: block;
-    z-index: 3;
-    width: 100%;
-  }
-  body header nav#mainNav ul {
-    list-style: none;
-    margin: 1rem auto !important;
-    margin-right: 0 !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0;
-    width: 95vw;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  body header nav#mainNav ul li.baseOption {
-    margin-right: 4rem;
-  }
-  body header nav#mainNav ul li.dropDown_holder {
-    display: block;
-  }
-  body header nav#mainNav ul li.dropDown_holder div.dropDown_btn {
-    margin-right: 4rem;
+    height: 5rem;
   }
   body header nav#mainNav ul li.dropDown_holder ul.dropDown_list {
-    position: absolute;
-    left: 0;
-    top: 7.5vh;
-    width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    visibility: hidden;
-    padding: 0;
-    height: 0;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    background-color: #969696;
-    color: #000936;
-    margin: 0 !important;
-    -webkit-transition: height 0.5s, padding 0.5s;
-    transition: height 0.5s, padding 0.5s;
-  }
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    opacity: 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    color: #000936;
-    cursor: pointer;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-    -webkit-transition-delay: 0.25s;
-            transition-delay: 0.25s;
+    top: 5rem;
+    padding: 0 12.5vw;
   }
   body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON {
-    padding: 1rem 10vw 1rem 10vw;
-    opacity: 1;
-    visibility: visible;
-    height: 12vh;
+    height: 5rem;
   }
   body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li {
-    opacity: 1;
-  }
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:link,
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:visited {
-    color: #000936;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-decoration: none;
-  }
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:link i,
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:visited i {
-    font-size: 1.5rem;
-  }
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li:hover a:hover,
-  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li:hover a:active {
-    color: white;
-  }
-  body header section#nav_mobile {
-    display: none;
+    cursor: pointer;
   }
   body footer {
     padding-bottom: 0;

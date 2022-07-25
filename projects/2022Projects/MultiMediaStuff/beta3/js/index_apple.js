@@ -1,22 +1,3 @@
-// function navElements(
-//   hambBtn = document.getElementById("hambBtn"),
-//   sideNav = document.getElementById('sideNav'),
-//   mobileNav = sideNav.parentElement,
-//   mainNav = document.getElementById('mainNav'),
-//   mainNav_dropDown_btn = mainNav.children[0].children[0].children[0],
-//   mainNav_dropDown_list = mainNav.children[0].children[0].children[1]
-// ) {
-//   hambBtn.addEventListener('click',(e)=>{
-//     mobileNav.classList.toggle('switch_ON');
-//   })
-//   mainNav_dropDown_btn.addEventListener('click',(e)=> {
-//     console.log(mainNav_dropDown_list)
-//     mainNav_dropDown_list.classList.toggle('switch_ON');
-//   })
-// }
-
-// navElements();
-
 
 const navElementFunctions = {
   mobileNav : function(
@@ -25,6 +6,12 @@ const navElementFunctions = {
   ){
     hambBtn.addEventListener('click',(e)=>{
       mobileNav.classList.toggle('switch_ON');
+      if (mobileNav.classList.contains('switch_ON')){
+        mobileNav.children[0].innerHTML = '<i class="fa-regular fa-circle-xmark"></i>';
+      }
+      else {
+        mobileNav.children[0].innerHTML = '<i class="fa-solid fa-bars"></i>'
+      }
     });
     // mobileNav.addEventListener('click',(e)=>{
     //   mobileNav.classList.toggle('switch_ON');
@@ -93,9 +80,9 @@ const footerElementFunctions = {
     gIT_btn = document.getElementById('subscribe').children[0],
     // closeBtn = document.getElementById('closeFormBtn')
   ){ 
-    console.log(gIT_btn);
+    // console.log(gIT_btn);
     gIT_btn.addEventListener('click',()=>{
-      console.log(document.getElementById('subscribe').children[1])
+      // console.log(document.getElementById('subscribe').children[1])
       document.getElementById('subscribe').children[1].classList.toggle('showOverlay');
       let closeBtn = document.getElementById('closeFormBtn');
       function closeEvent (){
