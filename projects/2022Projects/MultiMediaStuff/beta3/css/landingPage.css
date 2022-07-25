@@ -69,7 +69,7 @@
   }
   body main section#introBanner h1#scrollEffect_end {
     position: absolute;
-    bottom: 5vh;
+    bottom: 50vh;
     left: 0;
     width: 100%;
     text-align: center;
@@ -248,7 +248,7 @@
   body main section#photography_smallSliders div#photo_contentHolder {
     position: -webkit-sticky;
     position: sticky;
-    top: 7.5%;
+    top: 5rem;
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partA {
     width: 100%;
@@ -611,8 +611,16 @@
     opacity: 0;
     -webkit-transition: opacity 0.75s;
     transition: opacity 0.75s;
+    z-index: 2;
+    background-color: white;
+    height: 150vh;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani {
+  body main section#animationSection_youtubestyle div#animation_stickyContent {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani {
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -626,7 +634,7 @@
             flex-direction: column;
     position: relative;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani {
     position: absolute;
     color: white;
     background-color: rgba(0, 0, 0, 0.9);
@@ -636,16 +644,16 @@
     -webkit-transition: opacity 0.75s;
     transition: opacity 0.75s;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#textOverlay_text {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#textOverlay_text {
     width: 100%;
     margin: auto;
     padding: 1rem;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#textOverlay_text h1 {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#textOverlay_text h1 {
     width: 100%;
     text-align: center;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -661,7 +669,7 @@
     z-index: 2;
     cursor: pointer;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -673,7 +681,7 @@
     padding: 1rem 0 0.5rem 0;
     background-color: none;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani {
     width: 60px;
     height: 60px;
     overflow: hidden;
@@ -681,7 +689,7 @@
     padding: 0;
     cursor: pointer;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani div.overlay {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani div.overlay {
     width: 60px;
     height: 60px;
     position: absolute;
@@ -691,34 +699,34 @@
     transition: opacity 0.25s;
     padding: 0;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani img {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani img {
     width: 60px;
     height: 60px;
     -webkit-transition: width 0.25s, height 0.25s, margin 0.25s;
     transition: width 0.25s, height 0.25s, margin 0.25s;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover div.overlay,
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active div.overlay {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover div.overlay,
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active div.overlay {
     opacity: 1;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover img,
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active img {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover img,
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active img {
     width: 115%;
     height: 115%;
     margin-left: -0.4rem;
     margin-top: -0.15rem;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div {
     text-align: center;
     padding: 0 0 1rem 0;
     margin: 0;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div a:link,
-  body main section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div a:visited {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div a:link,
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div a:visited {
     text-decoration: none;
     color: black;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani video {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani video {
     width: 200%;
     -ms-flex-item-align: center;
         align-self: center;
@@ -726,16 +734,17 @@
     display: -ms-flexbox;
     display: flex;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani video source {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani video source {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  body main section#animationSection_youtubestyle div#videoHolder_ani.showOverlay div#textOverlay_ani {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani.showOverlay div#textOverlay_ani {
     opacity: 1;
   }
-  body main section#animationSection_youtubestyle div#overlayBtn {
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#overlayBtn {
     margin: 2.5rem auto 0 auto;
+    text-align: center;
   }
 }
 
@@ -792,6 +801,9 @@
   body section#photography_smallSliders {
     height: 600vh;
   }
+  body section#photography_smallSliders div#photo_contentHolder {
+    top: 7.5rem;
+  }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel {
     width: 100%;
   }
@@ -841,9 +853,6 @@
   body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder:hover {
     z-index: 2;
     opacity: 0.5;
-  }
-  body section#audio_playlist section#bannerView div#audio_features div#audio_stickyHolder article#playList ul li {
-    border: 3px solid rgba(255, 255, 255, 0.25);
   }
   body section#audioSection_playList_neo article#audio_playList div#audio_playList_coverPhoto {
     width: 37.5vw !important;
@@ -1146,6 +1155,9 @@
   }
   body section#videography_stagger div#videography_videoHolder div.singleVideo_area div.singleVideo_holder video {
     width: 100% !important;
+  }
+  body section#photography_smallSliders div#photo_contentHolder {
+    top: 5rem;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel {
     height: 75vh !important;

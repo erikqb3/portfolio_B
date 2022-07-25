@@ -348,7 +348,7 @@ const photoSection = {
     // currentImg_overlay = currentImg.children[0]
   ){
     photoGap = photo_section.offsetHeight - photo_contentHolder.offsetHeight; //all the space between the bottom of the content holder and the bottom of the entire section
-    photoGap_trigger = photo_section.offsetTop + (photoGap/3);
+    photoGap_trigger = photo_section.offsetTop + (photoGap/6);
 
     // let primaryScrollListener = window.addEventListener('scroll',(e)=> {
     //   let scroll = Math.floor(window.scrollY);
@@ -581,7 +581,8 @@ const animationSection = {
     ["videoE","resources/imgs/thmbNailE.jpg","resources/videoFiles/Animation5.mp4"]
   ],
   scrollIntro(
-    animationSection = document.getElementById('animationSection_youtubestyle')
+    animationSection = document.getElementById('animationSection_youtubestyle'),
+    footer = document.querySelector('footer')
   ){
     window.addEventListener('scroll', (e)=> {
       scroll = window.scrollY;
@@ -589,9 +590,11 @@ const animationSection = {
       if (window.innerWidth < 993){
         if (scroll >= (animationSection.offsetTop - 100)) {
           animationSection.style.opacity = "1";
+          footer.style.opacity = "1";
         }
         else {
           animationSection.style.opacity = "0";
+          footer.style.opacity = "0";
           try {
             textOverlay = document.getElementById('videoHolder_ani');
             textOverlay.classList.remove('showOverlay');

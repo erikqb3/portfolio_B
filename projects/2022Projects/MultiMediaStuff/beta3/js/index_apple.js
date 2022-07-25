@@ -91,7 +91,34 @@ const footerElementFunctions = {
       }
       closeBtn.addEventListener('click', closeEvent)
     })
-  }
+  },
+  // scrollEffect_appear : function(
+  //   footer = document.querySelector('footer'),
+  //   footerTop = footer.offsetTop
+  // ){
+  //   console.log(footerTop);
+  //   window.addEventListener('scroll', (e)=>{
+  //     let scroll = window.scrollY;
+  //     let screenWidth = window.innerWidth;
+  //     console.log(scroll, footerTop);
+  //     if (screenWidth < 768) {
+  //       if (scroll <= (footerTop+750)) {
+  //         footer.style.opacity = "0"
+  //       }
+  //       else (
+  //         footer.style.opacity = "1"
+  //       )
+  //     }
+  //     else if (screenWidth <= 993) {
+  //       if (scroll <= (footerTop+375)) {
+  //         footer.style.opacity = "0"
+  //       }
+  //       else (
+  //         footer.style.opacity = "1"
+  //       )
+  //     }
+  //   })
+  // }
 };
 
 
@@ -99,5 +126,6 @@ navElementFunctions.mobileNav();
 navElementFunctions.mainNav();
 footerElementFunctions.dropDownLists();
 footerElementFunctions.getInTouch();
+// footerElementFunctions.scrollEffect_appear();
 
 // console.log("HELLOW");

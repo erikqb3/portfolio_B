@@ -55,6 +55,10 @@
   }
   body header nav#mainNav ul li {
     color: white;
+    cursor: pointer;
+  }
+  body header nav#mainNav ul li:hover {
+    text-decoration: underline;
   }
   body header section#nav_mobile {
     position: absolute;
@@ -194,20 +198,53 @@
     position: relative;
   }
   body footer {
-    background-color: #000936;
     color: #8c8a86;
-    padding: 2rem 0 5rem 0;
-    margin: 5rem 0 0 0;
     width: 100%;
     min-height: 100px;
+    height: 300vh !important;
+    background-color: black !important;
     bottom: 0;
     display: block;
+    position: relative;
+    margin-top: -100vh;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+    -webkit-transition-delay: 0.75s;
+            transition-delay: 0.75s;
   }
-  body footer div#subscribe {
+  body footer div#footer_stickyContent {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    height: 112.5vh;
+  }
+  body footer div#footer_stickyContent div#footer_backgroundImg {
+    position: absolute;
     width: 100%;
-    padding: 0rem 0 1rem 0;
+    height: 112.5vh;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  body footer div#subscribe button {
+  body footer div#footer_stickyContent div#footer_backgroundImg img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay {
+    position: absolute;
+    z-index: 1;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe {
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe button {
     display: block;
     margin: 0 auto;
     width: 15rem;
@@ -215,13 +252,13 @@
     line-height: 2.75rem;
     cursor: pointer;
   }
-  body footer div#subscribe section#formOverflow {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow {
     display: none;
   }
-  body footer div#subscribe section#formOverflow.showOverlay {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay {
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
-    top: 7.25vh;
+    top: 5rem;
     bottom: 0;
     width: 100%;
     display: -webkit-box;
@@ -239,29 +276,29 @@
             justify-content: center;
     z-index: 3;
   }
-  body footer div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
     position: fixed;
-    top: 10vh;
+    top: 7.5rem;
     left: 2.5vw;
     color: white;
     font-size: 2rem;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form {
     margin-top: -15vh;
     width: 80vw;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form input, body footer div#subscribe section#formOverflow.showOverlay form textarea {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form input, body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form textarea {
     display: block;
     width: 100%;
     margin: 1rem 0;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form input {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form input {
     line-height: 2rem;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form textarea {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form textarea {
     height: 30vh;
   }
-  body footer div#footer_lists {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -273,26 +310,28 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 1rem;
+    position: absolute;
+    z-index: 1;
   }
-  body footer div#footer_lists section {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section {
     margin: 0.5rem 0;
   }
-  body footer div#footer_lists section > div > h3 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > h3 {
     color: white;
     text-decoration: underline;
     margin: 0 0 0.25rem 0;
     font-size: 1.75rem;
   }
-  body footer div#footer_lists section > div > ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul {
     color: white;
     list-style: none;
     padding: none;
   }
-  body footer div#footer_lists section > div > ul li h4 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4 {
     font-size: 1.25rem;
     cursor: pointer;
   }
-  body footer div#footer_lists section > div > ul li ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul {
     padding: none;
     list-style: none;
     height: 0;
@@ -300,14 +339,14 @@
     -webkit-transition: height 0.75s, opacity 0.75s;
     transition: height 0.75s, opacity 0.75s;
   }
-  body footer div#footer_lists section > div > ul li ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul li {
     font-size: 1rem;
     height: 0;
     padding-left: 1rem;
     -webkit-transition: height 0.75s;
     transition: height 0.75s;
   }
-  body footer div#footer_lists section > div > ul li ul.showList {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul.showList {
     height: 5rem;
     opacity: 1;
     display: -webkit-box;
@@ -321,16 +360,16 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  body footer div#footer_lists section > div > ul li ul.showList li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul.showList li {
     height: 0.75rem;
   }
-  body footer div#footer_lists section#footer_left div#siteLinks ul.showList {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul.showList {
     height: 8rem;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall h3 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
     text-align: left;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li {
     text-align: left;
   }
 }
@@ -368,10 +407,16 @@
   body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:active ul.dropDown_list.switch_ON {
     height: 325px;
   }
-  body footer div#subscribe section#formOverflow.showOverlay {
+  body footer div#footer_stickyContent div#footer_backgroundImg img {
+    width: 100% !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay {
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
-    top: 7.25vh;
+    top: 7.5rem;
     bottom: 0;
     width: 100%;
     display: -webkit-box;
@@ -389,41 +434,41 @@
             justify-content: center;
     z-index: 3;
   }
-  body footer div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
     position: fixed;
-    top: 10vh;
+    top: 10rem;
     left: 2.5vw;
     color: white;
     font-size: 2rem;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form {
     margin-top: -15vh;
     width: 80vw;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form input, body footer div#subscribe section#formOverflow.showOverlay form textarea {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form input, body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form textarea {
     display: block;
     width: 100%;
     margin: 1rem 0;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form input {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form input {
     line-height: 2rem;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form textarea {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form textarea {
     height: 30vh;
   }
-  body footer div#footer_lists {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall h3 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
     text-align: right;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li {
     text-align: right;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li {
     padding-right: 1rem;
   }
 }
@@ -553,9 +598,64 @@
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
   }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:hover,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:active {
+    text-decoration: none !important;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:hover i,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:active i {
+    text-decoration: none !important;
+  }
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:hover p,
+  body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:active p {
+    text-decoration: underline;
+  }
   body header section#nav_mobile {
     display: none;
     padding: 0;
+  }
+  body footer {
+    padding-bottom: 0;
+  }
+  body footer div#footer_stickyContent div#footer_backgroundImg img {
+    margin-top: -10rem;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
+    text-align: right;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul {
+    height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li {
+    text-align: right;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li h4 {
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 0 0 auto;
+    cursor: none;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 0rem 0 1rem;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li {
+    padding-right: 0rem;
+    margin: 0;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li:nth-of-type(3) {
+    margin-bottom: 1rem;
   }
 }
 
@@ -582,10 +682,10 @@
   body footer {
     padding-bottom: 0;
   }
-  body footer div#subscribe section#formOverflow.showOverlay {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay {
     background-color: rgba(0, 0, 0, 0.75);
     position: fixed;
-    top: 7.25vh;
+    top: 5rem;
     bottom: 0;
     width: 100%;
     display: -webkit-box;
@@ -603,29 +703,29 @@
             justify-content: center;
     z-index: 3;
   }
-  body footer div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay div#closeFormBtn {
     position: fixed;
-    top: 10vh;
+    top: 7.5rem;
     left: 2.5vw;
     color: white;
     font-size: 2rem;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form {
     margin-top: -15vh;
     width: 80vw;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form input, body footer div#subscribe section#formOverflow.showOverlay form textarea {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form input, body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form textarea {
     display: block;
     width: 100%;
     margin: 1rem 0;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form input {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form input {
     line-height: 2rem;
   }
-  body footer div#subscribe section#formOverflow.showOverlay form textarea {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form textarea {
     height: 30vh;
   }
-  body footer div#footer_lists {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -634,10 +734,10 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body footer div#footer_lists section {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section {
     width: 35vw;
   }
-  body footer div#footer_lists section > div > ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -652,14 +752,14 @@
         -ms-flex-pack: start;
             justify-content: start;
   }
-  body footer div#footer_lists section > div > ul li h4 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     font-size: 1rem;
     margin: 0 2.5rem 0 0;
   }
-  body footer div#footer_lists section > div > ul li ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -672,17 +772,17 @@
     height: -moz-fit-content;
     height: fit-content;
   }
-  body footer div#footer_lists section > div > ul li ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul li {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 0;
     font-size: 0.75rem;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall h3 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
     text-align: right;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul {
     height: 10rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -694,26 +794,26 @@
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li {
     text-align: right;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li h4 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li h4 {
     font-size: 1rem;
     text-align: left;
     margin: 0 0 0 auto;
     cursor: none;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     margin: 0 0rem 0 1rem;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li {
     padding-right: 0rem;
     margin: 0;
   }
-  body footer div#footer_lists section#footer_right div#contactSmall ul li ul li:nth-of-type(3) {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li:nth-of-type(3) {
     margin-bottom: 1rem;
   }
 }
