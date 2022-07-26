@@ -53,7 +53,7 @@ const footerElementFunctions = {
   dropDownLists : function(
     dropDown_array = document.querySelectorAll('h4.footerDropDown')
   ){
-    if (window.innerWidth < 1900) {
+    if (window.innerWidth < 1200) {
       for (let element of dropDown_array) {
         // let list = element.children[1];
         element.addEventListener('click',(e)=>{
@@ -92,6 +92,53 @@ const footerElementFunctions = {
       closeBtn.addEventListener('click', closeEvent)
     })
   },
+  scrollEffect_appear : function(
+    animationSection = document.getElementById('animationSection_youtubestyle'),
+    footer = document.querySelector('footer')
+  ){
+    window.addEventListener('scroll', (e)=> {
+      scroll = window.scrollY;
+
+      if (scroll >= (animationSection.offsetTop + (animationSection.offsetHeight / 3))) {
+        footer.style.opacity = "1";
+        // footer.style.opacity = "1";
+      }
+      else {
+        footer.style.opacity = "0";
+      }
+
+      // console.log(scroll, animationSection.offsetTop)
+      // if (window.innerWidth < 993){
+      //   if (scroll >= (animationSection.offsetTop + (animationSection.offsetHeight / 2))) {
+      //     footer.style.opacity = "1";
+      //     // footer.style.opacity = "1";
+      //   }
+      //   else {
+      //     footer.style.opacity = "0";
+      //     // footer.style.opacity = "0";
+      //     try {
+      //       textOverlay = document.getElementById('videoHolder_ani');
+      //       textOverlay.classList.remove('showOverlay');
+      //     }
+      //     catch(err){}
+      //   }
+      // }
+      // else {
+      //   if (scroll >= (animationSection.offsetTop - 200)) {
+      //     animationSection.style.opacity = "1";
+      //   }
+      //   else {
+      //     animationSection.style.opacity = "0";
+      //     try {
+      //       textOverlay = document.getElementById('videoHolder_ani');
+      //       textOverlay.classList.remove('showOverlay');
+      //     }
+      //     catch(err){}
+      //   }
+      // }
+      
+    })
+  }
   // scrollEffect_appear : function(
   //   footer = document.querySelector('footer'),
   //   footerTop = footer.offsetTop
@@ -126,6 +173,6 @@ navElementFunctions.mobileNav();
 navElementFunctions.mainNav();
 footerElementFunctions.dropDownLists();
 footerElementFunctions.getInTouch();
-// footerElementFunctions.scrollEffect_appear();
+footerElementFunctions.scrollEffect_appear();
 
 // console.log("HELLOW");

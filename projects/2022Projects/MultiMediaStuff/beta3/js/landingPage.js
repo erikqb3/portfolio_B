@@ -148,9 +148,9 @@ const videoSection = {
   fadeInEffect_scroll : function(
 
     overlay_array = document.querySelectorAll('.singleVideo_area > .overlay'),
-    loadOverlays = (overlay) => {
-      overlay.classList.add("visibleOverlay")
-    },
+    // loadOverlays = (overlay) => {
+    //   overlay.classList.add("visibleOverlay")
+    // },
     loadOptions = {
       threshold: 0,
       rootMargin: "0px 0px -100px 0px"
@@ -162,7 +162,7 @@ const videoSection = {
         let counter = 0;
         items.forEach((item) => {
           if (item.isIntersecting) {
-            loadOverlays(item.target);
+            // loadOverlays(item.target);
             observer.unobserve(item.target);
           }
         });
@@ -172,7 +172,7 @@ const videoSection = {
       });
     } else {
      overlay_array.forEach((overlay)=> {
-      loadOverlays(overlay)
+      // loadOverlays(overlay)
      }) 
     }
   },
@@ -191,19 +191,30 @@ const videoSection = {
       window.addEventListener('scroll',()=>{
       let scroll = window.scrollY;
       let percentage = parseFloat(((scroll - start) / (end-start)).toFixed(3))
+      let shownVideo = '';
       // console.log(scroll,start,end, percentage)
-      if ((percentage >= 0) && (percentage < 0.250)){
-        // console.log("video1");
+      if ((percentage < -0.5) || (percentage > 2.5)) {
+        for(let video of videoHolder) {
+          video.children[0].classList.remove('visibleOverlay')
+        }
+      }
+      else if ((percentage >= 0) && (percentage < 0.250)){
+        shownVideo = "video1";
+        videoHolder[0].children[0].classList.add('visibleOverlay')
       }
       else if ((percentage >= 0.250) && (percentage < 0.500)){
-        // console.log("video2");
+        shownVideo = "video2";
+        videoHolder[1].children[0].classList.add('visibleOverlay')
       }
       else if ((percentage >= 0.500) && (percentage < 0.750)){
-        // console.log("video3");
+        shownVideo = "video3";
+        videoHolder[2].children[0].classList.add('visibleOverlay')
       }
       else if ((percentage >= 0.750) && (percentage < 1.00)){
-        // console.log("video4");
+        shownVideo = "video4";
+        videoHolder[3].children[0].classList.add('visibleOverlay')
       }
+      console.log(percentage, shownVideo)
     })
   }
 
@@ -590,11 +601,11 @@ const animationSection = {
       if (window.innerWidth < 993){
         if (scroll >= (animationSection.offsetTop - 100)) {
           animationSection.style.opacity = "1";
-          footer.style.opacity = "1";
+          // footer.style.opacity = "1";
         }
         else {
           animationSection.style.opacity = "0";
-          footer.style.opacity = "0";
+          // footer.style.opacity = "0";
           try {
             textOverlay = document.getElementById('videoHolder_ani');
             textOverlay.classList.remove('showOverlay');

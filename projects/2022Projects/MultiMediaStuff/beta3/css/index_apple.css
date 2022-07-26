@@ -199,7 +199,7 @@
   }
   body footer {
     color: #8c8a86;
-    width: 100%;
+    width: 100vw;
     min-height: 100px;
     height: 300vh !important;
     background-color: black !important;
@@ -207,21 +207,20 @@
     display: block;
     position: relative;
     margin-top: -100vh;
+    font-family: 'Montserrat', sans-serif;
     -webkit-transition: opacity 0.75s;
     transition: opacity 0.75s;
-    -webkit-transition-delay: 0.75s;
-            transition-delay: 0.75s;
   }
   body footer div#footer_stickyContent {
     position: -webkit-sticky;
     position: sticky;
     top: 5rem;
-    height: 112.5vh;
+    height: 140vh;
   }
   body footer div#footer_stickyContent div#footer_backgroundImg {
     position: absolute;
     width: 100%;
-    height: 112.5vh;
+    height: 140vh;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -239,6 +238,8 @@
   body footer div#footer_stickyContent div#footer_textualOverlay {
     position: absolute;
     z-index: 1;
+    width: 100vw;
+    margin-top: 2.5rem;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe {
     width: 100%;
@@ -298,6 +299,10 @@
   body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay form textarea {
     height: 30vh;
   }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe p.descriptionText {
+    color: white;
+    padding: 1rem;
+  }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -312,6 +317,7 @@
     padding: 0 1rem;
     position: absolute;
     z-index: 1;
+    width: 100%;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section {
     margin: 0.5rem 0;
@@ -321,14 +327,25 @@
     text-decoration: underline;
     margin: 0 0 0.25rem 0;
     font-size: 1.75rem;
+    font-weight: normal;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul {
     color: white;
     list-style: none;
     padding: none;
   }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0.5rem 0;
+  }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4 {
     font-size: 1.25rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: normal;
     cursor: pointer;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul {
@@ -392,7 +409,7 @@
   }
   body header section#nav_mobile div#hambBtn {
     height: 7.5rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   body header section#nav_mobile.switch_ON nav#sideNav ul li.baseOption {
     font-size: 2rem;
@@ -407,11 +424,28 @@
   body header section#nav_mobile.switch_ON nav#sideNav ul li.dropDown_holder:active ul.dropDown_list.switch_ON {
     height: 325px;
   }
+  body footer {
+    height: 200vh !important;
+  }
+  body footer div#footer_stickyContent {
+    top: 7.5rem;
+    font-weight: normal;
+    height: 100vh;
+  }
+  body footer div#footer_stickyContent div#footer_backgroundImg {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   body footer div#footer_stickyContent div#footer_backgroundImg img {
     width: 100% !important;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    height: 100vh;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay {
+    margin-top: 7.5rem;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#subscribe section#formOverflow.showOverlay {
     background-color: rgba(0, 0, 0, 0.75);
@@ -465,11 +499,44 @@
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
     text-align: right;
   }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li {
     text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: right;
+    justify-self: end;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li {
-    padding-right: 1rem;
+    text-align: right;
+    padding-right: 0rem;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul.showList li {
+    text-align: right;
   }
 }
 
@@ -618,44 +685,7 @@
     padding-bottom: 0;
   }
   body footer div#footer_stickyContent div#footer_backgroundImg img {
-    margin-top: -10rem;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
-    text-align: right;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul {
-    height: 10rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li {
-    text-align: right;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li h4 {
-    font-size: 1rem;
-    text-align: left;
-    margin: 0 0 0 auto;
-    cursor: none;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin: 0 0rem 0 1rem;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li {
-    padding-right: 0rem;
-    margin: 0;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li:nth-of-type(3) {
-    margin-bottom: 1rem;
+    width: 200vw;
   }
 }
 
@@ -737,7 +767,10 @@
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section {
     width: 35vw;
   }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4 {
+    font-size: 1rem;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -752,14 +785,13 @@
         -ms-flex-pack: start;
             justify-content: start;
   }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4 {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li h4 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 1rem;
     margin: 0 2.5rem 0 0;
   }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li ul {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -772,49 +804,12 @@
     height: -moz-fit-content;
     height: fit-content;
   }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li ul li {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 0;
     font-size: 0.75rem;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
-    text-align: right;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul {
-    height: 10rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li {
-    text-align: right;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li h4 {
-    font-size: 1rem;
-    text-align: left;
-    margin: 0 0 0 auto;
-    cursor: none;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin: 0 0rem 0 1rem;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li {
-    padding-right: 0rem;
-    margin: 0;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li ul li:nth-of-type(3) {
-    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=index_apple.css.map */
