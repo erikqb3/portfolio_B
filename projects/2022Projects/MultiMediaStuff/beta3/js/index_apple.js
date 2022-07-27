@@ -53,11 +53,11 @@ const footerElementFunctions = {
   dropDownLists : function(
     dropDown_array = document.querySelectorAll('h4.footerDropDown')
   ){
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 1900) {
       for (let element of dropDown_array) {
         // let list = element.children[1];
         element.addEventListener('click',(e)=>{
-          let pastTarget = document.querySelector('ul.showList');
+          let pastTarget = document.querySelector('div.showList');
           if (pastTarget == e.target.nextElementSibling) {
             e.target.nextElementSibling.classList.toggle('showList');
           }
@@ -76,22 +76,22 @@ const footerElementFunctions = {
       }
     }
   },
-  getInTouch : function(
-    gIT_btn = document.getElementById('subscribe').children[0],
-    // closeBtn = document.getElementById('closeFormBtn')
-  ){ 
-    // console.log(gIT_btn);
-    gIT_btn.addEventListener('click',()=>{
-      // console.log(document.getElementById('subscribe').children[1])
-      document.getElementById('subscribe').children[1].classList.toggle('showOverlay');
-      let closeBtn = document.getElementById('closeFormBtn');
-      function closeEvent (){
-        document.getElementById('subscribe').children[1].classList.remove('showOverlay');
-        closeBtn.removeEventListener('click',closeEvent)
-      }
-      closeBtn.addEventListener('click', closeEvent)
-    })
-  },
+  // getInTouch : function(
+  //   gIT_btn = document.getElementById('subscribe').children[0],
+  //   // closeBtn = document.getElementById('closeFormBtn')
+  // ){ 
+  //   // console.log(gIT_btn);
+  //   gIT_btn.addEventListener('click',()=>{
+  //     // console.log(document.getElementById('subscribe').children[1])
+  //     document.getElementById('subscribe').children[1].classList.toggle('showOverlay');
+  //     let closeBtn = document.getElementById('closeFormBtn');
+  //     function closeEvent (){
+  //       document.getElementById('subscribe').children[1].classList.remove('showOverlay');
+  //       closeBtn.removeEventListener('click',closeEvent)
+  //     }
+  //     closeBtn.addEventListener('click', closeEvent)
+  //   })
+  // },
   scrollEffect_appear : function(
     animationSection = document.getElementById('animationSection_youtubestyle'),
     footer = document.querySelector('footer')
@@ -99,9 +99,8 @@ const footerElementFunctions = {
     window.addEventListener('scroll', (e)=> {
       scroll = window.scrollY;
 
-      if (scroll >= (animationSection.offsetTop + (animationSection.offsetHeight / 3))) {
-        footer.style.opacity = "1";
-        // footer.style.opacity = "1";
+      if (scroll >= (animationSection.offsetTop + (animationSection.offsetHeight))) {
+        footer.style.opacity = "1"
       }
       else {
         footer.style.opacity = "0";
@@ -172,7 +171,7 @@ const footerElementFunctions = {
 navElementFunctions.mobileNav();
 navElementFunctions.mainNav();
 footerElementFunctions.dropDownLists();
-footerElementFunctions.getInTouch();
+// footerElementFunctions.getInTouch();
 footerElementFunctions.scrollEffect_appear();
 
 // console.log("HELLOW");

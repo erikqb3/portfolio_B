@@ -265,7 +265,7 @@
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel {
     margin: 0 auto !important;
     width: 100%;
-    height: 75vw;
+    height: 90vh;
     position: relative;
     -webkit-transition: width 0.75s, height 0.75s;
     transition: width 0.75s, height 0.75s;
@@ -408,6 +408,9 @@
             justify-content: space-evenly;
     overflow-x: hidden;
     margin: 1rem 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide {
     width: 100vw;
@@ -613,7 +616,7 @@
     transition: opacity 0.75s;
     z-index: 2;
     background-color: white;
-    height: 150vh;
+    height: 275vh;
   }
   body main section#animationSection_youtubestyle div#animation_stickyContent {
     position: -webkit-sticky;
@@ -634,6 +637,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     position: relative;
+    height: 25rem;
   }
   body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani {
     position: absolute;
@@ -654,79 +658,6 @@
     width: 100%;
     text-align: center;
   }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100% !important;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0) !important;
-    position: absolute;
-    bottom: 0;
-    -webkit-transition: opacity 0.75s;
-    transition: opacity 0.75s;
-    z-index: 2;
-    cursor: pointer;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 100%;
-    padding: 1rem 0 0.5rem 0;
-    background-color: none;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani {
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-    position: relative;
-    padding: 0;
-    cursor: pointer;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani div.overlay {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    -webkit-transition: opacity 0.25s;
-    transition: opacity 0.25s;
-    padding: 0;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani img {
-    width: 60px;
-    height: 60px;
-    -webkit-transition: width 0.25s, height 0.25s, margin 0.25s;
-    transition: width 0.25s, height 0.25s, margin 0.25s;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover div.overlay,
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active div.overlay {
-    opacity: 1;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover img,
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active img {
-    width: 115%;
-    height: 115%;
-    margin-left: -0.4rem;
-    margin-top: -0.15rem;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div {
-    text-align: center;
-    padding: 0 0 1rem 0;
-    margin: 0;
-  }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div a:link,
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani div a:visited {
-    text-decoration: none;
-    color: black;
-  }
   body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani video {
     width: 200%;
     -ms-flex-item-align: center;
@@ -743,9 +674,87 @@
   body main section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani.showOverlay div#textOverlay_ani {
     opacity: 1;
   }
-  body main section#animationSection_youtubestyle div#animation_stickyContent div#overlayBtn {
-    margin: 2.5rem auto 0 auto;
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100% !important;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0) !important;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+    z-index: 2;
+    cursor: pointer;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    padding: 0rem 0 0rem 0;
+    background-color: none;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani {
+    width: 25vw;
+    height: 25vw;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani div.overlay {
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    padding: 0;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani img {
+    width: 25vw;
+    height: 25vw;
+    -webkit-transition: width 0.25s, height 0.25s, margin 0.25s;
+    transition: width 0.25s, height 0.25s, margin 0.25s;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover div.overlay,
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active div.overlay {
+    opacity: 1;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover img,
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active img {
+    width: 115%;
+    height: 115%;
+    margin-left: -0.4rem;
+    margin-top: -0.15rem;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div {
     text-align: center;
+    padding: 0 0 1rem 0;
+    margin: 0;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div a:link,
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#thmbNail_holder_ani div a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#overlayBtn {
+    padding: 1.5rem 0 1.5rem 0;
+    text-align: center;
+    color: white;
+    background-color: #000936;
+  }
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#overlayBtn:hover,
+  body main section#animationSection_youtubestyle div#animation_stickyContent div#overlayBtn:active {
+    background-color: #969696;
+    color: #000936;
   }
 }
 
@@ -859,20 +868,23 @@
     width: 37.5vw !important;
     height: 37.5vw !important;
   }
-  body section#animationSection_youtubestyle div.filler {
-    min-height: 125px;
+  body section#animationSection_youtubestyle div#animation_stickyContent {
+    top: 7.5rem !important;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row {
-    padding: 1rem 0 0.5rem 0;
+  body section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani {
+    height: 30rem;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row div.imgHolder {
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row {
+    padding: 1rem 0 0rem 0;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder {
     width: 125px;
     height: 125px;
     overflow: hidden;
     position: relative;
     padding: 0;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row div.imgHolder div.overlay {
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder div.overlay {
     width: 125px;
     height: 125px;
     position: absolute;
@@ -882,30 +894,30 @@
     transition: opacity 0.25s;
     padding: 0;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row div.imgHolder img {
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder img {
     width: 125px;
     height: 125px;
     -webkit-transition: width 0.25s, height 0.25s, margin 0.25s;
     transition: width 0.25s, height 0.25s, margin 0.25s;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row div.imgHolder:hover div.overlay,
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row div.imgHolder:active div.overlay {
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder:hover div.overlay,
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder:active div.overlay {
     opacity: 1;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row div.imgHolder:hover img,
-  body section#animationSection_youtubestyle div#thmbNail_holder div#thmbNail_holder_row div.imgHolder:active img {
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder:hover img,
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder:active img {
     width: 115%;
     height: 115%;
     margin-left: -0.4rem;
     margin-top: -0.15rem;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div {
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div {
     text-align: center;
     padding: 0 0 1rem 0;
     margin: 0;
   }
-  body section#animationSection_youtubestyle div#thmbNail_holder div a:link,
-  body section#animationSection_youtubestyle div#thmbNail_holder div a:visited {
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div a:link,
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div a:visited {
     text-decoration: none;
     color: white;
   }
@@ -1051,18 +1063,20 @@
     margin: 0;
   }
   body section#animationSection_youtubestyle {
-    height: 75vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
-  body section#animationSection_youtubestyle div#videoHolder_ani {
+  body section#animationSection_youtubestyle div#animation_stickyContent {
+    width: 100%;
+  }
+  body section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -1070,22 +1084,54 @@
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
   }
-  body section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani {
+  body section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani {
     opacity: 1 !important;
-    width: 45vw !important;
+    width: 50% !important;
     position: relative !important;
     background-color: rgba(0, 0, 0, 0) !important;
     color: black  !important;
   }
-  body section#animationSection_youtubestyle div#videoHolder_ani div#textOverlay_ani div#thmbNail_holder_ani {
-    position: initial !important;
+  body section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani div#textOverlay_ani div#textOverlay_text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
-  body section#animationSection_youtubestyle div#videoHolder_ani video {
-    width: 45vw !important;
+  body section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani video {
+    width: 50% !important;
   }
   body section#animationSection_youtubestyle div#overlayBtn {
     display: none;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani {
+    width: 25% !important;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani div.overlay {
+    width: 100% !important;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover div.overlay,
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active div.overlay {
+    opacity: 1;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:hover img,
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder_ani:active img {
+    width: 115%;
+    height: 115%;
+    margin-left: -0.8rem !important;
+    margin-top: -0.18rem !important;
   }
 }
 
@@ -1148,9 +1194,6 @@
   body section#videography_stagger div#videography_videoHolder {
     height: 95vh !important;
   }
-  body section#videography_stagger div#videography_videoHolder div.singleVideo_area div.overlay.visibleOverlay {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-  }
   body section#videography_stagger div#videography_videoHolder div.singleVideo_area div.singleVideo_holder {
     height: initial !important;
   }
@@ -1161,10 +1204,46 @@
     top: 5rem;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel {
-    height: 75vh !important;
+    height: 87.5vh !important;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder img {
     height: 200% !important;
+  }
+  body section#animationSection_youtubestyle div#animation_stickyContent {
+    top: 5rem !important;
+  }
+  body section#animationSection_youtubestyle div#animation_stickyContent div#videoHolder_ani {
+    height: 30rem;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row {
+    padding: 1rem 0 0.5rem 0;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder div.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    padding: 0;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div#thmbNail_holder_row div.imgHolder img {
+    -webkit-transition: width 0.25s, height 0.25s, margin 0.25s;
+    transition: width 0.25s, height 0.25s, margin 0.25s;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div {
+    text-align: center;
+    padding: 0 0 1rem 0;
+    margin: 0;
+  }
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div a:link,
+  body section#animationSection_youtubestyle div#thmbNail_holder_ani div a:visited {
+    text-decoration: none;
+    color: white;
   }
 }
 /*# sourceMappingURL=landingPage.css.map */

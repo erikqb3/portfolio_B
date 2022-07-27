@@ -351,6 +351,7 @@ const photoSection = {
     slideHolder,
     photo_section = document.getElementById('photography_smallSliders'),
     sectionA = document.getElementById('photo_partA'),
+    sectionB = document.getElementById('photo_partB'), 
     videoSection = document.getElementById('videography_stagger')
     // photo_contentHolder = document.getElementById('photo_contentHolder'),
     //for changeImg
@@ -377,13 +378,15 @@ const photoSection = {
       // console.log(scroll, photo_section.offsetTop);
 
       if (scroll >= photoGap_trigger){
-        photo_partA.classList.add("pseudoScrollEffect");
+        sectionA.classList.add("pseudoScrollEffect");
+        sectionB.style.opacity = "1";
         // console.log("pseudoEffect ON!")
         // videoSection.style.display = "none";
  
       }
       else {
-        photo_partA.classList.remove("pseudoScrollEffect");
+        sectionA.classList.remove("pseudoScrollEffect");
+        sectionB.style.opacity = "0"
         // videoSection.style.display = "block";
 
         // this.index = this.moveToNextSlide(slideHolder);
@@ -637,7 +640,7 @@ const animationSection = {
     //STEP1: target viewable video
     //STPE2: toggle existance of thmbNail_holder based on window width and if video is paused or not
              
-    video.addEventListener('click', (e)=> { //STEP1
+    // video.addEventListener('click', (e)=> { //STEP1
       //STEP2
       // thmbNail_holder.classList.toggle('hideElement');
       // if (window.innerWidth >= 993) {
@@ -648,7 +651,7 @@ const animationSection = {
       //     thmbNail_holder.style.display = "none";
       //   }
       // }
-    })
+    // })
   },
   videoOptionSwitch: function(
     thmbNailOptions_array = document.querySelectorAll('.imgHolder_ani'),
@@ -671,17 +674,17 @@ const animationSection = {
       video.addEventListener('click', (e)=> {
         // console.log(e.target)
         //STEP2
-        let formerSource = document.getElementById("cinematography_video").children[0];
+        let formerSource = document.getElementById("videoElement_ani").children[0];
         //STEP3
         let targetImg = e.target.parentElement.children[1];
         for (let storedVideo of this.cinemaOptions_library){
           if (targetImg.alt == storedVideo[0]) {
             //STEP4
-            let newVideo = helperFunctions.generateElement('video',"cinematography_video","video");
+            let newVideo = helperFunctions.generateElement('video',"videoElement_ani","video");
             newVideo = helperFunctions.specialElements(newVideo,["controls","muted"])
             let newSource = helperFunctions.generateElement('source',storedVideo[0],"video/mp4","",storedVideo[2]);
             newVideo.appendChild(newSource)
-            document.getElementById("cinematography_video").remove();
+            document.getElementById("videoElement_ani").remove();
             document.getElementById('videoHolder_ani').appendChild(newVideo)
             // document.getElementById("cinematography_youtubestyle").insertBefore(newVideo,document.getElementById("thmbNail_holder"));
             //STEP4a
@@ -710,7 +713,7 @@ const animationSection = {
           }
         }
         //STEP 7 
-        videoHolder_ani.classList.toggle('showOverlay');
+        // videoHolder_ani.classList.toggle('showOverlay');
         if (window.innerWidth >= 993) {
           // thmbNail_holder.style.display = "none";
         }
@@ -721,6 +724,7 @@ const animationSection = {
     videoHolder_ani = document.getElementById('videoHolder_ani'),
     overlayBtn = document.getElementById('overlayBtn')){
     overlayBtn.addEventListener('click',(e)=>{
+      console.log('showOverlay')
       videoHolder_ani.classList.toggle('showOverlay');
     })
   },
