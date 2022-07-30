@@ -56,7 +56,7 @@
                 </a>
               </li>
               <li>
-                <a href="#graphics_navTarget">
+                <a href="#animation_navTarget">
                   <i class="fa-solid fa-image"></i>
                   <p>Animation</p>
                 </a>
@@ -113,15 +113,15 @@
             <li class="dropDown_holder">
               <div class="dropDown_btn">Portfolio</div>
               <ul class="dropDown_list">
-                <li>Cinematography</li>
+                <li><a href="#cinema_navTarget">Cinematography</a></li>
                 <hr>
-                <li>Videography</li>
+                <li><a href="#video_navTarget">Videography</a></li>
                 <hr>
-                <li>Photography</li>
+                <li><a href="#photo_navTarget">Photography</a></li>
                 <hr>
-                <li>Audio</li>
+                <li><a href="#audio_navTarget">Audio</a></li>
                 <hr>
-                <li>Animation</li>
+                <li><a href="#animation_navTarget">Animation</a></li>
               </ul>
             </li>
             <hr>
@@ -160,7 +160,7 @@
       <section id="introBanner">
         <h1 id="landingTitle">Sapien Media</h1>
         <div id="bannerImg">
-          <img src="resources/imgs/noImg1.jpg">
+          <img src="resources/imgs/topBannerPic.jpg">
         </div>
         <div id="scrollEffect_intro">
           <div id="scrollEffect_content">
@@ -276,7 +276,7 @@
                     <div class="overlayText">
                       <h4>Weddings</h4>
                     </div>
-                    <img src="resources/imgs/noImg1.jpg">
+                    <img src="resources/imgs/photoA.jpg">
                   </div>
                 </div>
                 <div id="photoA" class="slide">
@@ -284,7 +284,7 @@
                     <div class="overlayText">
                       <h4>Graduations</h4>
                     </div>
-                    <img src="resources/imgs/noImg2.jpg">
+                    <img src="resources/imgs/photoB.jpg">
                   </div>
                 </div>
                 <div id="photoF" class="slide">
@@ -292,7 +292,7 @@
                     <div class="overlayText">
                       <h4>Real Estate</h4>
                     </div>
-                    <img src="resources/imgs/noImg3.jpg">
+                    <img src="resources/imgs/photoC.jpg">
                   </div>
                 </div>
                 <div id="photoD" class="slide">
@@ -300,7 +300,7 @@
                     <div class="overlayText">
                       <h4>Business Advertisement</h4>
                     </div>
-                    <img src="resources/imgs/noImg4.jpg">
+                    <img src="resources/imgs/photoD.jpg">
                   </div>
                 </div>
                 <div id="photoB" class="slide">
@@ -308,7 +308,7 @@
                     <div class="overlayText">
                       <h4>More</h4>
                     </div>
-                    <img src="resources/imgs/noImg5.jpg">
+                    <img src="resources/imgs/photoE.jpg">
                   </div>
                 </div>
               </div>
@@ -322,30 +322,38 @@
           <section id="photo_partB">
             <article class="autoSlide">
                 <div class="imgHolder">
-                  <img src="resources/imgs/noImg1.jpg">
+                  <!-- <div class="imgOverlay">Text</div> -->
+                  <img src="resources/imgs/photo1.jpg">
                 </div>
                 <div class="imgHolder">
-                  <img src="resources/imgs/noImg2.jpg">
+                  <!-- <div class="imgOverlay">Text</div> -->
+                  <img src="resources/imgs/photo2.jpg">
                 </div>
                 <div class="imgHolder">
+                  <!-- <div class="imgOverlay">Text</div> -->
                   <img src="resources/imgs/noImg3.jpg">
                 </div>
                 <div class="imgHolder">
-                  <img src="resources/imgs/noImg4.jpg">
+                  <!-- <div class="imgOverlay">Text</div> -->
+                  <img src="resources/imgs/photo4.jpg">
                 </div>
             </article>
             <article class="autoSlide">
               <div class="imgHolder">
-                <img src="resources/imgs/noImg5.jpg">
+                <!-- <div class="imgOverlay">Text</div> -->
+                <img src="resources/imgs/photo5.jpg">
               </div>
               <div class="imgHolder">
-                <img src="resources/imgs/noImg6.jpg">
+                <!-- <div class="imgOverlay">Text</div> -->
+                <img src="resources/imgs/photo6.jpg">
               </div>
               <div class="imgHolder">
-                <img src="resources/imgs/noImg7.jpg">
+                <!-- <div class="imgOverlay">Text</div> -->
+                <img src="resources/imgs/photo7.jpg">
               </div>
               <div class="imgHolder">
-                <img src="resources/imgs/noImg8.jpg">
+                <!-- <div class="imgOverlay">Text</div> -->
+                <img src="resources/imgs/photo8.jpg">
               </div>
             </article>
           </section>
@@ -424,7 +432,7 @@
           </ul>
         </article>
       </section>
-      <h1 id="d" class="navTarget">Animation</h1>
+      <h1 id="animation_navTarget" class="navTarget">Animation</h1>
       <section id="animationSection_youtubestyle">
         <div id="animation_stickyContent">
           <div id="videoHolder_ani">
@@ -483,24 +491,28 @@
       </section>
       <footer>
         <div id="footer_stickyContent">
-          <div id="footer_backgroundImg">
+          <!-- <div id="footer_backgroundImg">
             <img src="resources/imgs/SD_Front_Outside.jpg">
-          </div>
+          </div> -->
           <div id="footer_textualOverlay">
-            <div id="subscribe">
+            <div id="contactUs">
               <section id="formOverflow">
                 <form>
                   <h3>Contact Us</h3>
-                  <input placeholder="Name">
-                  <input placeholder="Email Address">
-                  <input placeholder="Subject">
+                  <div id="smallTextInput">
+                    <input placeholder="Name">
+                    <input placeholder="Email Address">
+                    <input placeholder="Subject">
+                  </div>
                   <textarea placeholder="Your Message"></textarea>
                   <button>Send Message</button>
                 </form>
               </section>
-              <!-- <p class="descriptionText">We are a turn key multimedia and content creation advertising agency with a production studio located at 50 College Avenue in Rexburg, Idaho. We produce all SEO digital marketing needs for companies and web designers. We create and produce copy writing, graphic design, animation, photography, videography & film, audio & music recording.</p> -->
             </div>
             <div id="footer_lists">
+              <div id="footer_backgroundImg">
+                <img src="resources/imgs/SD_Front_Outside.jpg">
+              </div>
               <section id="footer_left">
                 <div id="siteLinks">
                   <h3>Related Sites</h3>
@@ -510,10 +522,10 @@
                       <div class="footerDropDown_holder">
                         <ul>
                           <li><a href="#cinema_navTarget">Cinematography</a></li>
-                          <li><a href="#cinema_navTarget">Videography</a></li>
-                          <li><a href="#cinema_navTarget">Photography</a></li>
-                          <li><a href="#cinema_navTarget">Audio</a></li>
-                          <li><a href="#cinema_navTarget">Animation</a></li>
+                          <li><a href="#video_navTarget">Videography</a></li>
+                          <li><a href="#photo_navTarget">Photography</a></li>
+                          <li><a href="#audio_navTarget">Audio</a></li>
+                          <li><a href="#animation_navTarget">Animation</a></li>
                         </ul>
                       </div>
                     </li>
