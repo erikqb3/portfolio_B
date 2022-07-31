@@ -6,76 +6,147 @@ const introSection = {
     scrollEffect_content = document.getElementById('scrollEffect_content'),
     sectionLength_5xchunk = ((scrollEffect_endTop-scrollEffect_introTop)*0.2),
     sectionLength_andThenSome = (scrollEffect_endTop-scrollEffect_introTop),
-    scrollEffect_content_p = scrollEffect_content.children[1]
+    scrollEffect_content_p = scrollEffect_content.children[1],
   ){
     // console.log(scrollEffect_endTop);
     let  scrollProgress;
     window.addEventListener('scroll',(e)=>{
       let scroll = window.scrollY;
-      let activeArea = "";
-      let newOpacity;
-      let multiplier;
+      // let half = (window.innerHeight*0.6)/2;
+      // let whole = (window.innerHeight*0.6);
+
+      // let wireA = half;
+      // let wireB = wireA + half;
+      // let wireC = wireB + half;
+      // let wireD = wireC + whole;
+      // let wireE = wireD + half;
+      // let wireF = wireE + half;
+      
+
+      let tripWire1 = window.innerHeight*0.6;
+      let tripWire2 = tripWire1 + parseFloat(window.innerHeight*0.50);
+      let tripWire3 = tripWire2 + parseFloat(window.innerHeight*0.50);
+      let tripWire4 = tripWire3 + parseFloat(window.innerHeight*0.50);
+      let tripWire5 = tripWire4 + parseFloat(window.innerHeight*0.50);
+
+      // let tripWire3
+
 
       scrollProgress = (scroll - scrollEffect_introTop)/sectionLength;
 
-      if (scroll < (scrollEffect_introTop + (sectionLength* 0))) {
-        activeArea = "none";
-        multiplier = 0;
+      // console.log(scroll,tripWire1, tripWire2, tripWire3)
+      if (scroll < (tripWire1)){
+        console.log("trip1");
+        scrollEffect_content.children[1].style.position = "initial";
+        scrollEffect_content.style.opacity = ((scroll/tripWire1));
+        // console.log(scroll/tripWire1);
       }
-      else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.20)))){
-        activeArea = "quarter1";
-        multiplier = 0.2;
+      else if ((scroll > tripWire1) && (scroll < tripWire2)) {
+        console.log("trip2")
+        // console.log(scroll, tripWire2)
+        // console.log ((tripWire2-tripWire1), (scroll-tripWire1),((scroll-tripWire1)/(tripWire2-tripWire1)))
+        scrollEffect_content.children[1].style.position = "fixed";
+        scrollEffect_content.children[1].children[0].style.visibility = "visible";
+        scrollEffect_content.children[1].children[1].style.visibility = "hidden";
+
+        scrollEffect_content.children[0].children[0].style.opacity = 1-((scroll-tripWire1)/(tripWire2-tripWire1)*2);
+        scrollEffect_content.children[0].children[1].style.opacity = ((scroll-tripWire1)/(tripWire2-tripWire1));
       }
-      else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.20))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.40)))){
-        activeArea = "quarter2";
-        multiplier = 0.4;
-        //scrollup
+      else if ((scroll > tripWire2) && (scroll < tripWire3)) {
+        console.log("trip3")
+        scrollEffect_content.children[1].style.position = "initial";
+        scrollEffect_content.children[1].children[1].style.visibility = "visible";
+        scrollEffect_content.children[1].children[0].style.visibility = "hidden";
+        scrollEffect_content.children[1].style.top = "50vh"
+
+        scrollEffect_content.children[0].children[1].style.opacity = 1-((scroll-tripWire2)/(tripWire3-tripWire2)*2);
+        scrollEffect_content.children[1].children[1].style.opacity = 1-((scroll-tripWire2)/(tripWire3-tripWire2)*2);
+        scrollEffect_content.children[0].children[2].style.opacity = ((scroll-tripWire2)/(tripWire3-tripWire2));
+        scrollEffect_content.children[1].children[2].style.opacity = ((scroll-tripWire2)/(tripWire3-tripWire2));
       }
-      else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.40))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.60)))){
-        activeArea = "quarter3";
-        multiplier = 0.6;
+      else if ((scroll > tripWire3) && (scroll < tripWire4)) {
+        console.log("trip4")
+        scrollEffect_content.children[1].style.position = "fixed";
+        scrollEffect_content.children[1].style.top = "-00vh"
+        scrollEffect_content.children[1].children[1].style.visibility = "hidden";
+        scrollEffect_content.children[1].children[2].style.visibility = "visible";
+        scrollEffect_content.children[1].children[3].style.visibility = "hidden";
+
+        scrollEffect_content.children[0].children[2].style.opacity = 1-((scroll-tripWire3)/(tripWire4-tripWire3)*2);
+        scrollEffect_content.children[0].children[3].style.opacity = ((scroll-tripWire3)/(tripWire4-tripWire3));
       }
-      else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.60))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.80)))){
-        activeArea = "quarter4";
-        multiplier = 0.8;
+      else if ((scroll > tripWire4) && (scroll < tripWire5)) {
+        console.log("trip5")
+        scrollEffect_content.children[1].style.position = "initial";
+        scrollEffect_content.children[1].children[2].style.visibility = "hidden";
+        scrollEffect_content.children[1].children[3].style.visibility = "visible";
       }
-      else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.80))) && (scroll < (scrollEffect_introTop + (sectionLength * 1.00)))){
-        activeArea = "quarter5";
-        multiplier = 1.0;
+      else if ((scroll > tripWire5)){
+        // console.log("trip6")
       }
 
-      newOpacity = parseFloat((scrollEffect_introTop + ((sectionLength_andThenSome*multiplier)-scroll))/sectionLength_5xchunk).toFixed(3)
 
-      switch (activeArea) {
-        case "none":
-          scrollEffect_content.style.opacity = `${0}`;
-          // console.log(activeArea, newOpacity, scrollProgress)
-          break;
-        case "quarter1":
-          scrollEffect_content.style.opacity = `${1-newOpacity}`
-          // console.log(activeArea, newOpacity, scrollProgress)
-          break;
-        case "quarter2":
-          scrollEffect_content.style.opacity = `${newOpacity}`
-          scrollEffect_content_p.style.opacity = "0";
-          // console.log(activeArea, newOpacity, scrollProgress);
-          break;
-        case "quarter3":
-          scrollEffect_content.style.opacity = `${1-newOpacity}`
-          scrollEffect_content_p.style.opacity = "1";
-          // console.log(activeArea, newOpacity, scrollProgress);
-          break;
-        case "quarter4":
-          scrollEffect_content.style.opacity = `${newOpacity}`
-          // console.log(activeArea, newOpacity, scrollProgress)
-          break;
-        case "quarter5":
-          scrollEffect_content.style.opacity = `${0}`
-          // console.log(activeArea, newOpacity, scrollProgress)
-          break;
-        default:
-          break;
-      }
+
+
+      // if (scroll < (scrollEffect_introTop + (sectionLength* 0))) {
+      //   activeArea = "none";
+      //   multiplier = 0;
+      // }
+      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.20)))){
+      //   activeArea = "quarter1";
+      //   multiplier = 0.2;
+      // }
+      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.20))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.40)))){
+      //   activeArea = "quarter2";
+      //   multiplier = 0.4;
+      //   //scrollup
+      // }
+      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.40))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.60)))){
+      //   activeArea = "quarter3";
+      //   multiplier = 0.6;
+      // }
+      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.60))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.80)))){
+      //   activeArea = "quarter4";
+      //   multiplier = 0.8;
+      // }
+      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.80))) && (scroll < (scrollEffect_introTop + (sectionLength * 1.00)))){
+      //   activeArea = "quarter5";
+      //   multiplier = 1.0;
+      // }
+      // console.log(activeArea)
+
+      // newOpacity = parseFloat((scrollEffect_introTop + ((sectionLength_andThenSome*multiplier)-scroll))/sectionLength_5xchunk).toFixed(3)
+
+      // switch (activeArea) {
+      //   case "none":
+      //     scrollEffect_content.style.opacity = `${0}`;
+      //     // console.log(activeArea, newOpacity, scrollProgress)
+      //     break;
+      //   case "quarter1":
+      //     scrollEffect_content.style.opacity = `${1-newOpacity}`
+      //     // console.log(activeArea, newOpacity, scrollProgress)
+      //     break;
+      //   case "quarter2":
+      //     scrollEffect_content.style.opacity = `${newOpacity}`
+      //     scrollEffect_content_p.style.opacity = "0";
+      //     // console.log(activeArea, newOpacity, scrollProgress);
+      //     break;
+      //   case "quarter3":
+      //     scrollEffect_content.style.opacity = `${1-newOpacity}`
+      //     scrollEffect_content_p.style.opacity = "1";
+      //     // console.log(activeArea, newOpacity, scrollProgress);
+      //     break;
+      //   case "quarter4":
+      //     scrollEffect_content.style.opacity = `${newOpacity}`
+      //     // console.log(activeArea, newOpacity, scrollProgress)
+      //     break;
+      //   case "quarter5":
+      //     scrollEffect_content.style.opacity = `${0}`
+      //     // console.log(activeArea, newOpacity, scrollProgress)
+      //     break;
+      //   default:
+      //     break;
+      // }
 
       this.scrollEffect_changeTop(scrollProgress)
       // console.log(activeArea)
@@ -86,9 +157,20 @@ const introSection = {
     percentage,
     maxChangeValue = 200,
     scrollEffect_content = document.getElementById("scrollEffect_content"),
-    currentTop = 75 //see css value
+    currentTop = 75, //see css value
+    scrollEffect_background = document.getElementById('bannerImg'),
+    // SE_background_top = window.getComputedStyle(scrollEffect_background).getPropertyValue('top')
   ){
-    scrollEffect_content.style.top = `${currentTop - (maxChangeValue*percentage)}vh` 
+    // scrollEffect_content.style.top = `${currentTop - (maxChangeValue*percentage)}vh`;
+    // scrollEffect_background.style.top = `${SE_background_top - 2*(SE_background_top*percentage)}px`;
+    if ((window.innerWidth < 768) || (window.innerWidth > 1200)){
+      currentTop = 5;
+    }
+    else {
+      currentTop = 7.5;
+    }
+    scrollEffect_background.style.top = `${currentTop - (2*(currentTop*percentage))}rem`
+    // console.log(SE_background_top) 
     // let changeValue;
     // console.log(currentTop)
   }

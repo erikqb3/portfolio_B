@@ -32,49 +32,99 @@
           left:27.5%;
           // top:0;
         }
-        div#bannerImg{
-          width: 100%;
-          height: 90vh;
-          // margin: 2rem auto 2rem auto;
-          overflow:hidden;
-          // border-radius: 15px;
-          display:flex;
-          justify-content:center;
-          img{ 
-            // width: 100vw;
-            // height: fit-content;
-            height: 90vh;
-          }
-        }
         div#scrollEffect_intro{
           position:relative;
           // background-color: green;
-          height: 500vh;
-          // background-image: url('../resources/imgs/topBannerPic.jpg');
-          // background-size: cover;
-          // background-repeat: no-repeat;
-          // background-position:center;
-          div#scrollEffect_content{
-            // background-color: cyan !important;
-            opacity: 0;
+          height: 400vh;
+          display:flex;
+          flex-direction:column;
+          justify-content:start;
+          div#bannerImg{
+            width: 100%;
+            height: 120vh;
             position:sticky;
-            top: 150vh;
-            height:100vh;
-            // transition: opacity 0.25s;
-            h2 {
-              display:block;
-              margin: 0 auto 60vh auto;
-              // margin: 0 auto 10rem 7vw;
-              font-size:4rem;
-              text-align:center;
-            }
-            p {
-              width: 85%;
-              font-size: 1.25rem;
-              margin: 0rem auto 0 auto;
-              font-weight:bolder;
+            top: 5rem;
+            // margin: 2rem auto 2rem auto;
+            overflow:hidden;
+            // border-radius: 15px;
+            display:flex;
+            justify-content:center;
+            z-index:-1;
+            img{ 
+              // width: 100vw;
+              // height: fit-content;
+              height: 120vh;
             }
           }
+          div#scrollEffect_content{
+            color:white;
+            font-family: 'Montserrat', sans-serif;
+            
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            height: 200vh;
+            top: -20vh;
+            // background-color:rgba(0,255,255,0.5);
+            position:relative;
+            div#bannerText_left,
+            div#bannerText_right{
+              display:flex;
+              flex-direction:column;
+              width: 47.5%;
+              height: 100%;
+              z-index: 2;
+              justify-content:start;
+              h1 {
+                height: 50vh;
+                display:flex;
+                font-size: 2rem;
+                font-weight: 400 !important;
+                margin-top: -2.5rem;
+                // align-items: center;
+                // margin-bottom: 50vh;
+              }
+            }
+            div#bannerText_left{
+              // justify-content:end;
+              align-items:end;
+              position:relative;
+              // top: -50vh;
+            }
+            div#bannerText_right{
+              // position:fixed;
+              top: 50vh;
+              right:0;
+              h1:nth-child(even){
+                visibility:hidden;
+              }
+            }
+          }
+          // div#scrollEffect_content{
+          //   // background-image: url('../resources/imgs/topBannerPic.jpg');
+          //   // background-size: cover;
+          //   // background-repeat: no-repeat;
+          //   // background-position:center;
+          //   // background-color: cyan !important;
+          //   opacity: 0;
+          //   position:sticky;
+          //   top: 150vh;
+          //   height:100vh;
+          //   // transition: opacity 0.25s;
+          //   h2 {
+          //     display:block;
+          //     margin: 0 auto 60vh auto;
+          //     // margin: 0 auto 10rem 7vw;
+          //     font-size:4rem;
+          //     text-align:center;
+          //   }
+          //   p {
+          //     width: 85%;
+          //     font-size: 1.25rem;
+          //     margin: 0rem auto 0 auto;
+          //     font-weight:bolder;
+          //   }
+          // }
         }
         h1#scrollEffect_end{
           position:absolute;
@@ -705,10 +755,11 @@
 @media only screen and (min-width: 768px) {
   body {
     
+
     section#introBanner {
-      margin: 7.5rem auto 0 auto !important;
+      margin:  5rem auto 0 auto;
       position:relative;
-      h1 {
+      h1#landingTitle {
         text-align:center;
         font-size: 1.75rem;
         margin-top: 5rem;
@@ -716,49 +767,86 @@
         left:27.5%;
         // top:0;
       }
-      div#bannerImg{
-        width: 100%;
-        height: 85vh;
-        // height: 92.5vh !important;
-        // margin: 2rem auto 2rem auto;
-        overflow:hidden;
-        // border-radius: 15px;
-        display:flex;
-        justify-content:center;
-        img{ 
-          width: 100%;
-          // height: fit-content;
-          height: 85vh;
-        }
-      }
       div#scrollEffect_intro{
         position:relative;
         // background-color: green;
-        height: 500vh;
-        div#scrollEffect_content{
-          // background-color: cyan !important;
-          opacity: 0;
+        height: 400vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:start;
+        div#bannerImg{
+          width: 100%;
+          height: 120vh;
           position:sticky;
-          top: 150vh;
-          height:100vh;
-          // transition: opacity 0.25s;
-          h2 {
-            display:block;
-            margin: 0 auto 60vh auto;
-            // margin: 0 auto 10rem 7vw;
-            font-size:4rem;
-            text-align:center;
-          }
-          p {
-            width: 85%;
-            font-size: 1.25rem;
-            margin: 0rem auto 0 auto;
-            font-weight:bolder;
+          top: 5rem;
+          // margin: 2rem auto 2rem auto;
+          overflow:hidden;
+          // border-radius: 15px;
+          display:flex;
+          justify-content:center;
+          z-index:-1;
+          img{ 
+            width: 100%;
+            // width: 100vw;
+            // height: fit-content;
+            // height: 120vh;
           }
         }
+        div#scrollEffect_content{
+          color:white;
+          display:flex;
+          flex-direction:row;
+          justify-content:space-between;
+          height: 200vh;
+          top: -20vh;
+          // background-color:rgba(0,255,255,0.5);
+          position:relative;
+          div#bannerText_left,
+          div#bannerText_right{
+            display:flex;
+            flex-direction:column;
+            width: 47.5%;
+            height: 100%;
+            z-index: 2;
+            justify-content:start;
+            h1 {
+              height: 50vh;
+              display:flex;
+              font-size: 4rem !important;
+              // align-items: center;
+              // margin-bottom: 50vh;
+            }
+          }
+          div#bannerText_left{
+            // justify-content:end;
+            align-items:end;
+            position:relative;
+            // top: -50vh;
+          }
+          div#bannerText_right{
+            // position:fixed;
+            top: 50vh;
+            right:0;
+            h1:nth-child(even){
+              visibility:hidden;
+            }
+          }
+        }
+
+      }
+      h1#scrollEffect_end{
+        position:absolute;
+        bottom: 50vh;
+        left:0;
+        width: 100%;
+        text-align:center;
+        font-size: 3rem;
+        // margin-top: -10vh!important;
+        color:red;
       }
 
     }
+
     section#cinematography_scrollPlay{
       article.cinematography_singleVideo {
         div.overlay {
@@ -1020,25 +1108,91 @@
 @media only screen and (min-width: 993px) {
   body {
     section#introBanner {
-      h1 {
-      }
-      div#bannerImg{
-        // height:fit-content;
-        align-items:center;
-        justify-content:center;
-        img{ 
-          // width: 50vw !important;
-          // height: 300vh !important;
-          height:70vw !important;
-        }
+      margin:  5rem auto 0 auto;
+      position:relative;
+      h1#landingTitle {
+        text-align:center;
+        font-size: 1.75rem;
+        margin-top: 5rem;
+        position:absolute;
+        left:27.5%;
+        // top:0;
       }
       div#scrollEffect_intro{
-        div#scrollEffect_content{
-          h2 {
-          }
-          p {
+        position:relative;
+        // background-color: green;
+        height: 400vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:start;
+        div#bannerImg{
+          width: 100%;
+          height: 120vh;
+          position:sticky;
+          top: 5rem;
+          // margin: 2rem auto 2rem auto;
+          overflow:hidden;
+          // border-radius: 15px;
+          display:flex;
+          justify-content:center;
+          z-index:-1;
+          img{ 
+            // width: 100vw;
+            // height: fit-content;
+            height: 120vh;
           }
         }
+        div#scrollEffect_content{
+          color:white;
+          display:flex;
+          flex-direction:row;
+          justify-content:space-between;
+          height: 200vh;
+          top: -20vh;
+          // background-color:rgba(0,255,255,0.5);
+          position:relative;
+          div#bannerText_left,
+          div#bannerText_right{
+            display:flex;
+            flex-direction:column;
+            width: 47.5%;
+            height: 100%;
+            z-index: 2;
+            justify-content:start;
+            h1 {
+              height: 50vh;
+              display:flex;
+              font-size: 2rem;
+              // align-items: center;
+              // margin-bottom: 50vh;
+            }
+          }
+          div#bannerText_left{
+            // justify-content:end;
+            align-items:end;
+            position:relative;
+            // top: -50vh;
+          }
+          div#bannerText_right{
+            // position:fixed;
+            top: 50vh;
+            right:0;
+            h1:nth-child(even){
+              visibility:hidden;
+            }
+          }
+        }
+
+      }
+      h1#scrollEffect_end{
+        position:absolute;
+        bottom: 50vh;
+        left:0;
+        width: 100%;
+        text-align:center;
+        font-size: 3rem;
+        // margin-top: -10vh!important;
+        color:red;
       }
 
     }
@@ -1309,10 +1463,9 @@
 @media only screen and (min-width: 1200px) {
   body {
     section#introBanner {
-      margin: 5rem auto 0 auto !important;
-      // margin: 7.5vh auto 0 auto !important;
+      margin:  5rem auto 0 auto;
       position:relative;
-      h1 {
+      h1#landingTitle {
         text-align:center;
         font-size: 1.75rem;
         margin-top: 5rem;
@@ -1320,45 +1473,80 @@
         left:27.5%;
         // top:0;
       }
-      div#bannerImg{
-        width: 100%;
-        height: 92.5vh !important;
-        margin: 2rem auto 2rem auto;
-        overflow:hidden;
-        // border-radius: 15px;
-        display:flex;
-        justify-content:center;
-        img{ 
-          // width: 100vw;
-          // height: fit-content;
-          // height: 92.5vh !important;
-        }
-      }
       div#scrollEffect_intro{
         position:relative;
         // background-color: green;
-        height: 500vh;
-        div#scrollEffect_content{
-          // background-color: cyan !important;
-          opacity: 0;
+        height: 400vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:start;
+        div#bannerImg{
+          width: 100%;
+          height: 120vh;
           position:sticky;
-          top: 150vh;
-          height:100vh;
-          // transition: opacity 0.25s;
-          h2 {
-            display:block;
-            margin: 0 auto 60vh auto;
-            // margin: 0 auto 10rem 7vw;
-            font-size:4rem;
-            text-align:center;
-          }
-          p {
-            width: 85%;
-            font-size: 1.25rem;
-            margin: 0rem auto 0 auto;
-            font-weight:bolder;
+          top: 5rem;
+          // margin: 2rem auto 2rem auto;
+          overflow:hidden;
+          // border-radius: 15px;
+          display:flex;
+          justify-content:center;
+          z-index:-1;
+          img{ 
+            // width: 100vw;
+            // height: fit-content;
+            height: 120vh;
           }
         }
+        div#scrollEffect_content{
+          color:white;
+          display:flex;
+          flex-direction:row;
+          justify-content:space-between;
+          height: 200vh;
+          top: -20vh;
+          // background-color:rgba(0,255,255,0.5);
+          position:relative;
+          div#bannerText_left,
+          div#bannerText_right{
+            display:flex;
+            flex-direction:column;
+            width: 47.5%;
+            height: 100%;
+            z-index: 2;
+            justify-content:start;
+            h1 {
+              height: 50vh;
+              display:flex;
+              font-size: 6rem !important;
+              // align-items: center;
+              // margin-bottom: 50vh;
+            }
+          }
+          div#bannerText_left{
+            // justify-content:end;
+            align-items:end;
+            position:relative;
+            // top: -50vh;
+          }
+          div#bannerText_right{
+            // position:fixed;
+            top: 50vh;
+            right:0;
+            h1:nth-child(even){
+              visibility:hidden;
+            }
+          }
+        }
+      }
+      h1#scrollEffect_end{
+        position:absolute;
+        bottom: 50vh;
+        left:0;
+        width: 100%;
+        text-align:center;
+        font-size: 3rem;
+        // margin-top: -10vh!important;
+        color:red;
       }
 
     }
