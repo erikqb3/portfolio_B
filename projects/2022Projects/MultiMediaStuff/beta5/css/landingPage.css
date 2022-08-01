@@ -135,8 +135,8 @@
     height: 600vh;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
+    -webkit-transition: opacity 2.5s;
+    transition: opacity 2.5s;
     background-color: white !important;
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo {
@@ -178,7 +178,7 @@
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent {
     position: absolute;
-    bottom: 55vh;
+    bottom: 0vh;
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent h1 {
     z-index: 2;
@@ -204,87 +204,6 @@
   }
   body main section#cinematography_scrollPlay article#fillerCinema {
     height: 0 !important;
-  }
-  body main section#videography_stagger {
-    width: 100%;
-    margin: -75rem auto 0 auto;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5rem;
-    z-index: -1;
-  }
-  body main section#videography_stagger div#video_content {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
-  body main section#videography_stagger div#video_content h1 {
-    height: 0;
-    margin: 0 !important;
-  }
-  body main section#videography_stagger div#video_content div#videography_videoHolder {
-    background-color: white;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-  }
-  body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-  body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area div.overlay {
-    position: absolute;
-    z-index: 2;
-    top: 0%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-  }
-  body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area div.overlay h2 {
-    margin: 0;
-  }
-  body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area div.overlay.visibleOverlay {
-    opacity: 1;
-  }
-  body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area div.singleVideo_holder {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-item-align: center;
-        align-self: center;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area div.singleVideo_holder video {
-    width: 100%;
-  }
-  body main div#video2photoBuffer {
-    height: 300vh;
   }
   body main section#photography_smallSliders {
     height: 400vh;
@@ -502,7 +421,7 @@
     color: white;
   }
   body main h1#audio_navTarget {
-    background-color: black !important;
+    background-color: white !important;
     opacity: 1;
     margin: 0;
     padding-top: 10rem;

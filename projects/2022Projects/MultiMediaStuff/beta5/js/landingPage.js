@@ -207,7 +207,7 @@ const cinemaSection = {
       endPosition = cinemaSection_array[i+1].offsetTop
       updatedPercentage = this.checkPercentage(scroll,endPosition)
       cinemaSection_array[i].children[0].style.height = `${100-updatedPercentage}%`
-      if (cinemaSection_array[i].children[1].children[0].id == "videoE") {
+      if (cinemaSection_array[i] == cinemaSection_array[1]) {
         cinemaSection_array[i].children[0].style.backgroundColor = `rgba(255,255,255,${100-updatedPercentage-50}%)`  
       }
       else {
@@ -225,81 +225,81 @@ const cinemaSection = {
   }
 }
 
-const videoSection = {
-  fadeInEffect_scroll : function(
+// const videoSection = {
+//   fadeInEffect_scroll : function(
 
-    overlay_array = document.querySelectorAll('.singleVideo_area > .overlay'),
-    // loadOverlays = (overlay) => {
-    //   overlay.classList.add("visibleOverlay")
-    // },
-    loadOptions = {
-      threshold: 0,
-      rootMargin: "0px 0px -100px 0px"
-    }
-  ){
+//     overlay_array = document.querySelectorAll('.singleVideo_area > .overlay'),
+//     // loadOverlays = (overlay) => {
+//     //   overlay.classList.add("visibleOverlay")
+//     // },
+//     loadOptions = {
+//       threshold: 0,
+//       rootMargin: "0px 0px -100px 0px"
+//     }
+//   ){
 
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((items, observer) => {
-        let counter = 0;
-        items.forEach((item) => {
-          if (item.isIntersecting) {
-            // loadOverlays(item.target);
-            observer.unobserve(item.target);
-          }
-        });
-      }, loadOptions);
-      overlay_array.forEach((overlay)=> {
-        observer.observe(overlay);
-      });
-    } else {
-     overlay_array.forEach((overlay)=> {
-      // loadOverlays(overlay)
-     }) 
-    }
-  },
-  overlayScrollEffect: function(
-    start = document.getElementById('cinematography_scrollPlay').offsetTop + document.getElementById('cinematography_scrollPlay').offsetHeight,
-    end = start + document.getElementById('videography_stagger').offsetHeight,
-    videoHolder = document.getElementById('videography_videoHolder').children
-    ){
-      let overlayArray = [];
-      for (let video of videoHolder) {
-        let overlayElement = video.children[0];
-        // console.log(overlayElement);
-        overlayArray.push(overlayElement);
-      }
-      // console.log(overlayArray)
-      window.addEventListener('scroll',()=>{
-      let scroll = window.scrollY;
-      let percentage = parseFloat(((scroll - start) / (end-start)).toFixed(3))
-      let shownVideo = '';
-      // console.log(scroll,start,end, percentage)
-      if ((percentage < -0.5) || (percentage > 2.5)) {
-        for(let video of videoHolder) {
-          video.children[0].classList.remove('visibleOverlay')
-        }
-      }
-      else if ((percentage >= 0) && (percentage < 0.250)){
-        shownVideo = "video1";
-        videoHolder[0].children[0].classList.add('visibleOverlay')
-      }
-      else if ((percentage >= 0.250) && (percentage < 0.500)){
-        shownVideo = "video2";
-        videoHolder[1].children[0].classList.add('visibleOverlay')
-      }
-      else if ((percentage >= 0.500) && (percentage < 0.750)){
-        shownVideo = "video3";
-        videoHolder[2].children[0].classList.add('visibleOverlay')
-      }
-      else if ((percentage >= 0.750) && (percentage < 1.00)){
-        shownVideo = "video4";
-        videoHolder[3].children[0].classList.add('visibleOverlay')
-      }
-      // console.log(percentage, shownVideo)
-    })
-  }
+//     if ('IntersectionObserver' in window) {
+//       const observer = new IntersectionObserver((items, observer) => {
+//         let counter = 0;
+//         items.forEach((item) => {
+//           if (item.isIntersecting) {
+//             // loadOverlays(item.target);
+//             observer.unobserve(item.target);
+//           }
+//         });
+//       }, loadOptions);
+//       overlay_array.forEach((overlay)=> {
+//         observer.observe(overlay);
+//       });
+//     } else {
+//      overlay_array.forEach((overlay)=> {
+//       // loadOverlays(overlay)
+//      }) 
+//     }
+//   },
+//   overlayScrollEffect: function(
+//     start = document.getElementById('cinematography_scrollPlay').offsetTop + document.getElementById('cinematography_scrollPlay').offsetHeight,
+//     end = start + document.getElementById('videography_stagger').offsetHeight,
+//     videoHolder = document.getElementById('videography_videoHolder').children
+//     ){
+//       let overlayArray = [];
+//       for (let video of videoHolder) {
+//         let overlayElement = video.children[0];
+//         // console.log(overlayElement);
+//         overlayArray.push(overlayElement);
+//       }
+//       // console.log(overlayArray)
+//       window.addEventListener('scroll',()=>{
+//       let scroll = window.scrollY;
+//       let percentage = parseFloat(((scroll - start) / (end-start)).toFixed(3))
+//       let shownVideo = '';
+//       // console.log(scroll,start,end, percentage)
+//       if ((percentage < -0.5) || (percentage > 2.5)) {
+//         for(let video of videoHolder) {
+//           video.children[0].classList.remove('visibleOverlay')
+//         }
+//       }
+//       else if ((percentage >= 0) && (percentage < 0.250)){
+//         shownVideo = "video1";
+//         videoHolder[0].children[0].classList.add('visibleOverlay')
+//       }
+//       else if ((percentage >= 0.250) && (percentage < 0.500)){
+//         shownVideo = "video2";
+//         videoHolder[1].children[0].classList.add('visibleOverlay')
+//       }
+//       else if ((percentage >= 0.500) && (percentage < 0.750)){
+//         shownVideo = "video3";
+//         videoHolder[2].children[0].classList.add('visibleOverlay')
+//       }
+//       else if ((percentage >= 0.750) && (percentage < 1.00)){
+//         shownVideo = "video4";
+//         videoHolder[3].children[0].classList.add('visibleOverlay')
+//       }
+//       // console.log(percentage, shownVideo)
+//     })
+//   }
 
-}
+// }
 
 
 const photoSection = {
@@ -325,8 +325,6 @@ const photoSection = {
     slideHolder.append(firstClone);
     slideHolder.prepend(lastClone);
 
-    // let slideWidth = slide_array[this.index].clientWidth; //lower?
-    // let slideWidth = this.getWidth(slide_array)
 
     this.translateSlideHolder(slideHolder);
     slideHolder.addEventListener('transitionend', ()=>{
@@ -479,12 +477,12 @@ const photoSection = {
       
 
 
-      if (scroll >= (photo_section.offsetTop+photoGap)) {
-        videoSection.style.display = "none";
-      }
-      else {
-        videoSection.style.display = "block";
-      }
+      // if (scroll >= (photo_section.offsetTop+photoGap)) {
+      //   videoSection.style.display = "none";
+      // }
+      // else {
+      //   videoSection.style.display = "block";
+      // }
       // console.log(scroll, photo_section.offsetTop)
       // if ((scroll >= photoGap_top) && (scroll <= photo_cH_top)) {
       //   // let percentage = ((scroll - photo_section.offsetTop)/photo_gap).toFixed(3);
@@ -892,8 +890,8 @@ const helperFunctions = {
 
 introSection.scrollEffect();
 cinemaSection.overlayEffect_scroll();
-videoSection.fadeInEffect_scroll();
-videoSection.overlayScrollEffect();
+// videoSection.fadeInEffect_scroll();
+// videoSection.overlayScrollEffect();
 photoSection.runCarousel();
 audioFunctions_neo.useFunctions();
 animationSection.useFunctions();
