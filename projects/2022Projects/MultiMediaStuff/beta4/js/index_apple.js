@@ -93,17 +93,22 @@ const footerElementFunctions = {
       for (let element of dropDown_array) {
         // let list = element.children[1];
         element.addEventListener('click',(e)=>{
-          let pastTarget = document.querySelector('div.showList');
-          if (pastTarget == e.target.nextElementSibling) {
+          let pastTarget_h4 = document.querySelector('h4.showList')
+          let pastTarget_div = document.querySelector('div.showList');
+          if (pastTarget_div == e.target.nextElementSibling) {
+            e.target.classList.toggle('showList');
             e.target.nextElementSibling.classList.toggle('showList');
           }
           else {
             try {
-              pastTarget.classList.toggle('showList')
-              console.log('pastTarget', pastTarget)
+              console.log(e.target);
+              pastTarget_h4.classList.toggle('showList');
+              pastTarget_div.classList.toggle('showList');
+              // console.log('pastTarget', pastTarget)
               // document.querySelector('h4.showList').classList.toggle('showList');
             }
             catch(err) {}
+            e.target.classList.toggle('showList');
             e.target.nextElementSibling.classList.toggle('showList');
           }
           // console.log('showList', e.target.nextElementSibling)

@@ -388,20 +388,41 @@
     color: white;
     text-decoration: none;
   }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4 i {
+    -webkit-transition: -webkit-transform 0.75s;
+    transition: -webkit-transform 0.75s;
+    transition: transform 0.75s;
+    transition: transform 0.75s, -webkit-transform 0.75s;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4.showList i {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li div.footerDropDown_holder {
     height: 0;
     opacity: 0;
+    overflow: hidden !important;
     -webkit-transition: height 0.75s, opacity 0.75s;
     transition: height 0.75s, opacity 0.75s;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li div.footerDropDown_holder ul {
-    display: none;
-    padding: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     list-style: none;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li div.footerDropDown_holder ul li {
     font-size: 1rem;
-    height: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin: 0;
     padding-left: 1rem;
     -webkit-transition: height 0.75s;
@@ -421,21 +442,10 @@
     height: 5rem;
     opacity: 1;
   }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li div.footerDropDown_holder.showList ul {
-    height: 5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li div.footerDropDown_holder.showList ul li {
-    height: 0.75rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li div.footerDropDown_holder.showList ul li a:link,
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li div.footerDropDown_holder.showList ul li a:visited {
@@ -448,10 +458,15 @@
     color: #000936;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks div.footerDropDown_holder.showList {
-    height: 8rem;
+    height: 10rem;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks div.footerDropDown_holder.showList ul {
-    height: 8rem;
+    height: 10rem;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks div.footerDropDown_holder.showList ul li {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall h3 {
     text-align: left;
@@ -500,7 +515,7 @@
   body footer div#footer_stickyContent {
     top: 7.5rem;
     font-weight: normal;
-    height: 100vh;
+    height: 125vh;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#contactUs section#formOverflow form div#smallTextInput {
     display: -webkit-box;
@@ -529,11 +544,11 @@
             justify-content: space-between;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists div#footer_backgroundImg {
-    height: 50vh;
+    height: 100vh;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists div#footer_backgroundImg img {
     width: 150% !important;
-    height: 50vh;
+    height: 100vh;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left {
     margin: 2.5rem 0 0 2.5rem;
@@ -579,10 +594,18 @@
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li div.footerDropDown_holder ul li {
     text-align: right;
     padding-right: 0rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li div.footerDropDown_holder.showList {
+    height: 4rem;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li div.footerDropDown_holder.showList ul {
+    height: 4rem;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li div.footerDropDown_holder.showList ul li {
     text-align: right;
-    font-size: 0.75rem;
   }
 }
 
@@ -762,7 +785,7 @@
     top: 5rem;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay {
-    padding: 0 2.5rem;
+    padding: 0rem;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#contactUs section#formOverflow form {
     width: 60vw !important;
@@ -775,7 +798,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 93.75%;
+    width: 100%;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section {
     width: 35vw;
@@ -783,64 +806,12 @@
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section > div > ul li h4 {
     font-size: 1rem;
   }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    height: 7.5rem;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li h4 {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 2.5rem 0 0;
-    cursor: initial;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li h4:not(.footerDropDown) {
-    cursor: pointer;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li div.footerDropDown_holder {
-    opacity: 1;
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li div.footerDropDown_holder.showList {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li div.footerDropDown_holder ul {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    opacity: 1;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li div.footerDropDown_holder ul li {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 0;
-    font-size: 0.75rem;
-    margin: 0.5rem 0;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li div.footerDropDown_holder.showList ul {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_left div#siteLinks ul li div.footerDropDown_holder.showList ul li {
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists section#footer_right div#contactSmall ul li div.footerDropDown_holder.showList ul {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;

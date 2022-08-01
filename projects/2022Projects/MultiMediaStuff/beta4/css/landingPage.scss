@@ -134,7 +134,9 @@
           text-align:center;
           font-size: 3rem;
           // margin-top: -10vh!important;
-          color:red;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          color:white;
         }
 
       }
@@ -169,7 +171,7 @@
             div.textContent {
               position: absolute;
               text-align:center;
-              bottom: 15vh;
+              bottom: 20vh;
               // margin-top: 50vh;
               h1 {
                 font-family: 'Montserrat', sans-serif;
@@ -214,7 +216,7 @@
         // background-color: red;
         // height: 400vh;
         position:sticky;
-        top:15vh;
+        top:5rem;
         z-index:-1; //ZINDEX
 
         div#video_content {
@@ -226,13 +228,14 @@
           }
           div#videography_videoHolder{
             background-color: white;
-            height: 75vh;
+            // height: 75vh;
             display:grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             div.singleVideo_area{
               overflow:hidden;
               position:relative;
+              width: 100%;
               div.overlay{
                 position:absolute;
                 z-index:2;
@@ -265,11 +268,11 @@
                 justify-content: center;
                 align-self:center;
                 width: 100%;
-                height:100%;
+                // height:100%;
                 overflow:hidden;
                 position: relative;
                 video{
-                  width: 305%;
+                  width: 100%;
                   // display:none;
                 }
               }
@@ -851,7 +854,7 @@
       article.cinematography_singleVideo {
         div.overlay {
           div.textContent {
-            bottom: 50vh !important;
+            bottom: 40vh !important;
             h1 {
             }
             p {
@@ -1463,34 +1466,11 @@
 @media only screen and (min-width: 1200px) {
   body {
     section#introBanner {
-      margin:  5rem auto 0 auto;
-      position:relative;
       h1#landingTitle {
-        text-align:center;
-        font-size: 1.75rem;
-        margin-top: 5rem;
-        position:absolute;
-        left:27.5%;
-        // top:0;
       }
       div#scrollEffect_intro{
-        position:relative;
-        // background-color: green;
-        height: 400vh;
-        display:flex;
-        flex-direction:column;
-        justify-content:start;
         div#bannerImg{
-          width: 100%;
-          height: 120vh;
-          position:sticky;
           top: 5rem;
-          // margin: 2rem auto 2rem auto;
-          overflow:hidden;
-          // border-radius: 15px;
-          display:flex;
-          justify-content:center;
-          z-index:-1;
           img{ 
             // width: 100vw;
             // height: fit-content;

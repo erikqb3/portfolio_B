@@ -67,7 +67,7 @@ const introSection = {
       else if ((scroll > tripWire3) && (scroll < tripWire4)) {
         console.log("trip4")
         scrollEffect_content.children[1].style.position = "fixed";
-        scrollEffect_content.children[1].style.top = "-00vh"
+        scrollEffect_content.children[1].style.top = "-5rem"
         scrollEffect_content.children[1].children[1].style.visibility = "hidden";
         scrollEffect_content.children[1].children[2].style.visibility = "visible";
         scrollEffect_content.children[1].children[3].style.visibility = "hidden";

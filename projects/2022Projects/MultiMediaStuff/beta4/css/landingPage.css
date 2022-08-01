@@ -125,7 +125,9 @@
     width: 100%;
     text-align: center;
     font-size: 3rem;
-    color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: white;
   }
   body main section#cinematography_scrollPlay {
     opacity: 1;
@@ -177,7 +179,7 @@
   body main section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent {
     position: absolute;
     text-align: center;
-    bottom: 15vh;
+    bottom: 20vh;
   }
   body main section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent h1 {
     font-family: 'Montserrat', sans-serif;
@@ -213,7 +215,7 @@
     margin: -75rem auto 0 auto;
     position: -webkit-sticky;
     position: sticky;
-    top: 15vh;
+    top: 5rem;
     z-index: -1;
   }
   body main section#videography_stagger div#video_content {
@@ -227,7 +229,6 @@
   }
   body main section#videography_stagger div#video_content div#videography_videoHolder {
     background-color: white;
-    height: 75vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -238,6 +239,7 @@
   body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area {
     overflow: hidden;
     position: relative;
+    width: 100%;
   }
   body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area div.overlay {
     position: absolute;
@@ -280,12 +282,11 @@
     -ms-flex-item-align: center;
         align-self: center;
     width: 100%;
-    height: 100%;
     overflow: hidden;
     position: relative;
   }
   body main section#videography_stagger div#video_content div#videography_videoHolder div.singleVideo_area div.singleVideo_holder video {
-    width: 305%;
+    width: 100%;
   }
   body main div#video2photoBuffer {
     height: 300vh;
@@ -916,7 +917,7 @@
     color: red;
   }
   body section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent {
-    bottom: 50vh !important;
+    bottom: 40vh !important;
   }
   body section#photography_smallSliders {
     height: 600vh;
@@ -1340,45 +1341,8 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  body section#introBanner {
-    margin: 5rem auto 0 auto;
-    position: relative;
-  }
-  body section#introBanner h1#landingTitle {
-    text-align: center;
-    font-size: 1.75rem;
-    margin-top: 5rem;
-    position: absolute;
-    left: 27.5%;
-  }
-  body section#introBanner div#scrollEffect_intro {
-    position: relative;
-    height: 400vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
   body section#introBanner div#scrollEffect_intro div#bannerImg {
-    width: 100%;
-    height: 120vh;
-    position: -webkit-sticky;
-    position: sticky;
     top: 5rem;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    z-index: -1;
   }
   body section#introBanner div#scrollEffect_intro div#bannerImg img {
     height: 120vh;

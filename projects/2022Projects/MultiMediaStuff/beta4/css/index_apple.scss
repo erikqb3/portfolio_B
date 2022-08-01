@@ -359,19 +359,35 @@
                     color:white;
                     text-decoration:none;
                   }
+                  i {
+                    // color:red;
+                    transition: transform 0.75s;
+                    // font-size: rem;
+                  }
+                }
+                h4.showList{
+                  i {
+                    // color:blue;
+                    transform: rotate(45deg);
+                  }
                 }
                 div.footerDropDown_holder{
                   height:0;
                   opacity:0;
+                  overflow:hidden !important;
                   transition: height 0.75s, opacity 0.75s;
                   ul{
-                    display:none;
-                    padding:none;
+                    // height: 5rem;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content:space-evenly;
+                    // display:none;
+                    // padding:none;
                     list-style: none;
                     // margin: 0 0 0.5rem 0;
                     li{
                       font-size: 1rem;
-                      height:0;
+                      height:fit-content;
                       margin:0;
                       padding-left: 1rem;
                       transition: height 0.75s;
@@ -395,13 +411,13 @@
                   height: 5rem;
                   opacity: 1;
                   ul {
-                    height: 5rem;
+                    
                     // color:Red;
-                    display:flex;
-                    flex-direction: column;
-                    justify-content:space-evenly;
+                    // display:flex;
+                    // flex-direction: column;
+                    // justify-content:space-evenly;
                     li{
-                      height: 0.75rem;
+                      height: fit-content;
                       a:link,
                       a:visited {
                         color:white;
@@ -410,8 +426,8 @@
                       }
                       a:hover,
                       a:active {
-                        color:rgb(0,9,54)
-  ;                    }
+                        color:rgb(0,9,54);                    
+                      }
                     }
                   }
                 }
@@ -428,10 +444,11 @@
                   }
                 }
                 div.footerDropDown_holder.showList {
-                  height: 8rem;
+                  height: 10rem;
                   ul{
-                    height: 8rem;
+                    height: 10rem;
                     li{
+                      height:fit-content;
                     }
                   }
                 }
@@ -566,7 +583,7 @@
       height: 300vh !important;
       div#footer_stickyContent{
         top: 7.5rem;font-weight:normal;
-        height: 100vh;
+        height: 125vh;
         div#footer_textualOverlay{
           // margin-top:7.5rem;
           div#contactUs{
@@ -604,11 +621,11 @@
             justify-content:space-between;
             div#footer_backgroundImg{
               // height:fit-content;
-              height: 50vh;
+              height: 100vh;
               img{
                 width: 150% !important;
                 // height:fit-content;
-                height: 50vh;
+                height: 100vh;
                 // margin-top:-10rem;
               }
             }
@@ -684,14 +701,18 @@
                         li{
                           text-align:right;
                           padding-right: 0rem;
+                          height:fit-content;
                         }
                       }
                     }
                     div.footerDropDown_holder.showList{
+                      height: 4rem;
                       ul{
+                        height: 4rem;
                         li{
                           text-align:right;
-                          font-size: 0.75rem;
+                          
+                          // font-size: 0.75rem;
                         }
                       }
                     }
@@ -1026,7 +1047,7 @@
         top: 5rem;
         div#footer_backgroundnImg{}
         div#footer_textualOverlay{
-          padding: 0 2.5rem;
+          padding: 0rem;
           div#contactUs{
             button{
             }
@@ -1061,7 +1082,7 @@
           div#footer_lists{
             flex-direction: row;
             justify-content:space-between;
-            width: 93.75%;
+            width: 100%;
             section {
               // width:fit-content !important;
               width: 35vw;
@@ -1102,58 +1123,58 @@
                 }
               }
             }
-            section#footer_left{
-              div#siteLinks{
-                h3{ 
-                }
-                ul{
-                  display:flex;
-                  flex-direction:column;
-                  flex-wrap:wrap;
-                  height: 7.5rem;
-                  // flex-direction: row !important;
-                  justify-content: start;
-                  li{
-                    h4{
-                      // width: 12.5rem;
-                      width: fit-content;
-                      // font-size: 1rem;
-                      margin: 0 2.5rem 0 0;
-                      // font-weight: bold;
-                      cursor:initial;
-                    }
-                    h4:not(.footerDropDown) {
-                      cursor:pointer;
-                    }
-                    // width: ;
-                    div.footerDropDown_holder{
-                      opacity:1; 
-                      height: fit-content;
-                      ul{
-                        display: flex !important;
-                        flex-direction:column !important;
-                        opacity:1; 
-                        height: fit-content;
-                        li{
-                          height: fit-content;
-                          padding:0;
-                          font-size: 0.75rem;
-                          margin: 0.5rem 0;
-                        }
-                      }
-                    }
-                    div.footerDropDown_holder.showList{
-                      ul{
-                        height: fit-content;
-                        li{
-                          height: fit-content;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            // section#footer_left{
+            //   div#siteLinks{
+            //     h3{ 
+            //     }
+            //     ul{
+            //       display:flex;
+            //       flex-direction:column;
+            //       flex-wrap:wrap;
+            //       height: 7.5rem;
+            //       // flex-direction: row !important;
+            //       justify-content: start;
+            //       li{
+            //         h4{
+            //           // width: 12.5rem;
+            //           width: fit-content;
+            //           // font-size: 1rem;
+            //           margin: 0 2.5rem 0 0;
+            //           // font-weight: bold;
+            //           cursor:initial;
+            //         }
+            //         h4:not(.footerDropDown) {
+            //           cursor:pointer;
+            //         }
+            //         // width: ;
+            //         div.footerDropDown_holder{
+            //           opacity:1; 
+            //           height: fit-content;
+            //           ul{
+            //             display: flex !important;
+            //             flex-direction:column !important;
+            //             opacity:1; 
+            //             height: fit-content;
+            //             li{
+            //               height: fit-content;
+            //               padding:0;
+            //               font-size: 0.75rem;
+            //               margin: 0.5rem 0;
+            //             }
+            //           }
+            //         }
+            //         div.footerDropDown_holder.showList{
+            //           ul{
+            //             height: fit-content;
+            //             li{
+            //               height: fit-content;
+            //             }
+            //           }
+            //         }
+            //       }
+            //     }
+            //   }
+            // }
             section#footer_right{
               div#contactSmall{
                 h3{ 
@@ -1187,7 +1208,9 @@
                       }
                     }
                     div.footerDropDown_holder.showList{
+                      height: fit-content;
                       ul{
+                        height: fit-content;
                         li{
                           cursor:initial;
                         }
