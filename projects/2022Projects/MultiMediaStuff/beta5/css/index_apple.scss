@@ -199,7 +199,7 @@
       color:rgb(140,138,134);
       width: 100%;
       min-height:100px;
-      height:500vh !important;
+      height:300vh;
       background-color:black !important;
       bottom:0;
       display:block;
@@ -213,7 +213,7 @@
       div#footer_stickyContent{
         position: sticky;
         top:5rem;
-        height: 150vh;
+        height: 175vh; // contactUs + footer_lists > footer
         overflow:hidden;
         div#footer_textualOverlay {
           position:absolute;
@@ -223,6 +223,8 @@
           // padding: 0 1rem;
           div#contactUs{
             width: 100%;
+            height: 75vh;
+            overflow:hidden;
             padding: 2.5rem 0 3rem 0;
             background-color: rgb(0,9,54);
             transition: background-color 0.75s;
@@ -308,17 +310,17 @@
             flex-direction: column;
             justify-content:start;
             // padding: 0 1rem;
-            position:absolute;
+            // position:absolute;
             z-index: 1;
             width:100%;
-            height: 150vh;
+            height: 100vh;
             position:relative;
             overflow:hidden;
             div#footer_backgroundImg {
               position:absolute;
               width: 100%;
               // height:100%;
-              height: 90vh;
+              height: 100vh; // = footer_lists
               overflow:hidden;
               display:flex;
               justify-content:center;
@@ -328,166 +330,183 @@
                 height: 100%;
               }
             }
-            section {
-              margin:0.5rem 0 0.5rem 1rem;
-            }
-            section > div > h3 {
-              color:white;
-              text-decoration:underline;
-              margin: 0 0 0.25rem 0;
-              font-size: 1.75rem;
-              font-weight:normal;
-            }
-            section > div > ul {
-              color:white;
-              list-style: none;
-              padding:none;
-              margin: 0;
-              li{
-                width: fit-content;
-                margin: 0.5rem 0;
-                // text-align:right;
-                h4{
-                  font-size: 1.25rem;
-                  width:fit-content;
-                  font-weight:normal;
-                  cursor:pointer;
-                  a:link,
-                  a:visited,
-                  a:hover,
-                  a:active {
-                    color:white;
-                    text-decoration:none;
-                  }
-                  i {
-                    // color:red;
-                    transition: transform 0.75s;
-                    // font-size: rem;
-                  }
-                }
-                h4.showList{
-                  i {
-                    // color:blue;
-                    transform: rotate(45deg);
-                  }
-                }
-                div.footerDropDown_holder{
-                  height:0;
-                  opacity:0;
-                  overflow:hidden !important;
-                  transition: height 0.75s, opacity 0.75s;
-                  ul{
-                    // height: 5rem;
-                    display:flex;
-                    flex-direction: column;
-                    justify-content:space-evenly;
-                    // display:none;
-                    // padding:none;
-                    list-style: none;
-                    // margin: 0 0 0.5rem 0;
-                    li{
-                      font-size: 1rem;
-                      height:fit-content;
-                      margin:0;
-                      padding-left: 1rem;
-                      transition: height 0.75s;
-                      cursor:pointer;
-                      a:link,
-                      a:visited {
-                        color:white;
-                        text-decoration: none;
-                      }
-                      a:hover,
-                      a:active {
-                        color:rgb(0,9,54);
-                      }
+            div#footer_linksHolder{
+              position:relative;
+              display:flex;
+              flex-direction:column;
+              // justify-content:end;
+              width: 100%;
+              height: 100vh;
+              section {
+                margin:0.5rem 0 0.5rem 1rem;
+              }
+              section > div > h3 {
+                color:white;
+                text-decoration:underline;
+                margin: 2.5rem 0 0.25rem 0;
+                font-size: 1.75rem;
+                font-weight:normal;
+              }
+              section > div > ul {
+                color:white;
+                list-style: none;
+                padding:none;
+                margin: 0;
+                li{
+                  width: fit-content;
+                  margin: 0.5rem 0;
+                  // text-align:right;
+                  h4{
+                    font-size: 1.25rem;
+                    width:fit-content;
+                    font-weight:normal;
+                    cursor:pointer;
+                    a:link,
+                    a:visited,
+                    a:hover,
+                    a:active {
+                      color:white;
+                      text-decoration:none;
                     }
-                    // li:nth-of-type(3) {
-                    //   margin-bottom: 0.5rem;
-                    // }
+                    i {
+                      // color:red;
+                      transition: transform 0.75s;
+                      // font-size: rem;
+                    }
                   }
-                }
-                div.footerDropDown_holder.showList{
-                  height: 5rem;
-                  opacity: 1;
-                  ul {
-                    
-                    // color:Red;
-                    // display:flex;
-                    // flex-direction: column;
-                    // justify-content:space-evenly;
-                    li{
-                      height: fit-content;
-                      a:link,
-                      a:visited {
-                        color:white;
-                        text-decoration:none;
-                        width: 100%;
+                  h4.showList{
+                    i {
+                      // color:blue;
+                      transform: rotate(45deg);
+                    }
+                  }
+                  div.footerDropDown_holder{
+                    height:0;
+                    opacity:0;
+                    overflow:hidden !important;
+                    transition: height 0.75s, opacity 0.75s;
+                    ul{
+                      // height: 5rem;
+                      display:flex;
+                      flex-direction: column;
+                      justify-content:space-evenly;
+                      // display:none;
+                      // padding:none;
+                      list-style: none;
+                      // margin: 0 0 0.5rem 0;
+                      li{
+                        font-size: 1rem;
+                        height:fit-content;
+                        margin:0;
+                        padding-left: 1rem;
+                        transition: height 0.75s;
+                        cursor:pointer;
+                        a:link,
+                        a:visited {
+                          color:white;
+                          text-decoration: none;
+                        }
+                        a:hover,
+                        a:active {
+                          color:rgb(0,9,54);
+                        }
                       }
-                      a:hover,
-                      a:active {
-                        color:rgb(0,9,54);                    
+                      // li:nth-of-type(3) {
+                      //   margin-bottom: 0.5rem;
+                      // }
+                    }
+                  }
+                  div.footerDropDown_holder.showList{
+                    height: 5rem;
+                    opacity: 1;
+                    ul {
+                      
+                      // color:Red;
+                      // display:flex;
+                      // flex-direction: column;
+                      // justify-content:space-evenly;
+                      li{
+                        height: fit-content;
+                        a:link,
+                        a:visited {
+                          color:white;
+                          text-decoration:none;
+                          width: 100%;
+                        }
+                        a:hover,
+                        a:active {
+                          color:rgb(0,9,54);                    
+                        }
                       }
                     }
                   }
                 }
               }
-            }
-            section#footer_left{
-              div#siteLinks{
-                h4{}
-                div.footerDropDown_holder {
-                  ul{
-                    li{
-                      a{}
+              section#footer_left{
+                div#siteLinks{
+                  h4{}
+                  div.footerDropDown_holder {
+                    ul{
+                      li{
+                        a{}
+                      }
                     }
                   }
-                }
-                div.footerDropDown_holder.showList {
-                  height: 10rem;
-                  ul{
+                  div.footerDropDown_holder.showList {
                     height: 10rem;
+                    ul{
+                      height: 10rem;
+                      li{
+                        height:fit-content;
+                      }
+                    }
+                  }
+                }
+              }
+              section#footer_right{
+                div#contactSmall{
+                  h3{ 
+                    text-align:left;
+                    margin-top:0;
+                  }
+                  ul{
                     li{
-                      height:fit-content;
+                      text-align:left;
+                      h4{}
+                      div.footerDropDown_holder{
+                        ul{
+                          // padding:none;
+                          // list-style: none;
+                          // margin: 0 0 0.5rem 0;
+                          // height:0;
+                          li{
+                            // font-size: 0.75rem;
+                            // height:0;
+                            // opacity:0;
+                          }
+                          // li:nth-of-type(3) {
+                          //   margin-bottom: 0.5rem;
+                          // }
+                        }
+                      }
+                      div.footerDropDown_holder.showList{
+                        ul{
+                          li{
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
             }
-            section#footer_right{
-              div#contactSmall{
-                h3{ 
-                  text-align:left;
-                }
-                ul{
-                  li{
-                    text-align:left;
-                    h4{}
-                    div.footerDropDown_holder{
-                      ul{
-                        // padding:none;
-                        // list-style: none;
-                        // margin: 0 0 0.5rem 0;
-                        // height:0;
-                        li{
-                          // font-size: 0.75rem;
-                          // height:0;
-                          // opacity:0;
-                        }
-                        // li:nth-of-type(3) {
-                        //   margin-bottom: 0.5rem;
-                        // }
-                      }
-                    }
-                    div.footerDropDown_holder.showList{
-                      ul{
-                        li{
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+            div#copyright{
+              padding: 0 1rem;
+              position:absolute;
+              width: 100%;
+              bottom:2.5vh;
+              z-index:6;
+              color:white;
             }
           }
         }
@@ -580,13 +599,14 @@
     }
  
     footer{
-      height: 300vh !important;
+      height: 300vh;
       div#footer_stickyContent{
         top: 7.5rem;font-weight:normal;
-        height: 125vh;
+        height: 150vh;
         div#footer_textualOverlay{
           // margin-top:7.5rem;
           div#contactUs{
+            height: 50vh;
             section#formOverflow{
               form{
                 h3 {
@@ -617,108 +637,120 @@
             }
           }
           div#footer_lists{
-            flex-direction: row;
-            justify-content:space-between;
+            flex-direction: column;
+            height: 100vh;
+            // justify-content:space-between;
             div#footer_backgroundImg{
               // height:fit-content;
               height: 100vh;
               img{
-                width: 150% !important;
+                width: auto;
                 // height:fit-content;
                 height: 100vh;
                 // margin-top:-10rem;
               }
             }
-            section {
-            }
-            section > div > h3 {
-            }
-            section > div > ul {
-              li{
-                h4{
-                }
-                div.footerDropDown_holder{
-                  ul{
-      
-                    li{
+            div#footer_linksHolder{
+              flex-direction:row;
+              justify-content:space-between;
+              height: 100vh;
+              section {
+                height: fit-content;
+              }
+              section > div > h3 {
+              }
+              section > div > ul {
+                li{
+                  h4{
+                  }
+                  div.footerDropDown_holder{
+                    ul{
+        
+                      li{
+                      }
                     }
                   }
-                }
-                div.footerDropDown_holder{
-                  ul.showList {
-      
-                    li{
+                  div.footerDropDown_holder{
+                    ul.showList {
+        
+                      li{
+                      }
                     }
                   }
                 }
               }
-            }
-            section#footer_left{
-              margin: 2.5rem 0 0 2.5rem;
-              div#siteLinks{
-                h4{}
-                div.footerDropDown_holder{
-                  ul{
-                    li{
-                      a{}
+              section#footer_left{
+                margin: 2.5rem 0 0 2.5rem;
+                div#siteLinks{
+                  h4{}
+                  div.footerDropDown_holder{
+                    ul{
+                      li{
+                        a{}
+                      }
                     }
                   }
-                }
-                div.footerDropDown_holder.showList{
-                  ul{
-                    li{
+                  div.footerDropDown_holder.showList{
+                    ul{
+                      li{
+                      }
                     }
                   }
                 }
               }
-            }
-            section#footer_right{
-              margin: 2.5rem 2.5rem 0 0;
-              div#contactSmall{
-                h3{ 
-                  text-align:right;
-                }
-                ul{
-                  display:flex;
-                  flex-direction:column;
-                  align-items:end;
-
-                  li{
+              section#footer_right{
+                margin: 2.5rem 2.5rem 0 0;
+                div#contactSmall{
+                  h3{ 
                     text-align:right;
+                    margin-top: 2.5rem;
+                  }
+                  ul{
                     display:flex;
-                    // flex-direction:row-reverse;
                     flex-direction:column;
                     align-items:end;
-                    h4{
-                      display:flex;
+  
+                    li{
                       text-align:right;
-                      justify-self:end;
-                      // width:100% !important;
-                      
-                    }
-                    div.footerDropDown_holder{
-                      ul{
-                        li{
-                          text-align:right;
-                          padding-right: 0rem;
-                          height:fit-content;
+                      display:flex;
+                      // flex-direction:row-reverse;
+                      flex-direction:column;
+                      align-items:end;
+                      h4{
+                        display:flex;
+                        text-align:right;
+                        justify-self:end;
+                        // width:100% !important;
+                        
+                      }
+                      div.footerDropDown_holder{
+                        ul{
+                          li{
+                            text-align:right;
+                            padding-right: 0rem;
+                            height:fit-content;
+                          }
                         }
                       }
-                    }
-                    div.footerDropDown_holder.showList{
-                      height: 4rem;
-                      ul{
+                      div.footerDropDown_holder.showList{
                         height: 4rem;
-                        li{
-                          text-align:right;
-                          
-                          // font-size: 0.75rem;
+                        ul{
+                          height: 4rem;
+                          li{
+                            text-align:right;
+                            
+                            // font-size: 0.75rem;
+                          }
                         }
                       }
                     }
                   }
                 }
               }
+            }
+            div#copyright {
+              // position:initial;
+              // margin-top: -70rem;
             }
           }
         }
@@ -848,17 +880,12 @@
 
     footer{
       padding-bottom: 0;
+      height: 450vh;
       div#footer_stickyContent{
-        div#footer_backgroundImg{
-          img {
-            width: 200vw;
-            // margin-top:-10rem;
-            // margin-left:100vw !important;
-            // margin: 0 auto !important;
-          }
-        }
+        height: 175vh;
         div#footer_textualOverlay{
           div#contactUs{
+            height: 75vh;
             button{
             }
             section#formOverflow {
@@ -879,7 +906,17 @@
             }
           }
           div#footer_lists{
-
+            height: 100vh;
+            div#footer_backgroundImg{
+              height: 100vh;
+              img {
+                width: 200vw;
+                // height: 100vh;
+                // margin-top:-10rem;
+                // margin-left:100vw !important;
+                // margin: 0 auto !important;
+              }
+            }
             section {
             }
             section > div > h3 {
