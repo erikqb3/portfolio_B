@@ -199,7 +199,7 @@
       color:rgb(140,138,134);
       width: 100%;
       min-height:100px;
-      height:300vh;
+      height:400rem;
       background-color:black !important;
       bottom:0;
       display:block;
@@ -213,7 +213,7 @@
       div#footer_stickyContent{
         position: sticky;
         top:5rem;
-        height: 175vh; // contactUs + footer_lists > footer
+        height: 80rem; // contactUs + footer_lists > footer
         overflow:hidden;
         div#footer_textualOverlay {
           position:absolute;
@@ -223,7 +223,7 @@
           // padding: 0 1rem;
           div#contactUs{
             width: 100%;
-            height: 75vh;
+            height: 30rem;
             overflow:hidden;
             padding: 2.5rem 0 3rem 0;
             background-color: rgb(0,9,54);
@@ -313,14 +313,14 @@
             // position:absolute;
             z-index: 1;
             width:100%;
-            height: 100vh;
+            height: 50rem;
             position:relative;
             overflow:hidden;
             div#footer_backgroundImg {
               position:absolute;
               width: 100%;
               // height:100%;
-              height: 100vh; // = footer_lists
+              height: 50rem; // = footer_lists
               overflow:hidden;
               display:flex;
               justify-content:center;
@@ -336,7 +336,7 @@
               flex-direction:column;
               // justify-content:end;
               width: 100%;
-              height: 100vh;
+              height: 50rem;
               section {
                 margin:0.5rem 0 0.5rem 1rem;
               }
@@ -599,14 +599,15 @@
     }
  
     footer{
-      height: 300vh;
+      height: 300rem;
       div#footer_stickyContent{
-        top: 7.5rem;font-weight:normal;
-        height: 150vh;
+        top: 7.5rem;
+        font-weight:normal;
+        height: 70rem;
         div#footer_textualOverlay{
           // margin-top:7.5rem;
           div#contactUs{
-            height: 50vh;
+            height: 35rem;
             section#formOverflow{
               form{
                 h3 {
@@ -638,22 +639,22 @@
           }
           div#footer_lists{
             flex-direction: column;
-            height: 100vh;
+            height: 35rem;
             // justify-content:space-between;
             div#footer_backgroundImg{
               // height:fit-content;
-              height: 100vh;
+              height: 35rem;
               img{
                 width: auto;
                 // height:fit-content;
-                height: 100vh;
+                height: 35rem;
                 // margin-top:-10rem;
               }
             }
             div#footer_linksHolder{
               flex-direction:row;
               justify-content:space-between;
-              height: 100vh;
+              height: 35rem;
               section {
                 height: fit-content;
               }
@@ -882,10 +883,10 @@
       padding-bottom: 0;
       height: 450vh;
       div#footer_stickyContent{
-        height: 175vh;
+        // height: 175vh;
         div#footer_textualOverlay{
           div#contactUs{
-            height: 75vh;
+            // height: 75vh;
             button{
             }
             section#formOverflow {
@@ -906,9 +907,9 @@
             }
           }
           div#footer_lists{
-            height: 100vh;
+            // height: 100vh;
             div#footer_backgroundImg{
-              height: 100vh;
+              // height: 100vh;
               img {
                 width: 200vw;
                 // height: 100vh;
