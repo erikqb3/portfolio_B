@@ -256,7 +256,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder_carouselItem {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -273,14 +273,14 @@
     -webkit-transition: width 0.75s, height 0.75s;
     transition: width 0.75s, height 0.75s;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder div.overlayText {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder_carouselItem div.overlayText {
     position: absolute;
     opacity: 0;
     -webkit-transition: opacity 0.75s;
     transition: opacity 0.75s;
     color: white;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder img {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder_carouselItem img {
     width: 200%;
     height: 100%;
   }
@@ -326,10 +326,10 @@
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel {
     width: 80% !important;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder_carouselItem {
     width: 95%;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder div.overlayText {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder_carouselItem div.overlayText {
     background-color: rgba(0, 0, 0, 0.25);
     width: 100%;
     height: 100%;
@@ -345,14 +345,15 @@
     opacity: 1;
     -webkit-transition: opacity 0.75s;
     transition: opacity 0.75s;
+    display: none;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder div.overlayText h4 {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder_carouselItem div.overlayText h4 {
     font-weight: bolder;
     font-size: 1.5rem;
     text-align: center;
     -webkit-text-stroke: 0.25px #000936;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder img {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder_carouselItem img {
     width: 300% !important;
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.slideControls {
@@ -400,7 +401,7 @@
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem {
     height: 100%;
     width: 50vw;
     background-color: black;
@@ -411,19 +412,69 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
+    cursor: pointer;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder img {
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem div.imgOverlay {
+    position: absolute;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+    color: white;
+    font-weight: bolder;
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem img {
     width: 100%;
     height: 100%;
   }
-  body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder:hover {
-    opacity: 0.75;
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem:hover div.imgOverlay {
+    opacity: 1;
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partC article.half {
+    position: relative;
+    width: 100%;
+    border: 5px solid red;
+        grid-template-areas: 'areaA areaA areaB' 'areaC areaD areaD';
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partC article.half div.imgHolder_galleryItem {
+    display: block;
+    width: 100%;
+    border: 5px solid blue;
+    overflow: hidden;
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partC article.half div.imgHolder_galleryItem img {
+    width: 100%;
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partC article.half div.areaA {
+    grid-area: 'areaA';
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partC article.half div.areaB {
+    grid-area: 'areaB';
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partC article.half div.areaC {
+    grid-area: 'areaC';
+  }
+  body main section#photography_smallSliders div#photo_contentHolder section#photo_partC article.half div.areaD {
+    grid-area: 'areaD';
   }
   body main section#photography_smallSliders div#photo_contentHolder div#photoSection_descript p {
     color: white;
   }
   body main h1#audio_navTarget {
-    background-color: white !important;
+    background-color: black;
     opacity: 1;
     margin: 0;
     padding-top: 10rem;
@@ -841,10 +892,10 @@
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel {
     width: 100%;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder div.overlayText h4 {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder_carouselItem div.overlayText h4 {
     font-size: 4rem !important;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder img {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder_carouselItem img {
     height: 100%;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.slideControls button#prevBtn i,
@@ -855,10 +906,10 @@
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.slideControls button#nextBtn:focus {
     outline: none;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder_carouselItem {
     width: 95%;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder div.overlayText {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel div#slideHolder div.slide div.imgHolder_carouselItem div.overlayText {
     width: 100%;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.slideControls button#prevBtn:focus,
@@ -876,17 +927,13 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem {
     width: 45vw !important;
     background-color: black;
     overflow: hidden;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder img {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem img {
     width: 100%;
-  }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder:hover {
-    z-index: 2;
-    opacity: 0.5;
   }
   body section#audioSection_playList_neo article#audio_playList div#audio_playList_coverPhoto {
     width: 37.5vw !important;
@@ -1111,15 +1158,15 @@
             justify-content: space-evenly !important;
     margin: .5rem 0;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem {
     width: 22.5vw !important;
     background-color: black;
     overflow: hidden;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder img {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem img {
     width: 100%;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder:hover {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partB article.autoSlide div.imgHolder_galleryItem:hover {
     z-index: 2;
     opacity: 0.5;
   }
@@ -1331,25 +1378,13 @@
   body section#cinematography_scrollPlay article.cinematography_singleVideo div.overlay div.textContent {
     bottom: 80vh !important;
   }
-  body section#videography_stagger {
-    height: 95vh !important;
-  }
-  body section#videography_stagger div#videography_videoHolder {
-    height: 95vh !important;
-  }
-  body section#videography_stagger div#videography_videoHolder div.singleVideo_area div.singleVideo_holder {
-    height: initial !important;
-  }
-  body section#videography_stagger div#videography_videoHolder div.singleVideo_area div.singleVideo_holder video {
-    width: 100% !important;
-  }
   body section#photography_smallSliders div#photo_contentHolder {
     top: 5rem;
   }
   body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel {
     height: 87.5vh !important;
   }
-  body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder img {
+  body section#photography_smallSliders div#photo_contentHolder section#photo_partA div.carousel div#slideHolder div.slide div.imgHolder_carouselItem img {
     height: 200% !important;
   }
   body section#animationSection_youtubestyle div#animation_stickyContent {

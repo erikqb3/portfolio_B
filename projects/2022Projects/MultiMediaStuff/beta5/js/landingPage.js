@@ -303,7 +303,123 @@ const cinemaSection = {
 
 
 const photoSection = {
+  //STEP_1 construct initial Carousel (fetch1)
+  //Step_1a search library and get photos from initial group
+  //STEP_1b loop through results and construct initial carousel
+  //STEP_1c loop through results and construct gallery
+  //STEP_2 loop through gallery and make clickable by providing group when clicked (fetch2)
+  //STEP_3 construct newGroup carousel (fetch3)
+  //STEP_3a destroy initial carousel,
+  //STEP_3b recreate Gallery by following step 1
+  //STEP_3c don't reconstruct gallery
   index : 1,
+  accessPhotoLibrary : async function(
+    groupName,
+    fetchPath = "js/photoLibrary.json"
+  ){
+    console.log(fetchPath, groupName)
+    let myPromise = 
+      await fetch(fetchPath)
+        .then(response=> response.json())
+        .then(data => {
+          this.constructCarousel(groupName, data); //fetch1
+          this.constructGallery(groupName, data);
+          // this.gallerySwapEffect(data) //fetch 2 and 3
+        });
+    // console.log(myPromise)
+  },
+  assignCurrentImg : function(centerSlide, otherSlide, fullArray){
+    if (centerSlide.id == "firstClone") {
+      fullArray[1].classList.add('currentSlide');
+      // console.log(otherSlide)
+    }
+    else if (centerSlide.id == "lastClone") {
+      // console.log(otherSlide)
+      fullArray[fullArray.length-2].classList.add('currentSlide');
+    }
+    else {
+      otherSlide.classList.remove('currentSlide');
+      centerSlide.classList.add('currentSlide'); 
+    }
+    // console.log(centerSlide);
+    otherSlide.classList.remove('currentSlide');
+    // centerSlide.classList.add('currentSlide'); 
+  },
+  centerCurrentSlide : function(slideHolder) {
+    slide_array = this.getSlides();
+    this.translateSlideHolder(slideHolder);
+    slideHolder.style.transition = '0.75s ease'; 
+  },
+  constructCarousel : function (
+    groupName,
+    photoLibrary_data,
+    carousel_element = document.getElementById('carousel_element'),
+    slideHolder = helperFunctions.generateElement('div',"slideHolder")
+  ){
+    // console.log(groupName,photoLibrary_data[groupName])
+    for (let item in photoLibrary_data[groupName]){
+      // console.log(photoLibrary_data[groupName][item]);
+      let slide = helperFunctions.generateElement('div',"","slide");
+      let imgHolder = helperFunctions.generateElement('div',"","imgHolder_carouselItem");
+      let overlayText = helperFunctions.generateElement('div',"","overlayText");
+      let overlay_h4 = helperFunctions.generateElement('h4',"","",item);
+      let img_element = helperFunctions.generateElement('img',"","","",`${photoLibrary_data[groupName][item]['content']}`);
+
+      overlayText.appendChild(overlay_h4);
+      imgHolder = helperFunctions.appendChildren(imgHolder, overlayText,img_element)
+      slide.appendChild(imgHolder);
+      slideHolder.appendChild(slide);
+    }
+    carousel_element.appendChild(slideHolder);
+    this.runCarousel();
+    // this.accessPhotoLibrary(groupName);
+  },
+  constructGallery : function(){
+    
+  },
+  gallerySwapEffect : function( //should be compare gallery or something
+    photoLibrary_data,
+    galleryItems_array = document.querySelectorAll('.imgHolder_galleryItem')
+  ){
+    // console.log(photoLibrary_data)
+    // console.log(Object.keys(photoLibrary_data))
+    for (let gItem of galleryItems_array) {
+      gItem.addEventListener('click',(e)=> {
+        // console.log(e.target);
+        for (let libraryItem of Object.keys(photoLibrary_data)) {
+          console.log(libraryItem, e.target.innerHTML)
+          if (e.target.innerHTML == libraryItem) {
+            let groupName = libraryItem;
+            console.log(groupName);
+            //remove slideHolder from Carousel_elelemt
+            this.constructCarousel(groupName, photoLibrary_data)
+
+          }
+        }
+      })
+    }
+  },
+  getSlides : function(){return (document.querySelectorAll('.slide'))},
+  getWidth : function(slide_array){return (slide_array[this.index].clientWidth)},
+  moveToNextSlide : function(slideHolder){
+    slide_array = this.getSlides();
+    // console.log(slide_array)
+    if (this.index >= (slide_array.length - 1)) {return this.index};
+    this.index++;
+    this.translateSlideHolder(slideHolder);
+    slideHolder.style.transition = '0.75s ease'; //'0.75s linear';
+    this.assignCurrentImg(slide_array[this.index],slide_array[this.index-1], slide_array);
+    return this.index;
+  },
+  moveToPrevSlide : function(slideHolder){
+    slide_array = this.getSlides();
+    if (this.index <= 0) {return this.index};
+    this.index--;
+    this.translateSlideHolder(slideHolder);
+    slideHolder.style.transition = '0.75s ease'; //'0.75s linear';
+    this.assignCurrentImg(slide_array[this.index],slide_array[this.index+1], slide_array);
+    return this.index;
+  },
   runCarousel : function(
     photo_partA = document.getElementById('photo_partA'),
     slideHolder = document.getElementById('slideHolder'),
@@ -367,63 +483,8 @@ const photoSection = {
     });
     // this.scrollEffect_currentImg(slideEvent,slideHolder);
 
-  },
-  startSlides : function(interval,slideHolder){
-    slideEvent = setInterval(() => {
-      // console.log(this.index);
-      this.index =this.moveToNextSlide(slideHolder);
-    }, interval);
-    return slideEvent;
-  },
-  translateSlideHolder : function(slideHolder){ 
-    // console.log(slideHolder,this.index);
-    // console.log(slideWidth)
-    let slide_array = this.getSlides();
-    let slideWidth = this.getWidth(slide_array);
-    slideHolder.style.transform = `translateX(${-slideWidth * this.index}px)`;
-  },  
-  getSlides : function(){return (document.querySelectorAll('.slide'))},
-  getWidth : function(slide_array){return (slide_array[this.index].clientWidth)},
-  moveToNextSlide : function(slideHolder){
-    slide_array = this.getSlides();
-    // console.log(slide_array)
-    if (this.index >= (slide_array.length - 1)) {return this.index};
-    this.index++;
-    this.translateSlideHolder(slideHolder);
-    slideHolder.style.transition = '0.75s ease'; //'0.75s linear';
-    this.assignCurrentImg(slide_array[this.index],slide_array[this.index-1], slide_array);
-    return this.index;
-  },
-  moveToPrevSlide : function(slideHolder){
-    slide_array = this.getSlides();
-    if (this.index <= 0) {return this.index};
-    this.index--;
-    this.translateSlideHolder(slideHolder);
-    slideHolder.style.transition = '0.75s ease'; //'0.75s linear';
-    this.assignCurrentImg(slide_array[this.index],slide_array[this.index+1], slide_array);
-    return this.index;
-  },
-  centerCurrentSlide : function(slideHolder) {
-    slide_array = this.getSlides();
-    this.translateSlideHolder(slideHolder);
-    slideHolder.style.transition = '0.75s ease'; 
-  },
-  assignCurrentImg : function(centerSlide, otherSlide, fullArray){
-    if (centerSlide.id == "firstClone") {
-      fullArray[1].classList.add('currentSlide');
-      // console.log(otherSlide)
-    }
-    else if (centerSlide.id == "lastClone") {
-      // console.log(otherSlide)
-      fullArray[fullArray.length-2].classList.add('currentSlide');
-    }
-    else {
-      otherSlide.classList.remove('currentSlide');
-      centerSlide.classList.add('currentSlide'); 
-    }
-    // console.log(centerSlide);
-    otherSlide.classList.remove('currentSlide');
-    // centerSlide.classList.add('currentSlide'); 
+
+
   },
   scrollEffect_currentImg(
     slideEvent,
@@ -502,15 +563,27 @@ const photoSection = {
     // console.log(document.querySelector('div#carousel_holder'))
     })
   },
-  // scrollEffect : function(
-  //   photoSection_top = document.getElementById('photography_smallSliders'),
-  //   photoContent_top = document.getElementById('photo_contentHolder'),
-  // ){
-  //   window.addEventListener('scroll',()=>{
-  //     let scroll = Math.floor(window.scrollY);
-  //     console.log(scroll, photoSection_top,photoContent_top)
-  //   })
-  // }
+  useFetchedData : function(
+    groupName,
+    photoLibrary_data
+  ){
+    console.log(groupName, photoLibrary_data)
+  },
+
+  startSlides : function(interval,slideHolder){
+    slideEvent = setInterval(() => {
+      // console.log(this.index);
+      this.index =this.moveToNextSlide(slideHolder);
+    }, interval);
+    return slideEvent;
+  },
+  translateSlideHolder : function(slideHolder){ 
+    // console.log(slideHolder,this.index);
+    // console.log(slideWidth)
+    let slide_array = this.getSlides();
+    let slideWidth = this.getWidth(slide_array);
+    slideHolder.style.transform = `translateX(${-slideWidth * this.index}px)`;
+  }
 }
 
 const audioFunctions_neo = {
@@ -892,6 +965,9 @@ introSection.scrollEffect();
 cinemaSection.overlayEffect_scroll();
 // videoSection.fadeInEffect_scroll();
 // videoSection.overlayScrollEffect();
-photoSection.runCarousel();
+// photoSection.constructCarousel('Initial');
+// photoSection.runCarousel();
+
+photoSection.accessPhotoLibrary('Initial');
 audioFunctions_neo.useFunctions();
 animationSection.useFunctions();

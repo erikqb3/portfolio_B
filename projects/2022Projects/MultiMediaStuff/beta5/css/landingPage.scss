@@ -232,9 +232,6 @@
           // padding:0;
         }
       }
-  
-
-
 
       section#photography_smallSliders {
         height: 400vh;
@@ -276,7 +273,7 @@
                   align-items: center;
                   // margin: 0 5rem;
                   
-                  div.imgHolder {
+                  div.imgHolder_carouselItem {
                     width: 100%; //change
                     height: 100%;
                     overflow:hidden;
@@ -344,7 +341,7 @@
               width: 80% !important;
               div#slideHolder {
                 div.slide {
-                  div.imgHolder {
+                  div.imgHolder_carouselItem {
                     width: 95%; //change
                     div.overlayText{
                       background-color: rgba(0,0,0,0.25);
@@ -355,6 +352,7 @@
                       justify-content:center;
                       opacity:1;
                       transition: opacity 0.75s;
+                      display:none; //just for now
                       h4{
                         font-weight:bolder;
                         font-size: 1.5rem;
@@ -408,7 +406,7 @@
               
     
     
-                div.imgHolder{
+                div.imgHolder_galleryItem{
                   height: 100%;
                   width: 50vw;
                   background-color:black;
@@ -416,17 +414,63 @@
                   // border-radius: 10px;
                   display:flex;
                   align-items:center;
+                  position:relative;
+                  cursor:pointer;
+                  div.imgOverlay {
+                    position:absolute;
+                    top:0;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    background-color:rgba(0,0,0,0.75);
+                    width: 100%;
+                    height: 100%;
+                    opacity:0;
+                    transition: opacity 0.75s;
+                    color:white;
+                    font-weight:bolder;
+                  }
                   img {
                     width: 100%;
                     height: 100%;
                   }
                 }
-                div.imgHolder:hover{
-                  // z-index: 2;
-                  opacity: 0.75;
-                  // height: 37.5vw;
-                  // width: 65vw;
+                div.imgHolder_galleryItem:hover{
+                  div.imgOverlay {
+                    opacity: 1;
+                  }
                 }
+            }
+          }
+          section#photo_partC{
+            article.half{
+              position:relative;
+              width: 100%;
+              border: 5px solid red;
+              grid-template-areas: 
+              'areaA areaA areaB'
+              'areaC areaD areaD';
+              div.imgHolder_galleryItem{
+                display:block;
+                width: 100%;
+                border: 5px solid blue;
+                overflow:hidden;
+                img{
+                  width: 100%;
+                }
+              }
+              div.areaA{
+                grid-area: 'areaA'
+              }
+              div.areaB{
+                grid-area: 'areaB'
+              }
+              div.areaC{
+                grid-area: 'areaC'
+              }
+              div.areaD{
+                grid-area: 'areaD'
+              }
             }
           }
           div#photoSection_descript{
@@ -439,7 +483,7 @@
       }
 
       h1#audio_navTarget {
-        background-color:white !important;
+        background-color:black;
         opacity:1;
         margin:0;
         padding-top: 10rem;
@@ -829,7 +873,7 @@
             div#slideHolder {
               // height:fit-content !important;
               div.slide {
-                div.imgHolder {
+                div.imgHolder_carouselItem {
                   // width: 200vw; //change
                   // height:100%;
                   div.overlayText{
@@ -870,7 +914,7 @@
             // width: 80%;
             div#slideHolder {
               div.slide {
-                div.imgHolder {
+                div.imgHolder_carouselItem {
                   width: 95%; //change
                   div.overlayText{
                     width: 100%;
@@ -903,7 +947,7 @@
             // height: 30vw!important;
             animation-duration: 40s !important;
             justify-content: center !important;
-              div.imgHolder{
+              div.imgHolder_galleryItem{
                 // height: 20vh !important;
                 width: 45vw !important;
                 background-color:black;
@@ -912,9 +956,9 @@
                   width: 100%;
                 }
               }
-              div.imgHolder:hover{
-                z-index: 2;
-                opacity: 0.5;
+              div.imgHolder_galleryItem:hover{
+                // z-index: 2;
+                // opacity: 0.5;
                 // height: 26.25vh !important;
                 // width: 30rem !important;
               }
@@ -1250,7 +1294,7 @@
             animation-duration: 10s !important;
             justify-content:space-evenly !important;
             margin: .5rem 0;
-              div.imgHolder{
+              div.imgHolder_galleryItem{
                 // height: 20vh !important;
                 width: 22.5vw !important;
                 background-color:black;
@@ -1259,7 +1303,7 @@
                   width: 100%;
                 }
               }
-              div.imgHolder:hover{
+              div.imgHolder_galleryItem:hover{
                 z-index: 2;
                 opacity: 0.5;
                 // height: 26.25vh !important;
@@ -1499,32 +1543,32 @@
       article#fillerCinema {
       }
     }
-    section#videography_stagger{
-      height: 95vh !important;
-      h1{}
-      div#videography_videoHolder{
-        height: 95vh !important;
-        div.singleVideo_area{
-          div.overlay{
-            h2 {
-            }
-          }
+    // section#videography_stagger{
+    //   height: 95vh !important;
+    //   h1{}
+    //   div#videography_videoHolder{
+    //     height: 95vh !important;
+    //     div.singleVideo_area{
+    //       div.overlay{
+    //         h2 {
+    //         }
+    //       }
 
-          div.overlay:nth-of-type(2n+0){
-          }
-          div.overlay.visibleOverlay {
-            // background-color: rgba(255,255,255,0.5) !important;
+    //       div.overlay:nth-of-type(2n+0){
+    //       }
+    //       div.overlay.visibleOverlay {
+    //         // background-color: rgba(255,255,255,0.5) !important;
             
-          }
-          div.singleVideo_holder{
-            height: initial !important;
-            video{
-              width: 100% !important;
-            }
-          }
-        }
-      }
-    }
+    //       }
+    //       div.singleVideo_holder{
+    //         height: initial !important;
+    //         video{
+    //           width: 100% !important;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
     section#photography_smallSliders {
       div#photo_contentHolder{
         top: 5rem;
@@ -1533,7 +1577,7 @@
             height: 87.5vh !important;
             div#slideHolder{
              div.slide{
-              div.imgHolder{
+              div.imgHolder_carouselItem{
                 div.overlayText{
 
                 }
