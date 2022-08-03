@@ -323,7 +323,7 @@ const photoSection = {
         .then(response=> response.json())
         .then(data => {
           this.constructCarousel(groupName, data); //fetch1
-          this.constructGallery(groupName, data);
+          this.constructGallery(data);
           // this.gallerySwapEffect(data) //fetch 2 and 3
         });
     // console.log(myPromise)
@@ -374,30 +374,53 @@ const photoSection = {
     this.runCarousel();
     // this.accessPhotoLibrary(groupName);
   },
-  constructGallery : function(){
-    
-  },
-  gallerySwapEffect : function( //should be compare gallery or something
+  constructGallery : function(
     photoLibrary_data,
-    galleryItems_array = document.querySelectorAll('.imgHolder_galleryItem')
+    photo_partC = document.getElementById('photo_partC'),
+    half1 = helperFunctions.generateElement('article',"","half"),
+    half2 = helperFunctions.generateElement('article',"","half"),
+    loopResults = []
   ){
-    // console.log(photoLibrary_data)
-    // console.log(Object.keys(photoLibrary_data))
-    for (let gItem of galleryItems_array) {
-      gItem.addEventListener('click',(e)=> {
-        // console.log(e.target);
+    for (let item in photoLibrary_data["Initial"]){
+      // console.log(photoLibrary_data["Initial"][item]);
+      let galleryItem = helperFunctions.generateElement('div',"","imgHolder_galleryItem");
+      let imgOverlay = helperFunctions.generateElement('div',"","imgOverlay",item);
+      let img_element = helperFunctions.generateElement('img',"","","",`${photoLibrary_data["Initial"][item]['content']}`);
+
+      galleryItem = helperFunctions.appendChildren(galleryItem, imgOverlay,img_element);
+      galleryItem.addEventListener('click',(e)=>{
+        // console.log(e.target)
         for (let libraryItem of Object.keys(photoLibrary_data)) {
-          console.log(libraryItem, e.target.innerHTML)
+          // console.log(libraryItem, e.target.innerHTML)
           if (e.target.innerHTML == libraryItem) {
             let groupName = libraryItem;
             console.log(groupName);
-            //remove slideHolder from Carousel_elelemt
+            document.getElementById("slideHolder").remove();
             this.constructCarousel(groupName, photoLibrary_data)
 
           }
-        }
+        } 
       })
+      loopResults.push(galleryItem);
     }
+    // console.log(loopResults)
+    for (let i = 0; i < 4; i++) {
+      // console.log(loopResults[i])
+      loopResults[i].classList.add(`area${i+1}`);
+      if (((i+1) == 2) || ((i+1) == 3)) {
+        loopResults[i].classList.add("verti");
+      }
+      half1.appendChild(loopResults[i]);
+    }
+    for (let i = 4; i < 8; i++) {
+      // console.log(loopResults[i])
+      loopResults[i].classList.add(`area${i-3}`);
+      if (((i-3) == 2) || ((i-3) == 3)) {
+        loopResults[i].classList.add("verti");
+      }
+      half2.appendChild(loopResults[i]);
+    }
+    photo_partC = helperFunctions.appendChildren(photo_partC, half1,half2)
   },
   getSlides : function(){return (document.querySelectorAll('.slide'))},
   getWidth : function(slide_array){return (slide_array[this.index].clientWidth)},
@@ -491,7 +514,7 @@ const photoSection = {
     slideHolder,
     photo_section = document.getElementById('photography_smallSliders'),
     sectionA = document.getElementById('photo_partA'),
-    sectionB = document.getElementById('photo_partB'), 
+    sectionC = document.getElementById('photo_partC'), 
     videoSection = document.getElementById('videography_stagger')
     // photo_contentHolder = document.getElementById('photo_contentHolder'),
     //for changeImg
@@ -519,14 +542,14 @@ const photoSection = {
 
       if (scroll >= photoGap_trigger){
         sectionA.classList.add("pseudoScrollEffect");
-        sectionB.style.opacity = "1";
+        sectionC.style.opacity = "1";
         // console.log("pseudoEffect ON!")
         // videoSection.style.display = "none";
  
       }
       else {
         sectionA.classList.remove("pseudoScrollEffect");
-        sectionB.style.opacity = "0"
+        sectionC.style.opacity = "0"
         // videoSection.style.display = "block";
 
         // this.index = this.moveToNextSlide(slideHolder);

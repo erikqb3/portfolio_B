@@ -1,34 +1,34 @@
 {
   "Initial":{
-    "slide1":{
+    "Advertisement":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial1.jpeg"
     },
-    "slide2":{
+    "Fashion":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial2.jpeg"
     },
-    "slide3":{
+    "Headshot":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial3.jpeg"
     },
-    "slide4":{
+    "Product":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial4.jpeg"
     },
-    "slide5":{
+    "Real Estate":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial5.jpeg"
     },
-    "slide6":{
+    "Aerial":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial6.jpeg"
     },
-    "slide7":{
+    "Wedding":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial7.jpeg"
     },
-    "slide8":{
+    "Portrait":{
       "img_type":"hori",
       "content":"resources/imgs/photo_initial8.jpeg"
     }
@@ -36,273 +36,273 @@
   "Advertisement":{
     "slide1":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     },
     "slide2":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     },
     "slide3":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     },
     "slide4":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     },
     "slide5":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     },
     "slide6":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     },
     "slide7":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     },
     "slide8":{
       "img_type":"hori",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo1.jpg"
     }
   },
   "Fashion":{
     "slide1":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     },
     "slide2":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     },
     "slide3":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     },
     "slide4":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     },
     "slide5":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     },
     "slide6":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     },
     "slide7":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     },
     "slide8":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo2.jpg"
     }
   },
   "Headshot":{
     "slide1":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     },
     "slide2":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     },
     "slide3":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     },
     "slide4":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     },
     "slide5":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     },
     "slide6":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     },
     "slide7":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     },
     "slide8":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo3.jpg"
     }
   },
   "Product":{
     "slide1":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     },
     "slide2":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     },
     "slide3":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     },
     "slide4":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     },
     "slide5":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     },
     "slide6":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     },
     "slide7":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     },
     "slide8":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo4.jpg"
     }
   },
   "Real Estate":{
     "slide1":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     },
     "slide2":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     },
     "slide3":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     },
     "slide4":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     },
     "slide5":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     },
     "slide6":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     },
     "slide7":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     },
     "slide8":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo5.jpg"
     }
   },
   "Aerial":{
     "slide1":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     },
     "slide2":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     },
     "slide3":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     },
     "slide4":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     },
     "slide5":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     },
     "slide6":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     },
     "slide7":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     },
     "slide8":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo6.jpg"
     }
   },
   "Wedding":{
     "slide1":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     },
     "slide2":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     },
     "slide3":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     },
     "slide4":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     },
     "slide5":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     },
     "slide6":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     },
     "slide7":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     },
     "slide8":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo7.jpg"
     }
   },
   "Portrait":{
     "slide1":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     },
     "slide2":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     },
     "slide3":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     },
     "slide4":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     },
     "slide5":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     },
     "slide6":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     },
     "slide7":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     },
     "slide8":{
       "img_type":"",
-      "content":"../resources/imgs/photo_initial1.jpeg"
+      "content":"resources/imgs/betaMaterial/pseudo8.jpg"
     }
   }
 
