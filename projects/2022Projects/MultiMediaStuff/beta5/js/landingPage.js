@@ -371,8 +371,22 @@ const photoSection = {
       slideHolder.appendChild(slide);
     }
     carousel_element.appendChild(slideHolder);
+    this.index = 1;
+    this.constructCarouselControls();
     this.runCarousel();
     // this.accessPhotoLibrary(groupName);
+  },
+  constructCarouselControls : function(
+    photo_partA = document.getElementById('photo_partA'),
+    slideControls = helperFunctions.generateElement("div","","slideControls"),
+    prevBtn = helperFunctions.generateElement('button',"prevBtn"),
+    nextBtn = helperFunctions.generateElement('button',"nextBtn")
+  ){
+    prevBtn.innerHTML = `<i class="fa-solid fa-angle-left"></i>`;
+    nextBtn.innerHTML = `<i class="fa-solid fa-angle-right"></i>`;
+    slideControls = helperFunctions.appendChildren(slideControls, prevBtn,nextBtn);
+    photo_partA.appendChild(slideControls)
+
   },
   constructGallery : function(
     photoLibrary_data,
@@ -396,6 +410,7 @@ const photoSection = {
             let groupName = libraryItem;
             console.log(groupName);
             document.getElementById("slideHolder").remove();
+            document.querySelector('div.slideControls').remove();
             this.constructCarousel(groupName, photoLibrary_data)
 
           }
@@ -499,9 +514,11 @@ const photoSection = {
     prevBtn.addEventListener('click',()=>{
       this.index = this.moveToPrevSlide(slideHolder);
       // console.log('prevBtn');
+      console.log(this.index);
     });
     nextBtn.addEventListener('click',()=>{
       this.index = this.moveToNextSlide(slideHolder);
+      console.log(this.index);
       // console.log('nextBtn');
     });
     // this.scrollEffect_currentImg(slideEvent,slideHolder);

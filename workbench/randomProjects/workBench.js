@@ -99,4 +99,77 @@ prevBtn.addEventListener('click',()=> {
 })
 
 
+
+function generateElement ( //NOTE: RESTRUCTURE THIS TO ACCOMADATE AS MUCH AS YOU CAN
+paramElement,
+paramId = '',
+paramClass = '',
+paramText = '',
+paramLink = '',
+paramOther = []
+) {
+let element = document.createElement(paramElement);
+element.id = paramId;
+element.setAttribute('class', paramClass);
+switch (paramElement) {
+  case 'img':
+    element.setAttribute('src', paramLink);
+    element.setAttribute('alt', paramId);
+    break;
+  case 'a':
+    element.setAttribute('href', paramLink);
+    break;
+  case 'input':
+    element.setAttribute('type', paramClass);
+    element.setAttribute('name', paramId);
+  case 'source':
+    element.setAttribute('src', paramLink);
+    element.setAttribute('type', paramClass);
+    break;
+  case 'button':
+    element.setAttribute('value',paramId) //temporary set up
+}
+if (paramText != '') {
+  element.innerHTML = paramText;
+}
+return element;
+}
+
+
 startSlide();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("button").addEventListener('click',(e)=>{
+  let body = document.querySelector('body');
+  body.classList.toggle('postBtnClick');
+  document.getElementById("button").remove();
+  let newBtn = generateElement('button',"button","","Color Change!!!");
+  body.appendChild(newBtn)
+})
+
+
+

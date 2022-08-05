@@ -616,8 +616,9 @@
                 div#smallTextInput{
                   display:flex;
                   flex-wrap: wrap;
+                  justify-content: space-between !important;
                   input {
-                    width: 50%;
+                    width: 47.5%;
                   }
                   input:nth-of-type(3){
                     width: 100%;
@@ -884,6 +885,8 @@
       height: 450vh;
       div#footer_stickyContent{
         // height: 175vh;
+        height: 80rem !important;
+        border: 5px solid red !important;
         div#footer_textualOverlay{
           div#contactUs{
             // height: 75vh;
@@ -908,10 +911,13 @@
           }
           div#footer_lists{
             // height: 100vh;
+            height: 55rem !important;
             div#footer_backgroundImg{
               // height: 100vh;
+              height: 55rem !important;
               img {
                 width: 200vw;
+                height: 55rem !important;
                 // height: 100vh;
                 // margin-top:-10rem;
                 // margin-left:100vw !important;
