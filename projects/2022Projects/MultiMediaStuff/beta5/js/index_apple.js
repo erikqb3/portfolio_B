@@ -2,11 +2,17 @@
 const navElementFunctions = {
   mobileNav : {
     hamburgerBtn : function(
+      //STEP_1: add event listener to hambBtn
+      //STEP_1a: add css attributes by toggling the class whenenever you click it
+      //STEP_1b: change the icon whenever you click it.
       hambBtn = document.getElementById("hambBtn"),
       mobileNav = document.getElementById('nav_mobile')
     ){
+      //STEP_1
       hambBtn.addEventListener('click',(e)=>{
+        //STEP_1a
         mobileNav.classList.toggle('switch_ON');
+        //STEP_1b
         if (mobileNav.classList.contains('switch_ON')){
           mobileNav.children[0].innerHTML = '<i class="fa-regular fa-circle-xmark"></i>';
         }
@@ -14,24 +20,26 @@ const navElementFunctions = {
           mobileNav.children[0].innerHTML = '<i class="fa-solid fa-bars"></i>'
         }
       });
-      // mobileNav.addEventListener('click',(e)=>{
-      //   mobileNav.classList.toggle('switch_ON');
-      // })
     },
     listOptions : function(
+      //STEP_1: loop through all elements with "sideNav" class in "nav_mobile" element
+      //STEP_2: check if looped element is a "li" element and has the class "dropDown_holder"
+      //STEP_3: loop through the elements within the dropDown_holder's ul element (the ul.dropDownList comes after div.dropDown_btn, thus children[1])
+      //STEP_4: avoiding the hr elements, add event listeners to each of the small "li" suboptions 
+      //STEP_4a: flip the menu back up after they are clicked (that way it's not down when you try to navigate to various parts of the page)
       nav_mobile = document.getElementById('nav_mobile'),
       navOptions_array = document.getElementById("sideNav").firstElementChild.children
     ){
-
-      // console.log(navOptions_array)
+      //STEP_1
       for (let option of navOptions_array){
+        //STEP_2
         if ((option.tagName == "LI") && (option.classList.contains('dropDown_holder'))){
-          // console.log(option);
+          //STEP_3
           for (let subOption of option.children[1].children) {
-            // console.log(subOption)
+            //STEP_4
             if (subOption.tagName == "LI"){
-              // console.log(subOption)
               subOption.addEventListener('click',()=>{
+                //STEP_4a
                 nav_mobile.classList.toggle('switch_ON')
               })
             }
@@ -43,39 +51,22 @@ const navElementFunctions = {
   },
   mainNav : function(
     dropDownOptions_array = document.querySelectorAll('.dropDown_holder'),
-    mainElement = document.querySelector('main')
+    // mainElement = document.querySelector('main')
+    // STEP_1: loop through elements in navbar and add event listeners to each option
+    // STEP_2: 
   ){
     for (let option of dropDownOptions_array) {
       option.children[0].addEventListener('click',(e)=> {
-        // console.log(e.target.nextSibling.nextSibling)
         for (let option_I of dropDownOptions_array) {
-          // console.log(option_I, e.target.nextElementSibling);
+          console.log(option_I.children[1], e.target.nextElementSibling)
           if (option_I.children[1] != e.target.nextElementSibling) {
             option_I.children[1].classList.remove('switch_ON');
           }
         }
         e.target.nextElementSibling.classList.toggle('switch_ON');
-
-        // if (e.target.nextElementSibling.classList.contains('switch_ON')) {
-        //   for (let element of e.target.nextElementSibling.children){
-        //     // console.log(element.tagName, element)
-        //     if (element.tagNam == "LI") {
-        //       element.addEventListener('click',(e)=>{
-                
-        //       })
-        //     }
-        //   }
-        //   console.log(e.target.nextElementSibling.children)
-        // }
       })
     }
-    // mainElement.addEventListener('click',(e)=>{
-    //   for (let option_II of dropDownOptions_array) {
-    //     option_II.children[1].classList.remove('switch_ON');
-    //   }
-    // })
     window.addEventListener('click',(e)=> {
-      // console.log(e.target.tagName)
       for (let option_II of dropDownOptions_array) {
         if (e.target != option_II.children[0]) {
           option_II.children[1].classList.remove('switch_ON');
@@ -91,7 +82,6 @@ const footerElementFunctions = {
   ){
     if (window.innerWidth < 1900) {
       for (let element of dropDown_array) {
-        // let list = element.children[1];
         element.addEventListener('click',(e)=>{
           let pastTarget_h4 = document.querySelector('h4.showList')
           let pastTarget_div = document.querySelector('div.showList');
@@ -104,35 +94,16 @@ const footerElementFunctions = {
               console.log(e.target);
               pastTarget_h4.classList.toggle('showList');
               pastTarget_div.classList.toggle('showList');
-              // console.log('pastTarget', pastTarget)
-              // document.querySelector('h4.showList').classList.toggle('showList');
             }
             catch(err) {}
             e.target.classList.toggle('showList');
             e.target.nextElementSibling.classList.toggle('showList');
           }
-          // console.log('showList', e.target.nextElementSibling)
         })
-        // console.log(button);
       }
     }
   },
-  // getInTouch : function(
-  //   gIT_btn = document.getElementById('subscribe').children[0],
-  //   // closeBtn = document.getElementById('closeFormBtn')
-  // ){ 
-  //   // console.log(gIT_btn);
-  //   gIT_btn.addEventListener('click',()=>{
-  //     // console.log(document.getElementById('subscribe').children[1])
-  //     document.getElementById('subscribe').children[1].classList.toggle('showOverlay');
-  //     let closeBtn = document.getElementById('closeFormBtn');
-  //     function closeEvent (){
-  //       document.getElementById('subscribe').children[1].classList.remove('showOverlay');
-  //       closeBtn.removeEventListener('click',closeEvent)
-  //     }
-  //     closeBtn.addEventListener('click', closeEvent)
-  //   })
-  // },
+
   scrollEffect_appear : function(
     animationSection = document.getElementById('animationSection_youtubestyle'),
     footer = document.querySelector('footer')
@@ -152,66 +123,8 @@ const footerElementFunctions = {
       else {
         document.getElementById('contactUs').classList.remove("contactUs_altered");
       }
-
-      // console.log(scroll, animationSection.offsetTop)
-      // if (window.innerWidth < 993){
-      //   if (scroll >= (animationSection.offsetTop + (animationSection.offsetHeight / 2))) {
-      //     footer.style.opacity = "1";
-      //     // footer.style.opacity = "1";
-      //   }
-      //   else {
-      //     footer.style.opacity = "0";
-      //     // footer.style.opacity = "0";
-      //     try {
-      //       textOverlay = document.getElementById('videoHolder_ani');
-      //       textOverlay.classList.remove('showOverlay');
-      //     }
-      //     catch(err){}
-      //   }
-      // }
-      // else {
-      //   if (scroll >= (animationSection.offsetTop - 200)) {
-      //     animationSection.style.opacity = "1";
-      //   }
-      //   else {
-      //     animationSection.style.opacity = "0";
-      //     try {
-      //       textOverlay = document.getElementById('videoHolder_ani');
-      //       textOverlay.classList.remove('showOverlay');
-      //     }
-      //     catch(err){}
-      //   }
-      // }
-      
     })
   }
-  // scrollEffect_appear : function(
-  //   footer = document.querySelector('footer'),
-  //   footerTop = footer.offsetTop
-  // ){
-  //   console.log(footerTop);
-  //   window.addEventListener('scroll', (e)=>{
-  //     let scroll = window.scrollY;
-  //     let screenWidth = window.innerWidth;
-  //     console.log(scroll, footerTop);
-  //     if (screenWidth < 768) {
-  //       if (scroll <= (footerTop+750)) {
-  //         footer.style.opacity = "0"
-  //       }
-  //       else (
-  //         footer.style.opacity = "1"
-  //       )
-  //     }
-  //     else if (screenWidth <= 993) {
-  //       if (scroll <= (footerTop+375)) {
-  //         footer.style.opacity = "0"
-  //       }
-  //       else (
-  //         footer.style.opacity = "1"
-  //       )
-  //     }
-  //   })
-  // }
 };
 
 
@@ -219,7 +132,4 @@ navElementFunctions.mobileNav.hamburgerBtn();
 navElementFunctions.mobileNav.listOptions();
 navElementFunctions.mainNav();
 footerElementFunctions.dropDownLists();
-// footerElementFunctions.getInTouch();
 footerElementFunctions.scrollEffect_appear();
-
-// console.log("HELLOW");

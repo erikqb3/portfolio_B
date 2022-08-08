@@ -4,47 +4,28 @@ const introSection = {
     scrollEffect_endTop = document.getElementById('cinema_navTarget').offsetTop,
     sectionLength = scrollEffect_endTop - scrollEffect_introTop,
     scrollEffect_content = document.getElementById('scrollEffect_content'),
-    sectionLength_5xchunk = ((scrollEffect_endTop-scrollEffect_introTop)*0.2),
-    sectionLength_andThenSome = (scrollEffect_endTop-scrollEffect_introTop),
-    scrollEffect_content_p = scrollEffect_content.children[1],
+    // sectionLength_5xchunk = ((scrollEffect_endTop-scrollEffect_introTop)*0.2),
+    // sectionLength_andThenSome = (scrollEffect_endTop-scrollEffect_introTop),
+    // scrollEffect_content_p = scrollEffect_content.children[1],
   ){
-    // console.log(scrollEffect_endTop);
     let  scrollProgress;
     window.addEventListener('scroll',(e)=>{
       let scroll = window.scrollY;
-      // let half = (window.innerHeight*0.6)/2;
-      // let whole = (window.innerHeight*0.6);
-
-      // let wireA = half;
-      // let wireB = wireA + half;
-      // let wireC = wireB + half;
-      // let wireD = wireC + whole;
-      // let wireE = wireD + half;
-      // let wireF = wireE + half;
-      
-
       let tripWire1 = window.innerHeight*0.6;
       let tripWire2 = tripWire1 + parseFloat(window.innerHeight*0.50);
       let tripWire3 = tripWire2 + parseFloat(window.innerHeight*0.50);
       let tripWire4 = tripWire3 + parseFloat(window.innerHeight*0.50);
       let tripWire5 = tripWire4 + parseFloat(window.innerHeight*0.50);
 
-      // let tripWire3
 
 
       scrollProgress = (scroll - scrollEffect_introTop)/sectionLength;
 
-      // console.log(scroll,tripWire1, tripWire2, tripWire3)
       if (scroll < (tripWire1)){
-        console.log("trip1");
         scrollEffect_content.children[1].style.position = "initial";
         scrollEffect_content.style.opacity = ((scroll/tripWire1));
-        // console.log(scroll/tripWire1);
       }
       else if ((scroll > tripWire1) && (scroll < tripWire2)) {
-        console.log("trip2")
-        // console.log(scroll, tripWire2)
-        // console.log ((tripWire2-tripWire1), (scroll-tripWire1),((scroll-tripWire1)/(tripWire2-tripWire1)))
         scrollEffect_content.children[1].style.position = "fixed";
         scrollEffect_content.children[1].children[0].style.visibility = "visible";
         scrollEffect_content.children[1].children[1].style.visibility = "hidden";
@@ -53,7 +34,6 @@ const introSection = {
         scrollEffect_content.children[0].children[1].style.opacity = ((scroll-tripWire1)/(tripWire2-tripWire1));
       }
       else if ((scroll > tripWire2) && (scroll < tripWire3)) {
-        console.log("trip3")
         scrollEffect_content.children[1].style.position = "initial";
         scrollEffect_content.children[1].children[1].style.visibility = "visible";
         scrollEffect_content.children[1].children[0].style.visibility = "hidden";
@@ -65,7 +45,6 @@ const introSection = {
         scrollEffect_content.children[1].children[2].style.opacity = ((scroll-tripWire2)/(tripWire3-tripWire2));
       }
       else if ((scroll > tripWire3) && (scroll < tripWire4)) {
-        console.log("trip4")
         scrollEffect_content.children[1].style.position = "fixed";
         scrollEffect_content.children[1].style.top = "-5rem"
         scrollEffect_content.children[1].children[1].style.visibility = "hidden";
@@ -76,93 +55,21 @@ const introSection = {
         scrollEffect_content.children[0].children[3].style.opacity = ((scroll-tripWire3)/(tripWire4-tripWire3));
       }
       else if ((scroll > tripWire4) && (scroll < tripWire5)) {
-        console.log("trip5")
         scrollEffect_content.children[1].style.position = "initial";
         scrollEffect_content.children[1].children[2].style.visibility = "hidden";
         scrollEffect_content.children[1].children[3].style.visibility = "visible";
       }
       else if ((scroll > tripWire5)){
-        // console.log("trip6")
       }
 
-
-
-
-      // if (scroll < (scrollEffect_introTop + (sectionLength* 0))) {
-      //   activeArea = "none";
-      //   multiplier = 0;
-      // }
-      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.20)))){
-      //   activeArea = "quarter1";
-      //   multiplier = 0.2;
-      // }
-      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.20))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.40)))){
-      //   activeArea = "quarter2";
-      //   multiplier = 0.4;
-      //   //scrollup
-      // }
-      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.40))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.60)))){
-      //   activeArea = "quarter3";
-      //   multiplier = 0.6;
-      // }
-      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.60))) && (scroll < (scrollEffect_introTop + (sectionLength * 0.80)))){
-      //   activeArea = "quarter4";
-      //   multiplier = 0.8;
-      // }
-      // else if ((scroll >= (scrollEffect_introTop + (sectionLength* 0.80))) && (scroll < (scrollEffect_introTop + (sectionLength * 1.00)))){
-      //   activeArea = "quarter5";
-      //   multiplier = 1.0;
-      // }
-      // console.log(activeArea)
-
-      // newOpacity = parseFloat((scrollEffect_introTop + ((sectionLength_andThenSome*multiplier)-scroll))/sectionLength_5xchunk).toFixed(3)
-
-      // switch (activeArea) {
-      //   case "none":
-      //     scrollEffect_content.style.opacity = `${0}`;
-      //     // console.log(activeArea, newOpacity, scrollProgress)
-      //     break;
-      //   case "quarter1":
-      //     scrollEffect_content.style.opacity = `${1-newOpacity}`
-      //     // console.log(activeArea, newOpacity, scrollProgress)
-      //     break;
-      //   case "quarter2":
-      //     scrollEffect_content.style.opacity = `${newOpacity}`
-      //     scrollEffect_content_p.style.opacity = "0";
-      //     // console.log(activeArea, newOpacity, scrollProgress);
-      //     break;
-      //   case "quarter3":
-      //     scrollEffect_content.style.opacity = `${1-newOpacity}`
-      //     scrollEffect_content_p.style.opacity = "1";
-      //     // console.log(activeArea, newOpacity, scrollProgress);
-      //     break;
-      //   case "quarter4":
-      //     scrollEffect_content.style.opacity = `${newOpacity}`
-      //     // console.log(activeArea, newOpacity, scrollProgress)
-      //     break;
-      //   case "quarter5":
-      //     scrollEffect_content.style.opacity = `${0}`
-      //     // console.log(activeArea, newOpacity, scrollProgress)
-      //     break;
-      //   default:
-      //     break;
-      // }
-
       this.scrollEffect_changeTop(scrollProgress)
-      // console.log(activeArea)
-      // console.log(scrollEffect_introTop, scroll, scrollEffect_end)
     })
   },
   scrollEffect_changeTop: function(
     percentage,
-    maxChangeValue = 200,
-    scrollEffect_content = document.getElementById("scrollEffect_content"),
     currentTop = 75, //see css value
     scrollEffect_background = document.getElementById('bannerImg'),
-    // SE_background_top = window.getComputedStyle(scrollEffect_background).getPropertyValue('top')
   ){
-    // scrollEffect_content.style.top = `${currentTop - (maxChangeValue*percentage)}vh`;
-    // scrollEffect_background.style.top = `${SE_background_top - 2*(SE_background_top*percentage)}px`;
     if ((window.innerWidth < 768) || (window.innerWidth > 1200)){
       currentTop = 5;
     }
@@ -170,9 +77,6 @@ const introSection = {
       currentTop = 7.5;
     }
     scrollEffect_background.style.top = `${currentTop - (2*(currentTop*percentage))}rem`
-    // console.log(SE_background_top) 
-    // let changeValue;
-    // console.log(currentTop)
   }
 }
 
@@ -200,10 +104,6 @@ const cinemaSection = {
         document.getElementById('cinematography_scrollPlay').style.opacity = "1";
       }
 
-
-
-
-
       endPosition = cinemaSection_array[i+1].offsetTop
       updatedPercentage = this.checkPercentage(scroll,endPosition)
       cinemaSection_array[i].children[0].style.height = `${100-updatedPercentage}%`
@@ -214,7 +114,6 @@ const cinemaSection = {
         cinemaSection_array[i].children[0].style.backgroundColor = `rgba(0,0,0,${100-updatedPercentage-50}%)`
       }
       } 
-      // console.log(scroll, massOutput)
     })
   },
   checkPercentage : function(scroll, endPosition){
@@ -225,81 +124,6 @@ const cinemaSection = {
   }
 }
 
-// const videoSection = {
-//   fadeInEffect_scroll : function(
-
-//     overlay_array = document.querySelectorAll('.singleVideo_area > .overlay'),
-//     // loadOverlays = (overlay) => {
-//     //   overlay.classList.add("visibleOverlay")
-//     // },
-//     loadOptions = {
-//       threshold: 0,
-//       rootMargin: "0px 0px -100px 0px"
-//     }
-//   ){
-
-//     if ('IntersectionObserver' in window) {
-//       const observer = new IntersectionObserver((items, observer) => {
-//         let counter = 0;
-//         items.forEach((item) => {
-//           if (item.isIntersecting) {
-//             // loadOverlays(item.target);
-//             observer.unobserve(item.target);
-//           }
-//         });
-//       }, loadOptions);
-//       overlay_array.forEach((overlay)=> {
-//         observer.observe(overlay);
-//       });
-//     } else {
-//      overlay_array.forEach((overlay)=> {
-//       // loadOverlays(overlay)
-//      }) 
-//     }
-//   },
-//   overlayScrollEffect: function(
-//     start = document.getElementById('cinematography_scrollPlay').offsetTop + document.getElementById('cinematography_scrollPlay').offsetHeight,
-//     end = start + document.getElementById('videography_stagger').offsetHeight,
-//     videoHolder = document.getElementById('videography_videoHolder').children
-//     ){
-//       let overlayArray = [];
-//       for (let video of videoHolder) {
-//         let overlayElement = video.children[0];
-//         // console.log(overlayElement);
-//         overlayArray.push(overlayElement);
-//       }
-//       // console.log(overlayArray)
-//       window.addEventListener('scroll',()=>{
-//       let scroll = window.scrollY;
-//       let percentage = parseFloat(((scroll - start) / (end-start)).toFixed(3))
-//       let shownVideo = '';
-//       // console.log(scroll,start,end, percentage)
-//       if ((percentage < -0.5) || (percentage > 2.5)) {
-//         for(let video of videoHolder) {
-//           video.children[0].classList.remove('visibleOverlay')
-//         }
-//       }
-//       else if ((percentage >= 0) && (percentage < 0.250)){
-//         shownVideo = "video1";
-//         videoHolder[0].children[0].classList.add('visibleOverlay')
-//       }
-//       else if ((percentage >= 0.250) && (percentage < 0.500)){
-//         shownVideo = "video2";
-//         videoHolder[1].children[0].classList.add('visibleOverlay')
-//       }
-//       else if ((percentage >= 0.500) && (percentage < 0.750)){
-//         shownVideo = "video3";
-//         videoHolder[2].children[0].classList.add('visibleOverlay')
-//       }
-//       else if ((percentage >= 0.750) && (percentage < 1.00)){
-//         shownVideo = "video4";
-//         videoHolder[3].children[0].classList.add('visibleOverlay')
-//       }
-//       // console.log(percentage, shownVideo)
-//     })
-//   }
-
-// }
 
 
 const photoSection = {
@@ -345,20 +169,18 @@ const photoSection = {
     otherSlide.classList.remove('currentSlide');
     // centerSlide.classList.add('currentSlide'); 
   },
-  centerCurrentSlide : function(slideHolder) {
-    slide_array = this.getSlides();
-    this.translateSlideHolder(slideHolder);
-    slideHolder.style.transition = '0.75s ease'; 
-  },
+  // centerCurrentSlide : function(slideHolder) {
+  //   slide_array = this.getSlides();
+  //   this.translateSlideHolder(slideHolder);
+  //   slideHolder.style.transition = '0.75s ease'; 
+  // },
   constructCarousel : function (
     groupName,
     photoLibrary_data,
     carousel_element = document.getElementById('carousel_element'),
     slideHolder = helperFunctions.generateElement('div',"slideHolder")
   ){
-    // console.log(groupName,photoLibrary_data[groupName])
     for (let item in photoLibrary_data[groupName]){
-      // console.log(photoLibrary_data[groupName][item]);
       let slide = helperFunctions.generateElement('div',"","slide");
       let imgHolder = helperFunctions.generateElement('div',"","imgHolder_carouselItem");
       let overlayText = helperFunctions.generateElement('div',"","overlayText");
@@ -374,7 +196,6 @@ const photoSection = {
     this.index = 1;
     this.constructCarouselControls();
     this.runCarousel();
-    // this.accessPhotoLibrary(groupName);
   },
   constructCarouselControls : function(
     photo_partA = document.getElementById('photo_partA'),
@@ -396,16 +217,13 @@ const photoSection = {
     loopResults = []
   ){
     for (let item in photoLibrary_data["Initial"]){
-      // console.log(photoLibrary_data["Initial"][item]);
       let galleryItem = helperFunctions.generateElement('div',"","imgHolder_galleryItem");
       let imgOverlay = helperFunctions.generateElement('div',"","imgOverlay",item);
       let img_element = helperFunctions.generateElement('img',"","","",`${photoLibrary_data["Initial"][item]['content']}`);
 
       galleryItem = helperFunctions.appendChildren(galleryItem, imgOverlay,img_element);
       galleryItem.addEventListener('click',(e)=>{
-        // console.log(e.target)
         for (let libraryItem of Object.keys(photoLibrary_data)) {
-          // console.log(libraryItem, e.target.innerHTML)
           if (e.target.innerHTML == libraryItem) {
             let groupName = libraryItem;
             console.log(groupName);
@@ -603,23 +421,13 @@ const photoSection = {
     // console.log(document.querySelector('div#carousel_holder'))
     })
   },
-  useFetchedData : function(
-    groupName,
-    photoLibrary_data
-  ){
-    console.log(groupName, photoLibrary_data)
-  },
-
   startSlides : function(interval,slideHolder){
     slideEvent = setInterval(() => {
-      // console.log(this.index);
       this.index =this.moveToNextSlide(slideHolder);
     }, interval);
     return slideEvent;
   },
   translateSlideHolder : function(slideHolder){ 
-    // console.log(slideHolder,this.index);
-    // console.log(slideWidth)
     let slide_array = this.getSlides();
     let slideWidth = this.getWidth(slide_array);
     slideHolder.style.transform = `translateX(${-slideWidth * this.index}px)`;
@@ -792,15 +600,12 @@ const animationSection = {
   ){
     window.addEventListener('scroll', (e)=> {
       scroll = window.scrollY;
-      // console.log(scroll, animationSection.offsetTop)
       if (window.innerWidth < 993){
         if (scroll >= (animationSection.offsetTop - 100)) {
           animationSection.style.opacity = "1";
-          // footer.style.opacity = "1";
         }
         else {
           animationSection.style.opacity = "0";
-          // footer.style.opacity = "0";
           try {
             textOverlay = document.getElementById('videoHolder_ani');
             textOverlay.classList.remove('showOverlay');
@@ -828,22 +633,7 @@ const animationSection = {
     video = document.getElementById("cinematography_video"),
     thmbNail_holder = document.getElementById('thmbNail_holder')
   ){
-    //PURPOSE: thmbNail bar disappears so user can watch video without it blocking 
-    //STEP1: target viewable video
-    //STPE2: toggle existance of thmbNail_holder based on window width and if video is paused or not
-             
-    // video.addEventListener('click', (e)=> { //STEP1
-      //STEP2
-      // thmbNail_holder.classList.toggle('hideElement');
-      // if (window.innerWidth >= 993) {
-      //   if (e.target.paused == false)  {
-      //     thmbNail_holder.style.display = "block"; 
-      //   }
-      //   else {
-      //     thmbNail_holder.style.display = "none";
-      //   }
-      // }
-    // })
+
   },
   videoOptionSwitch: function(
     thmbNailOptions_array = document.querySelectorAll('.imgHolder_ani'),
@@ -862,9 +652,7 @@ const animationSection = {
 
     //STEP1
     for (let video of thmbNailOptions_array) {
-      // console.log(video)
       video.addEventListener('click', (e)=> {
-        // console.log(e.target)
         //STEP2
         let formerSource = document.getElementById("videoElement_ani").children[0];
         //STEP3
@@ -878,9 +666,7 @@ const animationSection = {
             newVideo.appendChild(newSource)
             document.getElementById("videoElement_ani").remove();
             document.getElementById('videoHolder_ani').appendChild(newVideo)
-            // document.getElementById("cinematography_youtubestyle").insertBefore(newVideo,document.getElementById("thmbNail_holder"));
             //STEP4a
-            // newVideo.setAttribute('muted',"muted")
             newVideo.muted = true;
             newVideo.controls = false;
             newVideo.loop = true;
@@ -891,12 +677,8 @@ const animationSection = {
           }
         }
         //STEP6
-        // console.log(formerSource.id)
         for (let storedVideoII of this.cinemaOptions_library) {
-          // console.log(storedVideoII[0], formerSource.id);
           if (storedVideoII[0] == formerSource.id) {
-            // console.log(storedVideoII[0]);
-            // console.log(storedVideoII[1]);
             e.target.parentElement.children[1].setAttribute("src", storedVideoII[1]);
             e.target.parentElement.children[1].setAttribute('alt',storedVideoII[0]);
           }
@@ -905,9 +687,7 @@ const animationSection = {
           }
         }
         //STEP 7 
-        // videoHolder_ani.classList.toggle('showOverlay');
         if (window.innerWidth >= 993) {
-          // thmbNail_holder.style.display = "none";
         }
       })
     }
@@ -916,7 +696,6 @@ const animationSection = {
     videoHolder_ani = document.getElementById('videoHolder_ani'),
     overlayBtn = document.getElementById('overlayBtn')){
     overlayBtn.addEventListener('click',(e)=>{
-      console.log('showOverlay')
       videoHolder_ani.classList.toggle('showOverlay');
     })
   },
@@ -968,8 +747,6 @@ const helperFunctions = {
     switch (element.classList.value) {
       case 'video': //SpecialCase
         for (let atr of extraAttribute) {
-          // console.log(atr)
-          // element.setAttribute(atr,atr)
         }
         break;
       case 'audio': //SpecialCase
@@ -1003,11 +780,6 @@ const helperFunctions = {
 
 introSection.scrollEffect();
 cinemaSection.overlayEffect_scroll();
-// videoSection.fadeInEffect_scroll();
-// videoSection.overlayScrollEffect();
-// photoSection.constructCarousel('Initial');
-// photoSection.runCarousel();
-
 photoSection.accessPhotoLibrary('Initial');
 audioFunctions_neo.useFunctions();
 animationSection.useFunctions();

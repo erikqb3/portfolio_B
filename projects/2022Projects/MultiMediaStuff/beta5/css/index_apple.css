@@ -537,7 +537,7 @@
   body footer div#footer_stickyContent {
     top: 7.5rem;
     font-weight: normal;
-    height: 70rem;
+    height: 87.5rem;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#contactUs {
     height: 35rem;
@@ -548,9 +548,12 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#contactUs section#formOverflow form div#smallTextInput input {
-    width: 50%;
+    width: 47.5%;
   }
   body footer div#footer_stickyContent div#footer_textualOverlay div#contactUs section#formOverflow form div#smallTextInput input:nth-of-type(3) {
     width: 100%;
@@ -793,8 +796,18 @@
     padding-bottom: 0;
     height: 450vh;
   }
+  body footer div#footer_stickyContent {
+    height: 90rem !important;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists {
+    height: 55rem !important;
+  }
+  body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists div#footer_backgroundImg {
+    height: 55rem !important;
+  }
   body footer div#footer_stickyContent div#footer_textualOverlay div#footer_lists div#footer_backgroundImg img {
     width: 200vw;
+    height: 55rem !important;
   }
 }
 

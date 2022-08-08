@@ -204,7 +204,8 @@
                 z-index:2;
                 color:red;
                 margin:0;
-                font-size: 3rem
+                font-size: 3rem;
+                text-align:center;
               }
               p {
                 text-align:center;
@@ -567,10 +568,10 @@
         }
         article#audio_info{
           width: 100%;
-          height: 50vh;
+          height: 60vh;
           // opacity:0;
           // background-color:rgba(0,255,255,0.5);
-          margin-top:75vh;
+          margin-top:50vh;
           // position:sticky;
           // margin-top:100vh;
           position:absolute;
@@ -587,7 +588,9 @@
             align-items:center;
             justify-content:center;
             color:white;
-            h4{}
+            h4{
+              font-size: 4rem;
+            }
             p{}
             div#currentSong_controls{
               display:none;
