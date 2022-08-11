@@ -322,7 +322,7 @@
     outline: none;
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect {
-    padding-top: 1.5rem;
+    padding: 1.5rem 0;
   }
   body main section#photography_smallSliders div#photo_contentHolder section#photo_partA.pseudoScrollEffect div.carousel {
     width: 80% !important;

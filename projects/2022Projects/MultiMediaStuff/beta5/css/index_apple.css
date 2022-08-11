@@ -758,6 +758,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    text-decoration: none;
     cursor: pointer;
   }
   body header nav#mainNav ul li.dropDown_holder ul.dropDown_list.switch_ON li a:link,

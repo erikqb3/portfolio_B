@@ -163,13 +163,24 @@ startSlide();
 
 
 
-document.getElementById("button").addEventListener('click',(e)=>{
-  let body = document.querySelector('body');
-  body.classList.toggle('postBtnClick');
-  document.getElementById("button").remove();
-  let newBtn = generateElement('button',"button","","Color Change!!!");
-  body.appendChild(newBtn)
-})
+// document.getElementById("button").addEventListener('click',(e)=>{
+//   let body = document.querySelector('body');
+//   body.classList.toggle('postBtnClick');
+//   document.getElementById("button").remove();
+//   let newBtn = generateElement('button',"newBtn","","Useless Button?");
+//   newBtn.addEventListener('click',changeColor())
+//   body.appendChild(newBtn);
+// })
 
+
+document.getElementById("button").addEventListener('click',changeColor);
+
+function changeColor (
+  ) {
+  let body = document.querySelector('body')
+  body.classList.toggle('postBtnClick');
+  console.log("HELLOW");
+  document.getElementById("button").removeEventListener('click',changeColor);
+}
 
 

@@ -12,6 +12,7 @@ import { sellGoodsMethods } from "../javascript/sellGoodsMethods.js";
 async function main() {
   switch(window.location.href){
     case dummyViews.homeView_github:
+    case dummyViews.homeView_portfolio:
     case dummyViews.homeView_local:
       homeViewMethods.establishHTML_home();
       shopKeeperSays("greetings");
@@ -238,7 +239,8 @@ export const buttonRouter = {
 }
 const dummyViews = {
   "homeView_github": "https://erikqb3.github.io/WDD330_ErikQBirch_portfolio/FinalProject/views/index.html",
-  "homeView_local": "http://127.0.0.1:5501/projects/3.newProjects/ZeldaBazaar/views/index.html"
+  "homeView_local": "http://127.0.0.1:5502/projects/2022Projects/ZeldaBazaar/views/index.html",
+  "homeView_portfolio": "https://https://erikqb3.github.io/portfolio_B/projects/2022Projects/ZeldaBazaar/views/index.html"
 }
 
 
