@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+@media only screen and (min-width: 0px) {
+  html{
+    body{
+      header{
+        div#bannerANDlogo{
+          position:relative;
+          display:flex;
+          width: 100%;
+          align-items:center;
+          justify-content:center;
+          img#logo{
+            position:absolute;
+            margin: 0 auto;
+            display:flex;
+            align-self:center;
+            justify-self:center;
+            // top: 50%;
+            z-index:1;
+          }
+          img#banner{}
+        }
+      }
+      main{}
+    }
+  }
+}
+@media only screen and (min-width: 760px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1600px) {
+}
+
