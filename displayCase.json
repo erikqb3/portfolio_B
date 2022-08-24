@@ -32,28 +32,6 @@
     ],
     "descript": ""
   },
-  "project4": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": ["School Project", "Social Media"],
-    "yearCreated": 2021,
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/Square.png"
-    ],
-    "descript": ""
-  },
-  "project5": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": ["School Project", "Social Media"],
-    "yearCreated": 2021,
-    "thumbnailPaths": [
-      "resources/img/HF_thumbnail.png",
-      "resources/img/Square.png"
-    ],
-    "descript": ""
-  },
   "project6": {
     "name": "Pokemon Cafe Mix (Fan-Art)",
     "path": "./projects/2.updatedProjects/PokemonCafeMix/views/menu.html",
@@ -98,17 +76,6 @@
     ],
     "descript": ""
   },
-  "project10": {
-    "name": "To Do List",
-    "path": "./projects/2021Projects/ToDoList/ToDo.html",
-    "siteType": ["School Project", "App"],
-    "yearCreated": 2021,
-    "thumbnailPaths": [
-      "resources/img/TD_thumbnail.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
   "project11": {
     "name": "Zelda BOTW Bazaar",
     "path": "./projects/2022Projects/ZeldaBazaar/views/index.html",
@@ -116,105 +83,6 @@
     "yearCreated": "",
     "thumbnailPaths": [
       "resources/img/ZB_thumbnail.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project12": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project13": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project14": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project15": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project16": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project17": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project18": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project19": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
-      "resources/img/HeroFactoryCard.png"
-    ],
-    "descript": ""
-  },
-  "project20": {
-    "name": "Hero Factory",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
-    "siteType": "Social Media",
-    "yearCreated": "",
-    "thumbnailPaths": [
-      "resources/img/Square.png",
       "resources/img/HeroFactoryCard.png"
     ],
     "descript": ""

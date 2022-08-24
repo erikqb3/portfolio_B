@@ -1,5 +1,15 @@
 {
-  "project1": {},
+  "project1": {
+    "name": "To Do List",
+    "path": "./projects/2021Projects/ToDoList/ToDo.html",
+    "siteType": ["School Project", "App"],
+    "yearCreated": 2021,
+    "thumbnailPaths": [
+      "resources/img/TD_thumbnail.png",
+      "resources/img/HeroFactoryCard.png"
+    ],
+    "descript": ""
+  },
   "project2":{},
   "project3":{},
   "project4": {},
