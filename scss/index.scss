@@ -241,6 +241,11 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
+          opacity: 1;
+          transition: opacity 0.75s;
+        }
+        img[data-src]{
+          opacity: 0;
         }
       }
       div.contentHolder:hover,

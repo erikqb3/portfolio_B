@@ -1,11 +1,11 @@
 {
   "project1": {
     "name": "Jeremy Cole",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
+    "path": "https://jeremycolebeta1.bss.design/",
     "siteType": ["Author"],
     "yearCreated": 2022,
     "thumbnailPaths": [
-      "resources/img/HF_thumbnail.png",
+      "resources/img/JeremyCole.jpg",
       "resources/img/Square.png"
     ],
     "descript": ""

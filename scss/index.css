@@ -282,6 +282,12 @@
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
+    opacity: 1;
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+  }
+  section#mainContent div.projectHolder div.contentHolder img[data-src] {
+    opacity: 0;
   }
   section#mainContent div.projectHolder div.contentHolder:hover,
   section#mainContent div.projectHolder div.contentHolder:active {
