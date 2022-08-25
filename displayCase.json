@@ -12,11 +12,11 @@
   },
   "project2": {
     "name": "Creative Keturah",
-    "path": "./projects/2021Projects/HeroFactory/html/index.html",
+    "path": "./projects/2022Projects/CreativeKeturah/index.html",
     "siteType": ["Artist"],
     "yearCreated": 2022,
     "thumbnailPaths": [
-      "resources/img/HF_thumbnail.png",
+      "resources/img/creativeKeturah.jpg",
       "resources/img/Square.png"
     ],
     "descript": ""
@@ -27,7 +27,7 @@
     "siteType": ["School", "Other"],
     "yearCreated": 2022,
     "thumbnailPaths": [
-      "resources/img/Square.png",
+      "resources/img/SapienDesigns.jpg",
       "resources/img/Square.png"
     ],
     "descript": ""

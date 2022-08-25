@@ -8,32 +8,235 @@
 @media only screen and (min-width: 0px) {
   html{
     body{
+      background-color: rgb(230, 242, 243);
       header{
         div#bannerANDlogo{
           position:relative;
           display:flex;
           width: 100%;
+          height: 25rem;
           align-items:center;
           justify-content:center;
-          img#logo{
+          overflow:hidden;
+          div#logoHolder{
             position:absolute;
             margin: 0 auto;
             display:flex;
-            align-self:center;
+            align-self:end;
             justify-self:center;
-            // top: 50%;
+            align-items:center;
+            justify-content:center;
+            height: fit-content;
+            background-color:rgba(53, 113, 181, 0.75);
+            padding: 1rem 0;
             z-index:1;
+            width: 100%;
+            img#logo{
+              width: 10rem;
+            }
           }
-          img#banner{}
+          img#banner{
+            width: 200%;
+          }
+        }
+        nav{
+          width: 100%;
+          display:flex;
+          justify-content:center;
+          margin: 2.5rem 0;
+          ul{
+            width: 17.5rem;
+            list-style:none;
+            display:flex;
+            justify-content:space-between;
+            li{
+              font-size: 1.25rem;
+              font-weight:bolder;
+            }
+            li:not(.decor){
+              cursor:pointer;
+            }
+            li:not(.decor):hover,
+            li:not(.decor):active {
+              color: rgb(0, 81, 255);
+            }
+          }
         }
       }
-      main{}
+      main{
+        div#pageLabel{
+          width: 100%;
+          height: fit-content;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
+        }
+        section#gallery{
+          margin: 2.5rem 0;
+          div#grid{
+            // width: 80%;
+            width: 20rem;
+            margin: 0 auto;
+            display:grid;
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+            article.imgHolder{
+              cursor:pointer;
+              position:relative;
+              display:flex;
+              align-items:start;
+              justify-content:center;
+              width: 100%;
+              height: 20rem;
+              overflow: hidden;
+              transition: border-radius 0.75s;
+              div.imgOverlay{
+                opacity:0;
+                position:absolute;
+                bottom: 0;
+                display:flex;
+                align-items:end;
+                justify-content:center;
+                width: 100%;
+                height: 100%;
+                color:white;
+                background: rgb(255,255,255);
+                background: linear-gradient(180deg, rgba(255,255,255,0) 25%, rgba(0, 81, 255, 0.50) 75%);
+                transition: opacity 0.75s;
+                h3{
+                  margin-bottom: 1rem;
+                }
+              }
+              img{
+                // width: 100%;
+                // height: 100%;
+              }
+              img.tall{width: 100%;}
+              img.wide{height: 100%;}
+            }
+            article.imgHolder:hover,
+            article.imgHolder:active {
+              border-radius: 5%;
+              div.imgOverlay{opacity: 1;}
+            }
+          }
+        }
+      }
     }
   }
 }
 @media only screen and (min-width: 760px) {
+  html{
+    body{
+      header{
+        div#bannerANDlogo{
+          height: 25rem;
+          div#logoHolder{
+            img#logo{
+            }
+          }
+          img#banner{
+            width: 200%;
+            margin-top: 17.5vw;
+          }
+        }
+        nav{
+          margin: 2.5rem 0;
+          ul{
+            width: 25rem;
+            li{
+              font-size: 1.5rem;
+            }
+            li:not(.decor){
+              cursor:pointer;
+            }
+            li:not(.decor):hover,
+            li:not(.decor):active {
+            }
+          }
+        }
+      }
+      main{
+        div#pageLabel{
+        }
+        section#gallery{
+          div#grid{
+            width: 45rem;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2rem;
+            article.imgHolder{
+
+              div.imgOverlay{
+                
+                h3{
+                }
+              }
+              img{
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 92px) {
 }
 @media only screen and (min-width: 1200px) {
+  html{
+    body{
+      header{
+        div#bannerANDlogo{
+          height: 35rem;
+          div#logoHolder{
+            img#logo{
+              width: 15rem;
+            }
+          }
+          img#banner{
+          }
+        }
+        nav{
+          margin: 2.5rem 0;
+          ul{
+            width: 40rem;
+            li{
+              font-size: 1.5rem;
+            }
+            li:not(.decor){
+              cursor:pointer;
+              transition: color 0.5s;
+            }
+            li:not(.decor):hover,
+            li:not(.decor):active {
+            }
+          }
+        }
+      }
+      main{
+        div#pageLabel{
+        }
+        section#gallery{
+          div#grid{
+            width: 80rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 2rem;
+            article.imgHolder{
+
+              div.imgOverlay{
+                
+                h3{
+                }
+              }
+              img{
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media only screen and (min-width: 1600px) {
 }

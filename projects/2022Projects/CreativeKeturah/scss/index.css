@@ -6,12 +6,96 @@
 }
 
 @media only screen and (min-width: 0px) {
+  html body {
+    background-color: #e6f2f3;
+  }
   html body header div#bannerANDlogo {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    height: 25rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow: hidden;
+  }
+  html body header div#bannerANDlogo div#logoHolder {
+    position: absolute;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: end;
+    justify-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: rgba(53, 113, 181, 0.75);
+    padding: 1rem 0;
+    z-index: 1;
+    width: 100%;
+  }
+  html body header div#bannerANDlogo div#logoHolder img#logo {
+    width: 10rem;
+  }
+  html body header div#bannerANDlogo img#banner {
+    width: 200%;
+  }
+  html body header nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 2.5rem 0;
+  }
+  html body header nav ul {
+    width: 17.5rem;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  html body header nav ul li {
+    font-size: 1.25rem;
+    font-weight: bolder;
+  }
+  html body header nav ul li:not(.decor) {
+    cursor: pointer;
+  }
+  html body header nav ul li:not(.decor):hover,
+  html body header nav ul li:not(.decor):active {
+    color: #0051ff;
+  }
+  html body main div#pageLabel {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -19,16 +103,133 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  html body header div#bannerANDlogo img#logo {
-    position: absolute;
+  html body main section#gallery {
+    margin: 2.5rem 0;
+  }
+  html body main section#gallery div#grid {
+    width: 20rem;
     margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  html body main section#gallery div#grid article.imgHolder {
+    cursor: pointer;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
-    justify-self: center;
-    z-index: 1;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    -webkit-transition: border-radius 0.75s;
+    transition: border-radius 0.75s;
+  }
+  html body main section#gallery div#grid article.imgHolder div.imgOverlay {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, rgba(255, 255, 255, 0)), color-stop(75%, rgba(0, 81, 255, 0.5)));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(0, 81, 255, 0.5) 75%);
+    -webkit-transition: opacity 0.75s;
+    transition: opacity 0.75s;
+  }
+  html body main section#gallery div#grid article.imgHolder div.imgOverlay h3 {
+    margin-bottom: 1rem;
+  }
+  html body main section#gallery div#grid article.imgHolder img.tall {
+    width: 100%;
+  }
+  html body main section#gallery div#grid article.imgHolder img.wide {
+    height: 100%;
+  }
+  html body main section#gallery div#grid article.imgHolder:hover,
+  html body main section#gallery div#grid article.imgHolder:active {
+    border-radius: 5%;
+  }
+  html body main section#gallery div#grid article.imgHolder:hover div.imgOverlay,
+  html body main section#gallery div#grid article.imgHolder:active div.imgOverlay {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  html body header div#bannerANDlogo {
+    height: 25rem;
+  }
+  html body header div#bannerANDlogo img#banner {
+    width: 200%;
+    margin-top: 17.5vw;
+  }
+  html body header nav {
+    margin: 2.5rem 0;
+  }
+  html body header nav ul {
+    width: 25rem;
+  }
+  html body header nav ul li {
+    font-size: 1.5rem;
+  }
+  html body header nav ul li:not(.decor) {
+    cursor: pointer;
+  }
+  html body main section#gallery div#grid {
+    width: 45rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html body header div#bannerANDlogo {
+    height: 35rem;
+  }
+  html body header div#bannerANDlogo div#logoHolder img#logo {
+    width: 15rem;
+  }
+  html body header nav {
+    margin: 2.5rem 0;
+  }
+  html body header nav ul {
+    width: 40rem;
+  }
+  html body header nav ul li {
+    font-size: 1.5rem;
+  }
+  html body header nav ul li:not(.decor) {
+    cursor: pointer;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+  }
+  html body main section#gallery div#grid {
+    width: 80rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
   }
 }
 /*# sourceMappingURL=index.css.map */
