@@ -1,6 +1,55 @@
 import { addAction } from '../js/addAction.js';
 
 export const establishHTML = {
+  filterDropDowns: function (
+    listOption,
+    ST_array = ["For Authors","For Artists","For Animators", "For Anyone Else", "For Academics"],
+    YC_array = ["2020 - 2024", "2025 - 2029","2030 - 2034","2035 - 2039", "2040 - 2044", "2045 - 2049" ], //if you add more, change the margin-top of "li.dropDwn_holder:nth-of-type(x):hover"
+
+    ST_dropDwn_Btn = helperFunctions.generateElement('div',"ST_dropDwn_Btn","dropDown"),
+    ST_dropDwn_content = helperFunctions.generateElement('ul',"ST_dropDwn_content","DDList"),
+  
+    YC_dropDwn_Btn = helperFunctions.generateElement('div',"YC_dropDwn_Btn","dropDown"),
+    YC_dropDwn_content = helperFunctions.generateElement('ul',"YC_dropDwn_content","DDList")
+    ) {
+      
+      let ST_dropDwn_holder;
+      let YC_dropDwn_holder;
+
+      console.log(listOption)
+      if (listOption) {
+        try {
+          if (listOption.innerHTML == "Site Type") {
+            ST_dropDwn_holder = listOption;
+            ST_dropDwn_holder.innerHTML="";
+            for (let i in ST_array) {
+              let ST_filter = helperFunctions.generateElement('li',"","filter",`${ST_array[i]}`);
+              ST_dropDwn_content.appendChild(ST_filter)
+            }
+            ST_dropDwn_holder = helperFunctions.appendChildren(ST_dropDwn_holder, ST_dropDwn_Btn,ST_dropDwn_content);
+            ST_dropDwn_Btn.innerHTML = "Site Type"
+          }     
+          else if (listOption.innerHTML = "Year") {
+            YC_dropDwn_holder = listOption;
+            YC_dropDwn_holder.innerHTML="";
+            for (let i in YC_array) {
+              let YC_filter = helperFunctions.generateElement('li',"","filter",`${YC_array[i]}`);
+              YC_dropDwn_content.appendChild(YC_filter)
+            }
+            YC_dropDwn_holder = helperFunctions.appendChildren(YC_dropDwn_holder, YC_dropDwn_Btn,YC_dropDwn_content);
+            YC_dropDwn_Btn.innerHTML = "Year"
+          }   
+        }
+        catch(err) {
+          console.log(err,"L103")
+        }
+      }
+  },
+  footer: function (footerElement = helperFunctions.generateElement('footer')) {
+    // console.log(footerElement);
+    document.querySelector('body').appendChild(footerElement);
+    console.log('WORKS?');
+  },
   header: function (
     header = helperFunctions.generateElement('header'),
     name = helperFunctions.generateElement('h1', '', '', 'Erik Q.<br>Birch'),
@@ -63,112 +112,6 @@ export const establishHTML = {
     hero = helperFunctions.appendChildren(hero, infoHolder, video);
     document.querySelector('body').appendChild(hero);
   },
-  filterDropDowns: function (
-    listOption,
-    ST_array = ["For Authors","For Artists","For Animators", "For Anyone Else", "For Academics"],
-    YC_array = ["2020 - 2024", "2025 - 2029","2030 - 2034","2035 - 2039", "2040 - 2044", "2045 - 2049" ], //if you add more, change the margin-top of "li.dropDwn_holder:nth-of-type(x):hover"
-
-    ST_dropDwn_Btn = helperFunctions.generateElement('div',"ST_dropDwn_Btn","dropDown"),
-    ST_dropDwn_content = helperFunctions.generateElement('ul',"ST_dropDwn_content","DDList"),
-  
-    YC_dropDwn_Btn = helperFunctions.generateElement('div',"YC_dropDwn_Btn","dropDown"),
-    YC_dropDwn_content = helperFunctions.generateElement('ul',"YC_dropDwn_content","DDList")
-    ) {
-      
-      let ST_dropDwn_holder;
-      let YC_dropDwn_holder;
-
-      console.log(listOption)
-      if (listOption) {
-        try {
-          if (listOption.innerHTML == "Site Type") {
-            ST_dropDwn_holder = listOption;
-            ST_dropDwn_holder.innerHTML="";
-            for (let i in ST_array) {
-              let ST_filter = helperFunctions.generateElement('li',"","filter",`${ST_array[i]}`);
-              ST_dropDwn_content.appendChild(ST_filter)
-            }
-            ST_dropDwn_holder = helperFunctions.appendChildren(ST_dropDwn_holder, ST_dropDwn_Btn,ST_dropDwn_content);
-            ST_dropDwn_Btn.innerHTML = "Site Type"
-          }     
-          else if (listOption.innerHTML = "Year") {
-            YC_dropDwn_holder = listOption;
-            YC_dropDwn_holder.innerHTML="";
-            for (let i in YC_array) {
-              let YC_filter = helperFunctions.generateElement('li',"","filter",`${YC_array[i]}`);
-              YC_dropDwn_content.appendChild(YC_filter)
-            }
-            YC_dropDwn_holder = helperFunctions.appendChildren(YC_dropDwn_holder, YC_dropDwn_Btn,YC_dropDwn_content);
-            YC_dropDwn_Btn.innerHTML = "Year"
-          }   
-        }
-        catch(err) {
-          console.log(err,"L103")
-        }
-      }
-  },
-  mainContent: async function () {
-    try {
-      let json = 'displayCase.json';
-      await fetch(json,
-          {
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept':'application/json'
-            }
-          })
-        .then((response) => {return response.json()})
-        .then((jsObject) => {
-          this.useFetchResults(jsObject);
-          helperFunctions.lazyLoading();
-          this.footer();
-        })
-        .catch(err => {
-          console.log(err)
-        });
-    }
-    catch (err) {
-    }
-  },
-  mainContent_filtered : async function(){},
-  useFetchResults: function (
-    results,
-    contentWrap = helperFunctions.generateElement('div', 'contentWrap'),
-    mainContent = helperFunctions.generateElement('section', 'mainContent')
-  ) {
-    console.log(results);
-    for (let i in results) {
-      let projectHolder = helperFunctions.generateElement('div', '', 'projectHolder');
-      let projectLink = helperFunctions.generateElement('a','','','',`${results[i].path}`);
-      let contentHolder = helperFunctions.generateElement('div', '', 'contentHolder');
-      let infoOverlay = helperFunctions.generateElement('div', '', 'infoOverlay');
-      let label = helperFunctions.generateElement('h3', '', 'label', `${results[i].name}`);
-      let thumbnail = helperFunctions.generateElement('img','','thumbnail');
-      thumbnail = helperFunctions.customSpecialElements(thumbnail,[`${results[i].thumbnailPaths[0]}`,`${results[i].name}`])
-
-      infoOverlay.appendChild(label);
-      contentHolder = helperFunctions.appendChildren(
-        contentHolder,
-        infoOverlay,
-        thumbnail
-      );
-      projectLink.appendChild(contentHolder);
-      projectHolder.appendChild(projectLink);
-
-      mainContent.appendChild(projectHolder);
-      // console.log(results[i].name);
-    }
-    contentWrap.appendChild(mainContent);
-    document.querySelector('body').appendChild(contentWrap);
-  },
-  footer: function (footerElement = helperFunctions.generateElement('footer')) {
-    // console.log(footerElement);
-    document.querySelector('body').appendChild(footerElement);
-    console.log('WORKS?');
-  },
-  clearElement: function (elementStr) {
-    document.querySelector(elementStr).innerHTML = '';
-  },
   heroQuotes: function (
     quotes = [
       {
@@ -205,6 +148,73 @@ export const establishHTML = {
   ) {
     return [quotes[randNumb].Quote, quotes[randNumb].Author];
   },
+  mainContent: async function () {
+    try {
+      let json = 'displayCase.json';
+      await fetch(json,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept':'application/json'
+            }
+          })
+        .then((response) => {return response.json()})
+        .then((jsObject) => {
+          this.useFetchResults(jsObject);
+          helperFunctions.lazyLoading();
+          this.footer();
+        })
+        .catch(err => {
+          console.log(err)
+        });
+    }
+    catch (err) {
+    }
+  },
+  mainContent_filtered : async function(){},
+  preview : {
+    popUp : function(){},
+    carousel: function(){},
+    description : function(){},
+    useFuncions : function(){}
+  },
+  useFetchResults : function (
+    results,
+    contentWrap = helperFunctions.generateElement('div', 'contentWrap'),
+    mainContent = helperFunctions.generateElement('section', 'mainContent')
+  ) {
+    console.log(results);
+    for (let i in results) {
+      let projectHolder = helperFunctions.generateElement('div', '', 'projectHolder');
+      let projectLink = helperFunctions.generateElement('a','','','',`${results[i].path}`);
+      let contentHolder = helperFunctions.generateElement('div', '', 'contentHolder');
+      let infoOverlay = helperFunctions.generateElement('div', '', 'infoOverlay');
+      let label = helperFunctions.generateElement('h3', '', 'label', `${results[i].name}`);
+      let thumbnail = helperFunctions.generateElement('img','','thumbnail');
+      thumbnail = helperFunctions.customSpecialElements(thumbnail,[`${results[i].thumbnailPaths[0]}`,`${results[i].name}`])
+
+      infoOverlay.appendChild(label);
+      contentHolder = helperFunctions.appendChildren(
+        contentHolder,
+        infoOverlay,
+        thumbnail
+      );
+      projectLink.appendChild(contentHolder);
+      projectHolder.appendChild(projectLink);
+        // projectHolder.appendChild(contentHolder)
+
+      mainContent.appendChild(projectHolder);
+      // console.log(results[i].name);
+    }
+    contentWrap.appendChild(mainContent);
+    document.querySelector('body').appendChild(contentWrap);
+  },
+  userFunctions : function(){
+    this.header();
+    this.hero();
+    this.filterDropDowns()
+    this.mainContent();
+  }
 };
 
 const helperFunctions = {
@@ -305,7 +315,7 @@ const helperFunctions = {
     },
     imgOptions = {
       threshold: 0,
-      rootMargin: "0px 0px -50px 0px" //make bottom positive so images load before entering screen;
+      rootMargin: "0px 0px -200px 0px" //make bottom positive so images load before entering screen;
     },
   ){
     //imagesToLoad - 

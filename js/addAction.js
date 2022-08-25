@@ -152,6 +152,18 @@ export const addAction = {
               break;
             case "For Academics":
               break;
+            case "2020 - 2024":
+              break;
+            case "2025 - 2029":
+              break;
+            case "2030 - 2034":
+              break;
+            case "2035 - 2039":
+              break;
+            case "2040 - 2044":
+              break;
+            case "2045 - 2049":
+              break;
           }
         })
       }
@@ -164,5 +176,6 @@ export const addAction = {
     this.filterSettings_void();
     this.hambBtn();
     this.navItems_array();
+    this.fixedheader();
   }
 }

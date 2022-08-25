@@ -3,14 +3,8 @@ import { addAction } from '../js/addAction.js';
 
 
 function startup() {
-  establishHTML.header();
-  establishHTML.hero();
-  establishHTML.filterDropDowns()
-  establishHTML.mainContent();
-  addAction.fixedheader();
+  establishHTML.userFunctions();
 
-  // console.log(document.getElementById("filterSettings_void"))
-  // establishHTML.footer();
 }
 
 // function loopTruDisplayCase(){}
