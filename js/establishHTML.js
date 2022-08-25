@@ -19,25 +19,27 @@ export const establishHTML = {
      * STEP3: append elements together
      */
 
-    addAction.showfilterSettings(hamBtn); //STEP1
+    // addAction.showfilterSettings(hamBtn); //STEP1
 
     //STEP2
     for (let i in listOptions) {//STEP2a
 
-      // if ((i == 1) || (i == 2)) {
-      //   // console.log(listOptions[i])
-      //   listOptions[i] = helperFunctions.generateElement('li','','dropDwn_holder',listOptions[i]);
-      //   this.filterDropDowns(listOptions[i]);
-      // } else {
-      //   listOptions[i] = helperFunctions.generateElement('li', '', '', listOptions[i]);
-      // }
-      listOptions[i] = helperFunctions.generateElement('li', '', '', listOptions[i]);
+      if ((i == 1) || (i == 2)) {
+        // console.log(listOptions[i])
+        listOptions[i] = helperFunctions.generateElement('li','','dropDwn_holder',listOptions[i]);
+        this.filterDropDowns(listOptions[i]);
+      } else {
+        listOptions[i] = helperFunctions.generateElement('li', '', '', listOptions[i]);
+      }
+      // listOptions[i] = helperFunctions.generateElement('li', '', '', listOptions[i]);
       filterSettings_list.appendChild(listOptions[i]);
     }
     //STEP3
     filterSettings_holder.appendChild(filterSettings_list);
     header = helperFunctions.appendChildren(header, name,titles,hamBtn,filterSettings_void,filterSettings_holder);
     document.querySelector('body').appendChild(header);
+
+    addAction.useFunctions()
   },
   hero: function (
     quoteInfo = this.heroQuotes(),
@@ -63,7 +65,7 @@ export const establishHTML = {
   },
   filterDropDowns: function (
     listOption,
-    ST_array = ["For Authors","For Artists","For Animators", "For Anyone Else"],
+    ST_array = ["For Authors","For Artists","For Animators", "For Anyone Else", "For Academics"],
     YC_array = ["2020 - 2024", "2025 - 2029","2030 - 2034","2035 - 2039", "2040 - 2044", "2045 - 2049" ], //if you add more, change the margin-top of "li.dropDwn_holder:nth-of-type(x):hover"
 
     ST_dropDwn_Btn = helperFunctions.generateElement('div',"ST_dropDwn_Btn","dropDown"),
@@ -128,6 +130,7 @@ export const establishHTML = {
     catch (err) {
     }
   },
+  mainContent_filtered : async function(){},
   useFetchResults: function (
     results,
     contentWrap = helperFunctions.generateElement('div', 'contentWrap'),

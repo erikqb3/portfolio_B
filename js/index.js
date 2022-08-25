@@ -8,6 +8,8 @@ function startup() {
   establishHTML.filterDropDowns()
   establishHTML.mainContent();
   addAction.fixedheader();
+
+  // console.log(document.getElementById("filterSettings_void"))
   // establishHTML.footer();
 }
 
