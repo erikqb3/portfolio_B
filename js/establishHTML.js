@@ -1,6 +1,25 @@
 import { addAction } from '../js/addAction.js';
 
 export const establishHTML = {
+  disclaimer : function(
+    body = document.querySelector('body'),
+    popUp = helperFunctions.generateElement('div',"disclaimerPopUp"),
+    warning = helperFunctions.generateElement('h1',"","","DISCLAIMER"),
+    description = helperFunctions.generateElement('p',"","","This Website is still under construction but posted for sample review. Some utilities do not function, but the necessary majority does. <h2>Please explore and enjoy!</h2>Click Anywhere to Continue...")
+    ){
+        console.log("HELLOW HONEST")
+        popUp = helperFunctions.appendChildren(popUp, warning,description)
+        body.appendChild(popUp)
+        popUp.addEventListener('click',(e)=>{
+            popUp.style.opacity = 0;
+            let myTimeOut = setTimeout(()=>{
+              console.log(popUp);
+              popUp.remove();
+            },750)
+        })
+
+
+  },
   filterDropDowns: function (
     listOption,
     ST_array = ["For Authors","For Artists","For Animators", "For Anyone Else", "For Academics"],
@@ -209,11 +228,14 @@ export const establishHTML = {
     contentWrap.appendChild(mainContent);
     document.querySelector('body').appendChild(contentWrap);
   },
-  userFunctions : function(){
+  userFunctions : function(
+    //ORDER MATTERS HERE
+  ){
     this.header();
     this.hero();
     this.filterDropDowns()
     this.mainContent();
+    this.disclaimer();
   }
 };
 
