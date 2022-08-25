@@ -1,5 +1,5 @@
 import { establishHTML } from "../js/establishHTML.js";
-
+import { addAction } from '../js/addAction.js';
 
 
 function startup() {
@@ -7,6 +7,7 @@ function startup() {
   establishHTML.hero();
   establishHTML.filterDropDowns()
   establishHTML.mainContent();
+  addAction.fixedheader();
   // establishHTML.footer();
 }
 
