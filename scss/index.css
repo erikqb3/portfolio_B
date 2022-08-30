@@ -1,37 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @media only screen and (min-width: 0px) {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   body {
-    min-height: 100vh;
     background-color: whitesmoke;
-  }
-  body div#disclaimerPopUp {
-    position: fixed;
-    z-index: 7;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: opacity 0.75s;
-    transition: opacity 0.75s;
-  }
-  body div#disclaimerPopUp p {
-    text-align: center;
-  }
-  main {
-    padding-bottom: 100px;
   }
   header {
     position: initial;
@@ -41,8 +23,8 @@
     height: 5rem;
     top: 0;
     width: 100%;
-    background-color: white;
-    color: #000855;
+    background-color: #000855;
+    color: white;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -52,6 +34,7 @@
   }
   header h1 {
     font-size: 2rem;
+    font-weight: 400;
     margin: 0 0 0 5%;
     font-family: 'Lucida Handwriting', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
@@ -59,7 +42,7 @@
     display: none;
   }
   header div#hamBtn {
-    color: #000855;
+    color: white;
     font-size: 1.5rem;
     margin: 0 5% 0 auto;
     font-weight: bold;
@@ -123,27 +106,6 @@
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
   }
-  header div#filterSettings_holder.visible ul {
-    display: block;
-  }
-  header div#filterSettings_holder.visible ul li.dropDwn_holder {
-    padding: 0;
-    line-height: 5rem;
-  }
-  header div#filterSettings_holder.visible ul li.dropDwn_holder ul {
-    display: none;
-  }
-  header div#filterSettings_holder.visible ul li.dropDwn_holder ul.showList {
-    display: block;
-  }
-  header div#filterSettings_holder.visible ul li.dropDwn_holder ul.showList li.filter {
-    padding: 1rem 0;
-    font-size: 1.5rem;
-  }
-  header div#filterSettings_holder.visible ul li.dropDwn_holder ul.showList li.filter:hover,
-  header div#filterSettings_holder.visible ul li.dropDwn_holder ul.showList li.filter:active {
-    background-color: #323232;
-  }
   @-webkit-keyframes unfold {
     from {
       width: 0;
@@ -205,160 +167,6 @@
       opacity: 1;
     }
   }
-  section#hero {
-    width: 100%;
-    height: 20rem;
-    background-color: #3a3a3a;
-    color: white;
-    text-shadow: 2.5px 2.5px 5px black;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  section#hero div#infoHolder {
-    position: absolute;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 20rem;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  section#hero div#infoHolder h2 {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  section#hero div#infoHolder p {
-    width: 80%;
-    font-size: 0.75rem;
-    margin: 0 auto 0 auto;
-    text-align: center;
-  }
-  section#hero div#infoHolder p#author {
-    font-style: italic;
-  }
-  section#hero video {
-    height: 27.5rem;
-  }
-  section#mainContent {
-    position: relative;
-    background-color: whitesmoke;
-    margin-top: 2.5rem;
-    padding-bottom: 3rem;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-  }
-  section#mainContent div.projectHolder {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  section#mainContent div.projectHolder div.contentHolder {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: block;
-    cursor: pointer;
-  }
-  section#mainContent div.projectHolder div.contentHolder div.infoOverlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: whitesmoke;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px black;
-    -webkit-text-stroke: 0.5px black;
-  }
-  section#mainContent div.projectHolder div.contentHolder img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    opacity: 1;
-    -webkit-transition: opacity 0.75s;
-    transition: opacity 0.75s;
-  }
-  section#mainContent div.projectHolder div.contentHolder img[data-src] {
-    opacity: 0;
-  }
-  section#mainContent div.projectHolder div.contentHolder:hover,
-  section#mainContent div.projectHolder div.contentHolder:active {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
-    -webkit-transition: 0.35s ease;
-    transition: 0.35s ease;
-  }
-  section#mainContent div.projectHolder div.contentHolder:hover div.infoOverlay,
-  section#mainContent div.projectHolder div.contentHolder:active div.infoOverlay {
-    top: 0%;
-    -webkit-transition: 0.35s ease;
-    transition: 0.35s ease;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 1) {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 /span 2;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 1) div.infoOverlay h3 {
-    margin: 70% auto 0 auto;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 2) {
-    -ms-grid-column: 3;
-    grid-column: 3;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 2) div.infoOverlay h3 {
-    margin: 35% auto 0 auto;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 3) {
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 3) div.infoOverlay h3 {
-    margin: 35% auto 0 auto;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 4) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-    grid-column: 2 / span 2;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 4) div.infoOverlay h3 {
-    margin: 70% auto 0 auto;
-  }
   footer {
     position: relative;
     height: 150px;
@@ -367,7 +175,7 @@
   }
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
   header {
     height: 5rem;
   }
@@ -385,86 +193,18 @@
   header div#filterSettings_holder ul li {
     font-size: 2rem;
   }
-  section#hero {
-    width: 100%;
-    height: 20rem;
-    margin-bottom: 1rem;
-  }
-  section#hero div#infoHolder {
-    height: 20rem;
-    width: 100%;
-  }
-  section#hero div#infoHolder h2 {
-    text-align: center;
-    margin: 4rem auto 0 auto;
-    font-size: 2.5rem;
-  }
-  section#hero div#infoHolder p {
-    text-align: center;
-    margin: 1rem auto 0 auto;
-    font-size: 1.25rem;
-  }
-  section#hero div#infoHolder p#author {
-    margin-top: 0.25rem;
-  }
-  section#hero video {
-    width: 100%;
-    height: initial;
-  }
-  section#mainContent {
-    margin-top: 2.5rem;
-    padding-bottom: 7.5rem;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr;
-  }
-  section#mainContent div.projectHolder {
-    width: 100%;
-    height: 100%;
-  }
-  section#mainContent div.projectHolder div.infoOverlay h3 {
-    margin: 25% auto 0 auto;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 1) {
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 1) div.infoOverlay h3 {
-    margin: 25% auto 0 auto;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 2) {
-    -ms-grid-column: 2;
-    grid-column: 2;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 2) div.infoOverlay h3 {
-    margin: 25% auto 0 auto;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 3) {
-    -ms-grid-column: 3;
-    grid-column: 3;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 3) div.infoOverlay h3 {
-    margin: 25% auto 0 auto;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 4) {
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-  section#mainContent div.projectHolder:nth-child(3n + 4) div.infoOverlay h3 {
-    margin: 25% auto 0 auto;
-  }
   footer {
     margin-top: 0rem;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   header {
     height: 5rem;
     top: 0;
     width: 100%;
+    background-color: white;
+    color: #000855;
   }
   header h1 {
     font-size: 2rem;
@@ -483,7 +223,7 @@
   header div#filterSettings_holder {
     position: absolute;
     display: block;
-    width: 50vw;
+    width: 40vw;
     height: 5rem;
     overflow: initial;
   }
@@ -544,56 +284,6 @@
   }
   header div#filterSettings_holder ul#nav li.dropDwn_holder:hover > ul {
     display: block;
-  }
-  section#hero {
-    height: 35rem;
-    margin-bottom: 5rem;
-  }
-  section#hero div#infoHolder {
-    height: 35rem;
-    width: 100%;
-  }
-  section#hero div#infoHolder h2 {
-    text-align: center;
-    margin: 10rem auto 0 auto;
-    font-size: 2.5rem;
-  }
-  section#hero div#infoHolder p {
-    text-align: center;
-    margin: 3rem auto 0 auto;
-    font-size: 1.5rem;
-  }
-  section#hero div#infoHolder p#author {
-    margin-top: 1rem;
-  }
-  section#hero video {
-    width: 100%;
-    height: initial;
-  }
-  section#mainContent {
-    margin-top: 2.5rem;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 1) {
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 2) {
-    -ms-grid-column: 2;
-    grid-column: 2;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 3) {
-    -ms-grid-column: 3;
-    grid-column: 3;
-  }
-  section#mainContent div.projectHolder:nth-child(4n + 4) {
-    -ms-grid-column: 4;
-    grid-column: 4;
   }
 }
 /*# sourceMappingURL=index.css.map */

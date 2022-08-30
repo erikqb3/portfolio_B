@@ -1,0 +1,1 @@
+import { nonLandingPage } from "../js/establishHTML.js";

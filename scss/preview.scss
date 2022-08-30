@@ -1,0 +1,308 @@
+@media only screen and (min-width: 0px) {
+  body {
+    // background-color: red;
+    min-height: 100vh;
+    background-color:whitesmoke;
+    div#disclaimerPopUp{
+      position:fixed;
+      z-index: 7;
+      top:0;
+      background-color: rgba(0,0,0,0.9);
+      color:white;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.75s;
+      h1{}
+      p{
+          text-align:center;
+      }
+  }
+  }
+
+
+    section#previewScreen {
+    // position:fixed;
+    // top:0;
+    display:flex;
+    flex-direction: column;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(255,255,255,0.95);
+    // overflow:scroll;
+    section#side1{
+      div#carousel{
+        width: 100%;
+        height: 200px;
+        position:relative;
+        margin: 2.5rem auto 0 auto;
+        overflow:hidden;
+        div#slidesHolder{
+          height:100%;
+          display:flex;
+          article.slide{
+            min-width: 100%;
+            img {
+              width: 100%;
+              height:100%;
+            }
+          }
+        }
+        div#slideControls{
+          position:absolute;
+          top:50%;
+          left: 0;
+          transform: translateY(-50%); //makes it perfectly centered?
+          width: 100%;
+          display:flex;
+          justify-content:space-between;
+          align-items: center;
+          button.shiftBtn{
+            background: transparent;
+            font-size: 2.5rem;
+            border:none;
+            padding: 10px;
+            color:white;
+            width: fit-content;
+            height:fit-content;
+          }
+          button.shiftBtn:focus {
+            outline:none;
+          }
+          button.shiftBtn:hover,
+          button.shiftBtn:active{
+            background-color: rgba(0,8,85,0.5);
+            border-radius: 5px;
+          }
+        }
+      }
+      div#buttonNav {
+        display:flex;
+        width: 60%;
+        margin: 1rem auto 1rem auto;
+        justify-content:space-between;
+        align-items:center;
+        color:rgba(0,8,85,1);
+
+      }
+      div#buttonNav{
+        div.slideBtn:hover,
+        div.slideBtn:active {
+          color:rgba(0,8,85,0.5)
+        }
+      }
+    }
+    section#side2{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      div#infoSection{
+        display:flex;
+        flex-direction:column;
+        margin: 0 auto 5rem auto;
+        width: 80%;
+        h1{
+          margin:0;
+        }
+        span#year{}
+        p{
+          margin-top:1rem;
+        }
+        div#tagList{}
+        div#previewBtnHolder{
+          display:flex;
+          width: 100%;
+          margin:2.5rem auto;
+          align-items: center;
+          justify-content: space-between;
+          a:link,
+          a:visited {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            background-color: rgba(0,8,85,1);
+            text-decoration:none;
+            width: 7.5rem;
+            padding: 0.5rem 1rem;
+            border:none;
+            border-radius: 5px;
+          }
+          a:hover,
+          a:active {
+            background-color: rgba(0,8,85,0.5);
+          }
+        }
+      }
+    }
+  }
+  
+}
+@media only screen and (min-width: 768px) {
+  section#previewScreen {
+    section#side1{
+      div#carousel{
+        height: 400px;
+        div#slidesHolder{
+          article.slide{
+            img {
+            }
+          }
+        }
+        div#slideControls{
+          button.shiftBtn{
+            font-size: 7.5rem;
+          }
+          button.shiftBtn:focus {
+          }
+          button.shiftBtn:hover,
+          button.shiftBtn:active{
+          }
+        }
+      }
+      div#buttonNav {
+        width: 50%;
+        font-size: 2rem;
+        
+      }
+    }
+    section#side2{
+      div#infoSection{
+        width: 80%;
+        div#tagList{}
+        div#previewBtnHolder{
+          width: 45%;
+          a#viewBtn,
+          a#returnBtn {
+            // width: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+@media only screen and (min-width: 992px) {
+  section#previewScreen {
+    section#side1{
+      div#carousel{
+        height: 500px;
+        div#slidesHolder{
+          article.slide{
+            img {
+            }
+          }
+        }
+        div#slideControls{
+          button.shiftBtn{
+            font-size: 7.5rem;
+          }
+          button.shiftBtn:focus {
+          }
+          button.shiftBtn:hover,
+          button.shiftBtn:active{
+          }
+        }
+      }
+      div#buttonNav {
+        margin: 2.5rem auto 1.5rem auto;
+        
+      }
+    }
+    section#side2{
+      div#infoSection{
+        width: 80%;
+        h1{
+          font-size: 2.5rem;
+        }
+        span#year{
+          font-size:2rem;
+        }
+        p{
+          font-size: 1.5rem;
+        }
+        div#tagList{}
+        div#previewBtnHolder{
+          width: 50%;
+          font-size: 2rem;
+          a#viewBtn,
+          a#returnBtn {
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+
+  section#previewScreen {
+    flex-direction:row;
+    align-items:center;
+    width: 90%;
+    margin: 2.5rem auto;
+    section#side1{
+      width: 50%;
+      div#carousel{
+        height: 300px;
+        div#slidesHolder{
+          article.slide{
+            img {
+            }
+          }
+        }
+        div#slideControls{
+          button.shiftBtn{
+            font-size: 5rem;
+          }
+          button.shiftBtn:focus {
+          }
+          button.shiftBtn:hover,
+          button.shiftBtn:active{
+          }
+        }
+      }
+      div#buttonNav {
+        font-size: 1.5rem;
+        
+      }
+    }
+    section#side2{
+      width: 50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0;
+      div#infoSection{
+        margin:0;
+        width: 80%;
+        h1{
+          font-size: 2rem;
+        }
+        span#year{
+          font-size:1.5rem;
+        }
+        p{
+          font-size: 1rem;
+        }
+        div#tagList{}
+        div#previewBtnHolder{
+          width: 75%;
+          font-size: 1.25rem;
+          a#viewBtn,
+          a#returnBtn {
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1600px) {
+  // @import '_index(mega)';
+}
+
