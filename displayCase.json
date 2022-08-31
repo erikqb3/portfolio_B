@@ -5,8 +5,8 @@
     "filterCategory": ["For Authors","2020 - 2024"],
     "yearCreated": 2022,
     "thumbnailPaths": [
-      "resources/img/JeremyCole.jpg",
-      "resources/img/Square.png"
+      "../resources/img/JeremyCole.jpg",
+      "../resources/img/Square.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=01",
@@ -22,8 +22,8 @@
     "filterCategory": ["For Artists","2020 - 2024"],
     "yearCreated": 2022,
     "thumbnailPaths": [
-      "resources/img/creativeKeturah.jpg",
-      "resources/img/Square.png"
+      "../resources/img/creativeKeturah.jpg",
+      "../resources/img/Square.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=02",
@@ -39,13 +39,13 @@
     "filterCategory": ["For Anyone Else", "For Academics","2020 - 2024"],
     "yearCreated": 2022,
     "thumbnailPaths": [
-      "resources/img/SapienDesigns.jpg",
-      "resources/img/Square.png"
+      "../resources/img/SapienDesigns.jpg",
+      "../resources/img/Square.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=03",
       "sitePath":"../projects/2022Projects/MultiMediaStuff/indexFolder/index_apple.html",
-      "carouselImgs" : ["resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png"],
+      "carouselImgs" : ["../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png"],
       "tags": [],
       "description" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, iure distinctio labore enim ad veritatis id aliquam eaque quod atque facilis impedit ex, dignissimos possimus harum eos omnis! Aliquam exercitationem, eos autem, adipisci corrupti iure voluptate excepturi odio necessitatibus a veniam? Placeat quis, fugit veniam ducimus voluptates deserunt commodi minima sed dolor dolore eius nesciunt reprehenderit, impedit corporis illo, ut tempore voluptatem. Quaerat maiores, expedita officia, harum libero aspernatur molestias voluptatibus, dolorem nesciunt aliquam impedit non consequatur deleniti labore velit soluta obcaecati incidunt similique voluptas officiis molestiae at? Numquam optio sit sed tempore amet odit facere, at nisi assumenda enim?"
     }
@@ -56,13 +56,13 @@
     "filterCategory": ["2020 - 2024"],
     "yearCreated": 2021,
     "thumbnailPaths": [
-      "resources/img/PCM_thumbnail.png",
-      "resources/img/HeroFactoryCard.png"
+      "../resources/img/PCM_thumbnail.png",
+      "../resources/img/HeroFactoryCard.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=04",
       "sitePath":"",
-      "carouselImgs" : ["resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png"],
+      "carouselImgs" : ["../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png"],
       "tags": [],
       "description" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, iure distinctio labore enim ad veritatis id aliquam eaque quod atque facilis impedit ex, dignissimos possimus harum eos omnis! Aliquam exercitationem, eos autem, adipisci corrupti iure voluptate excepturi odio necessitatibus a veniam? Placeat quis, fugit veniam ducimus voluptates deserunt commodi minima sed dolor dolore eius nesciunt reprehenderit, impedit corporis illo, ut tempore voluptatem. Quaerat maiores, expedita officia, harum libero aspernatur molestias voluptatibus, dolorem nesciunt aliquam impedit non consequatur deleniti labore velit soluta obcaecati incidunt similique voluptas officiis molestiae at? Numquam optio sit sed tempore amet odit facere, at nisi assumenda enim?"
     }
@@ -73,13 +73,13 @@
     "filterCategory": ["For Academics","2020 - 2024"],
     "yearCreated": 2021,
     "thumbnailPaths": [
-      "resources/img/FHB_thumbnail.png",
-      "resources/img/Square.png"
+      "../resources/img/FHB_thumbnail.png",
+      "../resources/img/Square.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=05",
       "sitePath":"",
-      "carouselImgs" : ["resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png"],
+      "carouselImgs" : ["../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png"],
       "tags": [],
       "description" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, iure distinctio labore enim ad veritatis id aliquam eaque quod atque facilis impedit ex, dignissimos possimus harum eos omnis! Aliquam exercitationem, eos autem, adipisci corrupti iure voluptate excepturi odio necessitatibus a veniam? Placeat quis, fugit veniam ducimus voluptates deserunt commodi minima sed dolor dolore eius nesciunt reprehenderit, impedit corporis illo, ut tempore voluptatem. Quaerat maiores, expedita officia, harum libero aspernatur molestias voluptatibus, dolorem nesciunt aliquam impedit non consequatur deleniti labore velit soluta obcaecati incidunt similique voluptas officiis molestiae at? Numquam optio sit sed tempore amet odit facere, at nisi assumenda enim?"
     }
@@ -90,13 +90,13 @@
     "filterCategory": ["For Academics","2020 - 2024"],
     "yearCreated": 2021,
     "thumbnailPaths": [
-      "resources/img/PRSB_thumbnail.png",
-      "resources/img/HeroFactoryCard.png"
+      "../resources/img/PRSB_thumbnail.png",
+      "../resources/img/HeroFactoryCard.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=06",
       "sitePath":"",
-      "carouselImgs" : ["resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png"],
+      "carouselImgs" : ["../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png"],
       "tags": [],
       "description" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, iure distinctio labore enim ad veritatis id aliquam eaque quod atque facilis impedit ex, dignissimos possimus harum eos omnis! Aliquam exercitationem, eos autem, adipisci corrupti iure voluptate excepturi odio necessitatibus a veniam? Placeat quis, fugit veniam ducimus voluptates deserunt commodi minima sed dolor dolore eius nesciunt reprehenderit, impedit corporis illo, ut tempore voluptatem. Quaerat maiores, expedita officia, harum libero aspernatur molestias voluptatibus, dolorem nesciunt aliquam impedit non consequatur deleniti labore velit soluta obcaecati incidunt similique voluptas officiis molestiae at? Numquam optio sit sed tempore amet odit facere, at nisi assumenda enim?"
     }
@@ -107,13 +107,13 @@
     "filterCategory": ["For Academics","2020 - 2024"],
     "yearCreated": 2021,
     "thumbnailPaths": [
-      "resources/img/YKSG_thumbnail.png",
-      "resources/img/HeroFactoryCard.png"
+      "../resources/img/YKSG_thumbnail.png",
+      "../resources/img/HeroFactoryCard.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=07",
       "sitePath":"",
-      "carouselImgs" : ["resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png"],
+      "carouselImgs" : ["../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png"],
       "tags": [],
       "description" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, iure distinctio labore enim ad veritatis id aliquam eaque quod atque facilis impedit ex, dignissimos possimus harum eos omnis! Aliquam exercitationem, eos autem, adipisci corrupti iure voluptate excepturi odio necessitatibus a veniam? Placeat quis, fugit veniam ducimus voluptates deserunt commodi minima sed dolor dolore eius nesciunt reprehenderit, impedit corporis illo, ut tempore voluptatem. Quaerat maiores, expedita officia, harum libero aspernatur molestias voluptatibus, dolorem nesciunt aliquam impedit non consequatur deleniti labore velit soluta obcaecati incidunt similique voluptas officiis molestiae at? Numquam optio sit sed tempore amet odit facere, at nisi assumenda enim?"
     }
@@ -124,13 +124,13 @@
     "filterCategory": ["For Academics","2020 - 2024"],
     "yearCreated": "",
     "thumbnailPaths": [
-      "resources/img/ZB_thumbnail.png",
-      "resources/img/HeroFactoryCard.png"
+      "../resources/img/ZB_thumbnail.png",
+      "../resources/img/HeroFactoryCard.png"
     ],
     "preview" : {
       "previewPath": "../views/preview.html?id=08",
       "sitePath":"",
-      "carouselImgs" : ["resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png","resources/img/Brothers.png"],
+      "carouselImgs" : ["../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png","../resources/img/Brothers.png"],
       "tags": [],
       "description" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, iure distinctio labore enim ad veritatis id aliquam eaque quod atque facilis impedit ex, dignissimos possimus harum eos omnis! Aliquam exercitationem, eos autem, adipisci corrupti iure voluptate excepturi odio necessitatibus a veniam? Placeat quis, fugit veniam ducimus voluptates deserunt commodi minima sed dolor dolore eius nesciunt reprehenderit, impedit corporis illo, ut tempore voluptatem. Quaerat maiores, expedita officia, harum libero aspernatur molestias voluptatibus, dolorem nesciunt aliquam impedit non consequatur deleniti labore velit soluta obcaecati incidunt similique voluptas officiis molestiae at? Numquam optio sit sed tempore amet odit facere, at nisi assumenda enim?"
     }
