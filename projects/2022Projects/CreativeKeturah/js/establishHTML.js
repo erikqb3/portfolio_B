@@ -1,148 +1,25 @@
-const images_obj = {
-  img1 : {
-    "title":"Title1",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img01.png"
-  },
-  img2 : {
-    "title":"Title2",
-    "type":"wide",
-    "description":"",
-    "path":"images/CK_img02.png"
-  },
-  img3 : {
-    "title":"Title3",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img03.png"
-  },
-  img4 : {
-    "title":"Title4",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img04.png"
-  },
-  img5 : {
-    "title":"Title5",
-    "type":"wide",
-    "description":"",
-    "path":"images/CK_img05.png"
-  },
-  img6 : {
-    "title":"Title6",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img06.png"
-  },
-  img7 : {
-    "title":"Title7",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img07.png"
-  },
-  img8 : {
-    "title":"Title8",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img08.png"
-  },
-  img9 : {
-    "title":"Title9",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img09.png"
-  },
-  img10 : {
-    "title":"Title10",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img10.png"
-  },
-  img11 : {
-    "title":"Title11",
-    "type":"wide",
-    "description":"",
-    "path":"images/CK_img11.png"
-  },
-  img12 : {
-    "title":"Title12",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img12.png"
-  },
-  img13 : {
-    "title":"Title13",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img13.png"
-  },
-  img14 : {
-    "title":"Title14",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img14.png"
-  },
-  img15 : {
-    "title":"Title15",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img15.png"
-  },
-  img16 : {
-    "title":"Title16",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img16.png"
-  },
-  img17 : {
-    "title":"Title17",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img17.png"
-  },
-  img18 : {
-    "title":"Title18",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img18.png"
-  },
-  img19 : {
-    "title":"Title19",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img19.png"
-  },
-  img20 : {
-    "title":"Title20",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img20.png"
-  },
-  img21 : {
-    "title":"Title21",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img21.png"
-  },
-  img22 : {
-    "title":"Title22",
-    "type":"tall",
-    "description":"",
-    "path":"images/CK_img22.png"
-  },
-}
 
 const establishHTML = {
+  fetchFromJSON : async function(
+    json = "js/images.json"
+  ){
+    try {
+      await fetch (json)
+        .then((response)=>{return response.json()})
+        .then((jsObject)=>{
+          this.gallery(jsObject);
+        })
+    }
+    catch(err){console.log(err)} 
+  },
   gallery : function(
+    jsObject,
     main = document.querySelector("main"),
     gallery = helperFunctions.generateElement('section',"gallery"),
     grid = helperFunctions.generateElement('div',"grid")
   ){
-    console.log(images_obj)
-    for (let img in images_obj){
-      console.log(images_obj[img]);
-      let imgArticle = this.imgArticle(img)
+    for (let img of Object.keys(jsObject)){
+      let imgArticle = this.imgArticle(jsObject[img])
       grid.appendChild(imgArticle)
     }
     gallery.appendChild(grid);
@@ -151,25 +28,57 @@ const establishHTML = {
   },
   imgArticle : function (
     img,
-    imgHolder = helperFunctions.generateElement('article',"","imgHolder"),
+    imgHolder = helperFunctions.generateElement('article',img.title,"imgHolder"),
     imgOverlay = helperFunctions.generateElement('div',"","imgOverlay"),
-    imgLabel = helperFunctions.generateElement('h3',"","",images_obj[img].title),
-    // imgElement = helperFunctions.generateElement('img',images_obj[img].title,"","",images_obj[img].path)
+    imgLabel = helperFunctions.generateElement('h3',"","",img.title),
+    // imgElement = helperFunctions.generateElement('img',img.title,"","",img.path)
   ){
-    if (images_obj[img].type == "tall"){
-      imgElement = helperFunctions.generateElement('img',images_obj[img].title,"tall","",images_obj[img].path)
+    // console.log(img)
+    if (img.type == "tall"){
+      imgElement = helperFunctions.generateElement('img',`${img.title}_pic`,"tall","",img.path)
     }
-    else if (images_obj[img].type == "wide"){
-      imgElement = helperFunctions.generateElement('img',images_obj[img].title,"wide","",images_obj[img].path)
+    else if (img.type == "wide"){
+      imgElement = helperFunctions.generateElement('img',`${img.title}_pic`,"wide","",img.path)
     }
 
     imgOverlay.appendChild(imgLabel);
-    imgHolder = helperFunctions.appendChildren(imgHolder, imgOverlay,imgElement)
+    imgHolder = helperFunctions.appendChildren(imgHolder, imgOverlay,imgElement);
+    imgHolder.addEventListener('click',(e)=>{
+      this.popUpPreview(img, imgHolder);
+    })
     return imgHolder;
   },
+  popUpPreview : function(
+    imgData, 
+    imgHolder,
+    popUp = helperFunctions.generateElement('section',"popUp"),
+    side1 = helperFunctions.generateElement('div',"side1"),
+    img = helperFunctions.generateElement('img',`${imgData.title}_popImg`,"","",imgData.path),
+    side2 = helperFunctions.generateElement('div',"side2"),
+    infoSection = helperFunctions.generateElement('div',"infoSection"),
+    title = helperFunctions.generateElement('h1',"title","",imgData.title),
+    descript = helperFunctions.generateElement('p',"descript","",imgData.description))
+    {
+      if (imgData.type == "tall"){
+        img.classList.add("tall");
+      }
+      else {
+        img.classList.add('wide')
+      }
+      console.log(imgData,imgHolder);
+      side1.appendChild(img);
+      infoSection = helperFunctions.appendChildren(infoSection, title,descript)
+      side2.appendChild(infoSection);
+      popUp = helperFunctions.appendChildren(popUp, side1,side2);
+      popUp.addEventListener('click',(e)=>{
+        popUp.remove();
+      })
+      document.querySelector('body').appendChild(popUp);
 
+  },
   useFunctions : function(){
-    this.gallery();
+    this.fetchFromJSON();
+    
   }
 }
 

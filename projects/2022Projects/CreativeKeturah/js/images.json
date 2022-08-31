@@ -1,0 +1,134 @@
+{
+  "img01" : {
+    "title":"Title1",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img01.png"
+  },
+  "img02" : {
+    "title":"Title2",
+    "type":"wide",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img02.png"
+  },
+  "img03" : {
+    "title":"Title3",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img03.png"
+  },
+  "img04" : {
+    "title":"Title4",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img04.png"
+  },
+  "img05" : {
+    "title":"Title5",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img05.png"
+  },
+  "img06" : {
+    "title":"Title6",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img06.png"
+  },
+  "img07" : {
+    "title":"Title7",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img07.png"
+  },
+  "img08" : {
+    "title":"Title8",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img08.png"
+  },
+  "img9" : {
+    "title":"Title9",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img09.png"
+  },
+  "img10" : {
+    "title":"Title10",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img10.png"
+  },
+  "img11" : {
+    "title":"Title11",
+    "type":"wide",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img11.png"
+  },
+  "img12" : {
+    "title":"Title12",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img12.png"
+  },
+  "img13" : {
+    "title":"Title13",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img13.png"
+  },
+  "img14" : {
+    "title":"Title14",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img14.png"
+  },
+  "img15" : {
+    "title":"Title15",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img15.png"
+  },
+  "img16" : {
+    "title":"Title16",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img16.png"
+  },
+  "img17" : {
+    "title":"Title17",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img17.png"
+  },
+  "img18" : {
+    "title":"Title18",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img18.png"
+  },
+  "img19" : {
+    "title":"Title19",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img19.png"
+  },
+  "img20" : {
+    "title":"Title20",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img20.png"
+  },
+  "img21" : {
+    "title":"Title21",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img21.png"
+  },
+  "img22" : {
+    "title":"Title22",
+    "type":"tall",
+    "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
+    "path":"images/CK_img22.png"
+  }
+}
