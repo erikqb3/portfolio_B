@@ -87,6 +87,9 @@
         justify-content:space-between;
         align-items:center;
         color:rgba(0,8,85,1);
+        div.currentBtn {
+          color:rgba(0,8,85,0.5)
+        }
 
       }
       div#buttonNav{

@@ -7,9 +7,9 @@
   },
   "img02" : {
     "title":"Title2",
-    "type":"wide",
+    "type":"tall",
     "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
-    "path":"images/CK_img02.png"
+    "path":"images/CK_img13.png"
   },
   "img03" : {
     "title":"Title3",
@@ -73,9 +73,9 @@
   },
   "img13" : {
     "title":"Title13",
-    "type":"tall",
+    "type":"wide",
     "description":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, voluptatum tempore, consequatur optio incidunt eos dolorum at magnam exercitationem iure laudantium consectetur facere a dolorem eum asperiores inventore molestias enim! Molestias numquam alias facilis eius, totam officia maiores consequatur quibusdam facere? Debitis aspernatur, culpa atque accusantium provident tempore et doloremque animi iusto vitae excepturi eaque officia aliquid quam, quaerat reiciendis esse, dolore asperiores iste! Dolore expedita accusamus veritatis placeat earum accusantium quidem ex aperiam neque.",
-    "path":"images/CK_img13.png"
+    "path":"images/CK_img02.png"
   },
   "img14" : {
     "title":"Title14",

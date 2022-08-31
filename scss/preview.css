@@ -114,6 +114,9 @@
             align-items: center;
     color: #000855;
   }
+  section#previewScreen section#side1 div#buttonNav div.currentBtn {
+    color: rgba(0, 8, 85, 0.5);
+  }
   section#previewScreen section#side1 div#buttonNav div.slideBtn:hover,
   section#previewScreen section#side1 div#buttonNav div.slideBtn:active {
     color: rgba(0, 8, 85, 0.5);

@@ -15,9 +15,9 @@ const establishHTML = {
     ){
       for (let path of imgArray) {
         let slide = helperFunctions.generateElement('article',`slide${counter}`,"slide");
-        counter++
         let img = helperFunctions.generateElement('img',`${item.name}`,"","",path);
         let slideBtn = helperFunctions.generateElement('div',`${counter}`,"slideBtn",'<i class="fa-solid fa-circle"></i>');       
+        counter++
         // slideBtn.addEventListener('click',()=>{landingPageActions.jummpToSlide()})
         slide.appendChild(img);
         buttonNav.appendChild(slideBtn);
@@ -126,7 +126,8 @@ const previewPageActions = {
       console.log(slidesHolder);
       slidesHolder.append(firstClone);
       slidesHolder.prepend(lastClone);
-      slidesArray[0].classList.add('currentSlide')
+      slidesArray[0].classList.add('currentSlide');
+      buttonNav[0].classList.add('currentBtn');
 
       slidesHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
 
@@ -166,6 +167,8 @@ const previewPageActions = {
       formerSlide,
       slidesArray
     ){
+      let target;
+      document.querySelector(".currentBtn").classList.remove('currentBtn')
       formerSlide.classList.remove('currentSlide');
       if (centerSlide.id == "firstClone"){
         slidesArray[1].classList.add('currentSlide');
@@ -176,6 +179,11 @@ const previewPageActions = {
       else {
         centerSlide.classList.add('currentSlide');
       }
+      
+      target = document.querySelector('.currentSlide').id
+      console.log(target);
+      console.log(document.getElementById(target.substring(5,6)));
+      document.getElementById(target.substring(5,6)).classList.add('currentBtn')
     },
     theEvents : function(carousel, slidesHolder,nextBtn,prevBtn, slideWidth, buttonNav){
       slidesHolder.addEventListener('transitionend',()=>{
@@ -203,7 +211,7 @@ const previewPageActions = {
       for (let slideBtn of buttonNav){
         slideBtn.addEventListener('click',()=>{
           let slidesArray = this.getSlides();
-          this.index = slideBtn.id;
+          this.index = parseFloat(slideBtn.id) + 1;
           this.assignCurrentSlide(slidesArray[this.index], document.querySelector('.currentSlide'),slidesArray)
           slidesHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
           slidesHolder.style.transition = '0.75s';
