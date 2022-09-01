@@ -129,8 +129,43 @@
 @media only screen and (min-width: 767px) {
 
 }
-@media only screen and (min-width: 993px) {
-
+@media only screen and (min-width: 992px) {
+  body {
+    main {
+      div#mainScreen {
+        div#timer,
+        div#callOut,
+        div#history {
+        }
+        div#timer {
+          div#timer_display{
+          }
+          div#timer_keypad{
+            div.number{
+              p {
+              }
+            }
+            div.number:nth-child(10) {
+            }
+          }
+        }
+        div#callOut{
+          p {
+          }
+        }
+        div#history{
+          p {
+          }
+        }
+      }
+      div#btnHolder {
+        button {
+        }
+      }
+      h1, a#pdfLink {
+      }
+    }
+  } 
 }
 @media only screen and (min-width: 1600px) {
 

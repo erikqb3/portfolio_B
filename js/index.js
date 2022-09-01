@@ -178,17 +178,20 @@ export const helperFunctions = {
 },
   },
   customSpecialElements: function (element,extraAttribute = []) { //CLONE?
-    switch (element.classList.value) {
-      case 'video':
-        element.setAttribute('autoplay', 'autoplay');
-        element.setAttribute('loop', true);
-        element.muted = 'muted';
-        break;
-      case 'thumbnail':
-        element.setAttribute('src',"../../resources/img/Square.png");
-        element.setAttribute('data-src', extraAttribute[0]);
-        element.setAttribute('alt',extraAttribute[1])
+    try {
+      switch (element.classList.value) {
+        case 'video':
+          element.setAttribute('autoplay', 'autoplay');
+          element.setAttribute('loop', true);
+          element.muted = 'muted';
+          break;
+        case 'thumbnail':
+          element.setAttribute('src',"../../resources/img/Square.png");
+          element.setAttribute('data-src', extraAttribute[0]);
+          element.setAttribute('alt',extraAttribute[1])
+      }
     }
+    catch(err){console.log(err)}
     return element;
   },
   generateElement: function (
