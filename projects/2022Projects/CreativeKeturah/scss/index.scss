@@ -148,6 +148,7 @@
           img{
             display:flex;
             margin: 0 auto;
+            box-shadow: 0 0 2.5rem white;
           }
           img.tall{
             width: 75%;
@@ -165,6 +166,7 @@
           div#infoSection{
             width: 80%;
             background-color: rgba(255,255,255,0.9);
+            box-shadow: 0 0 2.5rem white;
             border-radius: 10px;
             padding: 2.5rem;
             h1#title{}

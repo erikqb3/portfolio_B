@@ -6,7 +6,7 @@ export const establishHTML = {
     body = document.querySelector('body'),
     popUp = helperFunctions.generateElement('div',"disclaimerPopUp"),
     warning = helperFunctions.generateElement('h1',"","","DISCLAIMER"),
-    description = helperFunctions.generateElement('p',"","","This Website is still under construction but posted for sample review. Some utilities do not function, but the necessary majority does. <h2>Please explore and enjoy!</h2>Click Anywhere to Continue")
+    description = helperFunctions.generateElement('p',"","","This Website is still under construction but posted for sample review. Some utilities do not function, but the necessary majority does. <h2>Please explore and enjoy!</h2>Click Anywhere to Continue!!!")
     ){
         console.log("HELLOW HONEST")
         popUp = helperFunctions.appendChildren(popUp, warning,description)
