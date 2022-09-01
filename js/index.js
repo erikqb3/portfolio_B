@@ -185,7 +185,7 @@ export const helperFunctions = {
         element.muted = 'muted';
         break;
       case 'thumbnail':
-        element.setAttribute('src',"../resources/img/Square.png");
+        element.setAttribute('src',"../../resources/img/Square.png");
         element.setAttribute('data-src', extraAttribute[0]);
         element.setAttribute('alt',extraAttribute[1])
     }
